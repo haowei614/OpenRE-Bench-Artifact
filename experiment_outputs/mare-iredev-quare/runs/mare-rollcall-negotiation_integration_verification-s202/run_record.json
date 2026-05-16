@@ -1,0 +1,269 @@
+{
+  "run_id": "mare-rollcall-negotiation_integration_verification-s202",
+  "case_id": "RollCall",
+  "system": "mare",
+  "setting": "negotiation_integration_verification",
+  "seed": 202,
+  "model": "gpt-4o-mini",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "mare",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.12",
+    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "gpt-4o-mini",
+    "temperature": 0.7,
+    "seed": 202,
+    "prompt_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": true,
+    "fallback_tainted": true,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": true,
+    "non_comparable_reasons": []
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-05-12T04:50:04Z",
+  "end_timestamp": "2026-05-12T04:50:04Z",
+  "runtime_seconds": 0.081956,
+  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/mare-rollcall-negotiation_integration_verification-s202",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/mare-rollcall-negotiation_integration_verification-s202/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/mare-rollcall-negotiation_integration_verification-s202/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/mare-rollcall-negotiation_integration_verification-s202/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/mare-rollcall-negotiation_integration_verification-s202/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "mare_paper_workflow_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "negotiation_integration_verification",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 202,
+      "llm_seed_applied_turns": 0,
+      "llm_turns": 0,
+      "llm_fallback_turns": 9,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 0,
+      "execution_mode": "deterministic_fallback",
+      "llm_actions": [],
+      "fallback_actions": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "roles_executed": [
+        "Stakeholders",
+        "Collector",
+        "Modeler",
+        "Checker",
+        "Documenter"
+      ],
+      "actions_executed": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "role_action_map": {
+        "Stakeholders": [
+          "SpeakUserStories",
+          "AnswerQuestion"
+        ],
+        "Collector": [
+          "ProposeQuestion",
+          "WriteReqDraft"
+        ],
+        "Modeler": [
+          "ExtractEntity",
+          "ExtractRelation"
+        ],
+        "Checker": [
+          "CheckRequirement"
+        ],
+        "Documenter": [
+          "WriteSRS",
+          "WriteCheckReport"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Stakeholders",
+          "action": "SpeakUserStories",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 5,
+          "summary": "As a stakeholder of RollCall, I need Students must be able to view their own attendance records As a stakeholder of RollCall, I need The system must generate..."
+        },
+        {
+          "role": "Collector",
+          "action": "ProposeQuestion",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "What acceptance condition should constrain story 1? What acceptance condition should constrain story 2? What acceptance condition should constrain story 3?"
+        },
+        {
+          "role": "Stakeholders",
+          "action": "AnswerQuestion",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "Answer 1: The system shall Students must be able to view their own attendance records Answer 2: The system shall The system must generate attendance reports..."
+        },
+        {
+          "role": "Collector",
+          "action": "WriteReqDraft",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 6,
+          "summary": "Draft requirement 1: The system shall As a stakeholder of RollCall, I need Students must be able to view their own attendance records Draft requirement 2: Th..."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractEntity",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 8,
+          "summary": "draft requirement system shall stakeholder rollcall students their"
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractRelation",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 7,
+          "summary": "draft|refines|requirement requirement|refines|system system|refines|shall shall|refines|stakeholder stakeholder|refines|rollcall rollcall|refines|students st..."
+        },
+        {
+          "role": "Checker",
+          "action": "CheckRequirement",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "All requirements should remain verifiable with explicit measurable criteria."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteSRS",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "SRS-1 Scope and Stakeholders SRS-2 Functional and Quality Requirements SRS-3 Verification and Acceptance Criteria"
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteCheckReport",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "Check report item 1: All requirements should remain verifiable with explicit measurable criteria."
+        }
+      ],
+      "workspace_summary": {
+        "user_stories": 5,
+        "questions": 3,
+        "answers": 3,
+        "requirement_draft": 6,
+        "entities": 8,
+        "relations": 7,
+        "findings": 1,
+        "srs_sections": 3,
+        "check_report": 1,
+        "llm_turns": 0,
+        "llm_fallback_turns": 9
+      },
+      "workspace_digest": "be38e77379fd9fa9cdc96d709102eabd3448c56fa403badfd4788d6799023f83"
+    },
+    "case_description": "Roll Call Attendance Tracking System",
+    "system": "mare",
+    "setting": "negotiation_integration_verification",
+    "negotiation_enabled": true,
+    "verification_executed": true,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 202,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 202,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 9,
+      "retry_count": 0,
+      "parse_recoveries": 0,
+      "execution_mode": "deterministic_fallback"
+    },
+    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c"
+  }
+}

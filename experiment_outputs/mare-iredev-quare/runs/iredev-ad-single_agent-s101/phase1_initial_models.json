@@ -1,0 +1,277 @@
+{
+  "SingleAgent": [
+    {
+      "id": "INT-L1-001",
+      "name": "Integrated Goal",
+      "description": "Integrated single-agent objective for AD: - The system operates in specific urban and highway scenarios It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached [Efficiency & Planning Requirements - Based...",
+      "element_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Integrated coverage across all requirement clauses",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.090909,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:13",
+          "document": "automotive_safety.py",
+          "score": 0.085561,
+          "content": "L3 Level (Conditional Automation): - Safety requirements: System responsible within ODD + takeover request response time limits - System examples: Audi A8 Traffic Jam Pilot - KAOS goals: - \"ODD boundary detection accuracy > 99.9%\" - \"Takeover request to driver response < 10 se..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.080214,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-001",
+      "name": "Integrated Requirement 1",
+      "description": "The system shall satisfy: - The system operates in specific urban and highway scenarios",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:11",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.444444,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.333333,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:12",
+          "document": "cases/real_world_studies.py",
+          "score": 0.333333,
+          "content": "Actual Challenges and Solutions: - Challenge: Camera performance degraded 30% in rain Solution: Image enhancement algorithms + radar data fusion weight adjustment - Challenge: Misidentification in construction zones Solution: Added construction sign specialized training data -..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-002",
+      "name": "Integrated Requirement 2",
+      "description": "The system shall satisfy: It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.25,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:13",
+          "document": "automotive_safety.py",
+          "score": 0.1875,
+          "content": "L3 Level (Conditional Automation): - Safety requirements: System responsible within ODD + takeover request response time limits - System examples: Audi A8 Traffic Jam Pilot - KAOS goals: - \"ODD boundary detection accuracy > 99.9%\" - \"Takeover request to driver response < 10 se..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.1875,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-003",
+      "name": "Integrated Requirement 3",
+      "description": "The system shall satisfy: [Efficiency & Planning Requirements - Based on EM Motion Planner]",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:21",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:21",
+          "document": "automotive_safety.py",
+          "score": 0.375,
+          "content": "# Automotive Cybersecurity Requirements (Based on ISO/SAE 21434) AUTOMOTIVE_CYBERSECURITY = \"\"\" [Automotive Cybersecurity Requirements] ISO/SAE 21434"
+        },
+        {
+          "chunk_id": "sample_knowledge.py:23",
+          "document": "sample_knowledge.py",
+          "score": 0.375,
+          "content": "Pattern 2: Environmental Friendliness vs Performance Requirements Conflict Scenario: Energy-saving mode reduces CPU frequency affecting computational performance Resolution Strategies: - Smart Frequency Scaling: Dynamically adjust based on task importance - Load Prediction: En..."
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:23",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.375,
+          "content": "Pattern 2: Environmental Friendliness vs Performance Requirements Conflict Scenario: Energy-saving mode reduces CPU frequency affecting computational performance Resolution Strategies: - Smart Frequency Scaling: Dynamically adjust based on task importance - Load Prediction: En..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-004",
+      "name": "Integrated Requirement 4",
+      "description": "The system shall satisfy: Multiobjective Optimization:",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:43",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:43",
+          "document": "sample_knowledge.py",
+          "score": 0.5,
+          "content": "# Efficiency-related knowledge EFFICIENCY_KNOWLEDGE = \"\"\" Efficiency Optimization Key Areas:"
+        },
+        {
+          "chunk_id": "sample_knowledge.py:45",
+          "document": "sample_knowledge.py",
+          "score": 0.5,
+          "content": "Optimization Strategies: - Algorithm optimization - Data structure selection - Caching mechanisms - Parallel processing - Load balancing"
+        },
+        {
+          "chunk_id": "sample_knowledge.py:48",
+          "document": "sample_knowledge.py",
+          "score": 0.5,
+          "content": "Energy Efficiency: - Computing resource optimization - Data transmission minimization - Idle resource release - Smart power management"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-005",
+      "name": "Integrated Requirement 5",
+      "description": "The system shall satisfy: - The planner must simultaneously optimize for three conflicting objectives: Safety (collision avoidance), Smoothness (passenger comfort), and Speed (reaching destination)",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "domains/automotive_safety.py:14",
+      "source_document": "domains/automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "domains/automotive_safety.py:14",
+          "document": "domains/automotive_safety.py",
+          "score": 0.157895,
+          "content": "Safety Performance Metrics: - Overall system failure rate: <10^-8/hour - Collision avoidance success rate: >99.99% - False positive rate: <0.1% (emergency braking) - False negative rate: <0.01% (hazardous obstacles)"
+        },
+        {
+          "chunk_id": "sample_knowledge.py:37",
+          "document": "sample_knowledge.py",
+          "score": 0.157895,
+          "content": "Error 5: Unresolved quality attribute conflicts Error Example: Simultaneously requiring highest safety and highest performance Correction Example: Establish trade-off strategies and dynamic adjustment mechanisms \"\"\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:7",
+          "document": "sample_knowledge.py",
+          "score": 0.157895,
+          "content": "Tactical Level Refinement: - G1.1: Detect and avoid collision threats - G1.2: Comply with traffic regulations and standards - G1.3: Safely park in abnormal situations - G2.1: Optimize path planning algorithms - G2.2: Reduce unnecessary braking and acceleration - G3.1: Minimize..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-006",
+      "name": "Integrated Requirement 6",
+      "description": "The system shall satisfy: Path-Speed Decoupling (EM Framework):",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:15",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:15",
+          "document": "cases/real_world_studies.py",
+          "score": 0.2,
+          "content": "Actual Perception System Configuration: - LiDAR: Velodyne VLS-128, 360° scanning, 200m detection range Actual performance: Point cloud density 3 million points/second, accuracy ±2cm - Cameras: 29 high-resolution cameras, 360° coverage Actual performance: 4K@30fps, night vision..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:16",
+          "document": "cases/real_world_studies.py",
+          "score": 0.2,
+          "content": "Actual Decision System Performance: - Path planning update frequency: 10Hz - Behavior prediction time window: 8 seconds - Obstacle detection latency: ≤100ms - Emergency braking response: ≤150ms"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:19",
+          "document": "cases/real_world_studies.py",
+          "score": 0.2,
+          "content": "2. Complex traffic scenario handling: - Ambulance yielding: Sound recognition + visual confirmation, completed within 3 seconds - Construction zone detours: Real-time map updates, average detour adds 1.2 minutes - School zones: Automatic speed limit to 15mph, enhanced child de..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ]
+}

@@ -1,0 +1,563 @@
+{
+  "run_id": "iredev-atm-multi_agent_with_negotiation-s202",
+  "case_id": "ATM",
+  "system": "iredev",
+  "setting": "multi_agent_with_negotiation",
+  "seed": 202,
+  "model": "gpt-4o-mini",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "iredev",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.12",
+    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "gpt-4o-mini",
+    "temperature": 0.7,
+    "seed": 202,
+    "prompt_hash": "423f0ca8796fd2d4c769eff748d918a6837fee49d22d3a4c4879a1a6a57d59b6",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": true,
+    "fallback_tainted": true,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": false,
+    "non_comparable_reasons": [
+      "verification_not_executed_for_setting"
+    ]
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-05-12T04:50:00Z",
+  "end_timestamp": "2026-05-12T04:50:00Z",
+  "runtime_seconds": 0.125475,
+  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s202",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s202/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s202/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s202/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s202/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "iredev_knowledge_driven_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "multi_agent_with_negotiation",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 202,
+      "llm_seed_applied_turns": 0,
+      "llm_turns": 0,
+      "llm_fallback_turns": 33,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 0,
+      "execution_mode": "deterministic_fallback",
+      "llm_actions": [],
+      "fallback_actions": [
+        "DialogueWithEndUser",
+        "DialogueWithEndUser",
+        "DialogueWithEndUser",
+        "RespondEndUser",
+        "RespondEndUser",
+        "RespondEndUser",
+        "RaiseQuestionEndUser",
+        "RaiseQuestionEndUser",
+        "RaiseQuestionEndUser",
+        "ConfirmOrRefineEndUser",
+        "ConfirmOrRefineEndUser",
+        "ConfirmOrRefineEndUser",
+        "WriteInterviewRecords",
+        "WriteUserRequirementsList",
+        "DialogueWithDeployer",
+        "DialogueWithDeployer",
+        "DialogueWithDeployer",
+        "RespondDeployer",
+        "RespondDeployer",
+        "RespondDeployer",
+        "RaiseQuestionDeployer",
+        "RaiseQuestionDeployer",
+        "RaiseQuestionDeployer",
+        "ConfirmOrRefineDeployer",
+        "ConfirmOrRefineDeployer",
+        "ConfirmOrRefineDeployer",
+        "WriteOperatingEnvironmentList",
+        "WriteSystemRequirementsList",
+        "SelectRequirementModel",
+        "BuildRequirementModel",
+        "WriteSRS",
+        "Evaluate",
+        "ConfirmClosure"
+      ],
+      "roles_executed": [
+        "Interviewer",
+        "EndUser",
+        "Deployer",
+        "Analyst",
+        "Archivist",
+        "Reviewer"
+      ],
+      "actions_executed": [
+        "DialogueWithEndUser",
+        "WriteInterviewRecords",
+        "WriteUserRequirementsList",
+        "DialogueWithDeployer",
+        "WriteOperatingEnvironmentList",
+        "RespondEndUser",
+        "RaiseQuestionEndUser",
+        "ConfirmOrRefineEndUser",
+        "RespondDeployer",
+        "RaiseQuestionDeployer",
+        "ConfirmOrRefineDeployer",
+        "WriteSystemRequirementsList",
+        "SelectRequirementModel",
+        "BuildRequirementModel",
+        "WriteSRS",
+        "Evaluate",
+        "ConfirmClosure"
+      ],
+      "role_action_map": {
+        "Interviewer": [
+          "DialogueWithEndUser",
+          "WriteInterviewRecords",
+          "WriteUserRequirementsList",
+          "DialogueWithDeployer",
+          "WriteOperatingEnvironmentList"
+        ],
+        "EndUser": [
+          "RespondEndUser",
+          "RaiseQuestionEndUser",
+          "ConfirmOrRefineEndUser"
+        ],
+        "Deployer": [
+          "RespondDeployer",
+          "RaiseQuestionDeployer",
+          "ConfirmOrRefineDeployer"
+        ],
+        "Analyst": [
+          "WriteSystemRequirementsList",
+          "SelectRequirementModel",
+          "BuildRequirementModel"
+        ],
+        "Archivist": [
+          "WriteSRS"
+        ],
+        "Reviewer": [
+          "Evaluate",
+          "ConfirmClosure"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Interviewer",
+          "action": "DialogueWithEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 6,
+          "summary": "As a user of ATM, I need Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction As a user of A..."
+        },
+        {
+          "role": "Interviewer",
+          "action": "DialogueWithEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 6,
+          "summary": "As a user of ATM, I need Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction As a user of A..."
+        },
+        {
+          "role": "Interviewer",
+          "action": "DialogueWithEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 6,
+          "summary": "As a user of ATM, I need Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction As a user of A..."
+        },
+        {
+          "role": "EndUser",
+          "action": "RespondEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "Response: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction"
+        },
+        {
+          "role": "EndUser",
+          "action": "RespondEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 2,
+          "summary": "Response: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction Response: A bank client can h..."
+        },
+        {
+          "role": "EndUser",
+          "action": "RespondEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 4,
+          "summary": "Response: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction Response: A bank client can h..."
+        },
+        {
+          "role": "EndUser",
+          "action": "RaiseQuestionEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "Could you clarify the priority between performance and accuracy?"
+        },
+        {
+          "role": "EndUser",
+          "action": "RaiseQuestionEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "Could you clarify the priority between performance and accuracy?"
+        },
+        {
+          "role": "EndUser",
+          "action": "RaiseQuestionEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "Could you clarify the priority between performance and accuracy?"
+        },
+        {
+          "role": "EndUser",
+          "action": "ConfirmOrRefineEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "Confirmed: Response: Recorded transactions must include the date, time, transaction type, amount and account... Confirmed: Response: Recorded transactions mu..."
+        },
+        {
+          "role": "EndUser",
+          "action": "ConfirmOrRefineEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "Confirmed: Response: Recorded transactions must include the date, time, transaction type, amount and account... Confirmed: Response: Recorded transactions mu..."
+        },
+        {
+          "role": "EndUser",
+          "action": "ConfirmOrRefineEndUser",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "Confirmed: Response: Recorded transactions must include the date, time, transaction type, amount and account... Confirmed: Response: Recorded transactions mu..."
+        },
+        {
+          "role": "Interviewer",
+          "action": "WriteInterviewRecords",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 4,
+          "summary": "Interview record 1: Response: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction Interview..."
+        },
+        {
+          "role": "Interviewer",
+          "action": "WriteUserRequirementsList",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 6,
+          "summary": "UR-1: The system shall Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction UR-2: The system..."
+        },
+        {
+          "role": "Interviewer",
+          "action": "DialogueWithDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "What infrastructure constraints apply to Recorded transactions must include the date, time, transaction type, amount and account balance a...? What infrastru..."
+        },
+        {
+          "role": "Interviewer",
+          "action": "DialogueWithDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "What infrastructure constraints apply to Recorded transactions must include the date, time, transaction type, amount and account balance a...? What infrastru..."
+        },
+        {
+          "role": "Interviewer",
+          "action": "DialogueWithDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "What infrastructure constraints apply to Recorded transactions must include the date, time, transaction type, amount and account balance a...? What infrastru..."
+        },
+        {
+          "role": "Deployer",
+          "action": "RespondDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "Deploy constraint: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction"
+        },
+        {
+          "role": "Deployer",
+          "action": "RespondDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 2,
+          "summary": "Deploy constraint: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction Deploy constraint: A..."
+        },
+        {
+          "role": "Deployer",
+          "action": "RespondDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "Deploy constraint: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction Deploy constraint: A..."
+        },
+        {
+          "role": "Deployer",
+          "action": "RaiseQuestionDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "What are the expected peak concurrent connections?"
+        },
+        {
+          "role": "Deployer",
+          "action": "RaiseQuestionDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "What are the expected peak concurrent connections?"
+        },
+        {
+          "role": "Deployer",
+          "action": "RaiseQuestionDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "What are the expected peak concurrent connections?"
+        },
+        {
+          "role": "Deployer",
+          "action": "ConfirmOrRefineDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "Confirmed: Deploy constraint: Recorded transactions must include the date, time, transaction type, amount an... Confirmed: Deploy constraint: Recorded transa..."
+        },
+        {
+          "role": "Deployer",
+          "action": "ConfirmOrRefineDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "Confirmed: Deploy constraint: Recorded transactions must include the date, time, transaction type, amount an... Confirmed: Deploy constraint: Recorded transa..."
+        },
+        {
+          "role": "Deployer",
+          "action": "ConfirmOrRefineDeployer",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "Confirmed: Deploy constraint: Recorded transactions must include the date, time, transaction type, amount an... Confirmed: Deploy constraint: Recorded transa..."
+        },
+        {
+          "role": "Interviewer",
+          "action": "WriteOperatingEnvironmentList",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 3,
+          "summary": "ENV-1: Standard web server with HTTPS termination ENV-2: Relational database with backup and recovery procedures ENV-3: Authentication and access control fra..."
+        },
+        {
+          "role": "Analyst",
+          "action": "WriteSystemRequirementsList",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 9,
+          "summary": "SR-1: The system shall UR-1: The system shall Recorded transactions must include the date, time, transaction type, amount and account balance after the trans..."
+        },
+        {
+          "role": "Analyst",
+          "action": "SelectRequirementModel",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 1,
+          "summary": "Selected model: Use Case Diagram (UML) — suitable for stakeholder interactions"
+        },
+        {
+          "role": "Analyst",
+          "action": "BuildRequirementModel",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 6,
+          "summary": "Model element: system Model element: shall Model element: system Model element: shall Model element: recorded Model element: transactions"
+        },
+        {
+          "role": "Archivist",
+          "action": "WriteSRS",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 4,
+          "summary": "SRS-1 Purpose and Scope SRS-2 Functional Requirements SRS-3 Non-Functional Requirements and Quality Attributes SRS-4 External Interface Requirements"
+        },
+        {
+          "role": "Reviewer",
+          "action": "Evaluate",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 2,
+          "summary": "Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. Finding: Ensure traceability from user requirements to system..."
+        },
+        {
+          "role": "Reviewer",
+          "action": "ConfirmClosure",
+          "execution_mode": "fallback",
+          "llm_generated": false,
+          "llm_source": "openai",
+          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "output_count": 2,
+          "summary": "Closure: Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. — resolved Closure: Finding: Ensure traceability fro..."
+        }
+      ],
+      "workspace_summary": {
+        "interview_records": 4,
+        "user_requirements": 6,
+        "operating_environment": 3,
+        "enduser_responses": 7,
+        "enduser_questions": 3,
+        "enduser_confirmations": 9,
+        "deployer_responses": 6,
+        "deployer_questions": 3,
+        "deployer_confirmations": 9,
+        "system_requirements": 9,
+        "selected_model": 1,
+        "requirement_model": 6,
+        "srs_sections": 4,
+        "review_findings": 2,
+        "closure_confirmations": 2,
+        "dialogue_rounds": 3,
+        "total_action_fires": 33,
+        "distinct_actions_fired": 17,
+        "llm_turns": 0,
+        "llm_fallback_turns": 33
+      },
+      "workspace_digest": "fe5ad655381edd778579a24a1ea2e2ee192cae8ebdce1cbeb2de1d1b92248fca"
+    },
+    "case_description": "Automated Teller Machine System",
+    "system": "iredev",
+    "setting": "multi_agent_with_negotiation",
+    "negotiation_enabled": true,
+    "verification_executed": false,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 202,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 202,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 33,
+      "retry_count": 0,
+      "parse_recoveries": 0,
+      "execution_mode": "deterministic_fallback"
+    },
+    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "423f0ca8796fd2d4c769eff748d918a6837fee49d22d3a4c4879a1a6a57d59b6"
+  }
+}

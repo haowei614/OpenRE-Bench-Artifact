@@ -1,0 +1,277 @@
+{
+  "SingleAgent": [
+    {
+      "id": "INT-L1-001",
+      "name": "Integrated Goal",
+      "description": "Integrated single-agent objective for AD: The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort - Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip - Non-convex obstacle constraints must...",
+      "element_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Integrated coverage across all requirement clauses",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.090909,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:13",
+          "document": "automotive_safety.py",
+          "score": 0.085561,
+          "content": "L3 Level (Conditional Automation): - Safety requirements: System responsible within ODD + takeover request response time limits - System examples: Audi A8 Traffic Jam Pilot - KAOS goals: - \"ODD boundary detection accuracy > 99.9%\" - \"Takeover request to driver response < 10 se..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.080214,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-001",
+      "name": "Integrated Requirement 1",
+      "description": "The system shall satisfy: The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:18",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:18",
+          "document": "automotive_safety.py",
+          "score": 0.307692,
+          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
+        },
+        {
+          "chunk_id": "standards/latest_2024.py:4",
+          "document": "standards/latest_2024.py",
+          "score": 0.307692,
+          "content": "UN-R157 (Revised March 2024): New requirements for Automated Lane Keeping Systems: - System activation speed range: 60-130 km/h (previously 60-120) - Lane change function: Automatic lane changes allowed under specific conditions - Monitoring requirements: Driver attention moni..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:13",
+          "document": "automotive_safety.py",
+          "score": 0.230769,
+          "content": "L3 Level (Conditional Automation): - Safety requirements: System responsible within ODD + takeover request response time limits - System examples: Audi A8 Traffic Jam Pilot - KAOS goals: - \"ODD boundary detection accuracy > 99.9%\" - \"Takeover request to driver response < 10 se..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-002",
+      "name": "Integrated Requirement 2",
+      "description": "The system shall satisfy: - Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.166667,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.166667,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "standards/latest_2024.py:23",
+          "document": "standards/latest_2024.py",
+          "score": 0.166667,
+          "content": "US Digital Asset Regulatory Framework (2024): SEC + CFTC Regulatory Division: - Security tokens: SEC jurisdiction, securities law compliance required - Commodity tokens: CFTC jurisdiction, futures trading rules - Payment tokens: FinCEN anti-money laundering requirements - DeFi..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-003",
+      "name": "Integrated Requirement 3",
+      "description": "The system shall satisfy: - Non-convex obstacle constraints must be handled using iterative quadratic programming (QP)",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:9",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:9",
+          "document": "standards/latest_2024.py",
+          "score": 0.166667,
+          "content": "ISO/IEC 23053:2022 Framework for AI Systems and ML Models: Practical Application Requirements: - Model interpretability: Critical decisions must be explainable - Data quality management: Training data bias detection and mitigation - Model validation: Independent test dataset v..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:16",
+          "document": "cases/real_world_studies.py",
+          "score": 0.083333,
+          "content": "Actual Decision System Performance: - Path planning update frequency: 10Hz - Behavior prediction time window: 8 seconds - Obstacle detection latency: ≤100ms - Emergency braking response: ≤150ms"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-004",
+      "name": "Integrated Requirement 4",
+      "description": "The system shall satisfy: [Conflict Scenario for Negotiation]",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:5",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:5",
+          "document": "knowledge_guide.py",
+          "score": 0.75,
+          "content": "3. [Negotiation and Conflict Resolution Patterns] ✅ Real quality attribute conflict cases ✅ Validated negotiation strategies ✅ Assessment methods for compromises and trade-offs ✅ Convergence patterns for multi-round negotiations"
+        },
+        {
+          "chunk_id": "sample_knowledge.py:23",
+          "document": "sample_knowledge.py",
+          "score": 0.75,
+          "content": "Pattern 2: Environmental Friendliness vs Performance Requirements Conflict Scenario: Energy-saving mode reduces CPU frequency affecting computational performance Resolution Strategies: - Smart Frequency Scaling: Dynamically adjust based on task importance - Load Prediction: En..."
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:23",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.75,
+          "content": "Pattern 2: Environmental Friendliness vs Performance Requirements Conflict Scenario: Energy-saving mode reduces CPU frequency affecting computational performance Resolution Strategies: - Smart Frequency Scaling: Dynamically adjust based on task importance - Load Prediction: En..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-005",
+      "name": "Integrated Requirement 5",
+      "description": "The system shall satisfy: - The SafetyAgent prioritizes \"Passive Safety\" and strictly enforcing safe distances and MRM execution",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.25,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.166667,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.166667,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-006",
+      "name": "Integrated Requirement 6",
+      "description": "The system shall satisfy: - The EfficiencyAgent prioritizes \"Smoothness\" and \"Speed\" using the QP function to minimize Jerk",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:1",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.25,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:24",
+          "document": "sample_knowledge.py",
+          "score": 0.25,
+          "content": "Pattern 3: Trustworthiness vs Efficiency Conflict Scenario: Decision explanation generation requires additional 50% computation time Resolution Strategies: - Asynchronous Explanation: Execute decision first, generate explanation later - Tiered Explanation: Brief explanation ge..."
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:24",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.25,
+          "content": "Pattern 3: Trustworthiness vs Efficiency Conflict Scenario: Decision explanation generation requires additional 50% computation time Resolution Strategies: - Asynchronous Explanation: Execute decision first, generate explanation later - Tiered Explanation: Brief explanation ge..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ]
+}
