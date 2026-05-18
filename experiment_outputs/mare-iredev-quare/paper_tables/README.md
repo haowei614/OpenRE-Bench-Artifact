@@ -1,23 +1,41 @@
-# MARE vs iReDev vs QUARE: Paper-Reported Experimental Results
+# Paper-Reported Experimental Results
 
-This report mirrors the experimental values reported in the current paper PDF
-(`QUARE (48).pdf`). It is intended as the paper-facing index for artifact
-evaluation.
+This file records the numerical values reported in the current paper PDF
+(`QUARE (48).pdf`). It is the source of truth for paper-table values in the
+replication package.
 
-Machine-readable CSV versions of these tables are available under
-`experiment_outputs/mare-iredev-quare/paper_tables/` with `table_*` filenames.
+Machine-readable CSV versions of these tables are stored in this directory with
+`table_*` filenames.
 
-**Total Runs**: 180 (60 MARE + 60 iReDev + 60 QUARE)  
-**Model**: gpt-4o-mini-2024-07-18  
-**Temperature**: 0.7  
-**Round Cap**: 3  
-**Seeds**: 101, 202, 303  
-**Cases**: AD, ATM, Library, RollCall, Bookkeeping
+## CSV Index
+
+| File | Content |
+|------|---------|
+| `table_ii_benchmark_systems.csv` | Table II values used in the paper. |
+| `table_ii_case_input_stats_detailed.csv` | Additional input word-count and requirement-count details for Table II. |
+| `table_iii_coverage_diversity.csv` | Table III coverage and diversity values. |
+| `table_iv_semantic_preservation.csv` | Table IV semantic-preservation values. |
+| `table_v_negotiation_summary.csv` | Table V negotiation-process values. |
+| `table_vi_a_structural_compliance.csv` | Table VI(A) structural and compliance values. |
+| `table_vi_b_llm_judge_quality.csv` | Table VI(B) LLM-judge quality-score values. |
+| `table_vi_c_human_llm_validation.csv` | Table VI(C) human-vs-LLM validation values. |
+
+## Experimental Configuration
+
+| Parameter | Value |
+|---|---|
+| Total runs | 180 |
+| Frameworks | MARE, iReDev, QUARE |
+| Model | `gpt-4o-mini-2024-07-18` |
+| Temperature | 0.7 |
+| Round cap | 3 |
+| Seeds | 101, 202, 303 |
+| Case studies | AD, ATM, Library, RollCall, Bookkeeping |
 
 ## Table III: Requirement Coverage and Diversity
 
 Values are averaged across the five benchmark systems. CHV values are reported
-as `x10^-3`, matching the paper.
+as `x10^-3`.
 
 | Framework | Req. Count | CHV | MDC | CU | MAC |
 |---|---:|---:|---:|---:|---:|
@@ -46,10 +64,6 @@ BERTScore F1 between Phase 3 and Phase 1 outputs, reported as percentages.
 | Avg. negotiation steps | 10.0 | 12.0 | 16.5 |
 | Conflict resolution rate (%) | 66.7 | 46.7 | 25.0 |
 | Phase 2 vs. Phase 1 BERTScore (%) | 97.0 | 99.4 | 100.0 |
-
-The lower QUARE conflict-resolution rate is reported in the paper as a result
-of finer-grained conflict detection; unresolved conflicts are preserved for
-priority-weighted integration and traceability.
 
 ## Table VI(A): Structural Correctness
 

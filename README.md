@@ -50,7 +50,7 @@ OpenRE-Bench/
 │   ├── case_studies/       # 5 benchmark inputs (AD, ATM, Library,
 │   │                       #   RollCall, Bookkeeping)
 │   └── knowledge_base/     # Domain standards for RAG verification
-├── experiment_outputs/     # Pre-generated outputs (180 runs)
+├── experiment_outputs/     # Pre-generated outputs, run artifacts, paper tables
 ├── human_eval/             # Human evaluation data and agreement analysis
 ├── scripts/                # Evaluation and export utilities
 ├── tests/                  # Regression tests for harness and adapters
@@ -140,16 +140,20 @@ adapter.
 
 | Paper Reference | Artifact Location |
 |-----------------|-------------------|
-| Table III (Coverage and Diversity) | [`experiment_outputs/mare-iredev-quare/comparison_metrics_summary.csv`](experiment_outputs/mare-iredev-quare/comparison_metrics_summary.csv) |
-| Table IV (Semantic Preservation) | [`experiment_outputs/mare-iredev-quare/comparison_metrics_by_case.csv`](experiment_outputs/mare-iredev-quare/comparison_metrics_by_case.csv) |
-| Table V (Negotiation Summary) | [`experiment_outputs/mare-iredev-quare/comparison_ablation_table.csv`](experiment_outputs/mare-iredev-quare/comparison_ablation_table.csv) |
-| Table VI(A-B) (Validity and Compliance) | [`experiment_outputs/mare-iredev-quare/comparison_validity_log.md`](experiment_outputs/mare-iredev-quare/comparison_validity_log.md) |
-| Table VI(C) (Human Evaluation) | [`human_eval/analysis/`](human_eval/analysis/) |
+| Table II (Benchmark Systems) | [`experiment_outputs/mare-iredev-quare/paper_tables/table_ii_benchmark_systems.csv`](experiment_outputs/mare-iredev-quare/paper_tables/table_ii_benchmark_systems.csv) |
+| Table III (Coverage and Diversity) | [`experiment_outputs/mare-iredev-quare/paper_tables/table_iii_coverage_diversity.csv`](experiment_outputs/mare-iredev-quare/paper_tables/table_iii_coverage_diversity.csv) |
+| Table IV (Semantic Preservation) | [`experiment_outputs/mare-iredev-quare/paper_tables/table_iv_semantic_preservation.csv`](experiment_outputs/mare-iredev-quare/paper_tables/table_iv_semantic_preservation.csv) |
+| Table V (Negotiation Summary) | [`experiment_outputs/mare-iredev-quare/paper_tables/table_v_negotiation_summary.csv`](experiment_outputs/mare-iredev-quare/paper_tables/table_v_negotiation_summary.csv) |
+| Table VI(A) (Structural Correctness) | [`experiment_outputs/mare-iredev-quare/paper_tables/table_vi_a_structural_compliance.csv`](experiment_outputs/mare-iredev-quare/paper_tables/table_vi_a_structural_compliance.csv) |
+| Table VI(B) (LLM-Judge Quality Scores) | [`experiment_outputs/mare-iredev-quare/paper_tables/table_vi_b_llm_judge_quality.csv`](experiment_outputs/mare-iredev-quare/paper_tables/table_vi_b_llm_judge_quality.csv) |
+| Table VI(C) (Human Evaluation) | [`human_eval/analysis/`](human_eval/analysis/) and [`experiment_outputs/mare-iredev-quare/paper_tables/table_vi_c_human_llm_validation.csv`](experiment_outputs/mare-iredev-quare/paper_tables/table_vi_c_human_llm_validation.csv) |
 | Negotiation traces (Section V-B) | `experiment_outputs/mare-iredev-quare/runs/quare-*/phase2_negotiation_trace.json` |
 
 The summary report
 [`MARE-iReDev-QUARE-comparison-report.md`](MARE-iReDev-QUARE-comparison-report.md)
-provides a compact overview of the generated matrix outputs.
+provides a compact overview of the paper-reported experimental results. The
+machine-readable paper tables are indexed in
+[`experiment_outputs/mare-iredev-quare/paper_tables/`](experiment_outputs/mare-iredev-quare/paper_tables/).
 
 ## Human Evaluation
 
