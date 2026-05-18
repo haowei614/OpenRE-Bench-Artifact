@@ -154,6 +154,8 @@ The summary report
 provides a compact overview of the paper-reported experimental results. The
 machine-readable paper tables are indexed in
 [`experiment_outputs/mare-iredev-quare/paper_tables/`](experiment_outputs/mare-iredev-quare/paper_tables/).
+The corresponding experiment outputs are available at
+[`experiment_outputs/mare-iredev-quare/`](https://github.com/haowei614/OpenRE/tree/main/experiment_outputs/mare-iredev-quare).
 
 ## Human Evaluation
 
