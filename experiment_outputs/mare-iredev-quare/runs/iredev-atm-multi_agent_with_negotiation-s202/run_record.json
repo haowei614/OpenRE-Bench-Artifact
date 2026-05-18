@@ -11,24 +11,24 @@
     "system_name": "iredev",
     "implementation": "deterministic-parity-pipeline",
     "implementation_version": "0.1.0",
-    "python_version": "3.13.12",
-    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
-    "machine": "arm64"
+    "python_version": "3.14.0",
+    "platform": "Linux-6.18.10-2-cachyos-lts-x86_64-with-glibc2.43",
+    "machine": "x86_64"
   },
   "provenance": {
     "model": "gpt-4o-mini",
     "temperature": 0.7,
     "seed": 202,
-    "prompt_hash": "423f0ca8796fd2d4c769eff748d918a6837fee49d22d3a4c4879a1a6a57d59b6",
-    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
-    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+    "prompt_hash": "1ba498b78c21560fc469408ecdee90f5774ae6b6f95d0ad4bcdf6ed15c653a9e",
+    "corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
+    "corpus_path": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base"
   },
   "execution_flags": {
     "rag_fallback_used": false,
     "llm_fallback_used": true,
     "fallback_tainted": true,
-    "retry_used": false,
-    "retry_count": 0
+    "retry_used": true,
+    "retry_count": 3
   },
   "comparability": {
     "is_comparable": false,
@@ -40,20 +40,20 @@
   "rag_enabled": true,
   "rag_backend": "local_tfidf",
   "rag_fallback_used": false,
-  "start_timestamp": "2026-05-12T04:50:00Z",
-  "end_timestamp": "2026-05-12T04:50:00Z",
-  "runtime_seconds": 0.125475,
-  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s202",
+  "start_timestamp": "2026-02-17T09:47:15Z",
+  "end_timestamp": "2026-02-17T09:49:53Z",
+  "runtime_seconds": 158.602694,
+  "artifacts_dir": "experiment_outputs/iredev/runs/iredev-atm-multi_agent_with_negotiation-s202",
   "artifact_paths": {
-    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s202/phase1_initial_models.json",
-    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s202/phase2_negotiation_trace.json",
-    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s202/phase3_integrated_kaos_model.json",
-    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s202/phase4_verification_report.json"
+    "phase1_initial_models.json": "experiment_outputs/iredev/runs/iredev-atm-multi_agent_with_negotiation-s202/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/iredev/runs/iredev-atm-multi_agent_with_negotiation-s202/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/iredev/runs/iredev-atm-multi_agent_with_negotiation-s202/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/iredev/runs/iredev-atm-multi_agent_with_negotiation-s202/phase4_verification_report.json"
   },
   "artifact_blinded": false,
   "blinding_scheme_version": "",
   "blind_eval_run_id": "",
-  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "judge_pipeline_hash": "aca4416c757997fb3f3688c03e0d361b94a59adaca560b6cc5221f89f386eebd",
   "trace_audit_path": "",
   "notes": {
     "phase_a_b": true,
@@ -67,14 +67,13 @@
       "llm_source": "openai",
       "llm_enabled": true,
       "llm_seed": 202,
-      "llm_seed_applied_turns": 0,
-      "llm_turns": 0,
-      "llm_fallback_turns": 33,
-      "llm_retry_count": 0,
+      "llm_seed_applied_turns": 31,
+      "llm_turns": 31,
+      "llm_fallback_turns": 2,
+      "llm_retry_count": 3,
       "llm_parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback",
-      "llm_actions": [],
-      "fallback_actions": [
+      "execution_mode": "llm_hybrid_fallback",
+      "llm_actions": [
         "DialogueWithEndUser",
         "DialogueWithEndUser",
         "DialogueWithEndUser",
@@ -88,7 +87,6 @@
         "ConfirmOrRefineEndUser",
         "ConfirmOrRefineEndUser",
         "WriteInterviewRecords",
-        "WriteUserRequirementsList",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
@@ -106,8 +104,11 @@
         "SelectRequirementModel",
         "BuildRequirementModel",
         "WriteSRS",
-        "Evaluate",
         "ConfirmClosure"
+      ],
+      "fallback_actions": [
+        "WriteUserRequirementsList",
+        "Evaluate"
       ],
       "roles_executed": [
         "Interviewer",
@@ -171,132 +172,132 @@
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of ATM, I need Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction As a user of A..."
+          "summary": "The generated interview questions focus on understanding user goals, pain points, and acceptance criteria related to ATM usage, employing 5W1H and Socratic questioning techniques."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of ATM, I need Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction As a user of A..."
+          "summary": "The generated interview questions aim to uncover user goals, pain points, and acceptance criteria related to ATM usage by employing 5W1H and Socratic questioning techniques."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of ATM, I need Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction As a user of A..."
+          "summary": "The interview questions aim to uncover user goals, pain points, and acceptance criteria for ATM usage by employing 5W1H and Socratic techniques, ensuring a thorough understanding of user needs."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Response: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction"
-        },
-        {
-          "role": "EndUser",
-          "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
-          "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Response: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction Response: A bank client can h..."
-        },
-        {
-          "role": "EndUser",
-          "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
-          "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 4,
-          "summary": "Response: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction Response: A bank client can h..."
+          "summary": "The ATM system must address client pain points regarding transaction transparency, ease of account management, secure access via PIN, and prevention of negative balances to enhance user satisfaction."
+        },
+        {
+          "role": "EndUser",
+          "action": "RespondEndUser",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Clients prioritize detailed transaction histories, seamless account management, robust security measures, and the prevention of negative account balances as key expectations from their banking application."
+        },
+        {
+          "role": "EndUser",
+          "action": "RespondEndUser",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Clients express pain points related to transaction visibility, account management ease, security concerns, and the need to avoid negative balances."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user raises clarification questions regarding transaction history details, account linking management, negative balance prevention, and security measures for PIN verification."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user seeks clarification on the completeness of transaction history, the handling of multiple account types, and the prevention of negative balances."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Clarification questions focus on enhancing transaction history details, managing multiple account linkages, and ensuring prevention of negative balances."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: Recorded transactions must include the date, time, transaction type, amount and account... Confirmed: Response: Recorded transactions mu..."
+          "summary": "The requirements for the ATM system have been validated and refined based on user expectations regarding transaction clarity, account management, security, and balance prevention mechanisms."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: Recorded transactions must include the date, time, transaction type, amount and account... Confirmed: Response: Recorded transactions mu..."
+          "summary": "Refined the requirements based on user feedback to enhance transaction history clarity, account linking functionality, and overdraft prevention measures."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: Recorded transactions must include the date, time, transaction type, amount and account... Confirmed: Response: Recorded transactions mu..."
+          "summary": "The confirmation of requirements focuses on enhancing transaction clarity, ensuring seamless account management, and preventing negative balances, addressing user pain points and expectations."
         },
         {
           "role": "Interviewer",
           "action": "WriteInterviewRecords",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 4,
-          "summary": "Interview record 1: Response: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction Interview..."
+          "summary": "The interview records consolidate key requirements for the ATM system, including detailed transaction history, account management, security measures, and negative balance prevention, aligning with user expectations and ISO/IEC/IEEE 29148 standards."
         },
         {
           "role": "Interviewer",
@@ -304,179 +305,179 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 6,
           "summary": "UR-1: The system shall Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction UR-2: The system..."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "What infrastructure constraints apply to Recorded transactions must include the date, time, transaction type, amount and account balance a...? What infrastru..."
+          "summary": "The questions aim to clarify infrastructure constraints, security requirements, and scalability expectations for the ATM application's features."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to Recorded transactions must include the date, time, transaction type, amount and account balance a...? What infrastru..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Targeted questions are formulated to explore infrastructure constraints, security mandates, and scalability expectations related to the ATM application."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to Recorded transactions must include the date, time, transaction type, amount and account balance a...? What infrastru..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Targeted questions for the Deployer focus on infrastructure constraints, security mandates, and scalability expectations for the ATM system."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Deploy constraint: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployment strategy outlines key infrastructure, security, scalability, and operational procedures to ensure the ATM system meets user requirements efficiently."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Deploy constraint: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction Deploy constraint: A..."
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployment requires a cloud-based infrastructure for scalability and high availability, adherence to ISO/IEC 27001 for security, and operational procedures for continuous performance monitoring."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Deploy constraint: Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction Deploy constraint: A..."
+          "summary": "The deployment for the ATM system requires a cloud-based infrastructure for scalability, adherence to ISO/IEC 27001 for security, and a design capable of 20% annual growth in transaction volume."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Clarifications are needed on transaction history details, account linking management, and overdraft prevention mechanisms."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Clarifying questions focus on enhancing transaction history details, managing account linking for multiple accounts, and mechanisms to prevent negative balances."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Clarification is needed on transaction history details, account linking for multiple accounts, and mechanisms to prevent negative balances."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: Recorded transactions must include the date, time, transaction type, amount an... Confirmed: Deploy constraint: Recorded transa..."
+          "summary": "The deployment validation for the ATM system confirms the necessity for detailed transaction records, seamless account management, robust security measures, and strict prevention of negative balances."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: Recorded transactions must include the date, time, transaction type, amount an... Confirmed: Deploy constraint: Recorded transa..."
+          "summary": "The deployment requirements for the ATM application have been validated and are aligned with user expectations regarding transaction clarity, account management, security, and balance prevention."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: Recorded transactions must include the date, time, transaction type, amount an... Confirmed: Deploy constraint: Recorded transa..."
+          "summary": "The requirements for the ATM deployment focus on enhancing transaction clarity, managing account types effectively, ensuring security through PIN authentication, and preventing negative balances."
         },
         {
           "role": "Interviewer",
           "action": "WriteOperatingEnvironmentList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "ENV-1: Standard web server with HTTPS termination ENV-2: Relational database with backup and recovery procedures ENV-3: Authentication and access control fra..."
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "The operating environment for the ATM system requires a cloud-based infrastructure, compliance with ISO/IEC 27001 standards, scalability for increasing transaction volumes, and robust security measures."
         },
         {
           "role": "Analyst",
           "action": "WriteSystemRequirementsList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 9,
-          "summary": "SR-1: The system shall UR-1: The system shall Recorded transactions must include the date, time, transaction type, amount and account balance after the trans..."
+          "fallback_reason": "",
+          "output_count": 10,
+          "summary": "The consolidated system requirements define transaction recording, account management, security measures, and infrastructure needs for the ATM system, ensuring clarity, compliance, and scalability."
         },
         {
           "role": "Analyst",
           "action": "SelectRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 1,
-          "summary": "Selected model: Use Case Diagram (UML) — suitable for stakeholder interactions"
+          "summary": "A UML Use Case Diagram is selected to model the ATM system, capturing user interactions and functional requirements effectively."
         },
         {
           "role": "Analyst",
           "action": "BuildRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 6,
-          "summary": "Model element: system Model element: shall Model element: system Model element: shall Model element: recorded Model element: transactions"
+          "fallback_reason": "parse_failed: invalid recovered JSON: Expecting ',' delimiter: line 3 column 19 (char 33)",
+          "output_count": 1,
+          "summary": "Constructed a UML Use Case Diagram for the ATM system, highlighting key requirements and constraints including transaction recording, account management, and security protocols."
         },
         {
           "role": "Archivist",
           "action": "WriteSRS",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 4,
-          "summary": "SRS-1 Purpose and Scope SRS-2 Functional Requirements SRS-3 Non-Functional Requirements and Quality Attributes SRS-4 External Interface Requirements"
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "The SRS for the ATM system details requirements for transaction recording, account management, security compliance, and performance expectations, structured per IEEE 830 guidelines."
         },
         {
           "role": "Reviewer",
@@ -484,56 +485,58 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 2,
           "summary": "Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. Finding: Ensure traceability from user requirements to system..."
         },
         {
           "role": "Reviewer",
           "action": "ConfirmClosure",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Closure: Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. — resolved Closure: Finding: Ensure traceability fro..."
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "All findings related to the requirements have been confirmed as resolved, ensuring clarity, security, and effective account management within the ATM system."
         }
       ],
       "workspace_summary": {
         "interview_records": 4,
         "user_requirements": 6,
-        "operating_environment": 3,
-        "enduser_responses": 7,
-        "enduser_questions": 3,
+        "operating_environment": 5,
+        "enduser_responses": 12,
+        "enduser_questions": 9,
         "enduser_confirmations": 9,
-        "deployer_responses": 6,
-        "deployer_questions": 3,
+        "deployer_responses": 9,
+        "deployer_questions": 9,
         "deployer_confirmations": 9,
-        "system_requirements": 9,
+        "system_requirements": 10,
         "selected_model": 1,
-        "requirement_model": 6,
-        "srs_sections": 4,
+        "requirement_model": 1,
+        "srs_sections": 6,
         "review_findings": 2,
-        "closure_confirmations": 2,
+        "closure_confirmations": 5,
         "dialogue_rounds": 3,
         "total_action_fires": 33,
         "distinct_actions_fired": 17,
-        "llm_turns": 0,
-        "llm_fallback_turns": 33
+        "llm_turns": 31,
+        "llm_fallback_turns": 2
       },
-      "workspace_digest": "fe5ad655381edd778579a24a1ea2e2ee192cae8ebdce1cbeb2de1d1b92248fca"
+      "workspace_digest": "e5e5828b319ad5dd383bf230fa304605317225ae037efaaa420d0cc110e3dd83"
     },
     "case_description": "Automated Teller Machine System",
     "system": "iredev",
     "setting": "multi_agent_with_negotiation",
     "negotiation_enabled": true,
     "verification_executed": false,
-    "system_behaviors": {
-      "phase2_uses_llm": false,
-      "phase2_llm_active": false,
-      "optional_artifact_count": 0
+    "quare_only_behaviors": {
+      "phase0_external_spec_processing": false,
+      "dynamic_round_control": false,
+      "phase25_conflict_map_generation": false,
+      "phase5_software_materials_generation": false,
+      "phase2_dialectic_negotiation": false
     },
-    "optional_artifacts": {},
+    "quare_optional_artifacts": {},
     "phase2_llm": {
       "source": "disabled",
       "enabled": false,
@@ -544,20 +547,20 @@
       "retry_count": 0,
       "parse_recoveries": 0
     },
-    "runtime_llm": {
+    "mare_runtime_llm": {
       "source": "openai",
       "enabled": true,
       "seed": 202,
-      "seed_applied_turns": 0,
-      "turns": 0,
-      "fallback_turns": 33,
-      "retry_count": 0,
+      "seed_applied_turns": 31,
+      "turns": 31,
+      "fallback_turns": 2,
+      "retry_count": 3,
       "parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback"
+      "execution_mode": "llm_hybrid_fallback"
     },
-    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
-    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_corpus_dir": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base",
+    "rag_corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
     "rag_chunk_count": 308,
-    "prompt_contract_hash": "423f0ca8796fd2d4c769eff748d918a6837fee49d22d3a4c4879a1a6a57d59b6"
+    "prompt_contract_hash": "1ba498b78c21560fc469408ecdee90f5774ae6b6f95d0ad4bcdf6ed15c653a9e"
   }
 }

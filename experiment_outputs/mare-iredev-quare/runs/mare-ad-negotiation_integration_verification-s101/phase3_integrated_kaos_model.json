@@ -3,7 +3,7 @@
     {
       "id": "CHE-L1-004",
       "name": "Checker Goal",
-      "description": "Checker objective for AD: Check report item 1: Potential trade-off detected: responses shall not relax core safety and security constraints.",
+      "description": "Checker objective for AD: 1. The requirement 'The system operates in specific urban and highway scenarios' must specify the exact characteristics of these scenarios to reduce ambiguity and ensure clear verification.",
       "gsn_type": "Goal",
       "quality_attribute": "Safety",
       "priority": 1,
@@ -14,7 +14,7 @@
       "properties": {
         "original_kaos_type": "Goal",
         "source": "openre_bench.phase1.rag",
-        "source_document": "knowledge_guide.py",
+        "source_document": "cases/real_world_studies.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -23,7 +23,7 @@
     {
       "id": "CHE-L2-004-01",
       "name": "Checker Output 1",
-      "description": "The system shall Check report item 1: Potential trade-off detected: responses shall not relax core safety and security constraints.",
+      "description": "The system shall 1. The requirement 'The system operates in specific urban and highway scenarios' must specify the exact characteristics of these scenarios to reduce ambiguity and ensure clear verification.",
       "gsn_type": "Strategy",
       "quality_attribute": "Safety",
       "priority": 1,
@@ -34,7 +34,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "knowledge_guide.py",
+        "source_document": "cases/real_world_studies.py",
         "conflict_resolved_by": null,
         "validation_status": "candidate_resolution",
         "citation_required": true
@@ -43,7 +43,7 @@
     {
       "id": "CHE-L2-004-02",
       "name": "Checker Output 2",
-      "description": "The system shall Check report item 2: All requirements should remain verifiable with explicit measurable criteria.",
+      "description": "The system shall 2. The requirement regarding 'continuous monitoring of ODD compliance' requires explicit definitions of ODD criteria and communication methods to the driver to avoid potential conflict risks.",
       "gsn_type": "Strategy",
       "quality_attribute": "Safety",
       "priority": 1,
@@ -61,9 +61,49 @@
       }
     },
     {
+      "id": "CHE-L2-004-03",
+      "name": "Checker Output 3",
+      "description": "The system shall 3. The term 'HMI warning' needs a clear definition to ensure consistent interpretation and verifiability across the implementation and testing phases.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-04",
+      "name": "Checker Output 4",
+      "description": "The system shall 4. The multiobjective optimization requirement for safety, smoothness, and speed needs to clarify specific metrics for each objective to mitigate inherent conflicts in optimization.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
       "id": "COL-L1-002",
       "name": "Collector Goal",
-      "description": "Collector objective for AD: Draft requirement 1: The system shall As a stakeholder of AD, I need - The system operates in specific urban and highway scenarios",
+      "description": "Collector objective for AD: The system shall operate in urban environments characterized by dense traffic, pedestrian crossings, and various traffic signals, as well as highway scenarios with higher speed limits and fewer obstacles.",
       "gsn_type": "Goal",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -74,7 +114,7 @@
       "properties": {
         "original_kaos_type": "Goal",
         "source": "openre_bench.phase1.rag",
-        "source_document": "cases/real_world_studies.py",
+        "source_document": "sample_knowledge.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -83,7 +123,7 @@
     {
       "id": "COL-L2-002-01",
       "name": "Collector Output 1",
-      "description": "The system shall Draft requirement 1: The system shall As a stakeholder of AD, I need - The system operates in specific urban and highway scenarios",
+      "description": "The system shall The system shall operate in urban environments characterized by dense traffic, pedestrian crossings, and various traffic signals, as well as highway scenarios with higher speed limits and fewer obstacles.",
       "gsn_type": "Strategy",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -94,7 +134,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "cases/real_world_studies.py",
+        "source_document": "sample_knowledge.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -103,7 +143,7 @@
     {
       "id": "COL-L2-002-02",
       "name": "Collector Output 2",
-      "description": "The system shall Draft requirement 2: The system shall As a stakeholder of AD, I need It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached",
+      "description": "The system shall The system shall continuously monitor Operational Design Domain (ODD) compliance and shall alert the driver with a clear visual signal and audible alert when boundaries are reached, indicating the need for human takeo...",
       "gsn_type": "Strategy",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -123,12 +163,32 @@
     {
       "id": "COL-L2-002-03",
       "name": "Collector Output 3",
-      "description": "The system shall Draft requirement 3: The system shall As a stakeholder of AD, I need [Efficiency & Planning Requirements - Based on EM Motion Planner]",
+      "description": "The system shall The motion planner shall optimize for safety, measured by the number of near-miss incidents, smoothness, assessed through passenger comfort ratings, and speed, quantified by the time taken to reach the destination, co...",
       "gsn_type": "Strategy",
       "quality_attribute": "Efficiency",
       "priority": 1,
       "stakeholder": "Collector",
       "measurable_criteria": "Collector action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-04",
+      "name": "Collector Output 4",
+      "description": "The system shall The path-speed decoupling framework shall be implemented to ensure that the motion planner can effectively address the three conflicting objectives of safety, smoothness, and speed.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 4",
       "hierarchy_level": 2,
       "parent_goal_id": "COL-L1-002",
       "properties": {
@@ -141,29 +201,9 @@
       }
     },
     {
-      "id": "COL-L2-002-04",
-      "name": "Collector Output 4",
-      "description": "The system shall Draft requirement 4: The system shall As a stakeholder of AD, I need Multiobjective Optimization:",
-      "gsn_type": "Strategy",
-      "quality_attribute": "Efficiency",
-      "priority": 1,
-      "stakeholder": "Collector",
-      "measurable_criteria": "Collector action artifact 4",
-      "hierarchy_level": 2,
-      "parent_goal_id": "COL-L1-002",
-      "properties": {
-        "original_kaos_type": "Task",
-        "source": "openre_bench.phase1.rag",
-        "source_document": "sample_knowledge.py",
-        "conflict_resolved_by": null,
-        "validation_status": "pending",
-        "citation_required": true
-      }
-    },
-    {
       "id": "DOC-L1-005",
       "name": "Documenter Goal",
-      "description": "Documenter objective for AD: SRS-1 Scope and Stakeholders",
+      "description": "Documenter objective for AD: 1. Introduction: Overview of system capabilities and objectives.",
       "gsn_type": "Goal",
       "quality_attribute": "Sustainability",
       "priority": 1,
@@ -183,7 +223,7 @@
     {
       "id": "DOC-L2-005-01",
       "name": "Documenter Output 1",
-      "description": "The system shall SRS-1 Scope and Stakeholders",
+      "description": "The system shall 1. Introduction: Overview of system capabilities and objectives.",
       "gsn_type": "Strategy",
       "quality_attribute": "Sustainability",
       "priority": 1,
@@ -203,7 +243,7 @@
     {
       "id": "DOC-L2-005-02",
       "name": "Documenter Output 2",
-      "description": "The system shall SRS-2 Functional and Quality Requirements",
+      "description": "The system shall 2. Operational Design Domain (ODD): Definition of specific urban and highway scenarios for system operation.",
       "gsn_type": "Strategy",
       "quality_attribute": "Sustainability",
       "priority": 1,
@@ -214,7 +254,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source_document": "standards/latest_2024.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -223,7 +263,7 @@
     {
       "id": "DOC-L2-005-03",
       "name": "Documenter Output 3",
-      "description": "The system shall SRS-3 Verification and Acceptance Criteria",
+      "description": "The system shall 3. ODD Compliance Monitoring: Continuous monitoring protocols and HMI warning specifications.",
       "gsn_type": "Strategy",
       "quality_attribute": "Sustainability",
       "priority": 1,
@@ -241,9 +281,29 @@
       }
     },
     {
+      "id": "DOC-L2-005-04",
+      "name": "Documenter Output 4",
+      "description": "The system shall 4. Motion Planning Objectives: Multiobjective optimization criteria focusing on safety, smoothness, and speed.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
       "id": "MOD-L1-003",
       "name": "Modeler Goal",
-      "description": "Modeler objective for AD: Entity: draft",
+      "description": "Modeler objective for AD: Entity: system",
       "gsn_type": "Goal",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -263,7 +323,7 @@
     {
       "id": "MOD-L2-003-01",
       "name": "Modeler Output 1",
-      "description": "The system shall Entity: draft Negotiated trade-off accepted by Checker.",
+      "description": "The system shall Entity: system",
       "gsn_type": "Strategy",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -275,15 +335,15 @@
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
         "source_document": "automotive_safety.py",
-        "conflict_resolved_by": "Checker",
-        "validation_status": "resolved",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
         "citation_required": true
       }
     },
     {
       "id": "MOD-L2-003-02",
       "name": "Modeler Output 2",
-      "description": "The system shall Entity: requirement Negotiated trade-off accepted by Checker.",
+      "description": "The system shall Entity: urban environments",
       "gsn_type": "Strategy",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -294,16 +354,16 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
-        "conflict_resolved_by": "Checker",
-        "validation_status": "resolved",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
         "citation_required": true
       }
     },
     {
       "id": "MOD-L2-003-03",
       "name": "Modeler Output 3",
-      "description": "The system shall Entity: system Negotiated trade-off accepted by Checker.",
+      "description": "The system shall Entity: highway scenarios",
       "gsn_type": "Strategy",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -315,15 +375,15 @@
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
         "source_document": "automotive_safety.py",
-        "conflict_resolved_by": "Checker",
-        "validation_status": "resolved",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
         "citation_required": true
       }
     },
     {
       "id": "MOD-L2-003-04",
       "name": "Modeler Output 4",
-      "description": "The system shall Entity: shall Negotiated trade-off accepted by Checker.",
+      "description": "The system shall Entity: Operational Design Domain (ODD)",
       "gsn_type": "Strategy",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -334,16 +394,16 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "sample_knowledge.py",
-        "conflict_resolved_by": "Checker",
-        "validation_status": "resolved",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
         "citation_required": true
       }
     },
     {
       "id": "STA-L1-001",
       "name": "Stakeholders Goal",
-      "description": "Stakeholders objective for AD: As a stakeholder of AD, I need - The system operates in specific urban and highway scenarios",
+      "description": "Stakeholders objective for AD: As a city planner, I want the system to operate efficiently in urban and highway scenarios so that it can adapt to different driving environments.",
       "gsn_type": "Goal",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -363,7 +423,7 @@
     {
       "id": "STA-L2-001-01",
       "name": "Stakeholders Output 1",
-      "description": "The system shall As a stakeholder of AD, I need - The system operates in specific urban and highway scenarios Negotiated trade-off accepted by Collector.",
+      "description": "The system shall As a city planner, I want the system to operate efficiently in urban and highway scenarios so that it can adapt to different driving environments. Negotiated trade-off accepted by Collector.",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -383,7 +443,7 @@
     {
       "id": "STA-L2-001-02",
       "name": "Stakeholders Output 2",
-      "description": "The system shall As a stakeholder of AD, I need It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached Negotiated trade-off accepted by Collector.",
+      "description": "The system shall As a safety officer, I need the system to continuously monitor ODD compliance and alert the driver when boundaries are reached to ensure passenger safety. Negotiated trade-off accepted by Collector.",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -403,7 +463,7 @@
     {
       "id": "STA-L2-001-03",
       "name": "Stakeholders Output 3",
-      "description": "The system shall As a stakeholder of AD, I need [Efficiency & Planning Requirements - Based on EM Motion Planner] Negotiated trade-off accepted by Collector.",
+      "description": "The system shall As a transportation efficiency analyst, I want the motion planner to optimize for safety, smoothness, and speed concurrently to enhance the overall user experience. Negotiated trade-off accepted by Collector.",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -414,7 +474,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source_document": "sample_knowledge.py",
         "conflict_resolved_by": "Collector",
         "validation_status": "resolved",
         "citation_required": true
@@ -423,7 +483,7 @@
     {
       "id": "STA-L2-001-04",
       "name": "Stakeholders Output 4",
-      "description": "The system shall As a stakeholder of AD, I need Multiobjective Optimization: Negotiated trade-off accepted by Collector.",
+      "description": "The system shall As a passenger, I want the system to prioritize comfort while ensuring timely arrival at my destination. Negotiated trade-off accepted by Collector.",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -466,8 +526,8 @@
     },
     {
       "id": "REL-003",
-      "source_id": "COL-L1-002",
-      "target_id": "COL-L2-002-01",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-03",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -477,8 +537,8 @@
     },
     {
       "id": "REL-004",
-      "source_id": "COL-L1-002",
-      "target_id": "COL-L2-002-02",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-04",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -489,7 +549,7 @@
     {
       "id": "REL-005",
       "source_id": "COL-L1-002",
-      "target_id": "COL-L2-002-03",
+      "target_id": "COL-L2-002-01",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -500,7 +560,7 @@
     {
       "id": "REL-006",
       "source_id": "COL-L1-002",
-      "target_id": "COL-L2-002-04",
+      "target_id": "COL-L2-002-02",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -510,8 +570,8 @@
     },
     {
       "id": "REL-007",
-      "source_id": "DOC-L1-005",
-      "target_id": "DOC-L2-005-01",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-03",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -521,8 +581,8 @@
     },
     {
       "id": "REL-008",
-      "source_id": "DOC-L1-005",
-      "target_id": "DOC-L2-005-02",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-04",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -533,7 +593,7 @@
     {
       "id": "REL-009",
       "source_id": "DOC-L1-005",
-      "target_id": "DOC-L2-005-03",
+      "target_id": "DOC-L2-005-01",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -543,8 +603,8 @@
     },
     {
       "id": "REL-010",
-      "source_id": "MOD-L1-003",
-      "target_id": "MOD-L2-003-01",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-02",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -554,8 +614,8 @@
     },
     {
       "id": "REL-011",
-      "source_id": "MOD-L1-003",
-      "target_id": "MOD-L2-003-02",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-03",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -565,8 +625,8 @@
     },
     {
       "id": "REL-012",
-      "source_id": "MOD-L1-003",
-      "target_id": "MOD-L2-003-03",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-04",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -577,7 +637,7 @@
     {
       "id": "REL-013",
       "source_id": "MOD-L1-003",
-      "target_id": "MOD-L2-003-04",
+      "target_id": "MOD-L2-003-01",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -587,6 +647,39 @@
     },
     {
       "id": "REL-014",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-015",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-016",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-017",
       "source_id": "STA-L1-001",
       "target_id": "STA-L2-001-01",
       "connection_type": "SupportedBy",
@@ -597,7 +690,7 @@
       }
     },
     {
-      "id": "REL-015",
+      "id": "REL-018",
       "source_id": "STA-L1-001",
       "target_id": "STA-L2-001-02",
       "connection_type": "SupportedBy",
@@ -608,7 +701,7 @@
       }
     },
     {
-      "id": "REL-016",
+      "id": "REL-019",
       "source_id": "STA-L1-001",
       "target_id": "STA-L2-001-03",
       "connection_type": "SupportedBy",
@@ -619,7 +712,7 @@
       }
     },
     {
-      "id": "REL-017",
+      "id": "REL-020",
       "source_id": "STA-L1-001",
       "target_id": "STA-L2-001-04",
       "connection_type": "SupportedBy",
@@ -634,7 +727,7 @@
     "model_id": "model_mare-ad-negotiation_integration_verification-s101",
     "name": "OpenRE-Bench Integrated KAOS for AD",
     "description": "Deterministic protocol-aligned integrated GSN model.",
-    "created_timestamp": "2026-05-12T04:49:58Z",
+    "created_timestamp": "2026-02-17T04:29:48Z",
     "requirement_source": "Project: Baidu Apollo Autonomous Driving System (Planning & Control Module)\n\n[System Context]\nThe system is a Level 4 autonomous driving platform operating in mixed traffic environments. It must strictly adhere to the \"Apollo Pilot Safety Report\" and the \"EM Motion Planner\" specifications.\n\n[Safety Requirements - Based on Apollo Pilot Safety Report]\n1. Multi-Layer Safety Architecture:\n   - The system must implement \"Passive Safety\" (collision protection), \"Active Safety\" (ACC, AEB, LKA), and \"Functional Safety\" (fail-safe mechanisms).\n2. Minimal Risk Maneuver (MRM):\n   - Upon detecting a critical system failure (e.g., sensor loss, localization failure) or exiting the ODD, the vehicle must NOT simply stop in lane immediately if unsafe. It must execute an MRM to safely pull over or stop in a low-risk zone within a specific time window.\n3. ODD (Operational Design Domain):\n   - The system operates in specific urban and highway scenarios. It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached.\n\n[Efficiency & Planning Requirements - Based on EM Motion Planner]\n1. Multiobjective Optimization:\n   - The planner must simultaneously optimize for three conflicting objectives: Safety (collision avoidance), Smoothness (passenger comfort), and Speed (reaching destination).\n2. Path-Speed Decoupling (EM Framework):\n   - The system must use the Expectation-Maximization (EM) framework.\n   - Step 1 (E-step): Generate an optimal path in the Frenet Frame (SL-Graph).\n   - Step 2 (M-step): Generate an optimal speed profile in the Station-Time Frame (ST-Graph).\n3. Hard Constraints (Mathematical):\n   - Trajectory smoothness is critical. The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort.\n   - Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip.\n   - Non-convex obstacle constraints must be handled using iterative quadratic programming (QP).\n\n[Conflict Scenario for Negotiation]\n- The SafetyAgent prioritizes \"Passive Safety\" and strictly enforcing safe distances and MRM execution.\n- The EfficiencyAgent prioritizes \"Smoothness\" and \"Speed\" using the QP function to minimize Jerk.\n- **Potential Conflict**: An emergency MRM (Safety) triggered by a fault might violate the Jerk/Smoothness constraints (Efficiency), requiring architectural negotiation (e.g., relaxing smoothness constraints during MRM).",
     "model_type": "GSN",
     "quality_attributes": [
@@ -697,6 +790,18 @@
         "parent_goal_id": "CHE-L1-004"
       },
       {
+        "id": "CHE-L2-004-03",
+        "name": "Checker Output 3",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-04",
+        "name": "Checker Output 4",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
         "id": "COL-L2-002-01",
         "name": "Collector Output 1",
         "quality_attribute": "Efficiency",
@@ -735,6 +840,12 @@
       {
         "id": "DOC-L2-005-03",
         "name": "Documenter Output 3",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      },
+      {
+        "id": "DOC-L2-005-04",
+        "name": "Documenter Output 4",
         "quality_attribute": "Sustainability",
         "parent_goal_id": "DOC-L1-005"
       },
@@ -791,7 +902,9 @@
     "parent_child_mappings": {
       "CHE-L1-004": [
         "CHE-L2-004-01",
-        "CHE-L2-004-02"
+        "CHE-L2-004-02",
+        "CHE-L2-004-03",
+        "CHE-L2-004-04"
       ],
       "COL-L1-002": [
         "COL-L2-002-01",
@@ -802,7 +915,8 @@
       "DOC-L1-005": [
         "DOC-L2-005-01",
         "DOC-L2-005-02",
-        "DOC-L2-005-03"
+        "DOC-L2-005-03",
+        "DOC-L2-005-04"
       ],
       "MOD-L1-003": [
         "MOD-L2-003-01",
@@ -830,7 +944,7 @@
     "invalid_leaves": []
   },
   "model_id": "model_mare-ad-negotiation_integration_verification-s101",
-  "created_timestamp": "2026-05-12T04:49:58Z",
-  "total_elements": 22,
-  "total_relations": 17
+  "created_timestamp": "2026-02-17T04:29:48Z",
+  "total_elements": 25,
+  "total_relations": 20
 }

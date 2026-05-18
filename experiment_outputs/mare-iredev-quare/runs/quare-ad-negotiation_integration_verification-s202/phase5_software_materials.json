@@ -2,7 +2,7 @@
   "phase": "5_software_materials_generation",
   "case_id": "AD",
   "setting": "negotiation_integration_verification",
-  "generated_at": "2026-05-12T04:49:58Z",
+  "generated_at": "2026-02-26T10:41:43Z",
   "materials": {
     "srs_outline": [
       "System Scope and Stakeholders",
@@ -53,12 +53,6 @@
         "verification_anchor": "resolved"
       },
       {
-        "element_id": "EFF-L2-002-06",
-        "quality_attribute": "Efficiency",
-        "statement": "The system shall ensure efficiency (resource utilization): [Safety Requirements - Based on Apollo Pilot Safety Report]",
-        "verification_anchor": "resolved"
-      },
-      {
         "element_id": "RES-L1-005",
         "quality_attribute": "Responsibility",
         "statement": "Responsibility objective for AD: Path-Speed Decoupling (EM Framework):",
@@ -98,6 +92,12 @@
         "element_id": "RES-L2-005-06",
         "quality_attribute": "Responsibility",
         "statement": "The system shall ensure responsibility (ethical compliance): - Trajectory smoothness is critical",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "RES-L2-005-07",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (regulatory accountability): The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
         "verification_anchor": "pending"
       },
       {
@@ -179,12 +179,6 @@
         "verification_anchor": "pending"
       },
       {
-        "element_id": "SUS-L2-003-06",
-        "quality_attribute": "Sustainability",
-        "statement": "The system shall ensure sustainability (environmental impact awareness): It must execute an MRM to safely pull over or stop in a low-risk zone within a specific time window",
-        "verification_anchor": "pending"
-      },
-      {
         "element_id": "TRU-L1-004",
         "quality_attribute": "Trustworthiness",
         "statement": "Trustworthiness objective for AD: ODD (Operational Design Domain):",
@@ -194,46 +188,52 @@
         "element_id": "TRU-L2-004-01",
         "quality_attribute": "Trustworthiness",
         "statement": "The system shall ensure trustworthiness (security assurance): ODD (Operational Design Domain):",
-        "verification_anchor": "pending"
+        "verification_anchor": "resolved"
       },
       {
         "element_id": "TRU-L2-004-02",
         "quality_attribute": "Trustworthiness",
         "statement": "The system shall ensure trustworthiness (auditability): - The system operates in specific urban and highway scenarios",
-        "verification_anchor": "pending"
+        "verification_anchor": "resolved"
       },
       {
         "element_id": "TRU-L2-004-03",
         "quality_attribute": "Trustworthiness",
         "statement": "The system shall ensure trustworthiness (integrity guarantees): It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached",
-        "verification_anchor": "pending"
+        "verification_anchor": "resolved"
       },
       {
         "element_id": "TRU-L2-004-04",
         "quality_attribute": "Trustworthiness",
         "statement": "The system shall ensure trustworthiness (security assurance): [Efficiency & Planning Requirements - Based on EM Motion Planner]",
-        "verification_anchor": "pending"
+        "verification_anchor": "resolved"
       },
       {
         "element_id": "TRU-L2-004-05",
         "quality_attribute": "Trustworthiness",
         "statement": "The system shall ensure trustworthiness (auditability): Multiobjective Optimization:",
-        "verification_anchor": "pending"
+        "verification_anchor": "resolved"
       },
       {
         "element_id": "TRU-L2-004-06",
         "quality_attribute": "Trustworthiness",
         "statement": "The system shall ensure trustworthiness (integrity guarantees): - The planner must simultaneously optimize for three conflicting objectives: Safety (collision avoidance), Smooth...",
-        "verification_anchor": "pending"
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-07",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (security assurance): Path-Speed Decoupling (EM Framework):",
+        "verification_anchor": "resolved"
       }
     ]
   },
   "quality_signals": {
     "topology_is_valid": true,
     "deterministic_is_valid": true,
-    "compliance_coverage": 0.9,
+    "compliance_coverage": 0.833333,
     "s_logic": 1.0,
-    "detected_conflict_pairs": 2,
+    "detected_conflict_pairs": 3,
     "resolved_conflict_pairs": 2
   }
 }

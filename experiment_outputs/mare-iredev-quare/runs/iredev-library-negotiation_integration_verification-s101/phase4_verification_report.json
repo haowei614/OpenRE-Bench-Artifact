@@ -3,7 +3,7 @@
     "fact_checking": {
       "hallucination_reports": [],
       "flagged_elements": [],
-      "total_checked": 30
+      "total_checked": 27
     },
     "deterministic_validation": {
       "is_valid": true,
@@ -30,8 +30,8 @@
       "issues": [],
       "logical_score": 5,
       "logical_score_normalized": 1.0,
-      "terminology_score": 3,
-      "terminology_consistency_ratio": 0.75
+      "terminology_score": 1,
+      "terminology_consistency_ratio": 0.333333
     },
     "universal_verification": {
       "verification_summary": {
@@ -45,32 +45,32 @@
         "extracted_constraints": [
           {
             "clause": "A library management system must allow library members to borrow and return books",
-            "best_overlap": 0.8,
+            "best_overlap": 0.545455,
             "matched": true
           },
           {
             "clause": "The system must track which books are available, which are borrowed, and by whom",
-            "best_overlap": 0.8,
+            "best_overlap": 0.555556,
             "matched": true
           },
           {
             "clause": "Members must be able to search for books by title, author, or ISBN",
-            "best_overlap": 0.764706,
+            "best_overlap": 0.526316,
             "matched": true
           },
           {
             "clause": "The system must enforce borrowing limits (e",
-            "best_overlap": 0.25,
+            "best_overlap": 0.2,
             "matched": false
           },
           {
             "clause": ", maximum number of books per member) and track overdue books",
-            "best_overlap": 0.222222,
+            "best_overlap": 0.242424,
             "matched": false
           },
           {
             "clause": "Librarians must be able to add new books, remove books, and manage member accounts",
-            "best_overlap": 0.8125,
+            "best_overlap": 0.553191,
             "matched": true
           }
         ]
@@ -95,39 +95,39 @@
       "clauses": [
         {
           "clause": "A library management system must allow library members to borrow and return books",
-          "best_overlap": 0.8,
+          "best_overlap": 0.545455,
           "matched": true
         },
         {
           "clause": "The system must track which books are available, which are borrowed, and by whom",
-          "best_overlap": 0.8,
+          "best_overlap": 0.555556,
           "matched": true
         },
         {
           "clause": "Members must be able to search for books by title, author, or ISBN",
-          "best_overlap": 0.764706,
+          "best_overlap": 0.526316,
           "matched": true
         },
         {
           "clause": "The system must enforce borrowing limits (e",
-          "best_overlap": 0.25,
+          "best_overlap": 0.2,
           "matched": false
         },
         {
           "clause": ", maximum number of books per member) and track overdue books",
-          "best_overlap": 0.222222,
+          "best_overlap": 0.242424,
           "matched": false
         },
         {
           "clause": "Librarians must be able to add new books, remove books, and manage member accounts",
-          "best_overlap": 0.8125,
+          "best_overlap": 0.553191,
           "matched": true
         }
       ]
     },
     "terminology_consistency": {
-      "score": 3,
-      "consistency_ratio": 0.75,
+      "score": 1,
+      "consistency_ratio": 0.333333,
       "conflicts": [
         {
           "concept": "user",
@@ -146,7 +146,6 @@
             "DEP-L2-003-03",
             "DEP-L2-003-04",
             "END-L1-002",
-            "END-L2-002-01",
             "END-L2-002-02",
             "END-L2-002-03",
             "END-L2-002-04",
@@ -156,20 +155,84 @@
             "INT-L2-001-03",
             "INT-L2-001-04",
             "REV-L2-006-02",
+            "REV-L2-006-03",
             "REV-L2-006-04"
+          ]
+        },
+        {
+          "concept": "system",
+          "terms_used": [
+            "platform",
+            "service",
+            "system"
+          ],
+          "requirements": [
+            "ANA-L1-004",
+            "ANA-L2-004-01",
+            "ANA-L2-004-02",
+            "ANA-L2-004-03",
+            "ANA-L2-004-04",
+            "ARC-L1-005",
+            "ARC-L2-005-01",
+            "DEP-L1-003",
+            "DEP-L2-003-01",
+            "DEP-L2-003-02",
+            "DEP-L2-003-03",
+            "DEP-L2-003-04",
+            "END-L2-002-01",
+            "END-L2-002-02",
+            "END-L2-002-03",
+            "END-L2-002-04",
+            "INT-L2-001-01",
+            "INT-L2-001-02",
+            "INT-L2-001-03",
+            "INT-L2-001-04",
+            "REV-L2-006-01",
+            "REV-L2-006-02",
+            "REV-L2-006-03",
+            "REV-L2-006-04"
+          ]
+        },
+        {
+          "concept": "data",
+          "terms_used": [
+            "data",
+            "record"
+          ],
+          "requirements": [
+            "ANA-L1-004",
+            "ANA-L2-004-01",
+            "DEP-L2-003-02",
+            "END-L1-002",
+            "END-L2-002-01",
+            "INT-L1-001",
+            "INT-L2-001-01",
+            "REV-L2-006-03"
+          ]
+        },
+        {
+          "concept": "transaction",
+          "terms_used": [
+            "action",
+            "operation"
+          ],
+          "requirements": [
+            "ARC-L1-005",
+            "ARC-L2-005-01",
+            "REV-L2-006-03"
           ]
         }
       ],
-      "total_concepts": 4,
-      "consistent_concepts": 3
+      "total_concepts": 6,
+      "consistent_concepts": 2
     },
     "s_logic": 1.0,
-    "s_term": 0.75
+    "s_term": 0.333333
   },
   "fact_checking": {
     "hallucination_reports": [],
     "flagged_elements": [],
-    "total_checked": 30
+    "total_checked": 27
   },
   "deterministic_validation": {
     "is_valid": true,
@@ -196,8 +259,8 @@
     "issues": [],
     "logical_score": 5,
     "logical_score_normalized": 1.0,
-    "terminology_score": 3,
-    "terminology_consistency_ratio": 0.75
+    "terminology_score": 1,
+    "terminology_consistency_ratio": 0.333333
   },
   "universal_verification": {
     "verification_summary": {
@@ -211,32 +274,32 @@
       "extracted_constraints": [
         {
           "clause": "A library management system must allow library members to borrow and return books",
-          "best_overlap": 0.8,
+          "best_overlap": 0.545455,
           "matched": true
         },
         {
           "clause": "The system must track which books are available, which are borrowed, and by whom",
-          "best_overlap": 0.8,
+          "best_overlap": 0.555556,
           "matched": true
         },
         {
           "clause": "Members must be able to search for books by title, author, or ISBN",
-          "best_overlap": 0.764706,
+          "best_overlap": 0.526316,
           "matched": true
         },
         {
           "clause": "The system must enforce borrowing limits (e",
-          "best_overlap": 0.25,
+          "best_overlap": 0.2,
           "matched": false
         },
         {
           "clause": ", maximum number of books per member) and track overdue books",
-          "best_overlap": 0.222222,
+          "best_overlap": 0.242424,
           "matched": false
         },
         {
           "clause": "Librarians must be able to add new books, remove books, and manage member accounts",
-          "best_overlap": 0.8125,
+          "best_overlap": 0.553191,
           "matched": true
         }
       ]

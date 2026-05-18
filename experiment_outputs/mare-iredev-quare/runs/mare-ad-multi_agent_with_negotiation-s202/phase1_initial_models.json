@@ -3,7 +3,7 @@
     {
       "id": "STA-L1-001",
       "name": "Stakeholders Goal",
-      "description": "Stakeholders objective for AD: As a stakeholder of AD, I need The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+      "description": "Stakeholders objective for AD: As a passenger, I want the system to minimize Jerk to ensure a comfortable ride.",
       "element_type": "Goal",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -12,26 +12,26 @@
       "hierarchy_level": 1,
       "parent_goal_id": null,
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:18",
+      "source_chunk_id": "automotive_safety.py:25",
       "source_document": "automotive_safety.py",
       "retrieved_chunks": [
         {
-          "chunk_id": "automotive_safety.py:18",
+          "chunk_id": "automotive_safety.py:25",
           "document": "automotive_safety.py",
-          "score": 0.210526,
-          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
-        },
-        {
-          "chunk_id": "standards/latest_2024.py:4",
-          "document": "standards/latest_2024.py",
-          "score": 0.210526,
-          "content": "UN-R157 (Revised March 2024): New requirements for Automated Lane Keeping Systems: - System activation speed range: 60-130 km/h (previously 60-120) - Lane change function: Automatic lane changes allowed under specific conditions - Monitoring requirements: Driver attention moni..."
+          "score": 0.230769,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
         },
         {
           "chunk_id": "automotive_safety.py:13",
           "document": "automotive_safety.py",
-          "score": 0.157895,
+          "score": 0.153846,
           "content": "L3 Level (Conditional Automation): - Safety requirements: System responsible within ODD + takeover request response time limits - System examples: Audi A8 Traffic Jam Pilot - KAOS goals: - \"ODD boundary detection accuracy > 99.9%\" - \"Takeover request to driver response < 10 se..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:14",
+          "document": "automotive_safety.py",
+          "score": 0.153846,
+          "content": "L4 Level (High Automation): - Safety requirements: Complete system responsibility within ODD + minimal risk state capability - System examples: Waymo, Cruise (defined areas) - KAOS goals: - \"All safety-critical functions with redundant design\" - \"Safe parking success rate when..."
         }
       ],
       "conflict_resolved_by": null,
@@ -42,7 +42,7 @@
     {
       "id": "STA-L2-001-01",
       "name": "Stakeholders Output 1",
-      "description": "The system shall As a stakeholder of AD, I need The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+      "description": "The system shall As a passenger, I want the system to minimize Jerk to ensure a comfortable ride.",
       "element_type": "Task",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -51,26 +51,26 @@
       "hierarchy_level": 2,
       "parent_goal_id": "STA-L1-001",
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:18",
+      "source_chunk_id": "automotive_safety.py:25",
       "source_document": "automotive_safety.py",
       "retrieved_chunks": [
         {
-          "chunk_id": "automotive_safety.py:18",
+          "chunk_id": "automotive_safety.py:25",
           "document": "automotive_safety.py",
-          "score": 0.210526,
-          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
-        },
-        {
-          "chunk_id": "standards/latest_2024.py:4",
-          "document": "standards/latest_2024.py",
-          "score": 0.210526,
-          "content": "UN-R157 (Revised March 2024): New requirements for Automated Lane Keeping Systems: - System activation speed range: 60-130 km/h (previously 60-120) - Lane change function: Automatic lane changes allowed under specific conditions - Monitoring requirements: Driver attention moni..."
+          "score": 0.230769,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
         },
         {
           "chunk_id": "automotive_safety.py:13",
           "document": "automotive_safety.py",
-          "score": 0.157895,
+          "score": 0.153846,
           "content": "L3 Level (Conditional Automation): - Safety requirements: System responsible within ODD + takeover request response time limits - System examples: Audi A8 Traffic Jam Pilot - KAOS goals: - \"ODD boundary detection accuracy > 99.9%\" - \"Takeover request to driver response < 10 se..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:14",
+          "document": "automotive_safety.py",
+          "score": 0.153846,
+          "content": "L4 Level (High Automation): - Safety requirements: Complete system responsibility within ODD + minimal risk state capability - System examples: Waymo, Cruise (defined areas) - KAOS goals: - \"All safety-critical functions with redundant design\" - \"Safe parking success rate when..."
         }
       ],
       "conflict_resolved_by": null,
@@ -81,7 +81,7 @@
     {
       "id": "STA-L2-001-02",
       "name": "Stakeholders Output 2",
-      "description": "The system shall As a stakeholder of AD, I need - Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip",
+      "description": "The system shall As a vehicle designer, I need the system to adhere to curvature constraints to prevent rollover or tire slip.",
       "element_type": "Task",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -90,26 +90,26 @@
       "hierarchy_level": 2,
       "parent_goal_id": "STA-L1-001",
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "knowledge_guide.py:1",
-      "source_document": "knowledge_guide.py",
+      "source_chunk_id": "automotive_safety.py:18",
+      "source_document": "automotive_safety.py",
       "retrieved_chunks": [
         {
-          "chunk_id": "knowledge_guide.py:1",
-          "document": "knowledge_guide.py",
-          "score": 0.157895,
-          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
-        },
-        {
-          "chunk_id": "automotive_safety.py:17",
+          "chunk_id": "automotive_safety.py:18",
           "document": "automotive_safety.py",
-          "score": 0.105263,
-          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+          "score": 0.176471,
+          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
         },
         {
           "chunk_id": "automotive_safety.py:25",
           "document": "automotive_safety.py",
-          "score": 0.105263,
+          "score": 0.176471,
           "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:13",
+          "document": "automotive_safety.py",
+          "score": 0.117647,
+          "content": "L3 Level (Conditional Automation): - Safety requirements: System responsible within ODD + takeover request response time limits - System examples: Audi A8 Traffic Jam Pilot - KAOS goals: - \"ODD boundary detection accuracy > 99.9%\" - \"Takeover request to driver response < 10 se..."
         }
       ],
       "conflict_resolved_by": null,
@@ -120,7 +120,7 @@
     {
       "id": "STA-L2-001-03",
       "name": "Stakeholders Output 3",
-      "description": "The system shall As a stakeholder of AD, I need - Non-convex obstacle constraints must be handled using iterative quadratic programming (QP)",
+      "description": "The system shall As a developer, I want to ensure that non-convex obstacle constraints are managed effectively using iterative quadratic programming.",
       "element_type": "Task",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -145,10 +145,10 @@
           "content": "Actual Clinical Trial Results (PROLOG Study): - Participants: 670 patients, 6-month follow-up - Blood glucose improvement: HbA1c decreased from 8.2% to 7.5% - User satisfaction: 93% willing to continue using - Safety events: 2 cases of severe hypoglycemia (0.3%), 0 cases of DKA"
         },
         {
-          "chunk_id": "knowledge_guide.py:1",
-          "document": "knowledge_guide.py",
+          "chunk_id": "sample_knowledge.py:13",
+          "document": "sample_knowledge.py",
           "score": 0.105263,
-          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+          "content": "Safety Classification: - Class C: Software failure may cause death or serious injury - Class B: Software failure may cause non-serious injury - Class A: Software failure will not cause injury"
         }
       ],
       "conflict_resolved_by": null,
@@ -159,7 +159,7 @@
     {
       "id": "STA-L2-001-04",
       "name": "Stakeholders Output 4",
-      "description": "The system shall As a stakeholder of AD, I need [Conflict Scenario for Negotiation]",
+      "description": "The system shall As a safety officer, I need the SafetyAgent to prioritize passive safety by enforcing safe distances and executing MRM effectively.",
       "element_type": "Task",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -168,26 +168,26 @@
       "hierarchy_level": 2,
       "parent_goal_id": "STA-L1-001",
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "knowledge_guide.py:10",
-      "source_document": "knowledge_guide.py",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
       "retrieved_chunks": [
         {
-          "chunk_id": "knowledge_guide.py:10",
-          "document": "knowledge_guide.py",
-          "score": 0.272727,
-          "content": "2. [Improve Negotiation Quality] - Provide real conflict resolution cases as references - Use validated compromise strategies - Make decisions based on historical success patterns"
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.157895,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
         },
         {
-          "chunk_id": "knowledge_guide.py:16",
-          "document": "knowledge_guide.py",
-          "score": 0.272727,
-          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.157895,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
         },
         {
-          "chunk_id": "knowledge_guide.py:5",
-          "document": "knowledge_guide.py",
-          "score": 0.272727,
-          "content": "3. [Negotiation and Conflict Resolution Patterns] ✅ Real quality attribute conflict cases ✅ Validated negotiation strategies ✅ Assessment methods for compromises and trade-offs ✅ Convergence patterns for multi-round negotiations"
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.157895,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
         }
       ],
       "conflict_resolved_by": null,
@@ -200,7 +200,7 @@
     {
       "id": "COL-L1-002",
       "name": "Collector Goal",
-      "description": "Collector objective for AD: Draft requirement 1: The system shall As a stakeholder of AD, I need The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+      "description": "Collector objective for AD: The system shall minimize Jerk to a maximum threshold of 0.5 m/s^3 during transitions to ensure passenger comfort.",
       "element_type": "Goal",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -209,26 +209,26 @@
       "hierarchy_level": 1,
       "parent_goal_id": null,
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:18",
-      "source_document": "automotive_safety.py",
+      "source_chunk_id": "cases/real_world_studies.py:31",
+      "source_document": "cases/real_world_studies.py",
       "retrieved_chunks": [
         {
-          "chunk_id": "automotive_safety.py:18",
-          "document": "automotive_safety.py",
-          "score": 0.217391,
-          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
-        },
-        {
-          "chunk_id": "automotive_safety.py:7",
-          "document": "automotive_safety.py",
-          "score": 0.173913,
-          "content": "ASIL A: - Failure rate requirement: < 10^-6 /hour - Applicable systems: Entertainment system, air conditioning system - Development requirements: Structured development, basic testing"
+          "chunk_id": "cases/real_world_studies.py:31",
+          "document": "cases/real_world_studies.py",
+          "score": 0.25,
+          "content": "Actual Clinical Trial Results (PROLOG Study): - Participants: 670 patients, 6-month follow-up - Blood glucose improvement: HbA1c decreased from 8.2% to 7.5% - User satisfaction: 93% willing to continue using - Safety events: 2 cases of severe hypoglycemia (0.3%), 0 cases of DKA"
         },
         {
           "chunk_id": "cases/real_world_studies.py:8",
           "document": "cases/real_world_studies.py",
-          "score": 0.173913,
+          "score": 0.25,
           "content": "G2.1: Execute smooth acceleration and deceleration - Indicators: Longitudinal acceleration ≤2.5 m/s², lateral acceleration ≤1.8 m/s² - Actual: 95% of operations within comfort range"
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:24",
+          "document": "domains/automotive_safety.py",
+          "score": 0.25,
+          "content": "Steering System Benchmarks: - Steering response time: ≤100ms - Steering angle accuracy: ±0.5° - Centering capability: Return to center ±2° within 3s - Maximum torque when power assist fails: ≤60Nm"
         }
       ],
       "conflict_resolved_by": null,
@@ -239,7 +239,7 @@
     {
       "id": "COL-L2-002-01",
       "name": "Collector Output 1",
-      "description": "The system shall Draft requirement 1: The system shall As a stakeholder of AD, I need The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+      "description": "The system shall The system shall minimize Jerk to a maximum threshold of 0.5 m/s^3 during transitions to ensure passenger comfort.",
       "element_type": "Task",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -248,26 +248,26 @@
       "hierarchy_level": 2,
       "parent_goal_id": "COL-L1-002",
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:18",
-      "source_document": "automotive_safety.py",
+      "source_chunk_id": "cases/real_world_studies.py:31",
+      "source_document": "cases/real_world_studies.py",
       "retrieved_chunks": [
         {
-          "chunk_id": "automotive_safety.py:18",
-          "document": "automotive_safety.py",
-          "score": 0.217391,
-          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
-        },
-        {
-          "chunk_id": "automotive_safety.py:7",
-          "document": "automotive_safety.py",
-          "score": 0.173913,
-          "content": "ASIL A: - Failure rate requirement: < 10^-6 /hour - Applicable systems: Entertainment system, air conditioning system - Development requirements: Structured development, basic testing"
+          "chunk_id": "cases/real_world_studies.py:31",
+          "document": "cases/real_world_studies.py",
+          "score": 0.25,
+          "content": "Actual Clinical Trial Results (PROLOG Study): - Participants: 670 patients, 6-month follow-up - Blood glucose improvement: HbA1c decreased from 8.2% to 7.5% - User satisfaction: 93% willing to continue using - Safety events: 2 cases of severe hypoglycemia (0.3%), 0 cases of DKA"
         },
         {
           "chunk_id": "cases/real_world_studies.py:8",
           "document": "cases/real_world_studies.py",
-          "score": 0.173913,
+          "score": 0.25,
           "content": "G2.1: Execute smooth acceleration and deceleration - Indicators: Longitudinal acceleration ≤2.5 m/s², lateral acceleration ≤1.8 m/s² - Actual: 95% of operations within comfort range"
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:24",
+          "document": "domains/automotive_safety.py",
+          "score": 0.25,
+          "content": "Steering System Benchmarks: - Steering response time: ≤100ms - Steering angle accuracy: ±0.5° - Centering capability: Return to center ±2° within 3s - Maximum torque when power assist fails: ≤60Nm"
         }
       ],
       "conflict_resolved_by": null,
@@ -278,7 +278,7 @@
     {
       "id": "COL-L2-002-02",
       "name": "Collector Output 2",
-      "description": "The system shall Draft requirement 2: The system shall As a stakeholder of AD, I need - Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip",
+      "description": "The system shall The system shall satisfy curvature constraints ($kappa$) with a maximum curvature of 0.1 1/m to prevent rollover or tire slip.",
       "element_type": "Task",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -287,26 +287,26 @@
       "hierarchy_level": 2,
       "parent_goal_id": "COL-L1-002",
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "knowledge_guide.py:1",
-      "source_document": "knowledge_guide.py",
+      "source_chunk_id": "automotive_safety.py:18",
+      "source_document": "automotive_safety.py",
       "retrieved_chunks": [
         {
-          "chunk_id": "knowledge_guide.py:1",
-          "document": "knowledge_guide.py",
-          "score": 0.16,
-          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+          "chunk_id": "automotive_safety.py:18",
+          "document": "automotive_safety.py",
+          "score": 0.2,
+          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:24",
+          "document": "domains/automotive_safety.py",
+          "score": 0.2,
+          "content": "Steering System Benchmarks: - Steering response time: ≤100ms - Steering angle accuracy: ±0.5° - Centering capability: Return to center ±2° within 3s - Maximum torque when power assist fails: ≤60Nm"
         },
         {
           "chunk_id": "sample_knowledge.py:11",
           "document": "sample_knowledge.py",
-          "score": 0.16,
+          "score": 0.2,
           "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
-        },
-        {
-          "chunk_id": "sample_knowledge.py:33",
-          "document": "sample_knowledge.py",
-          "score": 0.16,
-          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
         }
       ],
       "conflict_resolved_by": null,
@@ -317,7 +317,7 @@
     {
       "id": "COL-L2-002-03",
       "name": "Collector Output 3",
-      "description": "The system shall Draft requirement 3: The system shall As a stakeholder of AD, I need - Non-convex obstacle constraints must be handled using iterative quadratic programming (QP)",
+      "description": "The system shall The system shall handle non-convex obstacle constraints by utilizing iterative quadratic programming to adjust trajectories around irregularly shaped barriers.",
       "element_type": "Task",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -326,26 +326,26 @@
       "hierarchy_level": 2,
       "parent_goal_id": "COL-L1-002",
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:25",
-      "source_document": "automotive_safety.py",
+      "source_chunk_id": "sample_knowledge.py:11",
+      "source_document": "sample_knowledge.py",
       "retrieved_chunks": [
-        {
-          "chunk_id": "automotive_safety.py:25",
-          "document": "automotive_safety.py",
-          "score": 0.16,
-          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
-        },
         {
           "chunk_id": "sample_knowledge.py:11",
           "document": "sample_knowledge.py",
-          "score": 0.16,
+          "score": 0.15,
           "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
         },
         {
           "chunk_id": "sample_knowledge_fixed.py:11",
           "document": "sample_knowledge_fixed.py",
-          "score": 0.16,
+          "score": 0.15,
           "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:13",
+          "document": "automotive_safety.py",
+          "score": 0.1,
+          "content": "L3 Level (Conditional Automation): - Safety requirements: System responsible within ODD + takeover request response time limits - System examples: Audi A8 Traffic Jam Pilot - KAOS goals: - \"ODD boundary detection accuracy > 99.9%\" - \"Takeover request to driver response < 10 se..."
         }
       ],
       "conflict_resolved_by": null,
@@ -356,7 +356,7 @@
     {
       "id": "COL-L2-002-04",
       "name": "Collector Output 4",
-      "description": "The system shall Draft requirement 4: The system shall As a stakeholder of AD, I need [Conflict Scenario for Negotiation]",
+      "description": "The system shall The SafetyAgent shall enforce safe distances of a minimum of 2 meters from any detected obstacle, dynamically adjusted based on the vehicle's speed and environmental conditions.",
       "element_type": "Task",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -365,26 +365,26 @@
       "hierarchy_level": 2,
       "parent_goal_id": "COL-L1-002",
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "knowledge_guide.py:16",
+      "source_chunk_id": "knowledge_guide.py:22",
       "source_document": "knowledge_guide.py",
       "retrieved_chunks": [
         {
-          "chunk_id": "knowledge_guide.py:16",
+          "chunk_id": "knowledge_guide.py:22",
           "document": "knowledge_guide.py",
-          "score": 0.294118,
-          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+          "score": 0.24,
+          "content": "print(\"\\n💡 Next Step Recommendations:\") print(\"1. Based on your main application domain, prioritize filling relevant knowledge\") print(\"2. Add more real cases and quantitative indicators\") print(\"3. Regularly update industry standards and best practices\") print(\"4. Validate th..."
         },
         {
-          "chunk_id": "sample_knowledge.py:11",
-          "document": "sample_knowledge.py",
-          "score": 0.235294,
-          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.2,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
         },
         {
-          "chunk_id": "sample_knowledge_fixed.py:11",
-          "document": "sample_knowledge_fixed.py",
-          "score": 0.235294,
-          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.2,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
         }
       ],
       "conflict_resolved_by": null,
@@ -397,7 +397,7 @@
     {
       "id": "MOD-L1-003",
       "name": "Modeler Goal",
-      "description": "Modeler objective for AD: Entity: draft",
+      "description": "Modeler objective for AD: Entity: Jerk",
       "element_type": "Goal",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -436,7 +436,7 @@
     {
       "id": "MOD-L2-003-01",
       "name": "Modeler Output 1",
-      "description": "The system shall Entity: draft",
+      "description": "The system shall Entity: Jerk",
       "element_type": "Task",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -475,7 +475,7 @@
     {
       "id": "MOD-L2-003-02",
       "name": "Modeler Output 2",
-      "description": "The system shall Entity: requirement",
+      "description": "The system shall Entity: passenger comfort",
       "element_type": "Task",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -484,26 +484,26 @@
       "hierarchy_level": 2,
       "parent_goal_id": "MOD-L1-003",
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:4",
+      "source_chunk_id": "automotive_safety.py:14",
       "source_document": "automotive_safety.py",
       "retrieved_chunks": [
         {
-          "chunk_id": "automotive_safety.py:4",
+          "chunk_id": "automotive_safety.py:14",
           "document": "automotive_safety.py",
-          "score": 0.5,
-          "content": "ASIL D (Most Stringent): - Failure rate requirement: < 10^-8 /hour - Applicable systems: Braking system, steering system, airbags - Development requirements: Formal methods, comprehensive verification, independent confirmation"
+          "score": 0.333333,
+          "content": "L4 Level (High Automation): - Safety requirements: Complete system responsibility within ODD + minimal risk state capability - System examples: Waymo, Cruise (defined areas) - KAOS goals: - \"All safety-critical functions with redundant design\" - \"Safe parking success rate when..."
         },
         {
-          "chunk_id": "automotive_safety.py:5",
-          "document": "automotive_safety.py",
-          "score": 0.5,
-          "content": "ASIL C: - Failure rate requirement: < 10^-7 /hour - Applicable systems: Collision warning, lane keeping assist - Development requirements: Structured methods, rigorous testing, semi-independent confirmation"
+          "chunk_id": "cases/real_world_studies.py:14",
+          "document": "cases/real_world_studies.py",
+          "score": 0.333333,
+          "content": "Project Background: - System: Waymo Driver (L4 autonomous driving) - Scope: Phoenix urban area driverless taxi service - Mileage: Over 20 million test miles, 800,000 passenger trips"
         },
         {
-          "chunk_id": "automotive_safety.py:6",
-          "document": "automotive_safety.py",
-          "score": 0.5,
-          "content": "ASIL B: - Failure rate requirement: < 10^-7 /hour - Applicable systems: Headlight control, windshield wiper system - Development requirements: Semi-formal methods, high coverage testing"
+          "chunk_id": "cases/real_world_studies.py:20",
+          "document": "cases/real_world_studies.py",
+          "score": 0.333333,
+          "content": "3. Human-machine interaction and customer experience: - Passenger communication: In-vehicle screen displays route and decision reasoning - Remote assistance: Average 3% of trips require human guidance, response time <30 seconds - Emergency handling: Passengers can contact cust..."
         }
       ],
       "conflict_resolved_by": null,
@@ -514,7 +514,7 @@
     {
       "id": "MOD-L2-003-03",
       "name": "Modeler Output 3",
-      "description": "The system shall Entity: system",
+      "description": "The system shall Entity: curvature constraints",
       "element_type": "Task",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -522,6 +522,361 @@
       "measurable_criteria": "Modeler action artifact 3",
       "hierarchy_level": 2,
       "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-04",
+      "name": "Modeler Output 4",
+      "description": "The system shall Entity: kappa",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Checker": [
+    {
+      "id": "CHE-L1-004",
+      "name": "Checker Goal",
+      "description": "Checker objective for AD: 1. The requirement to minimize 'Jerk' lacks specificity regarding acceptable values, which poses a challenge for performance verification.",
+      "element_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.166667,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.166667,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:39",
+          "document": "cases/real_world_studies.py",
+          "score": 0.166667,
+          "content": "Tactical Level Detection Mechanisms: G1.1: Real-time transaction risk scoring - Latency requirement: ≤50ms risk score calculation - Actual performance: Average 34ms response time"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-01",
+      "name": "Checker Output 1",
+      "description": "The system shall 1. The requirement to minimize 'Jerk' lacks specificity regarding acceptable values, which poses a challenge for performance verification.",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.166667,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.166667,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:39",
+          "document": "cases/real_world_studies.py",
+          "score": 0.166667,
+          "content": "Tactical Level Detection Mechanisms: G1.1: Real-time transaction risk scoring - Latency requirement: ≤50ms risk score calculation - Actual performance: Average 34ms response time"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-02",
+      "name": "Checker Output 2",
+      "description": "The system shall 2. The maximum curvature constraint of 0.1 1/m may conflict with operational parameters, potentially compromising both safety and performance.",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:22",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:22",
+          "document": "knowledge_guide.py",
+          "score": 0.3,
+          "content": "print(\"\\n💡 Next Step Recommendations:\") print(\"1. Based on your main application domain, prioritize filling relevant knowledge\") print(\"2. Add more real cases and quantitative indicators\") print(\"3. Regularly update industry standards and best practices\") print(\"4. Validate th..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.25,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:17",
+          "document": "cases/real_world_studies.py",
+          "score": 0.25,
+          "content": "Operational Data (2022 Phoenix Service): - Service availability: 99.5% (excluding weather and system maintenance) - Average pickup response time: 5.8 minutes - Completion rate: 99.1% (0.9% required human remote assistance) - Safety metrics: 0 serious accidents / 800,000 trips"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-03",
+      "name": "Checker Output 3",
+      "description": "The system shall 3. The description of non-convex obstacle constraints is insufficient, making it difficult to verify compliance with the requirement for iterative quadratic programming.",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:1",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.181818,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:11",
+          "document": "knowledge_guide.py",
+          "score": 0.181818,
+          "content": "3. [Ensure Compliance] - Automatically check for missing regulatory requirements - Remind about critical safety/privacy considerations - Ensure generated KAOS models comply with industry standards"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.136364,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-04",
+      "name": "Checker Output 4",
+      "description": "The system shall 4. Potential operational conflicts arise from the SafetyAgent's focus on 'Passive Safety' versus the EfficiencyAgent's emphasis on 'Smoothness and Speed'.",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:11",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.210526,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:22",
+          "document": "knowledge_guide.py",
+          "score": 0.210526,
+          "content": "print(\"\\n💡 Next Step Recommendations:\") print(\"1. Based on your main application domain, prioritize filling relevant knowledge\") print(\"2. Add more real cases and quantitative indicators\") print(\"3. Regularly update industry standards and best practices\") print(\"4. Validate th..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.157895,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Documenter": [
+    {
+      "id": "DOC-L1-005",
+      "name": "Documenter Goal",
+      "description": "Documenter objective for AD: Introduction",
+      "element_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-01",
+      "name": "Documenter Output 1",
+      "description": "The system shall Introduction",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-02",
+      "name": "Documenter Output 2",
+      "description": "The system shall System Overview",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
       "source": "openre_bench.phase1.rag",
       "source_chunk_id": "automotive_safety.py:10",
       "source_document": "automotive_safety.py",
@@ -551,286 +906,9 @@
       "citation_required": true
     },
     {
-      "id": "MOD-L2-003-04",
-      "name": "Modeler Output 4",
-      "description": "The system shall Entity: shall",
-      "element_type": "Task",
-      "quality_attribute": "Trustworthiness",
-      "priority": 1,
-      "stakeholder": "Modeler",
-      "measurable_criteria": "Modeler action artifact 4",
-      "hierarchy_level": 2,
-      "parent_goal_id": "MOD-L1-003",
-      "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "sample_knowledge.py:11",
-      "source_document": "sample_knowledge.py",
-      "retrieved_chunks": [
-        {
-          "chunk_id": "sample_knowledge.py:11",
-          "document": "sample_knowledge.py",
-          "score": 0.5,
-          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
-        },
-        {
-          "chunk_id": "sample_knowledge.py:12",
-          "document": "sample_knowledge.py",
-          "score": 0.5,
-          "content": "Example: \"During high-speed driving, when main braking system fails, backup braking system shall activate within 1 second, with failure probability <10^-8/hour (ASIL D)\""
-        },
-        {
-          "chunk_id": "sample_knowledge.py:33",
-          "document": "sample_knowledge.py",
-          "score": 0.5,
-          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
-        }
-      ],
-      "conflict_resolved_by": null,
-      "validation_status": "pending",
-      "validation_timestamp": null,
-      "citation_required": true
-    }
-  ],
-  "Checker": [
-    {
-      "id": "CHE-L1-004",
-      "name": "Checker Goal",
-      "description": "Checker objective for AD: Check report item 1: Potential trade-off detected: responses shall not relax core safety and security constraints.",
-      "element_type": "Goal",
-      "quality_attribute": "Safety",
-      "priority": 1,
-      "stakeholder": "Checker",
-      "measurable_criteria": "Checker deliverables remain traceable in shared workspace",
-      "hierarchy_level": 1,
-      "parent_goal_id": null,
-      "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "knowledge_guide.py:18",
-      "source_document": "knowledge_guide.py",
-      "retrieved_chunks": [
-        {
-          "chunk_id": "knowledge_guide.py:18",
-          "document": "knowledge_guide.py",
-          "score": 0.294118,
-          "content": "knowledge_base/ ├── domains/ # Domain-specific knowledge │ ├── automotive_safety.py # Automotive safety domain │ ├── medical_devices.py # Medical devices domain │ ├── financial_systems.py # Financial systems domain │ └── aerospace.py # Aerospace domain │ ├── standards/ # Indus..."
-        },
-        {
-          "chunk_id": "automotive_safety.py:17",
-          "document": "automotive_safety.py",
-          "score": 0.235294,
-          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
-        },
-        {
-          "chunk_id": "sample_knowledge.py:37",
-          "document": "sample_knowledge.py",
-          "score": 0.235294,
-          "content": "Error 5: Unresolved quality attribute conflicts Error Example: Simultaneously requiring highest safety and highest performance Correction Example: Establish trade-off strategies and dynamic adjustment mechanisms \"\"\""
-        }
-      ],
-      "conflict_resolved_by": null,
-      "validation_status": "pending",
-      "validation_timestamp": null,
-      "citation_required": true
-    },
-    {
-      "id": "CHE-L2-004-01",
-      "name": "Checker Output 1",
-      "description": "The system shall Check report item 1: Potential trade-off detected: responses shall not relax core safety and security constraints.",
-      "element_type": "Task",
-      "quality_attribute": "Safety",
-      "priority": 1,
-      "stakeholder": "Checker",
-      "measurable_criteria": "Checker action artifact 1",
-      "hierarchy_level": 2,
-      "parent_goal_id": "CHE-L1-004",
-      "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "knowledge_guide.py:18",
-      "source_document": "knowledge_guide.py",
-      "retrieved_chunks": [
-        {
-          "chunk_id": "knowledge_guide.py:18",
-          "document": "knowledge_guide.py",
-          "score": 0.294118,
-          "content": "knowledge_base/ ├── domains/ # Domain-specific knowledge │ ├── automotive_safety.py # Automotive safety domain │ ├── medical_devices.py # Medical devices domain │ ├── financial_systems.py # Financial systems domain │ └── aerospace.py # Aerospace domain │ ├── standards/ # Indus..."
-        },
-        {
-          "chunk_id": "automotive_safety.py:17",
-          "document": "automotive_safety.py",
-          "score": 0.235294,
-          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
-        },
-        {
-          "chunk_id": "sample_knowledge.py:37",
-          "document": "sample_knowledge.py",
-          "score": 0.235294,
-          "content": "Error 5: Unresolved quality attribute conflicts Error Example: Simultaneously requiring highest safety and highest performance Correction Example: Establish trade-off strategies and dynamic adjustment mechanisms \"\"\""
-        }
-      ],
-      "conflict_resolved_by": null,
-      "validation_status": "candidate_resolution",
-      "validation_timestamp": null,
-      "citation_required": true
-    },
-    {
-      "id": "CHE-L2-004-02",
-      "name": "Checker Output 2",
-      "description": "The system shall Check report item 2: All requirements should remain verifiable with explicit measurable criteria.",
-      "element_type": "Task",
-      "quality_attribute": "Safety",
-      "priority": 1,
-      "stakeholder": "Checker",
-      "measurable_criteria": "Checker action artifact 2",
-      "hierarchy_level": 2,
-      "parent_goal_id": "CHE-L1-004",
-      "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:14",
-      "source_document": "automotive_safety.py",
-      "retrieved_chunks": [
-        {
-          "chunk_id": "automotive_safety.py:14",
-          "document": "automotive_safety.py",
-          "score": 0.230769,
-          "content": "L4 Level (High Automation): - Safety requirements: Complete system responsibility within ODD + minimal risk state capability - System examples: Waymo, Cruise (defined areas) - KAOS goals: - \"All safety-critical functions with redundant design\" - \"Safe parking success rate when..."
-        },
-        {
-          "chunk_id": "knowledge_guide.py:11",
-          "document": "knowledge_guide.py",
-          "score": 0.230769,
-          "content": "3. [Ensure Compliance] - Automatically check for missing regulatory requirements - Remind about critical safety/privacy considerations - Ensure generated KAOS models comply with industry standards"
-        },
-        {
-          "chunk_id": "sample_knowledge.py:33",
-          "document": "sample_knowledge.py",
-          "score": 0.230769,
-          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
-        }
-      ],
-      "conflict_resolved_by": null,
-      "validation_status": "candidate_resolution",
-      "validation_timestamp": null,
-      "citation_required": true
-    }
-  ],
-  "Documenter": [
-    {
-      "id": "DOC-L1-005",
-      "name": "Documenter Goal",
-      "description": "Documenter objective for AD: SRS-1 Scope and Stakeholders",
-      "element_type": "Goal",
-      "quality_attribute": "Sustainability",
-      "priority": 1,
-      "stakeholder": "Documenter",
-      "measurable_criteria": "Documenter deliverables remain traceable in shared workspace",
-      "hierarchy_level": 1,
-      "parent_goal_id": null,
-      "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:17",
-      "source_document": "automotive_safety.py",
-      "retrieved_chunks": [
-        {
-          "chunk_id": "automotive_safety.py:17",
-          "document": "automotive_safety.py",
-          "score": 0.4,
-          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
-        },
-        {
-          "chunk_id": "automotive_safety.py:18",
-          "document": "automotive_safety.py",
-          "score": 0.4,
-          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
-        },
-        {
-          "chunk_id": "automotive_safety.py:20",
-          "document": "automotive_safety.py",
-          "score": 0.4,
-          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
-        }
-      ],
-      "conflict_resolved_by": null,
-      "validation_status": "pending",
-      "validation_timestamp": null,
-      "citation_required": true
-    },
-    {
-      "id": "DOC-L2-005-01",
-      "name": "Documenter Output 1",
-      "description": "The system shall SRS-1 Scope and Stakeholders",
-      "element_type": "Task",
-      "quality_attribute": "Sustainability",
-      "priority": 1,
-      "stakeholder": "Documenter",
-      "measurable_criteria": "Documenter action artifact 1",
-      "hierarchy_level": 2,
-      "parent_goal_id": "DOC-L1-005",
-      "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:17",
-      "source_document": "automotive_safety.py",
-      "retrieved_chunks": [
-        {
-          "chunk_id": "automotive_safety.py:17",
-          "document": "automotive_safety.py",
-          "score": 0.4,
-          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
-        },
-        {
-          "chunk_id": "automotive_safety.py:18",
-          "document": "automotive_safety.py",
-          "score": 0.4,
-          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
-        },
-        {
-          "chunk_id": "automotive_safety.py:20",
-          "document": "automotive_safety.py",
-          "score": 0.4,
-          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
-        }
-      ],
-      "conflict_resolved_by": null,
-      "validation_status": "pending",
-      "validation_timestamp": null,
-      "citation_required": true
-    },
-    {
-      "id": "DOC-L2-005-02",
-      "name": "Documenter Output 2",
-      "description": "The system shall SRS-2 Functional and Quality Requirements",
-      "element_type": "Task",
-      "quality_attribute": "Sustainability",
-      "priority": 1,
-      "stakeholder": "Documenter",
-      "measurable_criteria": "Documenter action artifact 2",
-      "hierarchy_level": 2,
-      "parent_goal_id": "DOC-L1-005",
-      "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:2",
-      "source_document": "automotive_safety.py",
-      "retrieved_chunks": [
-        {
-          "chunk_id": "automotive_safety.py:2",
-          "document": "automotive_safety.py",
-          "score": 0.5,
-          "content": "# ISO 26262 ASIL Levels and Specific Requirements ISO_26262_KNOWLEDGE = \"\"\" [ISO 26262 Automotive Functional Safety Standard]"
-        },
-        {
-          "chunk_id": "domains/automotive_safety.py:7",
-          "document": "domains/automotive_safety.py",
-          "score": 0.5,
-          "content": "Functional Safety Concept Development Process: 1. Hazard Analysis and Risk Assessment (HARA) 2. Functional Safety Concept (FSC) 3. Technical Safety Concept (TSC) 4. System design and implementation 5. Safety verification and validation"
-        },
-        {
-          "chunk_id": "knowledge_guide.py:16",
-          "document": "knowledge_guide.py",
-          "score": 0.5,
-          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
-        }
-      ],
-      "conflict_resolved_by": null,
-      "validation_status": "pending",
-      "validation_timestamp": null,
-      "citation_required": true
-    },
-    {
       "id": "DOC-L2-005-03",
       "name": "Documenter Output 3",
-      "description": "The system shall SRS-3 Verification and Acceptance Criteria",
+      "description": "The system shall Requirements Specification",
       "element_type": "Task",
       "quality_attribute": "Sustainability",
       "priority": 1,
@@ -839,26 +917,65 @@
       "hierarchy_level": 2,
       "parent_goal_id": "DOC-L1-005",
       "source": "openre_bench.phase1.rag",
-      "source_chunk_id": "automotive_safety.py:23",
+      "source_chunk_id": "automotive_safety.py:10",
       "source_document": "automotive_safety.py",
       "retrieved_chunks": [
         {
-          "chunk_id": "automotive_safety.py:23",
+          "chunk_id": "automotive_safety.py:10",
           "document": "automotive_safety.py",
           "score": 0.5,
-          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
         },
         {
-          "chunk_id": "domains/automotive_safety.py:7",
-          "document": "domains/automotive_safety.py",
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
           "score": 0.5,
-          "content": "Functional Safety Concept Development Process: 1. Hazard Analysis and Risk Assessment (HARA) 2. Functional Safety Concept (FSC) 3. Technical Safety Concept (TSC) 4. System design and implementation 5. Safety verification and validation"
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
         },
         {
-          "chunk_id": "automotive_safety.py:17",
+          "chunk_id": "automotive_safety.py:12",
+          "document": "automotive_safety.py",
+          "score": 0.5,
+          "content": "L2 Level (Partial Automation): - Safety requirements: Driver continuous monitoring + system monitors driver state - System examples: Tesla Autopilot, GM Super Cruise - KAOS goals: - \"Detect driver distraction < 3 seconds\" - \"Safely exit automatic mode when lane lines are lost\"..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-04",
+      "name": "Documenter Output 4",
+      "description": "The system shall Passenger Comfort Requirements",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:14",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:14",
+          "document": "automotive_safety.py",
+          "score": 0.666667,
+          "content": "L4 Level (High Automation): - Safety requirements: Complete system responsibility within ODD + minimal risk state capability - System examples: Waymo, Cruise (defined areas) - KAOS goals: - \"All safety-critical functions with redundant design\" - \"Safe parking success rate when..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
           "document": "automotive_safety.py",
           "score": 0.333333,
-          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.333333,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
         }
       ],
       "conflict_resolved_by": null,

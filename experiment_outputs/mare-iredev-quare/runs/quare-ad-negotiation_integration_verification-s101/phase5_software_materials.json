@@ -2,7 +2,7 @@
   "phase": "5_software_materials_generation",
   "case_id": "AD",
   "setting": "negotiation_integration_verification",
-  "generated_at": "2026-05-12T04:49:58Z",
+  "generated_at": "2026-02-26T10:38:24Z",
   "materials": {
     "srs_outline": [
       "System Scope and Stakeholders",
@@ -101,6 +101,12 @@
         "verification_anchor": "pending"
       },
       {
+        "element_id": "RES-L2-005-07",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (regulatory accountability): - The system operates in specific urban and highway scenarios",
+        "verification_anchor": "pending"
+      },
+      {
         "element_id": "SAF-L1-001",
         "quality_attribute": "Safety",
         "statement": "Safety objective for AD: - The system operates in specific urban and highway scenarios",
@@ -143,6 +149,12 @@
         "verification_anchor": "resolved"
       },
       {
+        "element_id": "SAF-L2-001-07",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (hazard prevention): - The system must use the Expectation-Maximization (EM) framework",
+        "verification_anchor": "resolved"
+      },
+      {
         "element_id": "SUS-L1-003",
         "quality_attribute": "Sustainability",
         "statement": "Sustainability objective for AD: - Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip",
@@ -179,22 +191,16 @@
         "verification_anchor": "pending"
       },
       {
-        "element_id": "SUS-L2-003-06",
-        "quality_attribute": "Sustainability",
-        "statement": "The system shall ensure sustainability (environmental impact awareness): - **Potential Conflict**: An emergency MRM (Safety) triggered by a fault might violate the Jerk/Smoothne...",
-        "verification_anchor": "pending"
-      },
-      {
         "element_id": "TRU-L1-004",
         "quality_attribute": "Trustworthiness",
         "statement": "Trustworthiness objective for AD: , relaxing smoothness constraints during MRM)",
-        "verification_anchor": "pending"
+        "verification_anchor": "candidate_resolution"
       },
       {
         "element_id": "TRU-L2-004-01",
         "quality_attribute": "Trustworthiness",
         "statement": "The system shall ensure trustworthiness (security assurance): , relaxing smoothness constraints during MRM)",
-        "verification_anchor": "resolved"
+        "verification_anchor": "pending"
       },
       {
         "element_id": "TRU-L2-004-02",
@@ -219,21 +225,15 @@
         "quality_attribute": "Trustworthiness",
         "statement": "The system shall ensure trustworthiness (auditability): [Safety Requirements - Based on Apollo Pilot Safety Report]",
         "verification_anchor": "resolved"
-      },
-      {
-        "element_id": "TRU-L2-004-06",
-        "quality_attribute": "Trustworthiness",
-        "statement": "The system shall ensure trustworthiness (integrity guarantees): Multi-Layer Safety Architecture:",
-        "verification_anchor": "resolved"
       }
     ]
   },
   "quality_signals": {
     "topology_is_valid": true,
     "deterministic_is_valid": true,
-    "compliance_coverage": 0.9,
+    "compliance_coverage": 0.833333,
     "s_logic": 1.0,
     "detected_conflict_pairs": 2,
-    "resolved_conflict_pairs": 2
+    "resolved_conflict_pairs": 0
   }
 }

@@ -11,24 +11,24 @@
     "system_name": "iredev",
     "implementation": "deterministic-parity-pipeline",
     "implementation_version": "0.1.0",
-    "python_version": "3.13.12",
-    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
-    "machine": "arm64"
+    "python_version": "3.14.0",
+    "platform": "Linux-6.18.10-2-cachyos-lts-x86_64-with-glibc2.43",
+    "machine": "x86_64"
   },
   "provenance": {
     "model": "gpt-4o-mini",
     "temperature": 0.7,
     "seed": 202,
-    "prompt_hash": "96727505f07c50ca614fc95ba6d6bfdf2b6492c9155dbd758e53596746769966",
-    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
-    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+    "prompt_hash": "3d4748ff7c0ca3808eb85e5e454eeecd51ce4eaae5679ddea2ab9e0003c4b266",
+    "corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
+    "corpus_path": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base"
   },
   "execution_flags": {
     "rag_fallback_used": false,
     "llm_fallback_used": true,
     "fallback_tainted": true,
-    "retry_used": false,
-    "retry_count": 0
+    "retry_used": true,
+    "retry_count": 4
   },
   "comparability": {
     "is_comparable": true,
@@ -38,20 +38,20 @@
   "rag_enabled": true,
   "rag_backend": "local_tfidf",
   "rag_fallback_used": false,
-  "start_timestamp": "2026-05-12T04:50:03Z",
-  "end_timestamp": "2026-05-12T04:50:03Z",
-  "runtime_seconds": 0.131187,
-  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/iredev-library-negotiation_integration_verification-s202",
+  "start_timestamp": "2026-02-17T10:38:21Z",
+  "end_timestamp": "2026-02-17T10:41:08Z",
+  "runtime_seconds": 166.850494,
+  "artifacts_dir": "experiment_outputs/iredev/runs/iredev-library-negotiation_integration_verification-s202",
   "artifact_paths": {
-    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/iredev-library-negotiation_integration_verification-s202/phase1_initial_models.json",
-    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/iredev-library-negotiation_integration_verification-s202/phase2_negotiation_trace.json",
-    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/iredev-library-negotiation_integration_verification-s202/phase3_integrated_kaos_model.json",
-    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/iredev-library-negotiation_integration_verification-s202/phase4_verification_report.json"
+    "phase1_initial_models.json": "experiment_outputs/iredev/runs/iredev-library-negotiation_integration_verification-s202/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/iredev/runs/iredev-library-negotiation_integration_verification-s202/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/iredev/runs/iredev-library-negotiation_integration_verification-s202/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/iredev/runs/iredev-library-negotiation_integration_verification-s202/phase4_verification_report.json"
   },
   "artifact_blinded": false,
   "blinding_scheme_version": "",
   "blind_eval_run_id": "",
-  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "judge_pipeline_hash": "aca4416c757997fb3f3688c03e0d361b94a59adaca560b6cc5221f89f386eebd",
   "trace_audit_path": "",
   "notes": {
     "phase_a_b": true,
@@ -65,14 +65,13 @@
       "llm_source": "openai",
       "llm_enabled": true,
       "llm_seed": 202,
-      "llm_seed_applied_turns": 0,
-      "llm_turns": 0,
-      "llm_fallback_turns": 33,
-      "llm_retry_count": 0,
+      "llm_seed_applied_turns": 30,
+      "llm_turns": 30,
+      "llm_fallback_turns": 3,
+      "llm_retry_count": 4,
       "llm_parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback",
-      "llm_actions": [],
-      "fallback_actions": [
+      "execution_mode": "llm_hybrid_fallback",
+      "llm_actions": [
         "DialogueWithEndUser",
         "DialogueWithEndUser",
         "DialogueWithEndUser",
@@ -85,8 +84,6 @@
         "ConfirmOrRefineEndUser",
         "ConfirmOrRefineEndUser",
         "ConfirmOrRefineEndUser",
-        "WriteInterviewRecords",
-        "WriteUserRequirementsList",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
@@ -104,8 +101,12 @@
         "SelectRequirementModel",
         "BuildRequirementModel",
         "WriteSRS",
-        "Evaluate",
         "ConfirmClosure"
+      ],
+      "fallback_actions": [
+        "WriteInterviewRecords",
+        "WriteUserRequirementsList",
+        "Evaluate"
       ],
       "roles_executed": [
         "Interviewer",
@@ -169,122 +170,122 @@
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of Library, I need , maximum number of books per member) and track overdue books As a user of Library, I need Librarians must be able to add new bo..."
+          "summary": "Generated interview questions focused on user goals, pain points, and acceptance criteria for a library management system using 5W1H and Socratic techniques."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of Library, I need , maximum number of books per member) and track overdue books As a user of Library, I need Librarians must be able to add new bo..."
+          "summary": "The generated interview questions aim to uncover user goals, pain points, and acceptance criteria for a library management system using 5W1H and Socratic questioning."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of Library, I need , maximum number of books per member) and track overdue books As a user of Library, I need Librarians must be able to add new bo..."
+          "summary": "The interview questions aim to uncover user goals, pain points, and acceptance criteria for a library management system, utilizing 5W1H and Socratic questioning techniques."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Response: , maximum number of books per member) and track overdue books"
-        },
-        {
-          "role": "EndUser",
-          "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
-          "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Response: , maximum number of books per member) and track overdue books Response: Librarians must be able to add new books, remove books, and manage member a..."
-        },
-        {
-          "role": "EndUser",
-          "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
-          "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 4,
-          "summary": "Response: , maximum number of books per member) and track overdue books Response: Librarians must be able to add new books, remove books, and manage member a..."
+          "summary": "Library members seek an efficient, user-friendly management system that enhances book search capabilities, tracks borrowing limits, sends reminders for due dates, and enables easy management of member accounts by librarians."
+        },
+        {
+          "role": "EndUser",
+          "action": "RespondEndUser",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Library members face challenges in finding books and tracking due dates, while librarians need a streamlined interface for account management."
+        },
+        {
+          "role": "EndUser",
+          "action": "RespondEndUser",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Library members face challenges in locating books and tracking due dates, while librarians seek efficient account management tools. Expectations include improved search functionality, reminders for due dates, and clear communication of borrowing limits."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Clarification questions focus on borrowing limits, overdue tracking, librarian interface design, and search functionality to address user pain points."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Clarification questions have been raised regarding borrowing limits communication, overdue tracking mechanisms, and librarian interface design."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user has raised clarification questions regarding borrowing limits, overdue book tracking, and the interface design for librarian functions."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: , maximum number of books per member) and track overdue books Confirmed: Response: , maximum number of books per member) and track overd..."
+          "summary": "The refined requirements focus on enhancing search capabilities, implementing overdue reminders, clarifying borrowing limits, and providing an efficient interface for librarians."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: , maximum number of books per member) and track overdue books Confirmed: Response: , maximum number of books per member) and track overd..."
+          "summary": "The library management system should enhance user experience by improving book search capabilities, implementing due date notifications, clarifying borrowing limits, and providing an efficient interface for librarians."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: , maximum number of books per member) and track overdue books Confirmed: Response: , maximum number of books per member) and track overd..."
+          "summary": "The refined requirements for the library management system focus on enhancing search functionality, implementing notification features for due dates, clearly communicating borrowing limits, and providing an intuitive interface for librarians."
         },
         {
           "role": "Interviewer",
@@ -292,9 +293,9 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 4,
-          "summary": "Interview record 1: Response: , maximum number of books per member) and track overdue books Interview record 2: Response: , maximum number of books per membe..."
+          "summary": "Interview record 1: As a library member, one of my main pain points is the difficulty in locating specific books, especially when the library has a large col..."
         },
         {
           "role": "Interviewer",
@@ -302,179 +303,179 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 6,
           "summary": "UR-1: The system shall , maximum number of books per member) and track overdue books UR-2: The system shall Librarians must be able to add new books, remove..."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "What infrastructure constraints apply to , maximum number of books per member) and track overdue books? What infrastructure constraints apply to Librarians m..."
+          "summary": "The questions aim to uncover necessary infrastructure constraints, security requirements, and scalability expectations for the library management system."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "What infrastructure constraints apply to , maximum number of books per member) and track overdue books? What infrastructure constraints apply to Librarians m..."
+          "summary": "The questions aim to uncover critical infrastructure constraints, security requirements, and scalability expectations necessary for the effective implementation of the library management system."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "What infrastructure constraints apply to , maximum number of books per member) and track overdue books? What infrastructure constraints apply to Librarians m..."
+          "summary": "The questions aim to uncover necessary infrastructure constraints, security requirements, and scalability expectations for the library management system."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Deploy constraint: , maximum number of books per member) and track overdue books"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The library management system must adhere to infrastructure, security, scalability, and operational constraints to efficiently manage library operations and member interactions."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Deploy constraint: , maximum number of books per member) and track overdue books Deploy constraint: Librarians must be able to add new books, remove books, a..."
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The library management system will have cloud-based infrastructure for reliability, adhere to GDPR for security, scale for 10,000 members and 50,000 books, and include intuitive operational procedures for efficient user interaction."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Deploy constraint: , maximum number of books per member) and track overdue books Deploy constraint: Librarians must be able to add new books, remove books, a..."
+          "summary": "The library management system will leverage cloud infrastructure for scalability and high availability, comply with stringent security mandates, and provide a user-friendly interface for operational efficiency."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Clarifications are needed on borrowing limits communication, overdue book tracking methods, and interface design for librarian functionalities."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployer seeks clarification on borrowing limits communication, overdue book tracking methods, and the interface design for librarians to enhance operational effectiveness."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployer seeks clarification on borrowing limits, tracking overdue books, and interface design for librarians to ensure comprehensive operational context for the library management system."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: , maximum number of books per member) and track overdue books Confirmed: Deploy constraint: , maximum number of books per membe..."
+          "summary": "The deployment requirements for the library management system have been validated and refined, emphasizing the need for robust search functionality, due date notifications, clear communication of borrowing limits, and an intuitive librarian interface."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: , maximum number of books per member) and track overdue books Confirmed: Deploy constraint: , maximum number of books per membe..."
+          "summary": "The deployment requirements for the library management system have been validated and refined, ensuring robust search functionality, notification features for due dates, clear communication of borrowing limits, compliance with security regulations, and scalability for future growth."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: , maximum number of books per member) and track overdue books Confirmed: Deploy constraint: , maximum number of books per membe..."
+          "summary": "The deployment requirements for the library management system include robust search capabilities, automated due date notifications, clear communication of borrowing limits, and an intuitive interface for librarians."
         },
         {
           "role": "Interviewer",
           "action": "WriteOperatingEnvironmentList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "ENV-1: Standard web server with HTTPS termination ENV-2: Relational database with backup and recovery procedures ENV-3: Authentication and access control fra..."
+          "fallback_reason": "empty_items",
+          "output_count": 4,
+          "summary": "The operating environment for the library management system includes a cloud-based infrastructure, compliance with GDPR for data protection, scalability for a large user base, and effective access control measures."
         },
         {
           "role": "Analyst",
           "action": "WriteSystemRequirementsList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 9,
-          "summary": "SR-1: The system shall UR-1: The system shall , maximum number of books per member) and track overdue books SR-2: The system shall UR-2: The system shall Lib..."
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "The system requirements for the library management system encompass functionalities for borrowing and returning books, tracking availability, sending due date notifications, providing search capabilities, and managing librarian actions, all while ensuring compliance with security and scalability standards."
         },
         {
           "role": "Analyst",
           "action": "SelectRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 1,
-          "summary": "Selected model: Use Case Diagram (UML) — suitable for stakeholder interactions"
+          "summary": "A UML Use Case Diagram is selected to model the Library management system due to its effectiveness in representing user interactions and system functionalities."
         },
         {
           "role": "Analyst",
           "action": "BuildRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 6,
-          "summary": "Model element: system Model element: shall Model element: system Model element: shall Model element: maximum Model element: number"
+          "fallback_reason": "",
+          "output_count": 1,
+          "summary": "Constructed a Use Case Diagram highlighting interactions between members and librarians, including key functionalities and potential gaps in tracking overdue books and communicating borrowing limits."
         },
         {
           "role": "Archivist",
           "action": "WriteSRS",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 4,
-          "summary": "SRS-1 Purpose and Scope SRS-2 Functional Requirements SRS-3 Non-Functional Requirements and Quality Attributes SRS-4 External Interface Requirements"
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "This SRS document provides a detailed description of the Library Management System, focusing on both functional and non-functional requirements, including user interactions, compliance, and scalability."
         },
         {
           "role": "Reviewer",
@@ -482,56 +483,58 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 2,
           "summary": "Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. Finding: Ensure traceability from user requirements to system..."
         },
         {
           "role": "Reviewer",
           "action": "ConfirmClosure",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Closure: Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. — resolved Closure: Finding: Ensure traceability fro..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "All findings from the review have been confirmed as resolved, ensuring clarity, traceability, and compliance with relevant standards."
         }
       ],
       "workspace_summary": {
         "interview_records": 4,
         "user_requirements": 6,
-        "operating_environment": 3,
-        "enduser_responses": 7,
-        "enduser_questions": 3,
+        "operating_environment": 4,
+        "enduser_responses": 12,
+        "enduser_questions": 9,
         "enduser_confirmations": 9,
-        "deployer_responses": 6,
-        "deployer_questions": 3,
+        "deployer_responses": 9,
+        "deployer_questions": 9,
         "deployer_confirmations": 9,
-        "system_requirements": 9,
+        "system_requirements": 8,
         "selected_model": 1,
-        "requirement_model": 6,
-        "srs_sections": 4,
+        "requirement_model": 1,
+        "srs_sections": 6,
         "review_findings": 2,
-        "closure_confirmations": 2,
+        "closure_confirmations": 4,
         "dialogue_rounds": 3,
         "total_action_fires": 33,
         "distinct_actions_fired": 17,
-        "llm_turns": 0,
-        "llm_fallback_turns": 33
+        "llm_turns": 30,
+        "llm_fallback_turns": 3
       },
-      "workspace_digest": "24bf7d0630c27f8b804844470b9487f1de7953af4da12add63e84e66326eb4a3"
+      "workspace_digest": "69bb720ba8c19b9f3a75ec2215a5bdf263ee7e044231781087bf07f17463267c"
     },
     "case_description": "Library Management System",
     "system": "iredev",
     "setting": "negotiation_integration_verification",
     "negotiation_enabled": true,
     "verification_executed": true,
-    "system_behaviors": {
-      "phase2_uses_llm": false,
-      "phase2_llm_active": false,
-      "optional_artifact_count": 0
+    "quare_only_behaviors": {
+      "phase0_external_spec_processing": false,
+      "dynamic_round_control": false,
+      "phase25_conflict_map_generation": false,
+      "phase5_software_materials_generation": false,
+      "phase2_dialectic_negotiation": false
     },
-    "optional_artifacts": {},
+    "quare_optional_artifacts": {},
     "phase2_llm": {
       "source": "disabled",
       "enabled": false,
@@ -542,20 +545,20 @@
       "retry_count": 0,
       "parse_recoveries": 0
     },
-    "runtime_llm": {
+    "mare_runtime_llm": {
       "source": "openai",
       "enabled": true,
       "seed": 202,
-      "seed_applied_turns": 0,
-      "turns": 0,
-      "fallback_turns": 33,
-      "retry_count": 0,
+      "seed_applied_turns": 30,
+      "turns": 30,
+      "fallback_turns": 3,
+      "retry_count": 4,
       "parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback"
+      "execution_mode": "llm_hybrid_fallback"
     },
-    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
-    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_corpus_dir": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base",
+    "rag_corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
     "rag_chunk_count": 308,
-    "prompt_contract_hash": "96727505f07c50ca614fc95ba6d6bfdf2b6492c9155dbd758e53596746769966"
+    "prompt_contract_hash": "3d4748ff7c0ca3808eb85e5e454eeecd51ce4eaae5679ddea2ab9e0003c4b266"
   }
 }

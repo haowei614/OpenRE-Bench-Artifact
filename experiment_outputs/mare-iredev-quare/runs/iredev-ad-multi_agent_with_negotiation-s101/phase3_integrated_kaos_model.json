@@ -3,7 +3,7 @@
     {
       "id": "ANA-L1-004",
       "name": "Negotiated Integrated Goal",
-      "description": "Analyst objective for AD: SR-1: The system shall UR-1: The system shall - The system operates in specific urban and highway scenarios",
+      "description": "Analyst objective for AD: 1. The system shall operate seamlessly in urban and highway scenarios, ensuring robust functionality in both environments.",
       "gsn_type": "Goal",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -23,7 +23,7 @@
     {
       "id": "END-L2-002-04",
       "name": "EndUser Output 4",
-      "description": "The system shall Response: - The system operates in specific urban and highway scenarios",
+      "description": "The system shall As an end user, my primary pain point is the system's ability to handle diverse urban and highway scenarios seamlessly. I expect the automated system to not only navigate efficiently but also to ensure safety by adher...",
       "gsn_type": "Strategy",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -34,7 +34,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "cases/real_world_studies.py",
+        "source_document": "automotive_safety.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -43,7 +43,7 @@
     {
       "id": "REV-L2-006-04",
       "name": "Reviewer Output 4",
-      "description": "The system shall Closure: Finding: Potential trade-off detected between conflicting quality attributes. — resolved",
+      "description": "The system shall Review finding: Potential trade-off detected between conflicting quality attributes.",
       "gsn_type": "Strategy",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -63,7 +63,7 @@
     {
       "id": "INT-L2-001-04",
       "name": "Interviewer Output 4",
-      "description": "The system shall Interview record 4: Response: - The system operates in specific urban and highway scenarios",
+      "description": "The system shall Interview record 4: As an end user, my primary pain point is the system's ability to handle diverse urban and highway scenarios seamlessly. I expect the automated syst... Negotiated trade-off accepted by EndUser.",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -74,16 +74,16 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "cases/real_world_studies.py",
-        "conflict_resolved_by": null,
-        "validation_status": "pending",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "EndUser",
+        "validation_status": "resolved",
         "citation_required": true
       }
     },
     {
       "id": "DEP-L2-003-04",
       "name": "Deployer Output 4",
-      "description": "The system shall Deploy constraint: - The system operates in specific urban and highway scenarios",
+      "description": "The system shall The infrastructure must support real-time data processing and robust connectivity for urban and highway scenarios, ensuring the system operates effectively in diverse conditions.",
       "gsn_type": "Strategy",
       "quality_attribute": "Safety",
       "priority": 1,
@@ -101,20 +101,20 @@
       }
     },
     {
-      "id": "ARC-L2-005-04",
-      "name": "Archivist Output 4",
-      "description": "The system shall SRS-4 External Interface Requirements",
+      "id": "ARC-L2-005-01",
+      "name": "Archivist Output 1",
+      "description": "The system shall 1. Introduction 1.1 Purpose The purpose of this Software Requirements Specification (SRS) is to outline the system requirements for the automated vehicle operating in urban and highway scenarios. 1.2 Scope This docume...",
       "gsn_type": "Strategy",
       "quality_attribute": "Sustainability",
       "priority": 1,
       "stakeholder": "Archivist",
-      "measurable_criteria": "Archivist action artifact 4",
+      "measurable_criteria": "Archivist action artifact 1",
       "hierarchy_level": 2,
       "parent_goal_id": "ANA-L1-004",
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "domains/automotive_safety.py",
+        "source_document": "cases/real_world_studies.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -123,7 +123,7 @@
     {
       "id": "ANA-L2-004-04",
       "name": "Analyst Output 4",
-      "description": "The system shall SR-4: The system shall UR-4: The system shall Multiobjective Optimization:",
+      "description": "The system shall 4. The system shall utilize a multiobjective optimization strategy to balance safety (collision avoidance), smoothness (passenger comfort), and speed (efficiency in reaching the destination).",
       "gsn_type": "Strategy",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -189,7 +189,7 @@
     {
       "id": "REL-005",
       "source_id": "ANA-L1-004",
-      "target_id": "ARC-L2-005-04",
+      "target_id": "ARC-L2-005-01",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -213,7 +213,7 @@
     "model_id": "model_iredev-ad-multi_agent_with_negotiation-s101",
     "name": "OpenRE-Bench Integrated KAOS for AD",
     "description": "Deterministic protocol-aligned integrated GSN model.",
-    "created_timestamp": "2026-05-12T04:49:58Z",
+    "created_timestamp": "2026-02-17T09:20:36Z",
     "requirement_source": "Project: Baidu Apollo Autonomous Driving System (Planning & Control Module)\n\n[System Context]\nThe system is a Level 4 autonomous driving platform operating in mixed traffic environments. It must strictly adhere to the \"Apollo Pilot Safety Report\" and the \"EM Motion Planner\" specifications.\n\n[Safety Requirements - Based on Apollo Pilot Safety Report]\n1. Multi-Layer Safety Architecture:\n   - The system must implement \"Passive Safety\" (collision protection), \"Active Safety\" (ACC, AEB, LKA), and \"Functional Safety\" (fail-safe mechanisms).\n2. Minimal Risk Maneuver (MRM):\n   - Upon detecting a critical system failure (e.g., sensor loss, localization failure) or exiting the ODD, the vehicle must NOT simply stop in lane immediately if unsafe. It must execute an MRM to safely pull over or stop in a low-risk zone within a specific time window.\n3. ODD (Operational Design Domain):\n   - The system operates in specific urban and highway scenarios. It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached.\n\n[Efficiency & Planning Requirements - Based on EM Motion Planner]\n1. Multiobjective Optimization:\n   - The planner must simultaneously optimize for three conflicting objectives: Safety (collision avoidance), Smoothness (passenger comfort), and Speed (reaching destination).\n2. Path-Speed Decoupling (EM Framework):\n   - The system must use the Expectation-Maximization (EM) framework.\n   - Step 1 (E-step): Generate an optimal path in the Frenet Frame (SL-Graph).\n   - Step 2 (M-step): Generate an optimal speed profile in the Station-Time Frame (ST-Graph).\n3. Hard Constraints (Mathematical):\n   - Trajectory smoothness is critical. The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort.\n   - Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip.\n   - Non-convex obstacle constraints must be handled using iterative quadratic programming (QP).\n\n[Conflict Scenario for Negotiation]\n- The SafetyAgent prioritizes \"Passive Safety\" and strictly enforcing safe distances and MRM execution.\n- The EfficiencyAgent prioritizes \"Smoothness\" and \"Speed\" using the QP function to minimize Jerk.\n- **Potential Conflict**: An emergency MRM (Safety) triggered by a fault might violate the Jerk/Smoothness constraints (Efficiency), requiring architectural negotiation (e.g., relaxing smoothness constraints during MRM).",
     "model_type": "GSN",
     "quality_attributes": [
@@ -265,8 +265,8 @@
         "parent_goal_id": "ANA-L1-004"
       },
       {
-        "id": "ARC-L2-005-04",
-        "name": "Archivist Output 4",
+        "id": "ARC-L2-005-01",
+        "name": "Archivist Output 1",
         "quality_attribute": "Sustainability",
         "parent_goal_id": "ANA-L1-004"
       },
@@ -284,7 +284,7 @@
         "REV-L2-006-04",
         "INT-L2-001-04",
         "DEP-L2-003-04",
-        "ARC-L2-005-04",
+        "ARC-L2-005-01",
         "ANA-L2-004-04"
       ]
     }
@@ -301,7 +301,7 @@
     "invalid_leaves": []
   },
   "model_id": "model_iredev-ad-multi_agent_with_negotiation-s101",
-  "created_timestamp": "2026-05-12T04:49:58Z",
+  "created_timestamp": "2026-02-17T09:20:36Z",
   "total_elements": 7,
   "total_relations": 6
 }

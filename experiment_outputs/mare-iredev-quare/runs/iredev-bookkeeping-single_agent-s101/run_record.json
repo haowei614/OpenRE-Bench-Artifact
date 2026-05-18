@@ -11,17 +11,17 @@
     "system_name": "iredev",
     "implementation": "deterministic-parity-pipeline",
     "implementation_version": "0.1.0",
-    "python_version": "3.13.12",
-    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
-    "machine": "arm64"
+    "python_version": "3.14.0",
+    "platform": "Linux-6.18.10-2-cachyos-lts-x86_64-with-glibc2.43",
+    "machine": "x86_64"
   },
   "provenance": {
     "model": "gpt-4o-mini",
     "temperature": 0.7,
     "seed": 101,
-    "prompt_hash": "1c4954821c36eda268b7bc8348bcfb3a07fc83e467bc771f625a809bb2d1e08f",
-    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
-    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+    "prompt_hash": "3d48eacae2d5b376362decd6983e019d072af5d54ae9eaf8cf9f6c4327c7090a",
+    "corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
+    "corpus_path": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base"
   },
   "execution_flags": {
     "rag_fallback_used": false,
@@ -40,20 +40,20 @@
   "rag_enabled": true,
   "rag_backend": "local_tfidf",
   "rag_fallback_used": false,
-  "start_timestamp": "2026-05-12T04:50:01Z",
-  "end_timestamp": "2026-05-12T04:50:01Z",
-  "runtime_seconds": 0.011196,
-  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/iredev-bookkeeping-single_agent-s101",
+  "start_timestamp": "2026-02-17T10:01:25Z",
+  "end_timestamp": "2026-02-17T10:01:25Z",
+  "runtime_seconds": 0.006875,
+  "artifacts_dir": "experiment_outputs/iredev/runs/iredev-bookkeeping-single_agent-s101",
   "artifact_paths": {
-    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/iredev-bookkeeping-single_agent-s101/phase1_initial_models.json",
-    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/iredev-bookkeeping-single_agent-s101/phase2_negotiation_trace.json",
-    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/iredev-bookkeeping-single_agent-s101/phase3_integrated_kaos_model.json",
-    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/iredev-bookkeeping-single_agent-s101/phase4_verification_report.json"
+    "phase1_initial_models.json": "experiment_outputs/iredev/runs/iredev-bookkeeping-single_agent-s101/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/iredev/runs/iredev-bookkeeping-single_agent-s101/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/iredev/runs/iredev-bookkeeping-single_agent-s101/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/iredev/runs/iredev-bookkeeping-single_agent-s101/phase4_verification_report.json"
   },
   "artifact_blinded": false,
   "blinding_scheme_version": "",
   "blind_eval_run_id": "",
-  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "judge_pipeline_hash": "aca4416c757997fb3f3688c03e0d361b94a59adaca560b6cc5221f89f386eebd",
   "trace_audit_path": "",
   "notes": {
     "phase_a_b": true,
@@ -66,12 +66,14 @@
     "setting": "single_agent",
     "negotiation_enabled": false,
     "verification_executed": false,
-    "system_behaviors": {
-      "phase2_uses_llm": false,
-      "phase2_llm_active": false,
-      "optional_artifact_count": 0
+    "quare_only_behaviors": {
+      "phase0_external_spec_processing": false,
+      "dynamic_round_control": false,
+      "phase25_conflict_map_generation": false,
+      "phase5_software_materials_generation": false,
+      "phase2_dialectic_negotiation": false
     },
-    "optional_artifacts": {},
+    "quare_optional_artifacts": {},
     "phase2_llm": {
       "source": "disabled",
       "enabled": false,
@@ -82,7 +84,7 @@
       "retry_count": 0,
       "parse_recoveries": 0
     },
-    "runtime_llm": {
+    "mare_runtime_llm": {
       "source": "disabled",
       "enabled": false,
       "seed": 101,
@@ -93,9 +95,9 @@
       "parse_recoveries": 0,
       "execution_mode": "deterministic_emulation"
     },
-    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
-    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_corpus_dir": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base",
+    "rag_corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
     "rag_chunk_count": 308,
-    "prompt_contract_hash": "1c4954821c36eda268b7bc8348bcfb3a07fc83e467bc771f625a809bb2d1e08f"
+    "prompt_contract_hash": "3d48eacae2d5b376362decd6983e019d072af5d54ae9eaf8cf9f6c4327c7090a"
   }
 }

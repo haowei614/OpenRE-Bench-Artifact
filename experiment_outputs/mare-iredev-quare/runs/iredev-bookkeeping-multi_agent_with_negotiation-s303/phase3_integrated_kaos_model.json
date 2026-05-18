@@ -3,7 +3,7 @@
     {
       "id": "ANA-L1-004",
       "name": "Negotiated Integrated Goal",
-      "description": "Analyst objective for Bookkeeping: SR-1: The system shall UR-1: The system shall The system must ensure double-entry bookkeeping principles are followed and maintain an audit trail of all transactions",
+      "description": "Analyst objective for Bookkeeping: REQ-1: The system must ensure that double-entry bookkeeping principles are followed and maintain an audit trail of all transactions to ensure transparency and accountability.",
       "gsn_type": "Goal",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -23,7 +23,7 @@
     {
       "id": "END-L2-002-04",
       "name": "EndUser Output 4",
-      "description": "The system shall Response: The system must ensure double-entry bookkeeping principles are followed and maintain an audit trail of all transactions",
+      "description": "The system shall Generating accurate and comprehensive financial reports is a critical expectation. Businesses rely on these reports for decision-making, and any delay or inaccuracy can lead to significant operational issues.",
       "gsn_type": "Strategy",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -34,21 +34,21 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source_document": "knowledge_guide.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
       }
     },
     {
-      "id": "REV-L2-006-04",
-      "name": "Reviewer Output 4",
-      "description": "The system shall Closure: Finding: Ensure traceability from user requirements to system requirements. — resolved",
+      "id": "REV-L2-006-03",
+      "name": "Reviewer Output 3",
+      "description": "The system shall Verified that all user requirements are aligned with the system requirements and that revisions address all review findings. Specifically, it was confirmed that each requirement includes clear acceptance criteria, ens...",
       "gsn_type": "Strategy",
       "quality_attribute": "Integrated",
       "priority": 1,
       "stakeholder": "Reviewer",
-      "measurable_criteria": "Reviewer action artifact 4",
+      "measurable_criteria": "Reviewer action artifact 3",
       "hierarchy_level": 2,
       "parent_goal_id": "ANA-L1-004",
       "properties": {
@@ -63,7 +63,7 @@
     {
       "id": "INT-L2-001-04",
       "name": "Interviewer Output 4",
-      "description": "The system shall Interview record 4: Response: The system must ensure double-entry bookkeeping principles are followed and maintain an audit trail of all transactions",
+      "description": "The system shall The system must maintain an audit trail of all transactions, ensuring transparency and accountability in financial operations.",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -83,12 +83,32 @@
     {
       "id": "DEP-L2-003-04",
       "name": "Deployer Output 4",
-      "description": "The system shall Deploy constraint: The system must ensure double-entry bookkeeping principles are followed and maintain an audit trail of all transactions",
+      "description": "The system shall The infrastructure must utilize a robust database management system to ensure compliance with double-entry bookkeeping principles, maintaining an audit trail for all transactions to enhance data integrity and transpar...",
       "gsn_type": "Strategy",
       "quality_attribute": "Safety",
       "priority": 1,
       "stakeholder": "Deployer",
       "measurable_criteria": "Deployer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-04",
+      "name": "Archivist Output 4",
+      "description": "The system shall 3.1. Compliance and Audit Trail: The system must ensure that double-entry bookkeeping principles are followed and maintain an audit trail of all transactions to ensure transparency and accountability.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 4",
       "hierarchy_level": 2,
       "parent_goal_id": "ANA-L1-004",
       "properties": {
@@ -101,29 +121,9 @@
       }
     },
     {
-      "id": "ARC-L2-005-04",
-      "name": "Archivist Output 4",
-      "description": "The system shall SRS-4 External Interface Requirements",
-      "gsn_type": "Strategy",
-      "quality_attribute": "Sustainability",
-      "priority": 1,
-      "stakeholder": "Archivist",
-      "measurable_criteria": "Archivist action artifact 4",
-      "hierarchy_level": 2,
-      "parent_goal_id": "ANA-L1-004",
-      "properties": {
-        "original_kaos_type": "Task",
-        "source": "openre_bench.phase1.rag",
-        "source_document": "domains/automotive_safety.py",
-        "conflict_resolved_by": null,
-        "validation_status": "pending",
-        "citation_required": true
-      }
-    },
-    {
       "id": "ANA-L2-004-04",
       "name": "Analyst Output 4",
-      "description": "The system shall SR-4: The system shall UR-4: The system shall The system must support multiple accounts and categories",
+      "description": "The system shall REQ-4: The system must support the creation of multiple accounts and categories, allowing users to define categories and subcategories for detailed financial analysis.",
       "gsn_type": "Strategy",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -134,7 +134,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "domains/automotive_safety.py",
+        "source_document": "cases/real_world_studies.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -156,7 +156,7 @@
     {
       "id": "REL-002",
       "source_id": "ANA-L1-004",
-      "target_id": "REV-L2-006-04",
+      "target_id": "REV-L2-006-03",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -213,7 +213,7 @@
     "model_id": "model_iredev-bookkeeping-multi_agent_with_negotiation-s303",
     "name": "OpenRE-Bench Integrated KAOS for Bookkeeping",
     "description": "Deterministic protocol-aligned integrated GSN model.",
-    "created_timestamp": "2026-05-12T04:50:02Z",
+    "created_timestamp": "2026-02-17T10:22:59Z",
     "requirement_source": "A bookkeeping system must record financial transactions including income and expenses. The system must support multiple accounts and categories. Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements. The system must ensure double-entry bookkeeping principles are followed and maintain an audit trail of all transactions. The system must support multiple currencies and handle currency conversion.",
     "model_type": "GSN",
     "quality_attributes": [
@@ -247,8 +247,8 @@
         "parent_goal_id": "ANA-L1-004"
       },
       {
-        "id": "REV-L2-006-04",
-        "name": "Reviewer Output 4",
+        "id": "REV-L2-006-03",
+        "name": "Reviewer Output 3",
         "quality_attribute": "Integrated",
         "parent_goal_id": "ANA-L1-004"
       },
@@ -281,7 +281,7 @@
     "parent_child_mappings": {
       "ANA-L1-004": [
         "END-L2-002-04",
-        "REV-L2-006-04",
+        "REV-L2-006-03",
         "INT-L2-001-04",
         "DEP-L2-003-04",
         "ARC-L2-005-04",
@@ -301,7 +301,7 @@
     "invalid_leaves": []
   },
   "model_id": "model_iredev-bookkeeping-multi_agent_with_negotiation-s303",
-  "created_timestamp": "2026-05-12T04:50:02Z",
+  "created_timestamp": "2026-02-17T10:22:59Z",
   "total_elements": 7,
   "total_relations": 6
 }

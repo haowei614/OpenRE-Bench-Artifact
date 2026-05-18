@@ -11,24 +11,24 @@
     "system_name": "iredev",
     "implementation": "deterministic-parity-pipeline",
     "implementation_version": "0.1.0",
-    "python_version": "3.13.12",
-    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
-    "machine": "arm64"
+    "python_version": "3.14.0",
+    "platform": "Linux-6.18.10-2-cachyos-lts-x86_64-with-glibc2.43",
+    "machine": "x86_64"
   },
   "provenance": {
     "model": "gpt-4o-mini",
     "temperature": 0.7,
     "seed": 202,
-    "prompt_hash": "423f0ca8796fd2d4c769eff748d918a6837fee49d22d3a4c4879a1a6a57d59b6",
-    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
-    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+    "prompt_hash": "1ba498b78c21560fc469408ecdee90f5774ae6b6f95d0ad4bcdf6ed15c653a9e",
+    "corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
+    "corpus_path": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base"
   },
   "execution_flags": {
     "rag_fallback_used": false,
     "llm_fallback_used": true,
     "fallback_tainted": true,
-    "retry_used": false,
-    "retry_count": 0
+    "retry_used": true,
+    "retry_count": 3
   },
   "comparability": {
     "is_comparable": false,
@@ -40,20 +40,20 @@
   "rag_enabled": true,
   "rag_backend": "local_tfidf",
   "rag_fallback_used": false,
-  "start_timestamp": "2026-05-12T04:50:01Z",
-  "end_timestamp": "2026-05-12T04:50:01Z",
-  "runtime_seconds": 0.199017,
-  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/iredev-bookkeeping-multi_agent_with_negotiation-s202",
+  "start_timestamp": "2026-02-17T10:13:13Z",
+  "end_timestamp": "2026-02-17T10:15:44Z",
+  "runtime_seconds": 151.196212,
+  "artifacts_dir": "experiment_outputs/iredev/runs/iredev-bookkeeping-multi_agent_with_negotiation-s202",
   "artifact_paths": {
-    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/iredev-bookkeeping-multi_agent_with_negotiation-s202/phase1_initial_models.json",
-    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/iredev-bookkeeping-multi_agent_with_negotiation-s202/phase2_negotiation_trace.json",
-    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/iredev-bookkeeping-multi_agent_with_negotiation-s202/phase3_integrated_kaos_model.json",
-    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/iredev-bookkeeping-multi_agent_with_negotiation-s202/phase4_verification_report.json"
+    "phase1_initial_models.json": "experiment_outputs/iredev/runs/iredev-bookkeeping-multi_agent_with_negotiation-s202/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/iredev/runs/iredev-bookkeeping-multi_agent_with_negotiation-s202/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/iredev/runs/iredev-bookkeeping-multi_agent_with_negotiation-s202/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/iredev/runs/iredev-bookkeeping-multi_agent_with_negotiation-s202/phase4_verification_report.json"
   },
   "artifact_blinded": false,
   "blinding_scheme_version": "",
   "blind_eval_run_id": "",
-  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "judge_pipeline_hash": "aca4416c757997fb3f3688c03e0d361b94a59adaca560b6cc5221f89f386eebd",
   "trace_audit_path": "",
   "notes": {
     "phase_a_b": true,
@@ -67,14 +67,13 @@
       "llm_source": "openai",
       "llm_enabled": true,
       "llm_seed": 202,
-      "llm_seed_applied_turns": 0,
-      "llm_turns": 0,
-      "llm_fallback_turns": 33,
-      "llm_retry_count": 0,
+      "llm_seed_applied_turns": 30,
+      "llm_turns": 30,
+      "llm_fallback_turns": 3,
+      "llm_retry_count": 3,
       "llm_parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback",
-      "llm_actions": [],
-      "fallback_actions": [
+      "execution_mode": "llm_hybrid_fallback",
+      "llm_actions": [
         "DialogueWithEndUser",
         "DialogueWithEndUser",
         "DialogueWithEndUser",
@@ -87,8 +86,6 @@
         "ConfirmOrRefineEndUser",
         "ConfirmOrRefineEndUser",
         "ConfirmOrRefineEndUser",
-        "WriteInterviewRecords",
-        "WriteUserRequirementsList",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
@@ -106,8 +103,12 @@
         "SelectRequirementModel",
         "BuildRequirementModel",
         "WriteSRS",
-        "Evaluate",
         "ConfirmClosure"
+      ],
+      "fallback_actions": [
+        "WriteInterviewRecords",
+        "WriteUserRequirementsList",
+        "Evaluate"
       ],
       "roles_executed": [
         "Interviewer",
@@ -171,122 +172,122 @@
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 5,
-          "summary": "As a user of Bookkeeping, I need Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements As a us..."
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "The interview questions focus on uncovering user goals, pain points, and acceptance criteria related to financial reporting and bookkeeping processes."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 5,
-          "summary": "As a user of Bookkeeping, I need Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements As a us..."
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "The interview questions focus on uncovering user goals, pain points, and acceptance criteria related to financial reporting and bookkeeping processes."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 5,
-          "summary": "As a user of Bookkeeping, I need Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements As a us..."
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "The interview questions aim to uncover user goals, pain points, and acceptance criteria related to bookkeeping by utilizing the 5W1H technique and Socratic questioning strategies."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Response: Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements"
-        },
-        {
-          "role": "EndUser",
-          "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
-          "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Response: Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements Response: The system must ensu..."
-        },
-        {
-          "role": "EndUser",
-          "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
-          "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 4,
-          "summary": "Response: Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements Response: The system must ensu..."
+          "summary": "The responses highlight key pain points in generating reports, ensuring accuracy, handling multiple currencies, and managing accounts, reflecting the need for an efficient bookkeeping system."
+        },
+        {
+          "role": "EndUser",
+          "action": "RespondEndUser",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "The small business owner needs a bookkeeping system that efficiently generates accurate financial reports, ensures compliance with double-entry principles, supports multiple currencies for international transactions, and effectively records diverse income and expenses."
+        },
+        {
+          "role": "EndUser",
+          "action": "RespondEndUser",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "As a small business owner, I face challenges in generating accurate financial reports quickly, ensuring compliance with double-entry principles, handling multiple currencies, and efficiently recording diverse transactions."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user seeks clarification on the prioritization of financial reports, adherence to bookkeeping principles, currency conversion mechanisms, and efficiency in transaction recording."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user seeks clarification on financial report prioritization, adherence to double-entry bookkeeping principles, and real-time currency conversion processes."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user raises several clarification questions regarding the prioritization and customization of financial reports, adherence to double-entry bookkeeping principles, real-time currency conversion accuracy, and overall user flexibility within the bookkeeping system."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: Users must be able to generate financial reports such as balance sheets, income stateme... Confirmed: Response: Users must be able to ge..."
+          "summary": "The refinements focus on enhancing report generation speed and accuracy, ensuring compliance with bookkeeping principles, and improving currency conversion efficiency."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: Users must be able to generate financial reports such as balance sheets, income stateme... Confirmed: Response: Users must be able to ge..."
+          "summary": "The refined requirements focus on enhancing user experience by prioritizing quick and customizable financial report generation, ensuring compliance with double-entry bookkeeping principles, and providing accurate real-time currency conversion."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: Users must be able to generate financial reports such as balance sheets, income stateme... Confirmed: Response: Users must be able to ge..."
+          "summary": "The requirements for the bookkeeping system have been validated and refined to prioritize efficient financial reporting, adherence to double-entry principles, real-time currency conversion, and easy transaction recording."
         },
         {
           "role": "Interviewer",
@@ -294,9 +295,9 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 4,
-          "summary": "Interview record 1: Response: Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements Interview..."
+          "summary": "Interview record 1: As a small business owner, I struggle with generating accurate financial reports quickly; it often takes too long to compile data manuall..."
         },
         {
           "role": "Interviewer",
@@ -304,179 +305,179 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 5,
           "summary": "UR-1: The system shall Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements UR-2: The system..."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to Users must be able to generate financial reports such as balance sheets, income statements, and c...? What infrastru..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Targeted questions for the Deployer aim to uncover infrastructure constraints, security mandates, and scalability expectations for the bookkeeping system."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to Users must be able to generate financial reports such as balance sheets, income statements, and c...? What infrastru..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Targeted questions for the Deployer aim to uncover infrastructure constraints, security mandates, and scalability expectations for the bookkeeping system."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to Users must be able to generate financial reports such as balance sheets, income statements, and c...? What infrastru..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Targeted questions for the Deployer focus on infrastructure constraints, security mandates, and scalability expectations relevant to the bookkeeping system."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Deploy constraint: Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployment for the bookkeeping system requires cloud hosting for scalability, strict security measures for data protection, horizontal scalability to manage user demand, and established operational procedures for data backup and recovery."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Deploy constraint: Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements Deploy constraint: Th..."
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployment of the bookkeeping system must address infrastructure constraints, security mandates, scalability targets, and operational procedures to ensure compliance, performance, and user satisfaction."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Deploy constraint: Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements Deploy constraint: Th..."
+          "summary": "The bookkeeping system must meet specific infrastructure constraints, security mandates, scalability targets, and operational procedures to ensure efficient and secure financial management."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Requesting clarification on the prioritization and customization of financial reports, adherence to double-entry bookkeeping principles with user flexibility, and handling of real-time currency conversion with accuracy measures."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployer seeks clarification on prioritization and customization of financial reports, adherence to double-entry principles with user flexibility, and mechanisms for real-time currency conversion accuracy."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployer seeks clarification on prioritization and customization of financial reports, adherence to double-entry bookkeeping principles, and handling of currency conversion to ensure accuracy."
+        },
+        {
+          "role": "Deployer",
+          "action": "ConfirmOrRefineDeployer",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
           "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "summary": "Validated deployment requirements for the bookkeeping system with refinements based on user feedback and operational constraints."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: Users must be able to generate financial reports such as balance sheets, incom... Confirmed: Deploy constraint: Users must be a..."
+          "summary": "The deployment requirements for the bookkeeping system remain valid, with adjustments made for enhanced user customization in reports, adherence to bookkeeping principles, and real-time currency conversion."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: Users must be able to generate financial reports such as balance sheets, incom... Confirmed: Deploy constraint: Users must be a..."
-        },
-        {
-          "role": "Deployer",
-          "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
-          "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: Users must be able to generate financial reports such as balance sheets, incom... Confirmed: Deploy constraint: Users must be a..."
+          "summary": "The deployment requirements for the Bookkeeping system are confirmed with enhancements in user report customization, adherence to bookkeeping principles, and real-time currency conversion."
         },
         {
           "role": "Interviewer",
           "action": "WriteOperatingEnvironmentList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "ENV-1: Standard web server with HTTPS termination ENV-2: Relational database with backup and recovery procedures ENV-3: Authentication and access control fra..."
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "The operating environment for the Bookkeeping system must include cloud hosting with load balancing, GDPR compliance, data encryption, multi-factor authentication, and the ability to scale horizontally to accommodate user demand and ensure real-time currency conversion."
         },
         {
           "role": "Analyst",
           "action": "WriteSystemRequirementsList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 8,
-          "summary": "SR-1: The system shall UR-1: The system shall Users must be able to generate financial reports such as balance sheets, income statements, and cash flow state..."
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "This system requirements list consolidates user and environment-level requirements for a bookkeeping system, ensuring adherence to IEEE 830 standards while addressing essential functionalities, security, and operational constraints."
         },
         {
           "role": "Analyst",
           "action": "SelectRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 1,
-          "summary": "Selected model: Use Case Diagram (UML) — suitable for stakeholder interactions"
+          "summary": "A UML Use Case Diagram is selected for modeling the bookkeeping system due to its ability to represent user interactions and system functionalities related to financial reporting and compliance."
         },
         {
           "role": "Analyst",
           "action": "BuildRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 6,
-          "summary": "Model element: system Model element: shall Model element: system Model element: shall Model element: users Model element: generate"
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "The requirements model outlines the interactions for generating financial reports, recording transactions, and managing currency conversions while ensuring adherence to double-entry principles and allowing for user customization."
         },
         {
           "role": "Archivist",
           "action": "WriteSRS",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 4,
-          "summary": "SRS-1 Purpose and Scope SRS-2 Functional Requirements SRS-3 Non-Functional Requirements and Quality Attributes SRS-4 External Interface Requirements"
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "This SRS document consolidates the approved requirements for the Bookkeeping system, detailing functional and non-functional aspects in compliance with IEEE 830 standards."
         },
         {
           "role": "Reviewer",
@@ -484,56 +485,58 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 2,
           "summary": "Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. Finding: Ensure traceability from user requirements to system..."
         },
         {
           "role": "Reviewer",
           "action": "ConfirmClosure",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Closure: Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. — resolved Closure: Finding: Ensure traceability fro..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "The review confirms that all findings are resolved, with requirements verified for clarity, traceability, and adherence to standards."
         }
       ],
       "workspace_summary": {
         "interview_records": 4,
         "user_requirements": 5,
-        "operating_environment": 3,
-        "enduser_responses": 7,
-        "enduser_questions": 3,
+        "operating_environment": 6,
+        "enduser_responses": 12,
+        "enduser_questions": 9,
         "enduser_confirmations": 9,
-        "deployer_responses": 6,
-        "deployer_questions": 3,
-        "deployer_confirmations": 9,
-        "system_requirements": 8,
+        "deployer_responses": 9,
+        "deployer_questions": 9,
+        "deployer_confirmations": 7,
+        "system_requirements": 6,
         "selected_model": 1,
-        "requirement_model": 6,
-        "srs_sections": 4,
+        "requirement_model": 8,
+        "srs_sections": 6,
         "review_findings": 2,
-        "closure_confirmations": 2,
+        "closure_confirmations": 4,
         "dialogue_rounds": 3,
         "total_action_fires": 33,
         "distinct_actions_fired": 17,
-        "llm_turns": 0,
-        "llm_fallback_turns": 33
+        "llm_turns": 30,
+        "llm_fallback_turns": 3
       },
-      "workspace_digest": "e3a18a77b49894d20dbcfc423e5778a6f0857bbe6622ce1b2bfc43087d4b48d8"
+      "workspace_digest": "b157a49eded3ec27fa00a31b65d24ad73b3ee854377b7f63ad882a14d7294c8f"
     },
     "case_description": "Bookkeeping Accounting System",
     "system": "iredev",
     "setting": "multi_agent_with_negotiation",
     "negotiation_enabled": true,
     "verification_executed": false,
-    "system_behaviors": {
-      "phase2_uses_llm": false,
-      "phase2_llm_active": false,
-      "optional_artifact_count": 0
+    "quare_only_behaviors": {
+      "phase0_external_spec_processing": false,
+      "dynamic_round_control": false,
+      "phase25_conflict_map_generation": false,
+      "phase5_software_materials_generation": false,
+      "phase2_dialectic_negotiation": false
     },
-    "optional_artifacts": {},
+    "quare_optional_artifacts": {},
     "phase2_llm": {
       "source": "disabled",
       "enabled": false,
@@ -544,20 +547,20 @@
       "retry_count": 0,
       "parse_recoveries": 0
     },
-    "runtime_llm": {
+    "mare_runtime_llm": {
       "source": "openai",
       "enabled": true,
       "seed": 202,
-      "seed_applied_turns": 0,
-      "turns": 0,
-      "fallback_turns": 33,
-      "retry_count": 0,
+      "seed_applied_turns": 30,
+      "turns": 30,
+      "fallback_turns": 3,
+      "retry_count": 3,
       "parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback"
+      "execution_mode": "llm_hybrid_fallback"
     },
-    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
-    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_corpus_dir": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base",
+    "rag_corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
     "rag_chunk_count": 308,
-    "prompt_contract_hash": "423f0ca8796fd2d4c769eff748d918a6837fee49d22d3a4c4879a1a6a57d59b6"
+    "prompt_contract_hash": "1ba498b78c21560fc469408ecdee90f5774ae6b6f95d0ad4bcdf6ed15c653a9e"
   }
 }

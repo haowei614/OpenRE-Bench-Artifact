@@ -11,24 +11,24 @@
     "system_name": "iredev",
     "implementation": "deterministic-parity-pipeline",
     "implementation_version": "0.1.0",
-    "python_version": "3.13.12",
-    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
-    "machine": "arm64"
+    "python_version": "3.14.0",
+    "platform": "Linux-6.18.10-2-cachyos-lts-x86_64-with-glibc2.43",
+    "machine": "x86_64"
   },
   "provenance": {
     "model": "gpt-4o-mini",
     "temperature": 0.7,
     "seed": 303,
-    "prompt_hash": "5bf20d783271620acb63887302551e6db5cfa38f7eca71ab1380ce461b7e75cd",
-    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
-    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+    "prompt_hash": "b980e6bea113c9678f0585ce3a35d997b0002f55774c8c82386c7d187bccd87e",
+    "corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
+    "corpus_path": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base"
   },
   "execution_flags": {
     "rag_fallback_used": false,
     "llm_fallback_used": true,
     "fallback_tainted": true,
-    "retry_used": false,
-    "retry_count": 0
+    "retry_used": true,
+    "retry_count": 2
   },
   "comparability": {
     "is_comparable": false,
@@ -40,20 +40,20 @@
   "rag_enabled": true,
   "rag_backend": "local_tfidf",
   "rag_fallback_used": false,
-  "start_timestamp": "2026-05-12T04:50:04Z",
-  "end_timestamp": "2026-05-12T04:50:04Z",
-  "runtime_seconds": 0.1085,
-  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/iredev-rollcall-multi_agent_without_negotiation-s303",
+  "start_timestamp": "2026-02-17T11:10:46Z",
+  "end_timestamp": "2026-02-17T11:13:13Z",
+  "runtime_seconds": 147.048391,
+  "artifacts_dir": "experiment_outputs/iredev/runs/iredev-rollcall-multi_agent_without_negotiation-s303",
   "artifact_paths": {
-    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/iredev-rollcall-multi_agent_without_negotiation-s303/phase1_initial_models.json",
-    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/iredev-rollcall-multi_agent_without_negotiation-s303/phase2_negotiation_trace.json",
-    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/iredev-rollcall-multi_agent_without_negotiation-s303/phase3_integrated_kaos_model.json",
-    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/iredev-rollcall-multi_agent_without_negotiation-s303/phase4_verification_report.json"
+    "phase1_initial_models.json": "experiment_outputs/iredev/runs/iredev-rollcall-multi_agent_without_negotiation-s303/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/iredev/runs/iredev-rollcall-multi_agent_without_negotiation-s303/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/iredev/runs/iredev-rollcall-multi_agent_without_negotiation-s303/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/iredev/runs/iredev-rollcall-multi_agent_without_negotiation-s303/phase4_verification_report.json"
   },
   "artifact_blinded": false,
   "blinding_scheme_version": "",
   "blind_eval_run_id": "",
-  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "judge_pipeline_hash": "aca4416c757997fb3f3688c03e0d361b94a59adaca560b6cc5221f89f386eebd",
   "trace_audit_path": "",
   "notes": {
     "phase_a_b": true,
@@ -67,14 +67,13 @@
       "llm_source": "openai",
       "llm_enabled": true,
       "llm_seed": 303,
-      "llm_seed_applied_turns": 0,
-      "llm_turns": 0,
-      "llm_fallback_turns": 33,
-      "llm_retry_count": 0,
+      "llm_seed_applied_turns": 32,
+      "llm_turns": 32,
+      "llm_fallback_turns": 1,
+      "llm_retry_count": 2,
       "llm_parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback",
-      "llm_actions": [],
-      "fallback_actions": [
+      "execution_mode": "llm_hybrid_fallback",
+      "llm_actions": [
         "DialogueWithEndUser",
         "DialogueWithEndUser",
         "DialogueWithEndUser",
@@ -88,7 +87,6 @@
         "ConfirmOrRefineEndUser",
         "ConfirmOrRefineEndUser",
         "WriteInterviewRecords",
-        "WriteUserRequirementsList",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
@@ -108,6 +106,9 @@
         "WriteSRS",
         "Evaluate",
         "ConfirmClosure"
+      ],
+      "fallback_actions": [
+        "WriteUserRequirementsList"
       ],
       "roles_executed": [
         "Interviewer",
@@ -171,132 +172,132 @@
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 5,
-          "summary": "As a user of RollCall, I need The system must generate attendance reports for administrators and calculate attendance percentages As a user of RollCall, I ne..."
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "The generated interview questions aim to uncover user goals, pain points, and acceptance criteria regarding the RollCall system using 5W1H and Socratic questioning techniques."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 5,
-          "summary": "As a user of RollCall, I need The system must generate attendance reports for administrators and calculate attendance percentages As a user of RollCall, I ne..."
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "The interview questions focus on understanding user goals, pain points, and acceptance criteria through targeted questioning techniques to gather comprehensive insights for the RollCall system."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 5,
-          "summary": "As a user of RollCall, I need The system must generate attendance reports for administrators and calculate attendance percentages As a user of RollCall, I ne..."
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "The generated questions aim to uncover user goals, pain points, and acceptance criteria for the RollCall system using 5W1H and Socratic techniques."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Response: The system must generate attendance reports for administrators and calculate attendance percentages"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The RollCall system should address real-time attendance tracking, comprehensive reporting, and user-friendly interfaces for both teachers and students to enhance attendance management."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Response: The system must generate attendance reports for administrators and calculate attendance percentages Response: The system must support multiple clas..."
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "End users express concerns about real-time tracking and the need for user-friendly reporting and interface, highlighting specific requirements for attendance management."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 4,
-          "summary": "Response: The system must generate attendance reports for administrators and calculate attendance percentages Response: The system must support multiple clas..."
+          "summary": "Key pain points include the lack of real-time tracking and the need for quick attendance marking. Expectations focus on user-friendly interfaces and comprehensive reporting for administrators, while usage scenarios emphasize the importance of student access to attendance records."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The questions focus on clarifying critical aspects such as real-time tracking, handling of multiple classes, attendance differentiation, report details, and student access to records."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The End User raises clarification questions regarding real-time tracking features, data management for multiple classes and semesters, and the differentiation of attendance statuses for accurate reporting."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user raised clarification questions focused on real-time tracking features, handling attendance across multiple classes and semesters, and the differentiation of attendance statuses."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: The system must generate attendance reports for administrators and calculate attendance... Confirmed: Response: The system must generate..."
+          "summary": "Refined requirements emphasize real-time tracking, user-friendly interfaces, and comprehensive reporting for effective attendance management."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: The system must generate attendance reports for administrators and calculate attendance... Confirmed: Response: The system must generate..."
+          "summary": "Requirements have been validated and refined, emphasizing real-time tracking, comprehensive reporting, and user-friendly interfaces."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: The system must generate attendance reports for administrators and calculate attendance... Confirmed: Response: The system must generate..."
+          "summary": "The requirements have been refined to emphasize real-time tracking, comprehensive reporting, and user-friendly interfaces based on end-user feedback."
         },
         {
           "role": "Interviewer",
           "action": "WriteInterviewRecords",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 4,
-          "summary": "Interview record 1: Response: The system must generate attendance reports for administrators and calculate attendance percentages Interview record 2: Respons..."
+          "fallback_reason": "empty_items",
+          "output_count": 3,
+          "summary": "The consolidated requirements emphasize the necessity for real-time attendance tracking, comprehensive reporting capabilities, and a user-friendly interface for both teachers and students."
         },
         {
           "role": "Interviewer",
@@ -304,236 +305,238 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 5,
           "summary": "UR-1: The system shall The system must generate attendance reports for administrators and calculate attendance percentages UR-2: The system shall The system..."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to The system must generate attendance reports for administrators and calculate attendance percentages? What infrastruc..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "The formulated questions aim to probe infrastructure constraints, security requirements, and scalability expectations for the RollCall system."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to The system must generate attendance reports for administrators and calculate attendance percentages? What infrastruc..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "The formulated questions for the Deployer focus on understanding the infrastructure constraints, security mandates, and scalability requirements of the RollCall system."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to The system must generate attendance reports for administrators and calculate attendance percentages? What infrastruc..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "The formulated questions aim to probe infrastructure constraints, security requirements, and scalability expectations for the RollCall system."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Deploy constraint: The system must generate attendance reports for administrators and calculate attendance percentages"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The RollCall system requires cloud-based infrastructure for scalability, strong security measures for data protection, and operational procedures for maintenance and user training."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Deploy constraint: The system must generate attendance reports for administrators and calculate attendance percentages Deploy constraint: The system must sup..."
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployment of the RollCall system requires a cloud-based infrastructure with strong security protocols, scalable to manage a large number of classes and students, alongside regular operational procedures for maintenance and user training."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Deploy constraint: The system must generate attendance reports for administrators and calculate attendance percentages Deploy constraint: The system must sup..."
+          "summary": "The RollCall system requires cloud-based infrastructure for scalability, robust security measures for data protection, and should efficiently manage attendance for numerous classes and students, with operational procedures in place."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Clarification is needed on real-time tracking features, data management for multiple classes, and differentiation of attendance statuses."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Requesting clarification on real-time tracking features, multi-class and semester management, and attendance status differentiation to enhance operational context for requirement development."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Requesting clarification on the operational context for real-time tracking features, multi-class data management, and attendance status classifications."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: The system must generate attendance reports for administrators and calculate a... Confirmed: Deploy constraint: The system must..."
+          "summary": "The deployment requirements for the RollCall system have been confirmed, focusing on real-time tracking, comprehensive reporting, and user-friendly interfaces."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: The system must generate attendance reports for administrators and calculate a... Confirmed: Deploy constraint: The system must..."
+          "summary": "Validated deployment requirements for the RollCall system include real-time tracking, comprehensive reporting, user-friendly interfaces, cloud infrastructure for scalability, and strong security measures."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: The system must generate attendance reports for administrators and calculate a... Confirmed: Deploy constraint: The system must..."
+          "summary": "The deployment requirements for the RollCall system have been validated and refined to emphasize real-time tracking, comprehensive reporting, and user-friendly interfaces."
         },
         {
           "role": "Interviewer",
           "action": "WriteOperatingEnvironmentList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "ENV-1: Standard web server with HTTPS termination ENV-2: Relational database with backup and recovery procedures ENV-3: Authentication and access control fra..."
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "The operating environment for the RollCall system requires a cloud-based infrastructure with adequate bandwidth, robust security measures, and scalability to support a large number of classes and students."
         },
         {
           "role": "Analyst",
           "action": "WriteSystemRequirementsList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 8,
-          "summary": "SR-1: The system shall UR-1: The system shall The system must generate attendance reports for administrators and calculate attendance percentages SR-2: The s..."
+          "fallback_reason": "",
+          "output_count": 9,
+          "summary": "This system requirements list consolidates user-level and environmental requirements for the RollCall system, focusing on attendance tracking, reporting, user interfaces, security, and scalability, in compliance with IEEE 830 standards."
         },
         {
           "role": "Analyst",
           "action": "SelectRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 1,
-          "summary": "Selected model: Use Case Diagram (UML) — suitable for stakeholder interactions"
+          "summary": "A use case diagram is chosen for RollCall to effectively visualize user interactions and functional requirements related to attendance tracking and reporting."
         },
         {
           "role": "Analyst",
           "action": "BuildRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 6,
-          "summary": "Model element: system Model element: shall Model element: system Model element: shall Model element: system Model element: generate"
+          "fallback_reason": "",
+          "output_count": 1,
+          "summary": "The RollCall requirements model captures user interactions and system functionalities, highlighting conflicts in real-time tracking integration and historical data management."
         },
         {
           "role": "Archivist",
           "action": "WriteSRS",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 4,
-          "summary": "SRS-1 Purpose and Scope SRS-2 Functional Requirements SRS-3 Non-Functional Requirements and Quality Attributes SRS-4 External Interface Requirements"
+          "fallback_reason": "",
+          "output_count": 1,
+          "summary": "The SRS for the RollCall system outlines functional and non-functional requirements for managing student attendance, including real-time tracking, reporting capabilities, and user interface considerations."
         },
         {
           "role": "Reviewer",
           "action": "Evaluate",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. Finding: Ensure traceability from user requirements to system..."
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "The SRS for the RollCall system exhibits issues with clarity, feasibility, verifiability, traceability, and consistency across its key requirements, necessitating revisions for improved specification."
         },
         {
           "role": "Reviewer",
           "action": "ConfirmClosure",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Closure: Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. — resolved Closure: Finding: Ensure traceability fro..."
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "All findings from the review have been addressed through revisions, confirming closure for each identified issue."
         }
       ],
       "workspace_summary": {
-        "interview_records": 4,
+        "interview_records": 3,
         "user_requirements": 5,
-        "operating_environment": 3,
-        "enduser_responses": 7,
-        "enduser_questions": 3,
+        "operating_environment": 5,
+        "enduser_responses": 10,
+        "enduser_questions": 9,
         "enduser_confirmations": 9,
-        "deployer_responses": 6,
-        "deployer_questions": 3,
+        "deployer_responses": 9,
+        "deployer_questions": 9,
         "deployer_confirmations": 9,
-        "system_requirements": 8,
+        "system_requirements": 9,
         "selected_model": 1,
-        "requirement_model": 6,
-        "srs_sections": 4,
-        "review_findings": 2,
-        "closure_confirmations": 2,
+        "requirement_model": 1,
+        "srs_sections": 1,
+        "review_findings": 5,
+        "closure_confirmations": 5,
         "dialogue_rounds": 3,
         "total_action_fires": 33,
         "distinct_actions_fired": 17,
-        "llm_turns": 0,
-        "llm_fallback_turns": 33
+        "llm_turns": 32,
+        "llm_fallback_turns": 1
       },
-      "workspace_digest": "79d8532e3b8ef8525ca02e1ce7e01f32703249281ba264d93273f77c11c720eb"
+      "workspace_digest": "ae08cbeaa513ed58947fcb1f125685142603f6562dc61091cf0e60974432993d"
     },
     "case_description": "Roll Call Attendance Tracking System",
     "system": "iredev",
     "setting": "multi_agent_without_negotiation",
     "negotiation_enabled": false,
     "verification_executed": false,
-    "system_behaviors": {
-      "phase2_uses_llm": false,
-      "phase2_llm_active": false,
-      "optional_artifact_count": 0
+    "quare_only_behaviors": {
+      "phase0_external_spec_processing": false,
+      "dynamic_round_control": false,
+      "phase25_conflict_map_generation": false,
+      "phase5_software_materials_generation": false,
+      "phase2_dialectic_negotiation": false
     },
-    "optional_artifacts": {},
+    "quare_optional_artifacts": {},
     "phase2_llm": {
       "source": "disabled",
       "enabled": false,
@@ -544,20 +547,20 @@
       "retry_count": 0,
       "parse_recoveries": 0
     },
-    "runtime_llm": {
+    "mare_runtime_llm": {
       "source": "openai",
       "enabled": true,
       "seed": 303,
-      "seed_applied_turns": 0,
-      "turns": 0,
-      "fallback_turns": 33,
-      "retry_count": 0,
+      "seed_applied_turns": 32,
+      "turns": 32,
+      "fallback_turns": 1,
+      "retry_count": 2,
       "parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback"
+      "execution_mode": "llm_hybrid_fallback"
     },
-    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
-    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_corpus_dir": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base",
+    "rag_corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
     "rag_chunk_count": 308,
-    "prompt_contract_hash": "5bf20d783271620acb63887302551e6db5cfa38f7eca71ab1380ce461b7e75cd"
+    "prompt_contract_hash": "b980e6bea113c9678f0585ce3a35d997b0002f55774c8c82386c7d187bccd87e"
   }
 }

@@ -11,24 +11,24 @@
     "system_name": "iredev",
     "implementation": "deterministic-parity-pipeline",
     "implementation_version": "0.1.0",
-    "python_version": "3.13.12",
-    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
-    "machine": "arm64"
+    "python_version": "3.14.0",
+    "platform": "Linux-6.18.10-2-cachyos-lts-x86_64-with-glibc2.43",
+    "machine": "x86_64"
   },
   "provenance": {
     "model": "gpt-4o-mini",
     "temperature": 0.7,
     "seed": 303,
-    "prompt_hash": "423f0ca8796fd2d4c769eff748d918a6837fee49d22d3a4c4879a1a6a57d59b6",
-    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
-    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+    "prompt_hash": "1ba498b78c21560fc469408ecdee90f5774ae6b6f95d0ad4bcdf6ed15c653a9e",
+    "corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
+    "corpus_path": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base"
   },
   "execution_flags": {
     "rag_fallback_used": false,
     "llm_fallback_used": true,
     "fallback_tainted": true,
-    "retry_used": false,
-    "retry_count": 0
+    "retry_used": true,
+    "retry_count": 3
   },
   "comparability": {
     "is_comparable": false,
@@ -40,20 +40,20 @@
   "rag_enabled": true,
   "rag_backend": "local_tfidf",
   "rag_fallback_used": false,
-  "start_timestamp": "2026-05-12T04:50:00Z",
-  "end_timestamp": "2026-05-12T04:50:00Z",
-  "runtime_seconds": 0.216508,
-  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s303",
+  "start_timestamp": "2026-02-17T09:55:48Z",
+  "end_timestamp": "2026-02-17T09:58:43Z",
+  "runtime_seconds": 175.478533,
+  "artifacts_dir": "experiment_outputs/iredev/runs/iredev-atm-multi_agent_with_negotiation-s303",
   "artifact_paths": {
-    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s303/phase1_initial_models.json",
-    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s303/phase2_negotiation_trace.json",
-    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s303/phase3_integrated_kaos_model.json",
-    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/iredev-atm-multi_agent_with_negotiation-s303/phase4_verification_report.json"
+    "phase1_initial_models.json": "experiment_outputs/iredev/runs/iredev-atm-multi_agent_with_negotiation-s303/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/iredev/runs/iredev-atm-multi_agent_with_negotiation-s303/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/iredev/runs/iredev-atm-multi_agent_with_negotiation-s303/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/iredev/runs/iredev-atm-multi_agent_with_negotiation-s303/phase4_verification_report.json"
   },
   "artifact_blinded": false,
   "blinding_scheme_version": "",
   "blind_eval_run_id": "",
-  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "judge_pipeline_hash": "aca4416c757997fb3f3688c03e0d361b94a59adaca560b6cc5221f89f386eebd",
   "trace_audit_path": "",
   "notes": {
     "phase_a_b": true,
@@ -67,14 +67,13 @@
       "llm_source": "openai",
       "llm_enabled": true,
       "llm_seed": 303,
-      "llm_seed_applied_turns": 0,
-      "llm_turns": 0,
-      "llm_fallback_turns": 33,
-      "llm_retry_count": 0,
+      "llm_seed_applied_turns": 32,
+      "llm_turns": 32,
+      "llm_fallback_turns": 1,
+      "llm_retry_count": 3,
       "llm_parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback",
-      "llm_actions": [],
-      "fallback_actions": [
+      "execution_mode": "llm_hybrid_fallback",
+      "llm_actions": [
         "DialogueWithEndUser",
         "DialogueWithEndUser",
         "DialogueWithEndUser",
@@ -88,7 +87,6 @@
         "ConfirmOrRefineEndUser",
         "ConfirmOrRefineEndUser",
         "WriteInterviewRecords",
-        "WriteUserRequirementsList",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
@@ -108,6 +106,9 @@
         "WriteSRS",
         "Evaluate",
         "ConfirmClosure"
+      ],
+      "fallback_actions": [
+        "WriteUserRequirementsList"
       ],
       "roles_executed": [
         "Interviewer",
@@ -171,132 +172,132 @@
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of ATM, I need A bank client can have two types of accounts As a user of ATM, I need A checking-account and a saving-account As a user of ATM, I ne..."
+          "summary": "The interview questions focus on understanding user goals, pain points, and acceptance criteria related to ATM account management, employing 5W1H and Socratic techniques."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of ATM, I need A bank client can have two types of accounts As a user of ATM, I need A checking-account and a saving-account As a user of ATM, I ne..."
+          "summary": "The generated interview questions are designed to uncover user goals, pain points, and acceptance criteria related to the ATM banking application, using 5W1H and Socratic questioning techniques."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of ATM, I need A bank client can have two types of accounts As a user of ATM, I need A checking-account and a saving-account As a user of ATM, I ne..."
+          "summary": "The interview questions are designed to uncover user goals, pain points, and acceptance criteria related to ATM account management, leveraging 5W1H and Socratic techniques."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Response: A bank client can have two types of accounts"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The bank client expects a user-friendly system that ensures secure access, prevents negative balances, and allows for automatic fund transfers between accounts to enhance financial management."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Response: A bank client can have two types of accounts Response: A checking-account and a saving-account"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The bank client emphasizes the need for seamless management between checking and savings accounts, secure access through PIN codes, and automated fund transfers to prevent transaction issues."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 4,
-          "summary": "Response: A bank client can have two types of accounts Response: A checking-account and a saving-account Response: For each checking account, one related sav..."
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The bank client prioritizes seamless financial management between accounts, secure access via PIN, and automatic fund transfers to avoid overdrafts."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The clarification questions focus on withdrawal processes, security measures related to PIN code access, and handling of insufficient funds in linked accounts."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user seeks clarification on the mechanisms for overdraft protection, user notifications for automatic transfers, and limitations on withdrawals from the saving account."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user raises clarification questions regarding the handling of overdrafts, user notifications during automatic withdrawals, and limits on withdrawal amounts from saving accounts."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: A bank client can have two types of accounts Confirmed: Response: A bank client can have two types of accounts Confirmed: Response: A ch..."
+          "summary": "Refined requirements emphasize user notifications and limits on automatic withdrawals to enhance user experience and trust."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: A bank client can have two types of accounts Confirmed: Response: A bank client can have two types of accounts Confirmed: Response: A ch..."
+          "summary": "The requirements have been refined to include user notification for automatic withdrawals, a limit on withdrawal amounts from saving accounts, and feedback for insufficient funds."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: A bank client can have two types of accounts Confirmed: Response: A bank client can have two types of accounts Confirmed: Response: A ch..."
+          "summary": "The validated requirements indicate that the ATM application must provide secure access, notify users of overdraft withdrawals, impose limits on saving account withdrawals, and handle transactions transparently, ensuring clarity for users in case of insufficient funds."
         },
         {
           "role": "Interviewer",
           "action": "WriteInterviewRecords",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 4,
-          "summary": "Interview record 1: Response: A bank client can have two types of accounts Interview record 2: Response: A bank client can have two types of accounts Intervi..."
+          "fallback_reason": "empty_items",
+          "output_count": 6,
+          "summary": "Consolidated elicitation records for ATM application requirements, ensuring compliance with ISO/IEC/IEEE 29148 standards."
         },
         {
           "role": "Interviewer",
@@ -304,236 +305,238 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 6,
           "summary": "UR-1: The system shall A bank client can have two types of accounts UR-2: The system shall A checking-account and a saving-account UR-3: The system shall For..."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to A bank client can have two types of accounts? What infrastructure constraints apply to A checking-account and a savi..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Targeted questions for the Deployer focus on infrastructure constraints, security mandates, and scalability expectations related to the ATM application."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to A bank client can have two types of accounts? What infrastructure constraints apply to A checking-account and a savi..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Targeted questions for the Deployer focus on infrastructure constraints, security mandates, and scalability expectations related to the ATM application."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What infrastructure constraints apply to A bank client can have two types of accounts? What infrastructure constraints apply to A checking-account and a savi..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Targeted questions for the Deployer focus on infrastructure constraints, security mandates, and scalability expectations related to the ATM application."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Deploy constraint: A bank client can have two types of accounts"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployment of the ATM system must consider infrastructure constraints for high availability, adhere to security mandates such as PCI DSS, target scalability for concurrent users, and establish operational procedures for security audits and user notifications."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Deploy constraint: A bank client can have two types of accounts Deploy constraint: A checking-account and a saving-account"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The ATM application must adhere to strict infrastructure, security, and scalability requirements while implementing operational procedures for user notifications and withdrawal limits."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Deploy constraint: A bank client can have two types of accounts Deploy constraint: A checking-account and a saving-account Deploy constraint: For each checki..."
+          "summary": "The application must adhere to strict infrastructure constraints, security mandates, and scalability targets while ensuring proper operational procedures for user transactions."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Requesting clarification on the handling of overdrafts and user notifications in the ATM application."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Request clarification on actions, limits, and handling of overdrafts related to account withdrawals."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Requesting clarification on actions and limits regarding overdraft handling and notifications for automatic withdrawals between checking and saving accounts."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: A bank client can have two types of accounts Confirmed: Deploy constraint: A bank client can have two types of accounts Confirm..."
+          "summary": "Validated deployment requirements confirm user notifications and constraints on withdrawal amounts to enhance account management and security."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: A bank client can have two types of accounts Confirmed: Deploy constraint: A bank client can have two types of accounts Confirm..."
+          "summary": "Validated and refined deployment requirements for the ATM application, ensuring security, user notification, and scalability while addressing user needs and regulatory standards."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: A bank client can have two types of accounts Confirmed: Deploy constraint: A bank client can have two types of accounts Confirm..."
+          "summary": "The deployment requirements for the ATM application have been confirmed and refined to include user notifications for overdrafts, limits on withdrawals from saving accounts, and necessary security protocols."
         },
         {
           "role": "Interviewer",
           "action": "WriteOperatingEnvironmentList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "ENV-1: Standard web server with HTTPS termination ENV-2: Relational database with backup and recovery procedures ENV-3: Authentication and access control fra..."
+          "summary": "The operating environment for the ATM application includes secure server hardware with redundancy, sufficient bandwidth for peak loads, and compliance with PCI DSS standards for transaction security."
         },
         {
           "role": "Analyst",
           "action": "WriteSystemRequirementsList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 9,
-          "summary": "SR-1: The system shall UR-1: The system shall A bank client can have two types of accounts SR-2: The system shall UR-2: The system shall A checking-account a..."
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "The consolidated system requirements for the ATM application include account management, secure access, balance constraints, and overdraft handling mechanisms."
         },
         {
           "role": "Analyst",
           "action": "SelectRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 1,
-          "summary": "Selected model: Use Case Diagram (UML) — suitable for stakeholder interactions"
+          "summary": "The UML Use Case Diagram is selected for the ATM system as it effectively captures the interactions between users (clients) and the system, detailing the functionalities such as account management and transaction handling while ensuring clarity in user requirements."
         },
         {
           "role": "Analyst",
           "action": "BuildRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 6,
-          "summary": "Model element: system Model element: shall Model element: system Model element: shall Model element: client Model element: types"
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "A requirements model for the ATM system is constructed using a UML use case diagram that illustrates client interactions, account types, and withdrawal functionalities, highlighting key constraints and user notifications."
         },
         {
           "role": "Archivist",
           "action": "WriteSRS",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 4,
-          "summary": "SRS-1 Purpose and Scope SRS-2 Functional Requirements SRS-3 Non-Functional Requirements and Quality Attributes SRS-4 External Interface Requirements"
+          "fallback_reason": "",
+          "output_count": 1,
+          "summary": "This SRS consolidates the approved system requirements for the ATM application, detailing both functional and non-functional requirements in alignment with IEEE 830 guidelines."
         },
         {
           "role": "Reviewer",
           "action": "Evaluate",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. Finding: Ensure traceability from user requirements to system..."
+          "fallback_reason": "empty_items",
+          "output_count": 6,
+          "summary": "The evaluation of the SRS for the ATM application revealed clarity issues in several requirements, particularly surrounding account relationships and conditions for overdrafts. Some requirements are feasible and verifiable, but lack explicit detail, leading to potential ambiguity."
         },
         {
           "role": "Reviewer",
           "action": "ConfirmClosure",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Closure: Finding: All requirements should include verifiable acceptance criteria per ISO/IEC/IEEE 29148. — resolved Closure: Finding: Ensure traceability fro..."
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "All findings from the review process have been identified and confirmed for closure, with specific recommendations for improving clarity and detail in the requirements."
         }
       ],
       "workspace_summary": {
-        "interview_records": 4,
+        "interview_records": 6,
         "user_requirements": 6,
         "operating_environment": 3,
-        "enduser_responses": 7,
-        "enduser_questions": 3,
+        "enduser_responses": 9,
+        "enduser_questions": 9,
         "enduser_confirmations": 9,
-        "deployer_responses": 6,
-        "deployer_questions": 3,
+        "deployer_responses": 9,
+        "deployer_questions": 9,
         "deployer_confirmations": 9,
-        "system_requirements": 9,
+        "system_requirements": 8,
         "selected_model": 1,
-        "requirement_model": 6,
-        "srs_sections": 4,
-        "review_findings": 2,
-        "closure_confirmations": 2,
+        "requirement_model": 8,
+        "srs_sections": 1,
+        "review_findings": 6,
+        "closure_confirmations": 6,
         "dialogue_rounds": 3,
         "total_action_fires": 33,
         "distinct_actions_fired": 17,
-        "llm_turns": 0,
-        "llm_fallback_turns": 33
+        "llm_turns": 32,
+        "llm_fallback_turns": 1
       },
-      "workspace_digest": "a5652704f7b9c69fd59b2b67031aa247d1adfbf017adf136f69b6a2e0e46b583"
+      "workspace_digest": "e979528bccf568278806cb9ac3987667b955a53949d57ba721e8f8d760544381"
     },
     "case_description": "Automated Teller Machine System",
     "system": "iredev",
     "setting": "multi_agent_with_negotiation",
     "negotiation_enabled": true,
     "verification_executed": false,
-    "system_behaviors": {
-      "phase2_uses_llm": false,
-      "phase2_llm_active": false,
-      "optional_artifact_count": 0
+    "quare_only_behaviors": {
+      "phase0_external_spec_processing": false,
+      "dynamic_round_control": false,
+      "phase25_conflict_map_generation": false,
+      "phase5_software_materials_generation": false,
+      "phase2_dialectic_negotiation": false
     },
-    "optional_artifacts": {},
+    "quare_optional_artifacts": {},
     "phase2_llm": {
       "source": "disabled",
       "enabled": false,
@@ -544,20 +547,20 @@
       "retry_count": 0,
       "parse_recoveries": 0
     },
-    "runtime_llm": {
+    "mare_runtime_llm": {
       "source": "openai",
       "enabled": true,
       "seed": 303,
-      "seed_applied_turns": 0,
-      "turns": 0,
-      "fallback_turns": 33,
-      "retry_count": 0,
+      "seed_applied_turns": 32,
+      "turns": 32,
+      "fallback_turns": 1,
+      "retry_count": 3,
       "parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback"
+      "execution_mode": "llm_hybrid_fallback"
     },
-    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
-    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_corpus_dir": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base",
+    "rag_corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
     "rag_chunk_count": 308,
-    "prompt_contract_hash": "423f0ca8796fd2d4c769eff748d918a6837fee49d22d3a4c4879a1a6a57d59b6"
+    "prompt_contract_hash": "1ba498b78c21560fc469408ecdee90f5774ae6b6f95d0ad4bcdf6ed15c653a9e"
   }
 }

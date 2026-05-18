@@ -11,24 +11,24 @@
     "system_name": "iredev",
     "implementation": "deterministic-parity-pipeline",
     "implementation_version": "0.1.0",
-    "python_version": "3.13.12",
-    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
-    "machine": "arm64"
+    "python_version": "3.14.0",
+    "platform": "Linux-6.18.10-2-cachyos-lts-x86_64-with-glibc2.43",
+    "machine": "x86_64"
   },
   "provenance": {
     "model": "gpt-4o-mini",
     "temperature": 0.7,
     "seed": 303,
-    "prompt_hash": "423f0ca8796fd2d4c769eff748d918a6837fee49d22d3a4c4879a1a6a57d59b6",
-    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
-    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+    "prompt_hash": "1ba498b78c21560fc469408ecdee90f5774ae6b6f95d0ad4bcdf6ed15c653a9e",
+    "corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
+    "corpus_path": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base"
   },
   "execution_flags": {
     "rag_fallback_used": false,
     "llm_fallback_used": true,
     "fallback_tainted": true,
-    "retry_used": false,
-    "retry_count": 0
+    "retry_used": true,
+    "retry_count": 2
   },
   "comparability": {
     "is_comparable": false,
@@ -40,20 +40,20 @@
   "rag_enabled": true,
   "rag_backend": "local_tfidf",
   "rag_fallback_used": false,
-  "start_timestamp": "2026-05-12T04:49:59Z",
-  "end_timestamp": "2026-05-12T04:49:59Z",
-  "runtime_seconds": 0.178856,
-  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/iredev-ad-multi_agent_with_negotiation-s303",
+  "start_timestamp": "2026-02-17T09:32:55Z",
+  "end_timestamp": "2026-02-17T09:35:13Z",
+  "runtime_seconds": 138.030467,
+  "artifacts_dir": "experiment_outputs/iredev/runs/iredev-ad-multi_agent_with_negotiation-s303",
   "artifact_paths": {
-    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/iredev-ad-multi_agent_with_negotiation-s303/phase1_initial_models.json",
-    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/iredev-ad-multi_agent_with_negotiation-s303/phase2_negotiation_trace.json",
-    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/iredev-ad-multi_agent_with_negotiation-s303/phase3_integrated_kaos_model.json",
-    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/iredev-ad-multi_agent_with_negotiation-s303/phase4_verification_report.json"
+    "phase1_initial_models.json": "experiment_outputs/iredev/runs/iredev-ad-multi_agent_with_negotiation-s303/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/iredev/runs/iredev-ad-multi_agent_with_negotiation-s303/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/iredev/runs/iredev-ad-multi_agent_with_negotiation-s303/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/iredev/runs/iredev-ad-multi_agent_with_negotiation-s303/phase4_verification_report.json"
   },
   "artifact_blinded": false,
   "blinding_scheme_version": "",
   "blind_eval_run_id": "",
-  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "judge_pipeline_hash": "aca4416c757997fb3f3688c03e0d361b94a59adaca560b6cc5221f89f386eebd",
   "trace_audit_path": "",
   "notes": {
     "phase_a_b": true,
@@ -67,14 +67,13 @@
       "llm_source": "openai",
       "llm_enabled": true,
       "llm_seed": 303,
-      "llm_seed_applied_turns": 0,
-      "llm_turns": 0,
-      "llm_fallback_turns": 33,
-      "llm_retry_count": 0,
+      "llm_seed_applied_turns": 31,
+      "llm_turns": 31,
+      "llm_fallback_turns": 2,
+      "llm_retry_count": 2,
       "llm_parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback",
-      "llm_actions": [],
-      "fallback_actions": [
+      "execution_mode": "llm_hybrid_fallback",
+      "llm_actions": [
         "DialogueWithEndUser",
         "DialogueWithEndUser",
         "DialogueWithEndUser",
@@ -87,8 +86,6 @@
         "ConfirmOrRefineEndUser",
         "ConfirmOrRefineEndUser",
         "ConfirmOrRefineEndUser",
-        "WriteInterviewRecords",
-        "WriteUserRequirementsList",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
         "DialogueWithDeployer",
@@ -108,6 +105,10 @@
         "WriteSRS",
         "Evaluate",
         "ConfirmClosure"
+      ],
+      "fallback_actions": [
+        "WriteInterviewRecords",
+        "WriteUserRequirementsList"
       ],
       "roles_executed": [
         "Interviewer",
@@ -171,122 +172,122 @@
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of AD, I need [Safety Requirements - Based on Apollo Pilot Safety Report] As a user of AD, I need Multi-Layer Safety Architecture: As a user of AD,..."
+          "summary": "The interview questions aim to uncover user goals and pain points related to safety requirements in the vehicle, utilizing 5W1H and Socratic questioning techniques."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of AD, I need [Safety Requirements - Based on Apollo Pilot Safety Report] As a user of AD, I need Multi-Layer Safety Architecture: As a user of AD,..."
+          "summary": "The interview questions aim to uncover user goals, pain points, and acceptance criteria related to safety requirements for the vehicle, utilizing 5W1H and Socratic questioning techniques."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 6,
-          "summary": "As a user of AD, I need [Safety Requirements - Based on Apollo Pilot Safety Report] As a user of AD, I need Multi-Layer Safety Architecture: As a user of AD,..."
+          "summary": "The generated interview questions aim to uncover user goals, pain points, and acceptance criteria related to the safety requirements of the vehicle, utilizing 5W1H and Socratic questioning techniques."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Response: [Safety Requirements - Based on Apollo Pilot Safety Report]"
-        },
-        {
-          "role": "EndUser",
-          "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
-          "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 2,
-          "summary": "Response: [Safety Requirements - Based on Apollo Pilot Safety Report] Response: Multi-Layer Safety Architecture:"
+          "summary": "End users highlight critical safety concerns and expectations for a robust multi-layer safety architecture, emphasizing the importance of safe maneuvering during system failures."
         },
         {
           "role": "EndUser",
           "action": "RespondEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 4,
-          "summary": "Response: [Safety Requirements - Based on Apollo Pilot Safety Report] Response: Multi-Layer Safety Architecture: Response: - The system must implement \"Passi..."
+          "fallback_reason": "",
+          "output_count": 1,
+          "summary": "The focus is on ensuring safety through a multi-layer architecture and effective responses to critical system failures."
+        },
+        {
+          "role": "EndUser",
+          "action": "RespondEndUser",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The business emphasizes the importance of safety mechanisms in the system's architecture, particularly focusing on the multi-layer safety requirements and the critical need for effective Minimal Risk Maneuvers during system failures."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user seeks clarification on the criteria for executing the MRM, the prioritization of safety measures, the defined operational domain, and the safety implications for other road users."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user seeks clarification on the criteria for executing MRM, the prioritization of safety features, and the specific operational design domain for safe operation."
         },
         {
           "role": "EndUser",
           "action": "RaiseQuestionEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Could you clarify the priority between performance and accuracy?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The end user seeks clarification on the criteria for executing MRM, the prioritization of safety measures, and the operational design domain for safe vehicle operation."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: [Safety Requirements - Based on Apollo Pilot Safety Report] Confirmed: Response: [Safety Requirements - Based on Apollo Pilot Safety Rep..."
+          "summary": "The requirements need refinement to clarify prioritization in safety protocols, define criteria for MRM execution, and outline the operational design domain for safe vehicle operation."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: [Safety Requirements - Based on Apollo Pilot Safety Report] Confirmed: Response: [Safety Requirements - Based on Apollo Pilot Safety Rep..."
+          "summary": "End user feedback emphasizes the need for clarity and detail in safety requirements, particularly around the multi-layer safety architecture, MRM execution criteria, and the operational design domain."
         },
         {
           "role": "EndUser",
           "action": "ConfirmOrRefineEndUser",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Response: [Safety Requirements - Based on Apollo Pilot Safety Report] Confirmed: Response: [Safety Requirements - Based on Apollo Pilot Safety Rep..."
+          "summary": "The safety requirements for the vehicle's multi-layer architecture and MRM need detailed definitions and clear criteria to effectively manage risks during critical failures."
         },
         {
           "role": "Interviewer",
@@ -294,9 +295,9 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 4,
-          "summary": "Interview record 1: Response: [Safety Requirements - Based on Apollo Pilot Safety Report] Interview record 2: Response: [Safety Requirements - Based on Apoll..."
+          "summary": "Interview record 1: One significant pain point for our business is ensuring the safety of passengers and other road users. Our expectation is that the system..."
         },
         {
           "role": "Interviewer",
@@ -304,236 +305,238 @@
           "execution_mode": "fallback",
           "llm_generated": false,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "empty_items",
           "output_count": 6,
           "summary": "UR-1: The system shall [Safety Requirements - Based on Apollo Pilot Safety Report] UR-2: The system shall Multi-Layer Safety Architecture: UR-3: The system s..."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "What infrastructure constraints apply to [Safety Requirements - Based on Apollo Pilot Safety Report]? What infrastructure constraints apply to Multi-Layer Sa..."
+          "summary": "Targeted questions formulated to probe the Deployer about infrastructure constraints, security mandates, and scalability expectations in relation to the safety requirements of the system."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "What infrastructure constraints apply to [Safety Requirements - Based on Apollo Pilot Safety Report]? What infrastructure constraints apply to Multi-Layer Sa..."
+          "summary": "Targeted questions focus on understanding infrastructure constraints, security mandates, and scalability expectations related to safety requirements."
         },
         {
           "role": "Interviewer",
           "action": "DialogueWithDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "What infrastructure constraints apply to [Safety Requirements - Based on Apollo Pilot Safety Report]? What infrastructure constraints apply to Multi-Layer Sa..."
+          "summary": "Targeted questions focus on understanding infrastructure constraints, security mandates, and scalability expectations related to safety requirements."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "Deploy constraint: [Safety Requirements - Based on Apollo Pilot Safety Report]"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployment of the system requires a robust infrastructure supporting multi-layered safety, stringent security measures for data integrity, scalable architecture for future enhancements, and well-defined operational procedures for handling critical failures."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Deploy constraint: [Safety Requirements - Based on Apollo Pilot Safety Report] Deploy constraint: Multi-Layer Safety Architecture:"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "The deployment of the safety system must address infrastructure, security, scalability, and operational procedures to ensure effective implementation and compliance with safety standards."
         },
         {
           "role": "Deployer",
           "action": "RespondDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Deploy constraint: [Safety Requirements - Based on Apollo Pilot Safety Report] Deploy constraint: Multi-Layer Safety Architecture: Deploy constraint: - The s..."
+          "summary": "The deployment of the safety system requires a supportive infrastructure, adherence to security standards, scalability for future enhancements, and well-defined operational procedures for critical failure scenarios."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Requesting clarification on crucial operational parameters for safety requirements, including MRM execution criteria and prioritization within the safety architecture."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Clarifications are requested on MRM execution criteria, prioritization within safety architecture, and the operational design domain to ensure comprehensive understanding and effective implementation of safety requirements."
         },
         {
           "role": "Deployer",
           "action": "RaiseQuestionDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 1,
-          "summary": "What are the expected peak concurrent connections?"
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Requesting clarification on critical criteria for executing MRM and prioritization within the multi-layer safety architecture, as well as defining the operational design domain (ODD) for safe vehicle operation."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: [Safety Requirements - Based on Apollo Pilot Safety Report] Confirmed: Deploy constraint: [Safety Requirements - Based on Apoll..."
+          "summary": "The deployment requirements for the multi-layer safety architecture and Minimal Risk Maneuver (MRM) must be validated or refined to ensure clear operational guidelines and adherence to safety standards."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: [Safety Requirements - Based on Apollo Pilot Safety Report] Confirmed: Deploy constraint: [Safety Requirements - Based on Apoll..."
+          "summary": "The deployment requirements need confirmation and refinement to ensure clarity in safety protocols, especially regarding the multi-layer safety architecture and Minimal Risk Maneuver criteria."
         },
         {
           "role": "Deployer",
           "action": "ConfirmOrRefineDeployer",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "Confirmed: Deploy constraint: [Safety Requirements - Based on Apollo Pilot Safety Report] Confirmed: Deploy constraint: [Safety Requirements - Based on Apoll..."
+          "summary": "The deployment requirements need refinement to explicitly define safety architecture, MRM criteria, and operational design domain to ensure effective risk mitigation and compliance with user expectations."
         },
         {
           "role": "Interviewer",
           "action": "WriteOperatingEnvironmentList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 3,
-          "summary": "ENV-1: Standard web server with HTTPS termination ENV-2: Relational database with backup and recovery procedures ENV-3: Authentication and access control fra..."
+          "summary": "The operating environment for the system includes hardware requirements for computing resources, network connectivity for communication, and compliance with cybersecurity standards to safeguard safety components."
         },
         {
           "role": "Analyst",
           "action": "WriteSystemRequirementsList",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 9,
-          "summary": "SR-1: The system shall UR-1: The system shall [Safety Requirements - Based on Apollo Pilot Safety Report] SR-2: The system shall UR-2: The system shall Multi..."
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "This consolidated system requirements list focuses on implementing a multi-layer safety architecture, executing Minimal Risk Maneuvers during critical failures, and ensuring compliance with operational and cybersecurity standards."
         },
         {
           "role": "Analyst",
           "action": "SelectRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 1,
-          "summary": "Selected model: Use Case Diagram (UML) — suitable for stakeholder interactions"
+          "summary": "The SysML diagram is selected for modeling the safety requirements due to its effectiveness in representing complex interactions and ensuring requirements traceability."
         },
         {
           "role": "Analyst",
           "action": "BuildRequirementModel",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 6,
-          "summary": "Model element: system Model element: shall Model element: system Model element: shall Model element: safety Model element: requirements"
+          "fallback_reason": "",
+          "output_count": 1,
+          "summary": "Constructed a requirements model in PlantUML format for safety requirements in the AD case, identifying conflicts and gaps regarding prioritization and clarity in execution criteria."
         },
         {
           "role": "Archivist",
           "action": "WriteSRS",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 4,
-          "summary": "SRS-1 Purpose and Scope SRS-2 Functional Requirements SRS-3 Non-Functional Requirements and Quality Attributes SRS-4 External Interface Requirements"
+          "fallback_reason": "",
+          "output_count": 1,
+          "summary": "The SRS outlines safety requirements for the Autonomous Driving system, detailing a Multi-Layer Safety Architecture and Minimal Risk Maneuver protocols, ensuring compliance with IEEE standards."
         },
         {
           "role": "Reviewer",
           "action": "Evaluate",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "Finding: Potential trade-off detected between conflicting quality attributes. Finding: All requirements should include verifiable acceptance criteria per ISO..."
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "The evaluation of the SRS reveals issues with clarity, feasibility, verifiability, traceability, and consistency, particularly in defining the Multi-Layer Safety Architecture and Minimal Risk Maneuver criteria."
         },
         {
           "role": "Reviewer",
           "action": "ConfirmClosure",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "Closure: Finding: Potential trade-off detected between conflicting quality attributes. — resolved Closure: Finding: All requirements should include verifiabl..."
+          "fallback_reason": "",
+          "output_count": 1,
+          "summary": "All review findings have been resolved following revisions to the SRS, confirming closure for each finding."
         }
       ],
       "workspace_summary": {
         "interview_records": 4,
         "user_requirements": 6,
         "operating_environment": 3,
-        "enduser_responses": 7,
-        "enduser_questions": 3,
+        "enduser_responses": 6,
+        "enduser_questions": 9,
         "enduser_confirmations": 9,
-        "deployer_responses": 6,
-        "deployer_questions": 3,
+        "deployer_responses": 9,
+        "deployer_questions": 9,
         "deployer_confirmations": 9,
-        "system_requirements": 9,
+        "system_requirements": 5,
         "selected_model": 1,
-        "requirement_model": 6,
-        "srs_sections": 4,
-        "review_findings": 3,
-        "closure_confirmations": 3,
+        "requirement_model": 1,
+        "srs_sections": 1,
+        "review_findings": 5,
+        "closure_confirmations": 1,
         "dialogue_rounds": 3,
         "total_action_fires": 33,
         "distinct_actions_fired": 17,
-        "llm_turns": 0,
-        "llm_fallback_turns": 33
+        "llm_turns": 31,
+        "llm_fallback_turns": 2
       },
-      "workspace_digest": "626fddc2dbe26efb36ed556c1bf4171c8ad85b0bc65cb86e02567c1a211e3e7f"
+      "workspace_digest": "17ff271d3c14ee6391cc0cb3778c6a5e35cd2461b9bb3f2456901367057714b0"
     },
     "case_description": "Autonomous Driving System (Baidu Apollo Planning & Control Module)",
     "system": "iredev",
     "setting": "multi_agent_with_negotiation",
     "negotiation_enabled": true,
     "verification_executed": false,
-    "system_behaviors": {
-      "phase2_uses_llm": false,
-      "phase2_llm_active": false,
-      "optional_artifact_count": 0
+    "quare_only_behaviors": {
+      "phase0_external_spec_processing": false,
+      "dynamic_round_control": false,
+      "phase25_conflict_map_generation": false,
+      "phase5_software_materials_generation": false,
+      "phase2_dialectic_negotiation": false
     },
-    "optional_artifacts": {},
+    "quare_optional_artifacts": {},
     "phase2_llm": {
       "source": "disabled",
       "enabled": false,
@@ -544,20 +547,20 @@
       "retry_count": 0,
       "parse_recoveries": 0
     },
-    "runtime_llm": {
+    "mare_runtime_llm": {
       "source": "openai",
       "enabled": true,
       "seed": 303,
-      "seed_applied_turns": 0,
-      "turns": 0,
-      "fallback_turns": 33,
-      "retry_count": 0,
+      "seed_applied_turns": 31,
+      "turns": 31,
+      "fallback_turns": 2,
+      "retry_count": 2,
       "parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback"
+      "execution_mode": "llm_hybrid_fallback"
     },
-    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
-    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_corpus_dir": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base",
+    "rag_corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
     "rag_chunk_count": 308,
-    "prompt_contract_hash": "423f0ca8796fd2d4c769eff748d918a6837fee49d22d3a4c4879a1a6a57d59b6"
+    "prompt_contract_hash": "1ba498b78c21560fc469408ecdee90f5774ae6b6f95d0ad4bcdf6ed15c653a9e"
   }
 }

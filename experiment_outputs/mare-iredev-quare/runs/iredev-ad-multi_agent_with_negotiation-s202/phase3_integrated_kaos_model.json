@@ -3,7 +3,7 @@
     {
       "id": "ANA-L1-004",
       "name": "Negotiated Integrated Goal",
-      "description": "Analyst objective for AD: SR-1: The system shall UR-1: The system shall The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+      "description": "Analyst objective for AD: The system shall minimize 'Jerk' (rate of change of acceleration) to ensure passenger comfort.",
       "gsn_type": "Goal",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -23,7 +23,7 @@
     {
       "id": "END-L2-002-04",
       "name": "EndUser Output 4",
-      "description": "The system shall Response: The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+      "description": "The system shall Conflicts between safety and efficiency present a real challenge in operations. The SafetyAgent's focus on passive safety and maintaining safe distances must not hinder the EfficiencyAgent's goal of optimizing smoothn...",
       "gsn_type": "Strategy",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -34,7 +34,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source_document": "knowledge_guide.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -43,7 +43,7 @@
     {
       "id": "REV-L2-006-04",
       "name": "Reviewer Output 4",
-      "description": "The system shall Closure: Finding: Potential trade-off detected between conflicting quality attributes. — resolved",
+      "description": "The system shall All findings have been addressed as follows: The potential trade-off between conflicting quality attributes has been noted and will be monitored during implementation. Acceptance criteria for each requirement have bee...",
       "gsn_type": "Strategy",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -63,7 +63,7 @@
     {
       "id": "INT-L2-001-04",
       "name": "Interviewer Output 4",
-      "description": "The system shall Interview record 4: Response: The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+      "description": "The system shall Interview record 4: Conflicts between safety and efficiency present a real challenge in operations. The SafetyAgent's focus on passive safety and maintaining safe dist... Negotiated trade-off accepted by EndUser.",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -74,16 +74,16 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
-        "conflict_resolved_by": null,
-        "validation_status": "pending",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "EndUser",
+        "validation_status": "resolved",
         "citation_required": true
       }
     },
     {
       "id": "DEP-L2-003-04",
       "name": "Deployer Output 4",
-      "description": "The system shall Deploy constraint: The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+      "description": "The system shall Security mandates must ensure data integrity and protection against unauthorized access, particularly concerning the algorithms used for safety prioritization and efficiency optimization. Implementing encryption and a...",
       "gsn_type": "Strategy",
       "quality_attribute": "Safety",
       "priority": 1,
@@ -103,7 +103,7 @@
     {
       "id": "ARC-L2-005-04",
       "name": "Archivist Output 4",
-      "description": "The system shall SRS-4 External Interface Requirements",
+      "description": "The system shall SRS-4 External Interface Requirements Negotiated trade-off accepted by Reviewer.",
       "gsn_type": "Strategy",
       "quality_attribute": "Sustainability",
       "priority": 1,
@@ -115,15 +115,15 @@
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
         "source_document": "domains/automotive_safety.py",
-        "conflict_resolved_by": null,
-        "validation_status": "pending",
+        "conflict_resolved_by": "Reviewer",
+        "validation_status": "resolved",
         "citation_required": true
       }
     },
     {
       "id": "ANA-L2-004-04",
       "name": "Analyst Output 4",
-      "description": "The system shall SR-4: The system shall UR-4: The system shall [Conflict Scenario for Negotiation]",
+      "description": "The system shall The system shall prioritize 'Passive Safety' by enforcing safe distances and managing MRM execution.",
       "gsn_type": "Strategy",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -134,7 +134,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "knowledge_guide.py",
+        "source_document": "automotive_safety.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -213,7 +213,7 @@
     "model_id": "model_iredev-ad-multi_agent_with_negotiation-s202",
     "name": "OpenRE-Bench Integrated KAOS for AD",
     "description": "Deterministic protocol-aligned integrated GSN model.",
-    "created_timestamp": "2026-05-12T04:49:58Z",
+    "created_timestamp": "2026-02-17T09:27:46Z",
     "requirement_source": "Project: Baidu Apollo Autonomous Driving System (Planning & Control Module)\n\n[System Context]\nThe system is a Level 4 autonomous driving platform operating in mixed traffic environments. It must strictly adhere to the \"Apollo Pilot Safety Report\" and the \"EM Motion Planner\" specifications.\n\n[Safety Requirements - Based on Apollo Pilot Safety Report]\n1. Multi-Layer Safety Architecture:\n   - The system must implement \"Passive Safety\" (collision protection), \"Active Safety\" (ACC, AEB, LKA), and \"Functional Safety\" (fail-safe mechanisms).\n2. Minimal Risk Maneuver (MRM):\n   - Upon detecting a critical system failure (e.g., sensor loss, localization failure) or exiting the ODD, the vehicle must NOT simply stop in lane immediately if unsafe. It must execute an MRM to safely pull over or stop in a low-risk zone within a specific time window.\n3. ODD (Operational Design Domain):\n   - The system operates in specific urban and highway scenarios. It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached.\n\n[Efficiency & Planning Requirements - Based on EM Motion Planner]\n1. Multiobjective Optimization:\n   - The planner must simultaneously optimize for three conflicting objectives: Safety (collision avoidance), Smoothness (passenger comfort), and Speed (reaching destination).\n2. Path-Speed Decoupling (EM Framework):\n   - The system must use the Expectation-Maximization (EM) framework.\n   - Step 1 (E-step): Generate an optimal path in the Frenet Frame (SL-Graph).\n   - Step 2 (M-step): Generate an optimal speed profile in the Station-Time Frame (ST-Graph).\n3. Hard Constraints (Mathematical):\n   - Trajectory smoothness is critical. The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort.\n   - Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip.\n   - Non-convex obstacle constraints must be handled using iterative quadratic programming (QP).\n\n[Conflict Scenario for Negotiation]\n- The SafetyAgent prioritizes \"Passive Safety\" and strictly enforcing safe distances and MRM execution.\n- The EfficiencyAgent prioritizes \"Smoothness\" and \"Speed\" using the QP function to minimize Jerk.\n- **Potential Conflict**: An emergency MRM (Safety) triggered by a fault might violate the Jerk/Smoothness constraints (Efficiency), requiring architectural negotiation (e.g., relaxing smoothness constraints during MRM).",
     "model_type": "GSN",
     "quality_attributes": [
@@ -301,7 +301,7 @@
     "invalid_leaves": []
   },
   "model_id": "model_iredev-ad-multi_agent_with_negotiation-s202",
-  "created_timestamp": "2026-05-12T04:49:58Z",
+  "created_timestamp": "2026-02-17T09:27:46Z",
   "total_elements": 7,
   "total_relations": 6
 }

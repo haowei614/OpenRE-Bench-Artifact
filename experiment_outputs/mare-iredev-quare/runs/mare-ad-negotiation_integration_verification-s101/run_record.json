@@ -11,22 +11,22 @@
     "system_name": "mare",
     "implementation": "deterministic-parity-pipeline",
     "implementation_version": "0.1.0",
-    "python_version": "3.13.12",
-    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
-    "machine": "arm64"
+    "python_version": "3.11.13",
+    "platform": "Linux-6.18.10-2-cachyos-lts-x86_64-with-glibc2.43",
+    "machine": "x86_64"
   },
   "provenance": {
     "model": "gpt-4o-mini",
     "temperature": 0.7,
     "seed": 101,
-    "prompt_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c",
-    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
-    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+    "prompt_hash": "9ce31be2b419f764ac8c9121db54b1133d78662cb2e5f6b1b88bd8c2a51bcf77",
+    "corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
+    "corpus_path": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base"
   },
   "execution_flags": {
     "rag_fallback_used": false,
-    "llm_fallback_used": true,
-    "fallback_tainted": true,
+    "llm_fallback_used": false,
+    "fallback_tainted": false,
     "retry_used": false,
     "retry_count": 0
   },
@@ -38,20 +38,20 @@
   "rag_enabled": true,
   "rag_backend": "local_tfidf",
   "rag_fallback_used": false,
-  "start_timestamp": "2026-05-12T04:49:58Z",
-  "end_timestamp": "2026-05-12T04:49:58Z",
-  "runtime_seconds": 0.08276,
-  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/mare-ad-negotiation_integration_verification-s101",
+  "start_timestamp": "2026-02-17T04:29:22Z",
+  "end_timestamp": "2026-02-17T04:29:48Z",
+  "runtime_seconds": 25.750349,
+  "artifacts_dir": "experiment_outputs/mare/runs/mare-ad-negotiation_integration_verification-s101",
   "artifact_paths": {
-    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/mare-ad-negotiation_integration_verification-s101/phase1_initial_models.json",
-    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/mare-ad-negotiation_integration_verification-s101/phase2_negotiation_trace.json",
-    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/mare-ad-negotiation_integration_verification-s101/phase3_integrated_kaos_model.json",
-    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/mare-ad-negotiation_integration_verification-s101/phase4_verification_report.json"
+    "phase1_initial_models.json": "experiment_outputs/mare/runs/mare-ad-negotiation_integration_verification-s101/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/mare/runs/mare-ad-negotiation_integration_verification-s101/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/mare/runs/mare-ad-negotiation_integration_verification-s101/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/mare/runs/mare-ad-negotiation_integration_verification-s101/phase4_verification_report.json"
   },
   "artifact_blinded": false,
   "blinding_scheme_version": "",
   "blind_eval_run_id": "",
-  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "judge_pipeline_hash": "aca4416c757997fb3f3688c03e0d361b94a59adaca560b6cc5221f89f386eebd",
   "trace_audit_path": "",
   "notes": {
     "phase_a_b": true,
@@ -65,14 +65,13 @@
       "llm_source": "openai",
       "llm_enabled": true,
       "llm_seed": 101,
-      "llm_seed_applied_turns": 0,
-      "llm_turns": 0,
-      "llm_fallback_turns": 9,
+      "llm_seed_applied_turns": 9,
+      "llm_turns": 9,
+      "llm_fallback_turns": 0,
       "llm_retry_count": 0,
       "llm_parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback",
-      "llm_actions": [],
-      "fallback_actions": [
+      "execution_mode": "llm_driven",
+      "llm_actions": [
         "SpeakUserStories",
         "ProposeQuestion",
         "AnswerQuestion",
@@ -83,6 +82,7 @@
         "WriteSRS",
         "WriteCheckReport"
       ],
+      "fallback_actions": [],
       "roles_executed": [
         "Stakeholders",
         "Collector",
@@ -126,120 +126,122 @@
         {
           "role": "Stakeholders",
           "action": "SpeakUserStories",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 6,
-          "summary": "As a stakeholder of AD, I need - The system operates in specific urban and highway scenarios As a stakeholder of AD, I need It must continuously monitor ODD..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "User stories reflect stakeholder needs for operational efficiency, safety monitoring, multiobjective optimization, and passenger comfort."
         },
         {
           "role": "Collector",
           "action": "ProposeQuestion",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "What acceptance condition should constrain story 1? What acceptance condition should constrain story 2? What acceptance condition should constrain story 3?"
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Clarification questions to resolve ambiguities in the requirements and ensure they are verifiable."
         },
         {
           "role": "Stakeholders",
           "action": "AnswerQuestion",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "Answer 1: The system shall - The system operates in specific urban and highway scenarios Answer 2: The system shall It must continuously monitor ODD complian..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Stakeholders provided detailed answers to questions regarding operational scenarios, ODD compliance criteria, HMI warnings, and optimization metrics for the motion planner."
         },
         {
           "role": "Collector",
           "action": "WriteReqDraft",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 6,
-          "summary": "Draft requirement 1: The system shall As a stakeholder of AD, I need - The system operates in specific urban and highway scenarios Draft requirement 2: The s..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Draft requirement statements created for the MARE paper encompass system operation scenarios, ODD compliance monitoring, motion planner optimization, and path-speed decoupling."
         },
         {
           "role": "Modeler",
           "action": "ExtractEntity",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "fallback_reason": "",
           "output_count": 8,
-          "summary": "draft requirement system shall stakeholder system operates specific"
+          "summary": "Extracted candidate requirement entities from the draft, focusing on key concepts related to system operation and optimization."
         },
         {
           "role": "Modeler",
           "action": "ExtractRelation",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 7,
-          "summary": "draft|refines|requirement requirement|refines|system system|refines|shall shall|refines|stakeholder stakeholder|refines|system system|refines|operates operat..."
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted entity relations in the context of system operation, ODD compliance, and motion planning optimization."
         },
         {
           "role": "Checker",
           "action": "CheckRequirement",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Potential trade-off detected: responses shall not relax core safety and security constraints. All requirements should remain verifiable with explicit measura..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "The requirements exhibit ambiguity in defining operational contexts, conflict risks in objective optimization, and issues with verifiability regarding alerts and compliance criteria."
         },
         {
           "role": "Documenter",
           "action": "WriteSRS",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 3,
-          "summary": "SRS-1 Scope and Stakeholders SRS-2 Functional and Quality Requirements SRS-3 Verification and Acceptance Criteria"
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Drafted SRS section headings addressing system operation in urban/highway scenarios, ODD compliance, motion planning optimization, and path-speed decoupling."
         },
         {
           "role": "Documenter",
           "action": "WriteCheckReport",
-          "execution_mode": "fallback",
-          "llm_generated": false,
+          "execution_mode": "llm",
+          "llm_generated": true,
           "llm_source": "openai",
-          "fallback_reason": "request_failed: LiteLLM request failed: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
-          "output_count": 2,
-          "summary": "Check report item 1: Potential trade-off detected: responses shall not relax core safety and security constraints. Check report item 2: All requirements shou..."
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "The check report identifies ambiguities and conflicts in the requirements related to operational scenarios, ODD compliance, HMI warnings, and multiobjective optimization, necessitating further clarification for effective verification."
         }
       ],
       "workspace_summary": {
-        "user_stories": 6,
-        "questions": 3,
-        "answers": 3,
-        "requirement_draft": 6,
+        "user_stories": 4,
+        "questions": 4,
+        "answers": 4,
+        "requirement_draft": 4,
         "entities": 8,
-        "relations": 7,
-        "findings": 2,
-        "srs_sections": 3,
-        "check_report": 2,
-        "llm_turns": 0,
-        "llm_fallback_turns": 9
+        "relations": 8,
+        "findings": 4,
+        "srs_sections": 4,
+        "check_report": 4,
+        "llm_turns": 9,
+        "llm_fallback_turns": 0
       },
-      "workspace_digest": "c7e4fcfa36d8b732ab49f6470c6800ea2cdfd1b06e8e5544986a0bf3784597e5"
+      "workspace_digest": "7ec474c856da2a418a93f62dbce28abdf2ae4f39fdf5a1b559d93b2a7805dea4"
     },
     "case_description": "Autonomous Driving System (Baidu Apollo Planning & Control Module)",
     "system": "mare",
     "setting": "negotiation_integration_verification",
     "negotiation_enabled": true,
     "verification_executed": true,
-    "system_behaviors": {
-      "phase2_uses_llm": false,
-      "phase2_llm_active": false,
-      "optional_artifact_count": 0
+    "quare_only_behaviors": {
+      "phase0_external_spec_processing": false,
+      "dynamic_round_control": false,
+      "phase25_conflict_map_generation": false,
+      "phase5_software_materials_generation": false,
+      "phase2_dialectic_negotiation": false
     },
-    "optional_artifacts": {},
+    "quare_optional_artifacts": {},
     "phase2_llm": {
       "source": "disabled",
       "enabled": false,
@@ -250,20 +252,20 @@
       "retry_count": 0,
       "parse_recoveries": 0
     },
-    "runtime_llm": {
+    "mare_runtime_llm": {
       "source": "openai",
       "enabled": true,
       "seed": 101,
-      "seed_applied_turns": 0,
-      "turns": 0,
-      "fallback_turns": 9,
+      "seed_applied_turns": 9,
+      "turns": 9,
+      "fallback_turns": 0,
       "retry_count": 0,
       "parse_recoveries": 0,
-      "execution_mode": "deterministic_fallback"
+      "execution_mode": "llm_driven"
     },
-    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
-    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_corpus_dir": "[ANONYMIZED_DIR]/OpenRE-Bench/data/knowledge_base",
+    "rag_corpus_hash": "25f9fa3b0d6e04f132bce9f1c373b1e3fee1bde201dcc037ab9c976fff431798",
     "rag_chunk_count": 308,
-    "prompt_contract_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c"
+    "prompt_contract_hash": "9ce31be2b419f764ac8c9121db54b1133d78662cb2e5f6b1b88bd8c2a51bcf77"
   }
 }

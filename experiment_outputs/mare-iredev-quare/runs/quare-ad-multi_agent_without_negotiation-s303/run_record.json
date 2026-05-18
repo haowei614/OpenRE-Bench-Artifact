@@ -11,22 +11,22 @@
     "system_name": "quare",
     "implementation": "deterministic-parity-pipeline",
     "implementation_version": "0.1.0",
-    "python_version": "3.13.12",
-    "platform": "macOS-15.6.1-arm64-arm-64bit-Mach-O",
-    "machine": "arm64"
+    "python_version": "3.11.7",
+    "platform": "macOS-10.16-x86_64-i386-64bit",
+    "machine": "x86_64"
   },
   "provenance": {
     "model": "gpt-4o-mini",
     "temperature": 0.7,
     "seed": 303,
     "prompt_hash": "36cf0fe38414ab5b8b332afe2599bb3b2dc0482b1cb806405aaee2fdf0ec0f7f",
-    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
-    "corpus_path": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base"
+    "corpus_hash": "",
+    "corpus_path": "/Users/haowei/Documents/OpenRE-Bench/data/knowledge_base"
   },
   "execution_flags": {
-    "rag_fallback_used": false,
+    "rag_fallback_used": true,
     "llm_fallback_used": false,
-    "fallback_tainted": false,
+    "fallback_tainted": true,
     "retry_used": false,
     "retry_count": 0
   },
@@ -39,24 +39,24 @@
   "max_tokens": 4000,
   "rag_enabled": true,
   "rag_backend": "local_tfidf",
-  "rag_fallback_used": false,
-  "start_timestamp": "2026-05-12T04:49:58Z",
-  "end_timestamp": "2026-05-12T04:49:59Z",
-  "runtime_seconds": 0.059384,
-  "artifacts_dir": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303",
+  "rag_fallback_used": true,
+  "start_timestamp": "2026-02-26T10:41:47Z",
+  "end_timestamp": "2026-02-26T10:41:47Z",
+  "runtime_seconds": 0.014037,
+  "artifacts_dir": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303",
   "artifact_paths": {
-    "phase1_initial_models.json": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303/phase1_initial_models.json",
-    "phase2_negotiation_trace.json": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303/phase2_negotiation_trace.json",
-    "phase3_integrated_kaos_model.json": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303/phase3_integrated_kaos_model.json",
-    "phase4_verification_report.json": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303/phase4_verification_report.json",
-    "phase0_external_spec_rules.json": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303/phase0_external_spec_rules.json",
-    "phase2_conflict_map.json": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303/phase2_conflict_map.json",
-    "phase5_software_materials.json": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303/phase5_software_materials.json"
+    "phase1_initial_models.json": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303/phase4_verification_report.json",
+    "phase0_external_spec_rules.json": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303/phase0_external_spec_rules.json",
+    "phase2_conflict_map.json": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303/phase2_conflict_map.json",
+    "phase5_software_materials.json": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303/phase5_software_materials.json"
   },
   "artifact_blinded": false,
   "blinding_scheme_version": "",
   "blind_eval_run_id": "",
-  "judge_pipeline_hash": "0dd214854aad9df58e5c633d44f4943502ced4e5c8e238a4073469e5b4a6a7f6",
+  "judge_pipeline_hash": "ef65560e3e5210041525721d85fce427a36b4a99d276fee46274a58bbbac7f5b",
   "trace_audit_path": "",
   "notes": {
     "phase_a_b": true,
@@ -69,15 +69,17 @@
     "setting": "multi_agent_without_negotiation",
     "negotiation_enabled": false,
     "verification_executed": false,
-    "system_behaviors": {
-      "phase2_uses_llm": true,
-      "phase2_llm_active": false,
-      "optional_artifact_count": 3
+    "quare_only_behaviors": {
+      "phase0_external_spec_processing": true,
+      "dynamic_round_control": true,
+      "phase25_conflict_map_generation": true,
+      "phase5_software_materials_generation": true,
+      "phase2_dialectic_negotiation": false
     },
-    "optional_artifacts": {
-      "phase0_external_spec_rules.json": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303/phase0_external_spec_rules.json",
-      "phase2_conflict_map.json": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303/phase2_conflict_map.json",
-      "phase5_software_materials.json": "experiment_outputs/mare-iredev-quare/runs/quare-ad-multi_agent_without_negotiation-s303/phase5_software_materials.json"
+    "quare_optional_artifacts": {
+      "phase0_external_spec_rules.json": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303/phase0_external_spec_rules.json",
+      "phase2_conflict_map.json": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303/phase2_conflict_map.json",
+      "phase5_software_materials.json": "experiment_outputs/quare_rebalanced/runs/quare-ad-multi_agent_without_negotiation-s303/phase5_software_materials.json"
     },
     "phase2_llm": {
       "source": "disabled",
@@ -89,7 +91,7 @@
       "retry_count": 0,
       "parse_recoveries": 0
     },
-    "runtime_llm": {
+    "mare_runtime_llm": {
       "source": "disabled",
       "enabled": false,
       "seed": 303,
@@ -100,9 +102,9 @@
       "parse_recoveries": 0,
       "execution_mode": "deterministic_emulation"
     },
-    "rag_corpus_dir": "/Users/haowei/Desktop/OpenRE-Bench-main/data/knowledge_base",
-    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
-    "rag_chunk_count": 308,
+    "rag_corpus_dir": "/Users/haowei/Documents/OpenRE-Bench/data/knowledge_base",
+    "rag_corpus_hash": "",
+    "rag_chunk_count": 0,
     "prompt_contract_hash": "36cf0fe38414ab5b8b332afe2599bb3b2dc0482b1cb806405aaee2fdf0ec0f7f"
   }
 }

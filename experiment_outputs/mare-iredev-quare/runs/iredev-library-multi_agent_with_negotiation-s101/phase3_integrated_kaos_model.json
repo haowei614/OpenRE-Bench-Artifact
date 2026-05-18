@@ -3,7 +3,7 @@
     {
       "id": "ANA-L1-004",
       "name": "Negotiated Integrated Goal",
-      "description": "Analyst objective for Library: SR-1: The system shall UR-1: The system shall Librarians must be able to add new books, remove books, and manage member accounts",
+      "description": "Analyst objective for Library: 1. The system shall provide a user-friendly interface for librarians to add new books, remove books, and manage member accounts efficiently.",
       "gsn_type": "Goal",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -14,7 +14,7 @@
       "properties": {
         "original_kaos_type": "Goal",
         "source": "openre_bench.phase1.rag",
-        "source_document": "sample_knowledge.py",
+        "source_document": "cases/real_world_studies.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -23,7 +23,7 @@
     {
       "id": "END-L2-002-04",
       "name": "EndUser Output 4",
-      "description": "The system shall Response: Librarians must be able to add new books, remove books, and manage member accounts",
+      "description": "The system shall The borrowing and returning process must be seamless. Members often express frustration when they cannot find available books or when they face unclear borrowing limits. A clear system for tracking borrowed books and...",
       "gsn_type": "Strategy",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -34,7 +34,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "knowledge_guide.py",
+        "source_document": "standards/latest_2024.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -43,7 +43,7 @@
     {
       "id": "REV-L2-006-04",
       "name": "Reviewer Output 4",
-      "description": "The system shall Closure: Finding: Ensure traceability from user requirements to system requirements. — resolved",
+      "description": "The system shall The requirement for managing book inventory with a streamlined interface is confirmed, addressing librarian pain points.",
       "gsn_type": "Strategy",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -54,7 +54,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source_document": "sample_knowledge.py",
         "conflict_resolved_by": null,
         "validation_status": "candidate_resolution",
         "citation_required": true
@@ -63,7 +63,7 @@
     {
       "id": "INT-L2-001-04",
       "name": "Interviewer Output 4",
-      "description": "The system shall Interview record 4: Response: Librarians must be able to add new books, remove books, and manage member accounts",
+      "description": "The system shall UR-1: The system shall Librarians must be able to add new books, remove books, and manage member accounts Negotiated trade-off accepted by EndUser.",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -74,16 +74,16 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "cases/real_world_studies.py",
-        "conflict_resolved_by": null,
-        "validation_status": "pending",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": "EndUser",
+        "validation_status": "resolved",
         "citation_required": true
       }
     },
     {
       "id": "DEP-L2-003-04",
       "name": "Deployer Output 4",
-      "description": "The system shall Deploy constraint: Librarians must be able to add new books, remove books, and manage member accounts",
+      "description": "The system shall Infrastructure Constraints: The library management system will be deployed on a cloud platform, ensuring scalability to handle increased loads during peak usage, such as weekends and holidays. It must support high ava...",
       "gsn_type": "Strategy",
       "quality_attribute": "Safety",
       "priority": 1,
@@ -101,20 +101,20 @@
       }
     },
     {
-      "id": "ARC-L2-005-04",
-      "name": "Archivist Output 4",
-      "description": "The system shall SRS-4 External Interface Requirements",
+      "id": "ARC-L2-005-01",
+      "name": "Archivist Output 1",
+      "description": "The system shall 1. Introduction 1.1 Purpose This Software Requirements Specification (SRS) document provides a detailed description of the Library Management System. It outlines the system's functionalities and requirements in accord...",
       "gsn_type": "Strategy",
       "quality_attribute": "Sustainability",
       "priority": 1,
       "stakeholder": "Archivist",
-      "measurable_criteria": "Archivist action artifact 4",
+      "measurable_criteria": "Archivist action artifact 1",
       "hierarchy_level": 2,
       "parent_goal_id": "ANA-L1-004",
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "domains/automotive_safety.py",
+        "source_document": "knowledge_guide.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -123,7 +123,7 @@
     {
       "id": "ANA-L2-004-04",
       "name": "Analyst Output 4",
-      "description": "The system shall SR-4: The system shall UR-4: The system shall Members must be able to search for books by title, author, or ISBN",
+      "description": "The system shall 4. The system shall enable members to search for books by title, author, or ISBN.",
       "gsn_type": "Strategy",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -189,7 +189,7 @@
     {
       "id": "REL-005",
       "source_id": "ANA-L1-004",
-      "target_id": "ARC-L2-005-04",
+      "target_id": "ARC-L2-005-01",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -213,7 +213,7 @@
     "model_id": "model_iredev-library-multi_agent_with_negotiation-s101",
     "name": "OpenRE-Bench Integrated KAOS for Library",
     "description": "Deterministic protocol-aligned integrated GSN model.",
-    "created_timestamp": "2026-05-12T04:50:02Z",
+    "created_timestamp": "2026-02-17T10:30:04Z",
     "requirement_source": "A library management system must allow library members to borrow and return books. The system must track which books are available, which are borrowed, and by whom. Members must be able to search for books by title, author, or ISBN. The system must enforce borrowing limits (e.g., maximum number of books per member) and track overdue books. Librarians must be able to add new books, remove books, and manage member accounts.",
     "model_type": "GSN",
     "quality_attributes": [
@@ -265,8 +265,8 @@
         "parent_goal_id": "ANA-L1-004"
       },
       {
-        "id": "ARC-L2-005-04",
-        "name": "Archivist Output 4",
+        "id": "ARC-L2-005-01",
+        "name": "Archivist Output 1",
         "quality_attribute": "Sustainability",
         "parent_goal_id": "ANA-L1-004"
       },
@@ -284,7 +284,7 @@
         "REV-L2-006-04",
         "INT-L2-001-04",
         "DEP-L2-003-04",
-        "ARC-L2-005-04",
+        "ARC-L2-005-01",
         "ANA-L2-004-04"
       ]
     }
@@ -301,7 +301,7 @@
     "invalid_leaves": []
   },
   "model_id": "model_iredev-library-multi_agent_with_negotiation-s101",
-  "created_timestamp": "2026-05-12T04:50:02Z",
+  "created_timestamp": "2026-02-17T10:30:04Z",
   "total_elements": 7,
   "total_relations": 6
 }

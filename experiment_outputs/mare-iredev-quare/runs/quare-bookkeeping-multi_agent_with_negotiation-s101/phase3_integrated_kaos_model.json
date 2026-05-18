@@ -3,7 +3,7 @@
     {
       "id": "EFF-L1-002",
       "name": "Negotiated Integrated Goal",
-      "description": "Efficiency objective for Bookkeeping: Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements",
+      "description": "Efficiency objective for Bookkeeping: Users must be able to generate financial reports with a focus on performance and sustainability metrics",
       "gsn_type": "Goal",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -13,8 +13,8 @@
       "parent_goal_id": null,
       "properties": {
         "original_kaos_type": "Goal",
-        "source": "openre_bench.phase1.rag",
-        "source_document": "sample_knowledge.py",
+        "source": "openre_bench.phase1.rag_fallback",
+        "source_document": null,
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -33,88 +33,68 @@
       "parent_goal_id": "EFF-L1-002",
       "properties": {
         "original_kaos_type": "Task",
-        "source": "openre_bench.phase1.rag",
-        "source_document": "sample_knowledge.py",
-        "conflict_resolved_by": null,
-        "validation_status": "pending",
+        "source": "openre_bench.phase1.rag_fallback",
+        "source_document": null,
+        "conflict_resolved_by": "GreenAgent",
+        "validation_status": "resolved",
         "citation_required": true
       }
     },
     {
-      "id": "RES-L2-005-06",
-      "name": "Responsibility Requirement 6",
-      "description": "The system shall ensure responsibility (ethical compliance): A bookkeeping system must record financial transactions including income and expenses",
+      "id": "RES-L2-005-07",
+      "name": "Responsibility Requirement 7",
+      "description": "The system shall ensure responsibility (regulatory accountability): The system must support multiple accounts and categories",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
       "stakeholder": "ResponsibilityAgent",
-      "measurable_criteria": "Clause-level quality requirement for ethical compliance",
+      "measurable_criteria": "Clause-level quality requirement for regulatory accountability",
       "hierarchy_level": 2,
       "parent_goal_id": "EFF-L1-002",
       "properties": {
         "original_kaos_type": "Task",
-        "source": "openre_bench.phase1.rag",
-        "source_document": "cases/real_world_studies.py",
+        "source": "openre_bench.phase1.rag_fallback",
+        "source_document": null,
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
       }
     },
     {
-      "id": "SAF-L2-001-06",
-      "name": "Safety Requirement 6",
-      "description": "The system shall ensure safety (risk mitigation): The system must support multiple accounts and categories",
+      "id": "SAF-L2-001-07",
+      "name": "Safety Requirement 7",
+      "description": "The system shall ensure safety (hazard prevention): Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements",
       "gsn_type": "Strategy",
       "quality_attribute": "Safety",
       "priority": 1,
       "stakeholder": "SafetyAgent",
-      "measurable_criteria": "Clause-level quality requirement for risk mitigation",
+      "measurable_criteria": "Clause-level quality requirement for hazard prevention",
       "hierarchy_level": 2,
       "parent_goal_id": "EFF-L1-002",
       "properties": {
         "original_kaos_type": "Task",
-        "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source": "openre_bench.phase1.rag_fallback",
+        "source_document": null,
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
       }
     },
     {
-      "id": "SUS-L2-003-06",
-      "name": "Sustainability Requirement 6",
-      "description": "The system shall ensure sustainability (environmental impact awareness): The system must ensure double-entry bookkeeping principles are followed and maintain an audit trail of all transactions",
+      "id": "SUS-L2-003-05",
+      "name": "Sustainability Requirement 5",
+      "description": "The system shall ensure sustainability (resource lifecycle control): Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements",
       "gsn_type": "Strategy",
       "quality_attribute": "Sustainability",
       "priority": 1,
       "stakeholder": "GreenAgent",
-      "measurable_criteria": "Clause-level quality requirement for environmental impact awareness",
+      "measurable_criteria": "Clause-level quality requirement for resource lifecycle control",
       "hierarchy_level": 2,
       "parent_goal_id": "EFF-L1-002",
       "properties": {
         "original_kaos_type": "Task",
-        "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
-        "conflict_resolved_by": null,
-        "validation_status": "pending",
-        "citation_required": true
-      }
-    },
-    {
-      "id": "TRU-L2-004-06",
-      "name": "Trustworthiness Requirement 6",
-      "description": "The system shall ensure trustworthiness (integrity guarantees): The system must support multiple currencies and handle currency conversion",
-      "gsn_type": "Strategy",
-      "quality_attribute": "Trustworthiness",
-      "priority": 1,
-      "stakeholder": "TrustworthinessAgent",
-      "measurable_criteria": "Clause-level quality requirement for integrity guarantees",
-      "hierarchy_level": 2,
-      "parent_goal_id": "EFF-L1-002",
-      "properties": {
-        "original_kaos_type": "Task",
-        "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source": "openre_bench.phase1.rag_fallback",
+        "source_document": null,
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -133,10 +113,30 @@
       "parent_goal_id": "EFF-L1-002",
       "properties": {
         "original_kaos_type": "Task",
-        "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source": "openre_bench.phase1.rag_fallback",
+        "source_document": null,
         "conflict_resolved_by": null,
         "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "EFF-L2-002-05",
+      "name": "Efficiency Requirement 5",
+      "description": "The system shall ensure efficiency (throughput stability): The system must support multiple accounts and categories",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Clause-level quality requirement for throughput stability",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag_fallback",
+        "source_document": null,
+        "conflict_resolved_by": "GreenAgent",
+        "validation_status": "resolved",
         "citation_required": true
       }
     }
@@ -156,7 +156,7 @@
     {
       "id": "REL-002",
       "source_id": "EFF-L1-002",
-      "target_id": "RES-L2-005-06",
+      "target_id": "RES-L2-005-07",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -167,7 +167,7 @@
     {
       "id": "REL-003",
       "source_id": "EFF-L1-002",
-      "target_id": "SAF-L2-001-06",
+      "target_id": "SAF-L2-001-07",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -178,7 +178,7 @@
     {
       "id": "REL-004",
       "source_id": "EFF-L1-002",
-      "target_id": "SUS-L2-003-06",
+      "target_id": "SUS-L2-003-05",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -189,7 +189,7 @@
     {
       "id": "REL-005",
       "source_id": "EFF-L1-002",
-      "target_id": "TRU-L2-004-06",
+      "target_id": "TRU-L2-004-05",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -200,7 +200,7 @@
     {
       "id": "REL-006",
       "source_id": "EFF-L1-002",
-      "target_id": "TRU-L2-004-05",
+      "target_id": "EFF-L2-002-05",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -213,7 +213,7 @@
     "model_id": "model_quare-bookkeeping-multi_agent_with_negotiation-s101",
     "name": "OpenRE-Bench Integrated KAOS for Bookkeeping",
     "description": "Deterministic protocol-aligned integrated GSN model.",
-    "created_timestamp": "2026-05-12T04:50:01Z",
+    "created_timestamp": "2026-02-26T10:54:22Z",
     "requirement_source": "A bookkeeping system must record financial transactions including income and expenses. The system must support multiple accounts and categories. Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements. The system must ensure double-entry bookkeeping principles are followed and maintain an audit trail of all transactions. The system must support multiple currencies and handle currency conversion.",
     "model_type": "GSN",
     "quality_attributes": [
@@ -247,27 +247,21 @@
         "parent_goal_id": "EFF-L1-002"
       },
       {
-        "id": "RES-L2-005-06",
-        "name": "Responsibility Requirement 6",
+        "id": "RES-L2-005-07",
+        "name": "Responsibility Requirement 7",
         "quality_attribute": "Responsibility",
         "parent_goal_id": "EFF-L1-002"
       },
       {
-        "id": "SAF-L2-001-06",
-        "name": "Safety Requirement 6",
+        "id": "SAF-L2-001-07",
+        "name": "Safety Requirement 7",
         "quality_attribute": "Safety",
         "parent_goal_id": "EFF-L1-002"
       },
       {
-        "id": "SUS-L2-003-06",
-        "name": "Sustainability Requirement 6",
+        "id": "SUS-L2-003-05",
+        "name": "Sustainability Requirement 5",
         "quality_attribute": "Sustainability",
-        "parent_goal_id": "EFF-L1-002"
-      },
-      {
-        "id": "TRU-L2-004-06",
-        "name": "Trustworthiness Requirement 6",
-        "quality_attribute": "Trustworthiness",
         "parent_goal_id": "EFF-L1-002"
       },
       {
@@ -275,17 +269,23 @@
         "name": "Trustworthiness Requirement 5",
         "quality_attribute": "Trustworthiness",
         "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "EFF-L2-002-05",
+        "name": "Efficiency Requirement 5",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "EFF-L1-002"
       }
     ],
     "level_3": [],
     "parent_child_mappings": {
       "EFF-L1-002": [
         "EFF-L2-002-06",
-        "RES-L2-005-06",
-        "SAF-L2-001-06",
-        "SUS-L2-003-06",
-        "TRU-L2-004-06",
-        "TRU-L2-004-05"
+        "RES-L2-005-07",
+        "SAF-L2-001-07",
+        "SUS-L2-003-05",
+        "TRU-L2-004-05",
+        "EFF-L2-002-05"
       ]
     }
   },
@@ -301,7 +301,7 @@
     "invalid_leaves": []
   },
   "model_id": "model_quare-bookkeeping-multi_agent_with_negotiation-s101",
-  "created_timestamp": "2026-05-12T04:50:01Z",
+  "created_timestamp": "2026-02-26T10:54:22Z",
   "total_elements": 7,
   "total_relations": 6
 }

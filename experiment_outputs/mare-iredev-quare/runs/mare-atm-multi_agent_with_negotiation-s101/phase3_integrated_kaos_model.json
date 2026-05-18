@@ -3,7 +3,7 @@
     {
       "id": "CHE-L1-004",
       "name": "Negotiated Integrated Goal",
-      "description": "Checker objective for ATM: Check report item 1: All requirements should remain verifiable with explicit measurable criteria.",
+      "description": "Checker objective for ATM: 1. Each transaction must be recorded, and the client must have the ability to review all transactions performed against a given account. Further clarity is needed on the format and specifics...",
       "gsn_type": "Goal",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -14,7 +14,7 @@
       "properties": {
         "original_kaos_type": "Goal",
         "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source_document": "cases/real_world_studies.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -23,7 +23,7 @@
     {
       "id": "COL-L2-002-04",
       "name": "Collector Output 4",
-      "description": "The system shall Draft requirement 4: The system shall As a stakeholder of ATM, I need A checking-account and a saving-account",
+      "description": "The system shall The application shall allow one saving account to be linked to each checking account.",
       "gsn_type": "Strategy",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -43,7 +43,7 @@
     {
       "id": "STA-L2-001-04",
       "name": "Stakeholders Output 4",
-      "description": "The system shall As a stakeholder of ATM, I need A checking-account and a saving-account",
+      "description": "The system shall As a bank client, I need a saving account linked to my checking account to facilitate easy transfers and savings.",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -61,14 +61,14 @@
       }
     },
     {
-      "id": "CHE-L2-004-01",
-      "name": "Checker Output 1",
-      "description": "The system shall Check report item 1: All requirements should remain verifiable with explicit measurable criteria.",
+      "id": "CHE-L2-004-04",
+      "name": "Checker Output 4",
+      "description": "The system shall 4. For each checking account, one related saving account can exist. The wording must be corrected from 'can exists' to 'can exist' to prevent misunderstandings.",
       "gsn_type": "Strategy",
       "quality_attribute": "Safety",
       "priority": 1,
       "stakeholder": "Checker",
-      "measurable_criteria": "Checker action artifact 1",
+      "measurable_criteria": "Checker action artifact 4",
       "hierarchy_level": 2,
       "parent_goal_id": "CHE-L1-004",
       "properties": {
@@ -81,20 +81,20 @@
       }
     },
     {
-      "id": "DOC-L2-005-03",
-      "name": "Documenter Output 3",
-      "description": "The system shall SRS-3 Verification and Acceptance Criteria",
+      "id": "DOC-L2-005-04",
+      "name": "Documenter Output 4",
+      "description": "The system shall 4. Account Types: Description of the checking and saving accounts supported by the application.",
       "gsn_type": "Strategy",
       "quality_attribute": "Sustainability",
       "priority": 1,
       "stakeholder": "Documenter",
-      "measurable_criteria": "Documenter action artifact 3",
+      "measurable_criteria": "Documenter action artifact 4",
       "hierarchy_level": 2,
       "parent_goal_id": "CHE-L1-004",
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source_document": "knowledge_guide.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -103,7 +103,7 @@
     {
       "id": "MOD-L2-003-04",
       "name": "Modeler Output 4",
-      "description": "The system shall Entity: shall",
+      "description": "The system shall Entity: date",
       "gsn_type": "Strategy",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -114,7 +114,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "sample_knowledge.py",
+        "source_document": "automotive_safety.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -147,7 +147,7 @@
     {
       "id": "REL-003",
       "source_id": "CHE-L1-004",
-      "target_id": "CHE-L2-004-01",
+      "target_id": "CHE-L2-004-04",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -158,7 +158,7 @@
     {
       "id": "REL-004",
       "source_id": "CHE-L1-004",
-      "target_id": "DOC-L2-005-03",
+      "target_id": "DOC-L2-005-04",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -182,7 +182,7 @@
     "model_id": "model_mare-atm-multi_agent_with_negotiation-s101",
     "name": "OpenRE-Bench Integrated KAOS for ATM",
     "description": "Deterministic protocol-aligned integrated GSN model.",
-    "created_timestamp": "2026-05-12T04:49:59Z",
+    "created_timestamp": "2026-02-17T04:33:26Z",
     "requirement_source": "The bank client must be able to deposit an amount to and withdraw an amount from his or her accounts using the bank application. Each transaction must be recorded, and the client must have the ability to review all transactions performed against a given account. Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction.\n\nA bank client can have two types of accounts. A checking-account and a saving-account. For each checking account, one related saving-account can exists. The application must verify that a client can gain access to his or her account by identification via a personal identification number (PIN) code.\n\nNeither a checking-account nor a saving-account can have a negative balance. The application should automatically withdraw funds from a related saving-account if the requested withdrawal amount on the checking-account is more than its current balance. If the saving-account balance is insufficient to cover the requested withdrawal amount, the application should inform the user and terminate the transaction.",
     "model_type": "GSN",
     "quality_attributes": [
@@ -222,14 +222,14 @@
         "parent_goal_id": "CHE-L1-004"
       },
       {
-        "id": "CHE-L2-004-01",
-        "name": "Checker Output 1",
+        "id": "CHE-L2-004-04",
+        "name": "Checker Output 4",
         "quality_attribute": "Safety",
         "parent_goal_id": "CHE-L1-004"
       },
       {
-        "id": "DOC-L2-005-03",
-        "name": "Documenter Output 3",
+        "id": "DOC-L2-005-04",
+        "name": "Documenter Output 4",
         "quality_attribute": "Sustainability",
         "parent_goal_id": "CHE-L1-004"
       },
@@ -245,8 +245,8 @@
       "CHE-L1-004": [
         "COL-L2-002-04",
         "STA-L2-001-04",
-        "CHE-L2-004-01",
-        "DOC-L2-005-03",
+        "CHE-L2-004-04",
+        "DOC-L2-005-04",
         "MOD-L2-003-04"
       ]
     }
@@ -263,7 +263,7 @@
     "invalid_leaves": []
   },
   "model_id": "model_mare-atm-multi_agent_with_negotiation-s101",
-  "created_timestamp": "2026-05-12T04:49:59Z",
+  "created_timestamp": "2026-02-17T04:33:26Z",
   "total_elements": 6,
   "total_relations": 5
 }

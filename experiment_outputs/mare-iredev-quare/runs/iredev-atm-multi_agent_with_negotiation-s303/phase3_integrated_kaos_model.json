@@ -3,7 +3,7 @@
     {
       "id": "ANA-L1-004",
       "name": "Negotiated Integrated Goal",
-      "description": "Analyst objective for ATM: SR-1: The system shall UR-1: The system shall A bank client can have two types of accounts",
+      "description": "Analyst objective for ATM: The system shall support two types of accounts for bank clients: checking accounts and saving accounts.",
       "gsn_type": "Goal",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -14,7 +14,7 @@
       "properties": {
         "original_kaos_type": "Goal",
         "source": "openre_bench.phase1.rag",
-        "source_document": "automotive_safety.py",
+        "source_document": "knowledge_guide.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -23,7 +23,7 @@
     {
       "id": "END-L2-002-04",
       "name": "EndUser Output 4",
-      "description": "The system shall Response: A bank client can have two types of accounts",
+      "description": "The system shall As a bank client, I often face the pain point of managing my finances between checking and saving accounts. I expect a seamless experience where I can easily switch between these accounts without worrying about overdr...",
       "gsn_type": "Strategy",
       "quality_attribute": "Efficiency",
       "priority": 1,
@@ -43,7 +43,7 @@
     {
       "id": "REV-L2-006-04",
       "name": "Reviewer Output 4",
-      "description": "The system shall Closure: Finding: Ensure traceability from user requirements to system requirements. — resolved",
+      "description": "The system shall Requirement ID: ATM-004 - Stating that accounts cannot have a negative balance is clear; however, it lacks conditions for overdraft scenarios, which could create confusion (Clarity).",
       "gsn_type": "Strategy",
       "quality_attribute": "Integrated",
       "priority": 1,
@@ -63,7 +63,7 @@
     {
       "id": "INT-L2-001-04",
       "name": "Interviewer Output 4",
-      "description": "The system shall Interview record 4: Response: A bank client can have two types of accounts",
+      "description": "The system shall Requirement ID: ATM-004 - Neither checking accounts nor saving accounts can have a negative balance. Negotiated trade-off accepted by EndUser.",
       "gsn_type": "Strategy",
       "quality_attribute": "Responsibility",
       "priority": 1,
@@ -74,16 +74,16 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "cases/real_world_studies.py",
-        "conflict_resolved_by": null,
-        "validation_status": "pending",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "EndUser",
+        "validation_status": "resolved",
         "citation_required": true
       }
     },
     {
       "id": "DEP-L2-003-04",
       "name": "Deployer Output 4",
-      "description": "The system shall Deploy constraint: A bank client can have two types of accounts",
+      "description": "The system shall Infrastructure Constraints: The system must operate in a secure server environment with redundancy and failover capabilities to ensure high availability. Sufficient bandwidth is necessary to accommodate peak transacti...",
       "gsn_type": "Strategy",
       "quality_attribute": "Safety",
       "priority": 1,
@@ -94,36 +94,36 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "cases/real_world_studies.py",
+        "source_document": "automotive_safety.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
       }
     },
     {
-      "id": "ARC-L2-005-04",
-      "name": "Archivist Output 4",
-      "description": "The system shall SRS-4 External Interface Requirements",
+      "id": "ARC-L2-005-01",
+      "name": "Archivist Output 1",
+      "description": "The system shall 1. Introduction 1.1 Purpose The purpose of this Software Requirements Specification (SRS) is to outline the requirements for the ATM application which supports two types of accounts for bank clients: checking accounts... Negotiated trade-off accepted by Reviewer.",
       "gsn_type": "Strategy",
       "quality_attribute": "Sustainability",
       "priority": 1,
       "stakeholder": "Archivist",
-      "measurable_criteria": "Archivist action artifact 4",
+      "measurable_criteria": "Archivist action artifact 1",
       "hierarchy_level": 2,
       "parent_goal_id": "ANA-L1-004",
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "domains/automotive_safety.py",
-        "conflict_resolved_by": null,
-        "validation_status": "pending",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "Reviewer",
+        "validation_status": "resolved",
         "citation_required": true
       }
     },
     {
       "id": "ANA-L2-004-04",
       "name": "Analyst Output 4",
-      "description": "The system shall SR-4: The system shall UR-4: The system shall The application must verify that a client can gain access to his or her account by identification via a personal identificat...",
+      "description": "The system shall Neither checking accounts nor saving accounts shall have a negative balance.",
       "gsn_type": "Strategy",
       "quality_attribute": "Trustworthiness",
       "priority": 1,
@@ -134,7 +134,7 @@
       "properties": {
         "original_kaos_type": "Task",
         "source": "openre_bench.phase1.rag",
-        "source_document": "knowledge_guide.py",
+        "source_document": "automotive_safety.py",
         "conflict_resolved_by": null,
         "validation_status": "pending",
         "citation_required": true
@@ -189,7 +189,7 @@
     {
       "id": "REL-005",
       "source_id": "ANA-L1-004",
-      "target_id": "ARC-L2-005-04",
+      "target_id": "ARC-L2-005-01",
       "connection_type": "SupportedBy",
       "description": "Derived from parent-child refinement",
       "strength": null,
@@ -213,7 +213,7 @@
     "model_id": "model_iredev-atm-multi_agent_with_negotiation-s303",
     "name": "OpenRE-Bench Integrated KAOS for ATM",
     "description": "Deterministic protocol-aligned integrated GSN model.",
-    "created_timestamp": "2026-05-12T04:50:00Z",
+    "created_timestamp": "2026-02-17T09:58:43Z",
     "requirement_source": "The bank client must be able to deposit an amount to and withdraw an amount from his or her accounts using the bank application. Each transaction must be recorded, and the client must have the ability to review all transactions performed against a given account. Recorded transactions must include the date, time, transaction type, amount and account balance after the transaction.\n\nA bank client can have two types of accounts. A checking-account and a saving-account. For each checking account, one related saving-account can exists. The application must verify that a client can gain access to his or her account by identification via a personal identification number (PIN) code.\n\nNeither a checking-account nor a saving-account can have a negative balance. The application should automatically withdraw funds from a related saving-account if the requested withdrawal amount on the checking-account is more than its current balance. If the saving-account balance is insufficient to cover the requested withdrawal amount, the application should inform the user and terminate the transaction.",
     "model_type": "GSN",
     "quality_attributes": [
@@ -265,8 +265,8 @@
         "parent_goal_id": "ANA-L1-004"
       },
       {
-        "id": "ARC-L2-005-04",
-        "name": "Archivist Output 4",
+        "id": "ARC-L2-005-01",
+        "name": "Archivist Output 1",
         "quality_attribute": "Sustainability",
         "parent_goal_id": "ANA-L1-004"
       },
@@ -284,7 +284,7 @@
         "REV-L2-006-04",
         "INT-L2-001-04",
         "DEP-L2-003-04",
-        "ARC-L2-005-04",
+        "ARC-L2-005-01",
         "ANA-L2-004-04"
       ]
     }
@@ -301,7 +301,7 @@
     "invalid_leaves": []
   },
   "model_id": "model_iredev-atm-multi_agent_with_negotiation-s303",
-  "created_timestamp": "2026-05-12T04:50:00Z",
+  "created_timestamp": "2026-02-17T09:58:43Z",
   "total_elements": 7,
   "total_relations": 6
 }
