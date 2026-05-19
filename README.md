@@ -93,6 +93,51 @@ OpenRE-Bench/
    HF_HOME=/tmp/openre-bench-hf-cache uv run pytest
    ```
 
+## Artifact Evaluation Guide
+
+For artifact evaluation, the package can be inspected at several levels
+depending on available time and compute budget.
+
+### Recommended Reviewer Workflow
+
+| Goal | Location or Command | Expected Cost |
+|------|---------------------|---------------|
+| Inspect pre-generated experiment outputs | [`experiment_outputs/mare-iredev-quare/`](experiment_outputs/mare-iredev-quare/) | No execution required |
+| Check paper-table values | [`experiment_outputs/mare-iredev-quare/paper_tables/`](experiment_outputs/mare-iredev-quare/paper_tables/) | No execution required |
+| Inspect human-evaluation evidence | [`human_eval/`](human_eval/) | No execution required |
+| Run one framework on one case | See "Single-system smoke test" below | Short run |
+| Reproduce the full comparison matrix | See "Full 180-run comparison matrix" below | Long-running |
+
+### Reproducibility Levels
+
+| Level | Purpose | What to Inspect or Run |
+|-------|---------|------------------------|
+| 0 | Inspect artifact without executing code | Paper tables, pre-generated run artifacts, and human-evaluation outputs |
+| 1 | Confirm the CLI and one adapter execute locally | Run the single-system smoke test with `--system quare`, `mare`, or `iredev` |
+| 2 | Reproduce the three-framework experiment matrix | Run the 180-run comparison matrix |
+| 3 | Audit individual runs | Open per-run JSON artifacts under `experiment_outputs/mare-iredev-quare/runs/` |
+
+### Main Output Files
+
+Each run directory contains the phase artifacts produced by the shared harness.
+
+| File | Meaning |
+|------|---------|
+| `phase1_initial_models.json` | Initial framework-specific generated requirements, goals, or model elements |
+| `phase2_negotiation_trace.json` | Negotiation, interaction, or workflow trace when applicable |
+| `phase3_integrated_kaos_model.json` | Integrated KAOS-style requirement model used for downstream evaluation |
+| `phase4_verification_report.json` | Structural, compliance, and quality-checking outputs when verification is executed |
+| `run_record.json` | Run provenance, configuration, comparability flags, and aggregate metrics |
+
+### Troubleshooting
+
+| Issue | Suggested Action |
+|-------|------------------|
+| Missing model credentials | Create `.env` from `.env.example`, or create `.api_key` with `OPENAI_API_KEY=...` |
+| Hugging Face cache or permission errors | Set `HF_HOME=/tmp/openre-bench-hf-cache` before running tests |
+| Full matrix takes too long | Run the single-system smoke test first and inspect pre-generated outputs |
+| LLM access is unavailable | Use the pre-generated outputs and paper-table CSVs for inspection |
+
 ## Reproducing Paper Results
 
 ### Full 180-run comparison matrix
