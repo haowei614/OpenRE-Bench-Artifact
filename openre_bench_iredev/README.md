@@ -1,6 +1,6 @@
 # iReDev Adapter
 
-Faithful reimplementation of the iReDev framework (Jin et al., 2025;
+Faithful reimplementation of the iReDev framework (2025;
 arXiv:2507.13081) for cross-framework comparison.
 
 ## Architecture

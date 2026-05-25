@@ -1,4 +1,4 @@
-"""iReDev 6-agent / 17-action knowledge-driven workflow (Jin et al., TOSEM 2025)."""
+"""iReDev 6-agent / 17-action knowledge-driven workflow (TOSEM 2025 paper)."""
 
 from __future__ import annotations
 

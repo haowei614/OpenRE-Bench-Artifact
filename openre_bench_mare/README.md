@@ -1,6 +1,6 @@
 # MARE Adapter
 
-Faithful reimplementation of the MARE framework (Jin et al., 2024;
+Faithful reimplementation of the MARE framework (2024;
 arXiv:2405.03256) for cross-framework comparison.
 
 ## Architecture

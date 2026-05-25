@@ -81,7 +81,7 @@ MARE_RUNTIME_TRACE_VERSION = "1"
 IREDEV_RUNTIME_SEMANTICS_MODE = "iredev_knowledge_driven_v1"
 IREDEV_RUNTIME_TRACE_VERSION = "1"
 
-# NOTE: MARE paper (Jin et al., ASE 2024) does not define quality attributes
+# NOTE: The MARE paper (ASE 2024) does not define quality attributes
 # per role. These OpenRE-Bench benchmark-axis labels keep target adapters
 # comparable without treating any one target as the metric owner.
 MARE_ROLE_QUALITY_ATTRIBUTES: dict[str, str] = {
@@ -92,7 +92,7 @@ MARE_ROLE_QUALITY_ATTRIBUTES: dict[str, str] = {
     "Documenter": "Sustainability",
 }
 
-# NOTE: iReDev paper (Jin et al., TOSEM 2025) does not define quality
+# NOTE: The iReDev paper (TOSEM 2025) does not define quality
 # attributes per role. Same rationale as MARE_ROLE_QUALITY_ATTRIBUTES above.
 IREDEV_ROLE_QUALITY_ATTRIBUTES: dict[str, str] = {
     "Interviewer": "Responsibility",

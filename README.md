@@ -30,8 +30,8 @@ evaluate QUARE against baseline frameworks.
 | Framework | Adapter Package | Agents | Strategy | Paper |
 |-----------|----------------|--------|----------|-------|
 | **QUARE** | [`openre_bench_quare/`](openre_bench_quare/) | 5 quality-specialized + orchestrator | Dialectical negotiation by quality dimension | This paper |
-| **MARE** | [`openre_bench_mare/`](openre_bench_mare/) | 5 task-specialized | 9-action pipeline, single-turn negotiation | Jin et al., 2024 |
-| **iReDev** | [`openre_bench_iredev/`](openre_bench_iredev/) | 6 knowledge-driven | 17-action workflow, surrogate human-in-the-loop | Jin et al., 2025 |
+| **MARE** | [`openre_bench_mare/`](openre_bench_mare/) | 5 task-specialized | 9-action pipeline, single-turn negotiation | MARE paper, 2024 |
+| **iReDev** | [`openre_bench_iredev/`](openre_bench_iredev/) | 6 knowledge-driven | 17-action workflow, surrogate human-in-the-loop | iReDev paper, 2025 |
 
 Each adapter is registered by the shared pipeline in
 [`src/openre_bench/pipeline/_core.py`](src/openre_bench/pipeline/_core.py) and

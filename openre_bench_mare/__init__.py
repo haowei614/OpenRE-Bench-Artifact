@@ -1,4 +1,4 @@
-"""MARE 5-agent / 9-action workflow (Jin et al., ASE 2024)."""
+"""MARE 5-agent / 9-action workflow (ASE 2024 paper)."""
 
 from __future__ import annotations
 
