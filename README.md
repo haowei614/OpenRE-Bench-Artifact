@@ -25,6 +25,57 @@ The repository is named OpenRE-Bench because the artifact is not only the QUARE
 implementation; it is also the common replication and comparison harness used to
 evaluate QUARE against baseline frameworks.
 
+## Summary of Artifact
+
+This artifact provides a reusable benchmark harness for evaluating multi-agent
+Requirements Engineering frameworks under controlled experimental conditions. It
+implements QUARE and reimplements two baseline frameworks, MARE and iReDev, so
+that all systems can be executed over the same case-study inputs, LLM
+configuration, phase contracts, provenance records, and evaluation scripts.
+
+Expected inputs are JSON case-study descriptions under
+[`data/case_studies/`](data/case_studies/). The primary outputs are structured
+JSON phase artifacts, run records, comparison CSV files, paper-table CSV files,
+and human-evaluation analysis outputs. Pre-generated outputs for the paper
+experiments are included under
+[`experiment_outputs/mare-iredev-quare/`](experiment_outputs/mare-iredev-quare/)
+so that reviewers can inspect and verify the results without rerunning the full
+LLM experiment matrix.
+
+The motivation for the artifact is to support transparent comparison of QUARE
+against related multi-agent RE approaches while minimizing confounds introduced
+by different prompts, data formats, execution environments, or evaluation code.
+
+## Authors Information
+
+The artifact accompanies the paper:
+
+> **QUARE: Quality-Aware Requirements Analysis through Multi-Agent Dialectical
+> Negotiation**  
+> *Conditionally accepted at IEEE RE 2026*
+
+Authors should cite the paper and this archived artifact when reusing the
+software, datasets, generated outputs, or evaluation materials.
+
+**Author list:** TODO: replace this line with the final paper author list before
+submission.
+
+**Software citation:** A machine-readable citation template is provided in
+[`CITATION.cff`](CITATION.cff). Update the author metadata and DOI after the
+Zenodo or FigShare DOI has been reserved.
+
+## Artifact Location
+
+- Source repository:
+  <https://github.com/haowei614/OpenRE-Bench-Artifact>
+- Archival DOI: TODO: add the Zenodo or FigShare DOI before artifact submission.
+- Archival URL: TODO: add the immutable Zenodo or FigShare record URL before
+  artifact submission.
+
+The artifact should be evaluated from the archived DOI version for the final
+submission. The GitHub repository is provided as a development mirror and source
+code landing page.
+
 ## Implemented Frameworks
 
 | Framework | Adapter Package | Agents | Strategy | Paper |
@@ -56,6 +107,42 @@ OpenRE-Bench/
 ├── tests/                  # Regression tests for harness and adapters
 └── docs/                   # Supplementary documentation
 ```
+
+## Description of Artifact
+
+The top-level directories have the following roles:
+
+| Path | Description |
+|------|-------------|
+| [`openre_bench_quare/`](openre_bench_quare/) | QUARE implementation for the accompanying paper. |
+| [`openre_bench_mare/`](openre_bench_mare/) | Reimplementation of the MARE baseline adapter. |
+| [`openre_bench_iredev/`](openre_bench_iredev/) | Reimplementation of the iReDev baseline adapter. |
+| [`src/openre_bench/`](src/openre_bench/) | Shared CLI, pipeline, schemas, LLM client, validators, and comparison harness. |
+| [`data/case_studies/`](data/case_studies/) | Five benchmark inputs used by all framework adapters. |
+| [`data/knowledge_base/`](data/knowledge_base/) | Domain and standards material used by verification steps. |
+| [`experiment_outputs/`](experiment_outputs/) | Pre-generated run artifacts, comparison metrics, and paper-table CSV files. |
+| [`human_eval/`](human_eval/) | Human-evaluation workbook, traceability files, and agreement analyses. |
+| [`scripts/`](scripts/) | Utilities for exporting requirements, building human-evaluation materials, and analyzing results. |
+| [`tests/`](tests/) | Regression and smoke tests for the harness, metrics, runtime routing, and adapters. |
+| [`docs/`](docs/) | Supplementary methodology, CLI, artifact-format, and target-adapter documentation. |
+
+Each run directory contains phase outputs and a provenance record documenting
+the case, framework, configuration, seed, and aggregate metrics.
+
+## System Requirements
+
+- Operating system: tested on macOS and expected to run on Linux or other POSIX
+  environments with Python support.
+- Python: `>=3.14`.
+- Package manager: [`uv`](https://docs.astral.sh/uv/) is recommended for
+  reproducible installation from `pyproject.toml` and `uv.lock`.
+- LLM access: an OpenAI-compatible API key is required for commands that
+  generate new LLM outputs.
+- Optional cache setting: set `HF_HOME=/tmp/openre-bench-hf-cache` if the local
+  Hugging Face cache location is unavailable or not writable.
+
+Reviewers can inspect the included paper outputs and human-evaluation evidence
+without model credentials.
 
 ## Quick Start
 
@@ -92,6 +179,55 @@ OpenRE-Bench/
    uv run ruff check .
    HF_HOME=/tmp/openre-bench-hf-cache uv run pytest
    ```
+
+## Installation Instructions
+
+Start from a fresh checkout or the archived artifact directory:
+
+```bash
+uv sync --all-groups
+uv run openre_bench --version
+```
+
+For commands that call an LLM, configure an OpenAI-compatible API key:
+
+```bash
+cp .env.example .env
+# edit .env with OPENAI_API_KEY and any provider-specific settings
+uv run openre_bench --check-openai
+uv run openre_bench --llm-ping
+```
+
+If model credentials are unavailable, skip LLM execution and use the
+pre-generated artifacts under
+[`experiment_outputs/mare-iredev-quare/`](experiment_outputs/mare-iredev-quare/).
+
+## Usage Instructions
+
+The main entry point is the `openre_bench` command installed by the Python
+package. The most useful reviewer commands are:
+
+```bash
+uv run openre_bench --version
+uv run openre_bench --check-openai
+uv run openre_bench --llm-ping
+```
+
+To run one case through one adapter:
+
+```bash
+uv run openre_bench --run-case \
+  --case-input data/case_studies/ATM_input.json \
+  --artifacts-dir artifacts/atm-quare \
+  --run-record artifacts/atm-quare/run_record.json \
+  --system quare
+```
+
+Replace `quare` with `mare` or `iredev` to run the same case through another
+adapter. Generated artifacts are written to the selected `--artifacts-dir`, and
+the run-level provenance and metrics are written to `--run-record`.
+
+For detailed CLI reference, see [`docs/reference/cli.md`](docs/reference/cli.md).
 
 ## Artifact Evaluation Guide
 
@@ -138,7 +274,30 @@ Each run directory contains the phase artifacts produced by the shared harness.
 | Full matrix takes too long | Run the single-system smoke test first and inspect pre-generated outputs |
 | LLM access is unavailable | Use the pre-generated outputs and paper-table CSVs for inspection |
 
-## Reproducing Paper Results
+## Steps to Reproduce
+
+The recommended reproduction path is staged so that reviewers can verify the
+artifact within the conference time budget and still have a path to full
+re-execution when compute and API access are available.
+
+1. Inspect the machine-readable paper tables under
+   [`experiment_outputs/mare-iredev-quare/paper_tables/`](experiment_outputs/mare-iredev-quare/paper_tables/).
+2. Inspect the full pre-generated comparison outputs under
+   [`experiment_outputs/mare-iredev-quare/`](experiment_outputs/mare-iredev-quare/).
+3. Inspect the human-evaluation workbook, traceability files, and agreement
+   outputs under [`human_eval/`](human_eval/).
+4. Run the local test suite with
+   `HF_HOME=/tmp/openre-bench-hf-cache uv run pytest`.
+5. If LLM credentials are available, run the single-system smoke test below.
+6. If sufficient time, budget, and API quota are available, rerun the full
+   180-run comparison matrix below.
+
+Known runtime deviation: the full matrix involves 180 LLM-backed runs and may
+exceed 60 minutes depending on provider latency, quota, and local parallelism.
+For artifact review within 60 minutes, use the smoke test plus the included
+pre-generated outputs and paper-table CSV files.
+
+### Reproducing Paper Results
 
 ### Full 180-run comparison matrix
 
