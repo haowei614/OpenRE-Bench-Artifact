@@ -57,20 +57,32 @@ The artifact accompanies the paper:
 Authors should cite the paper and this archived artifact when reusing the
 software, datasets, generated outputs, or evaluation materials.
 
-**Author list:** TODO: replace this line with the final paper author list before
-submission.
+**Author list:**
+
+- Haowei Cheng, Waseda University, Tokyo, Japan
+  (<haowei.cheng@fuji.waseda.jp>)
+- Milhan Kim, Waseda University, Tokyo, Japan
+  (<milhan.kim@ruri.waseda.jp>)
+- Foutse Khomh, Polytechnique Montréal, Montréal, Canada
+  (<foutse.khomh@polymtl.ca>)
+- Teeradaj Racharak, Tohoku University, Miyagi, Japan
+  (<racharak.teeradaj.c3@tohoku.ac.jp>)
+- Nobukazu Yoshioka, Waseda University, Tokyo, Japan
+  (<nobukazu@aoni.waseda.jp>)
+- Naoyasu Ubayashi, Waseda University, Tokyo, Japan
+  (<ubayashi@aoni.waseda.jp>)
+- Hironori Washizaki, Waseda University, Tokyo, Japan
+  (<washizaki@waseda.jp>)
 
 **Software citation:** A machine-readable citation template is provided in
-[`CITATION.cff`](CITATION.cff). Update the author metadata and DOI after the
-Zenodo or FigShare DOI has been reserved.
+[`CITATION.cff`](CITATION.cff).
 
 ## Artifact Location
 
 - Source repository:
   <https://github.com/haowei614/OpenRE-Bench-Artifact>
-- Archival DOI: TODO: add the Zenodo or FigShare DOI before artifact submission.
-- Archival URL: TODO: add the immutable Zenodo or FigShare record URL before
-  artifact submission.
+- Archival DOI: <https://doi.org/10.5281/zenodo.20427360>
+- Archival URL: <https://zenodo.org/records/20427360>
 
 The artifact should be evaluated from the archived DOI version for the final
 submission. The GitHub repository is provided as a development mirror and source
