@@ -81,8 +81,8 @@ software, datasets, generated outputs, or evaluation materials.
 
 - Source repository:
   <https://github.com/haowei614/OpenRE-Bench-Artifact>
-- Archival DOI: <https://doi.org/10.5281/zenodo.20427360>
-- Archival URL: <https://zenodo.org/records/20427360>
+- Archival DOI: <https://doi.org/10.5281/zenodo.20482393>
+- Archival URL: <https://zenodo.org/records/20482393>
 
 The artifact should be evaluated from the archived DOI version for the final
 submission. The GitHub repository is provided as a development mirror and source
