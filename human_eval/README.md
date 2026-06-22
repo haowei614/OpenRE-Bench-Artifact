@@ -1,14 +1,39 @@
 # Phase 3 Human Evaluation Package
 
-This directory contains the human-evaluation workbook, source traceability files,
-and derived analysis outputs for the QUARE LLM-as-a-judge validation.
+This directory contains the Phase 3 requirement export, blind traceability
+mapping, and derived analysis outputs for the QUARE LLM-as-a-judge validation.
 
-## Primary Workbook
+## Quick Navigation
 
-- `Phase3_Human_Evaluation_Annotators.xlsx`
-  - `ANNOT-001` and `ANNOT-002`: human evaluator scores.
-  - `LLM-Judge(Hidden to Annotator)`: framework labels and LLM judge scores.
-  - `Instructions` and `Case_Context`: evaluation rubric and case context.
+Start with these files:
+
+- `analysis/table_c_human_validation.csv`: compact CSV version of the
+  human-validation table reported in the paper.
+- `analysis/human_eval_item_level_scores.csv`: per-sample human scores and
+  human means.
+- `analysis/human_eval_agreement_summary.csv` / `.json`: human-human agreement
+  between `ANNOT-001` and `ANNOT-002`.
+- `analysis/human_vs_llm_alignment.csv` / `.json`: human-vs-LLM agreement
+  metrics.
+- `phase3_human_eval_sample_summary.json`: sampling counts by framework and
+  case study.
+
+## Trace a Sample Back to the Source Run
+
+Use this recipe to audit any row in the human-evaluation analysis:
+
+1. Pick a `Sample_ID` from `analysis/human_eval_item_level_scores.csv`.
+2. Look up the same `Sample_ID` in `phase3_human_eval_mapping.json`.
+3. Use the mapping fields for framework, case study, run id, seed, source
+   requirement id, raw text, and cleaned text.
+4. Open the corresponding
+   `experiment_outputs/mare-iredev-quare/runs/<run_id>/phase3_integrated_kaos_model.json`
+   file to inspect the original Phase 3 requirement context.
+5. Compare aggregate values with
+   `experiment_outputs/mare-iredev-quare/paper_tables/table_vi_c_human_llm_validation.csv`.
+
+The mapping file is intended for audit and reproducibility. It was not part of
+the blind information shown to annotators.
 
 ## Traceability Files
 
@@ -25,10 +50,9 @@ and derived analysis outputs for the QUARE LLM-as-a-judge validation.
 
 ## Analysis Outputs
 
-Files under `analysis/` are derived from `Phase3_Human_Evaluation_Annotators.xlsx`.
+Files under `analysis/` are derived from the annotated human-evaluation data and
+the traceability files above.
 
-- `table_c_human_validation.tex`
-  - LaTeX version of Table C.
 - `table_c_human_validation.csv`
   - Table C values in CSV form.
 - `human_eval_agreement_summary.csv` / `.json`
@@ -41,5 +65,3 @@ Files under `analysis/` are derived from `Phase3_Human_Evaluation_Annotators.xls
   - Human-vs-LLM agreement metrics.
 - `human_vs_llm_framework_summary.csv`
   - Human and LLM means by framework and criterion.
-
-The traceability mapping file is intended for audit/reproducibility, not for annotators.

@@ -308,7 +308,7 @@ def main() -> int:
                     }
                 ],
                 temperature=0,
-                max_tokens=16,
+                max_tokens=256,
             )
         except Exception as exc:
             print(f"LLM ping failed: {exc}", file=sys.stderr)
