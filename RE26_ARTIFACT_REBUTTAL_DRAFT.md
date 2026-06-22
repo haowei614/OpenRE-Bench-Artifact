@@ -1,7 +1,8 @@
 We thank the reviewers for the careful artifact evaluation and for identifying
 several places where the replication package could be made easier to exercise.
-We have updated the GitHub mirror accordingly and will preserve these changes in
-the final archived artifact.
+All issues discussed below have been addressed in `v1.0.2-artifact` (DOI:
+https://doi.org/10.5281/zenodo.20790383; release notes:
+https://github.com/haowei614/OpenRE-Bench-Artifact/releases/tag/v1.0.2-artifact).
 
 First, we fixed the installation issue reported by Reviewers 1 and 3. The
 artifact previously declared Python >=3.14 and also pinned a free-threaded
@@ -10,7 +11,8 @@ artifact previously declared Python >=3.14 and also pinned a free-threaded
 the lock file, and the README. We verified that dependency resolution succeeds
 with `uv lock --python 3.13`. We also added a Dockerfile that fixes the runtime
 environment to Python 3.13 and runs `uv sync --frozen --all-groups`, giving
-reviewers a containerized path when local setup is inconvenient.
+reviewers a containerized path when local setup is inconvenient, including on
+Windows hosts via Docker or WSL.
 
 Second, we addressed the linting failure. We reproduced the `uv run ruff check .`
 errors and fixed them: one unused import was removed, and the few scripts that
@@ -27,7 +29,9 @@ submitted evidence. We also revised the earlier ambiguous wording: pre-generated
 artifacts are now described as a non-execution verification path, not as an
 alternative way to generate new outputs. To reduce cognitive load, we also
 shortened the top-level README into a reviewer landing page and moved detailed
-CLI/artifact-format guidance to the `docs/` pages and subdirectory READMEs.
+CLI/artifact-format guidance to the `docs/` pages and subdirectory READMEs. The
+README and CLI reference now also explicitly document both `.env` and local
+`.api_key` configuration for `OPENAI_API_KEY`/`OPENAI_KEY`.
 
 Fourth, we added cost and token guidance. The README and experiment-output
 README now explain that the packaged run records do not contain provider-billed

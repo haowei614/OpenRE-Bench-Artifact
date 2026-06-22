@@ -22,7 +22,8 @@ docker run --rm openre-bench
 ## LLM Configuration
 
 LLM-backed commands use LiteLLM. The following settings can be placed in `.env`
-or exported in the shell:
+or exported in the shell. A local `.api_key` file with `OPENAI_API_KEY=...` or
+`OPENAI_KEY=...` is also supported and takes precedence for the key value.
 
 - `OPENAI_API_KEY`: hosted provider key, or a dummy value for local servers that
   do not validate keys.
@@ -37,7 +38,7 @@ Example hosted configuration:
 
 ```bash
 cp .env.example .env
-# edit .env with OPENAI_API_KEY=...
+# edit .env with OPENAI_API_KEY=..., or create .api_key with OPENAI_API_KEY=...
 uv run openre_bench --check-openai
 uv run openre_bench --llm-ping
 ```

@@ -82,7 +82,8 @@ To use a hosted OpenAI-compatible provider:
 
 ```bash
 cp .env.example .env
-# edit .env with OPENAI_API_KEY, OPENAI_MODEL, and optional OPENAI_BASE_URL
+# edit .env, or create .api_key with OPENAI_API_KEY=...
+# set OPENAI_MODEL and optional OPENAI_BASE_URL as needed
 uv run openre_bench --check-openai
 uv run openre_bench --llm-ping
 ```
