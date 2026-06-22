@@ -19,8 +19,8 @@ rerunning selected experiments.
 ## Artifact Location
 
 - Source repository: <https://github.com/haowei614/OpenRE-Bench-Artifact>
-- Archival DOI: <https://doi.org/10.5281/zenodo.20790607>
-- Archival URL: <https://zenodo.org/records/20790607>
+- Archival DOI: <https://doi.org/10.5281/zenodo.20790776>
+- Archival URL: <https://zenodo.org/records/20790776>
 - Software citation: [`CITATION.cff`](CITATION.cff)
 
 ## Authors and Citation
