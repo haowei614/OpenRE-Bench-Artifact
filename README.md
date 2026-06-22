@@ -167,6 +167,7 @@ provides a compact overview of the paper-reported experimental results.
 
 - CLI and runtime configuration: [`docs/reference/cli.md`](docs/reference/cli.md)
 - Artifact formats and run records: [`docs/reference/artifacts.md`](docs/reference/artifacts.md)
+- NLP4RE ID-Card summary: [`docs/NLP4RE-ID-CARD.md`](docs/NLP4RE-ID-CARD.md)
 - Human-evaluation navigation: [`human_eval/README.md`](human_eval/README.md)
 - Ground-truth scope: [`data/ground_truth/README.md`](data/ground_truth/README.md)
 - Precision/F1 scope: [`docs/guides/precision-f1.md`](docs/guides/precision-f1.md)

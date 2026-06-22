@@ -58,7 +58,9 @@ item-level scores to the traceability mapping, source run id, and original Phase
 does not claim an authoritative gold-standard KAOS model or requirement set per
 case. The artifact includes shared case-study inputs, but the reported evidence
 instead relies on controlled cross-system comparisons, structural checks,
-LLM-judge outputs, and human-evaluation agreement.
+LLM-judge outputs, and human-evaluation agreement. Following Reviewer 2's
+suggestion, we also added a filled-in NLP4RE ID-Card summary under
+`docs/NLP4RE-ID-CARD.md`.
 
 We hope these changes address the main reproducibility concerns while preserving
 the original artifact content and reported results.
