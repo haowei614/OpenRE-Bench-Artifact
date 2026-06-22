@@ -1,8 +1,8 @@
 We thank the reviewers for the careful artifact evaluation and for identifying
 several places where the replication package could be made easier to exercise.
-All issues discussed below have been addressed in `v1.0.2-artifact` (DOI:
-https://doi.org/10.5281/zenodo.20790383; release notes:
-https://github.com/haowei614/OpenRE-Bench-Artifact/releases/tag/v1.0.2-artifact).
+All issues discussed below have been addressed in `v1.0.3-artifact` (DOI:
+https://doi.org/10.5281/zenodo.20790607; release notes:
+https://github.com/haowei614/OpenRE-Bench-Artifact/releases/tag/v1.0.3-artifact).
 
 First, we fixed the installation issue reported by Reviewers 1 and 3. The
 artifact previously declared Python >=3.14 and also pinned a free-threaded

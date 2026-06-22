@@ -19,9 +19,18 @@ rerunning selected experiments.
 ## Artifact Location
 
 - Source repository: <https://github.com/haowei614/OpenRE-Bench-Artifact>
-- Archival DOI: <https://doi.org/10.5281/zenodo.20482393>
-- Archival URL: <https://zenodo.org/records/20482393>
+- Archival DOI: <https://doi.org/10.5281/zenodo.20790607>
+- Archival URL: <https://zenodo.org/records/20790607>
 - Software citation: [`CITATION.cff`](CITATION.cff)
+
+## Authors and Citation
+
+Authors: Haowei Cheng, Milhan Kim, Foutse Khomh, Teeradaj Racharak, Nobukazu
+Yoshioka, Naoyasu Ubayashi, and Hironori Washizaki.
+
+Please cite both the accompanying paper and this archived software artifact when
+reusing the code, datasets, generated outputs, or evaluation materials. A
+machine-readable citation template is provided in [`CITATION.cff`](CITATION.cff).
 
 ## Reviewer Quick Start
 
@@ -116,6 +125,11 @@ uv run openre_bench --run-comparison-matrix \
 The matrix contains 5 case studies, 3 frameworks, 4 settings, and 3 seeds, for
 180 runs. Use the pre-generated outputs for artifact review when time, quota, or
 budget is limited.
+
+The full 180-run matrix may exceed 60 minutes depending on provider latency,
+quota, and local parallelism. For artifact review within 60 minutes, use the
+single-case smoke test plus the included pre-generated outputs and paper-table
+CSVs.
 
 ## Cost Estimate
 
