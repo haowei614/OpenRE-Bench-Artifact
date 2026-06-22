@@ -99,17 +99,20 @@ uv run openre_bench --llm-ping
 
 ## Reproduction Commands
 
-Run one framework on one case:
+Run a no-key single-case smoke test:
 
 ```bash
 uv run openre_bench --run-case \
   --case-input data/case_studies/ATM_input.json \
-  --artifacts-dir artifacts/atm-quare \
-  --run-record artifacts/atm-quare/run_record.json \
-  --system quare
+  --artifacts-dir artifacts/atm-quare-single \
+  --run-record artifacts/atm-quare-single/run_record.json \
+  --system quare \
+  --setting single_agent
 ```
 
-Replace `quare` with `mare` or `iredev` to exercise another adapter.
+LLM-backed settings require either hosted model credentials or a local
+OpenAI-compatible endpoint. Replace `quare` with `mare` or `iredev` to exercise
+another adapter under the same no-key smoke-test setting.
 
 Run the full paper matrix:
 
