@@ -14,7 +14,9 @@ arXiv:2405.03256) for cross-framework comparison.
 ## Reimplementation Notes
 
 - Based on published paper description; no public implementation available
-- Uses shared model configuration (`gpt-4o-mini-2024-07-18`, temperature `0.7`)
+- Uses the shared, configurable model setting (temperature `0.7`). Reference
+  runs used `claude-haiku-4-5-20251001` for the mined-case experiments and
+  `gpt-4o-mini-2024-07-18` for the originating QUARE (RE 2026) experiment.
 - Conservative interpretation adopted where details were underspecified
 
 ## Entry Points
