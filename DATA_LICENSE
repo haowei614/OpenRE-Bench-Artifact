@@ -1,0 +1,63 @@
+OpenRE-Bench — Data licensing
+==============================
+
+This file covers the *data* components of the artifact. Source code is licensed
+separately under AGPL-3.0-or-later (see LICENSE / LICENSE.md).
+
+The data in this repository has three distinct provenance classes, licensed
+differently.
+
+1. Our curated annotations, metadata, and derived structure — CC BY 4.0
+----------------------------------------------------------------------------
+Everything we authored or computed is released under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0,
+https://creativecommons.org/licenses/by/4.0/). This includes:
+
+  - the mined-case provenance and metadata (data/mined_cases_metadata.json),
+  - the filtered-pool curation: field selection, per-stage pass/fail markers,
+    de-identification, and the selected_into_case flags
+    (data/filtered_issue_pool.jsonl and its schema),
+  - the mining funnel statistics and filter decisions
+    (ingestion/filtered/, ingestion/stats/),
+  - the precision-audit sample design and sheets
+    (docs/precision_audit_sample.csv),
+  - the hand-built case specifications (data/_handbuilt/, the AD/ATM/Library/
+    RollCall/Bookkeeping inputs), and
+  - all generated experiment outputs (experiment_outputs/, human_eval/).
+
+Attribute to the OpenRE-Bench authors and cite the accompanying paper and the
+archived release (CITATION.cff).
+
+2. Original GitHub issue text — rights retained by the original authors
+----------------------------------------------------------------------------
+The mined cases (data/case_studies/<project>_<window>_input.json) and the
+filtered issue pool (data/filtered_issue_pool.jsonl) embed text taken verbatim
+(after normalization and de-identification) from public GitHub issues. The
+copyright in that issue text remains with its original authors and is subject
+to GitHub's Terms of Service.
+
+We redistribute this text **for non-commercial research use only**, to make the
+benchmark reproducible. To preserve attribution and let readers consult the
+canonical source:
+
+  - every issue record retains its source `url` (html_url), and
+  - author @-mentions are replaced with `@USER` (de-identification); the raw
+    API snapshots under ingestion/snapshots/ are the unmodified provenance.
+
+If you are an issue author and want your content removed or re-attributed,
+please open an issue on the repository.
+
+3. Third-party standards and framework descriptions
+----------------------------------------------------------------------------
+References to ISO/IEC/IEEE 29148, ISO/IEC 25010, KAOS, and the MARE, iReDev, and
+QUARE framework concepts remain the intellectual property of their respective
+authors and standards bodies; they are used here for interoperability and
+comparison, not redistributed as standards text.
+
+Summary
+-------
+  Code                                  -> AGPL-3.0-or-later (LICENSE)
+  Our annotations / metadata / outputs  -> CC BY 4.0
+  Embedded GitHub issue text            -> original authors; research use,
+                                           source URLs retained, @-mentions
+                                           de-identified
