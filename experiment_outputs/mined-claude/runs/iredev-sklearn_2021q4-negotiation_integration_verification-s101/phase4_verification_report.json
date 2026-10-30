@@ -1,0 +1,652 @@
+{
+  "verification_results": {
+    "fact_checking": {
+      "hallucination_reports": [],
+      "flagged_elements": [],
+      "total_checked": 30
+    },
+    "deterministic_validation": {
+      "is_valid": true,
+      "violations": [],
+      "passed_rules": [
+        "topology_validity",
+        "traceability",
+        "logical_consistency"
+      ]
+    },
+    "topology_status": {
+      "status": "Valid",
+      "is_valid": true,
+      "is_dag": true,
+      "orphan_count": 0,
+      "cycle_count": 0,
+      "invalid_leaf_count": 0,
+      "orphan_elements": [],
+      "cycles": [],
+      "invalid_leaves": []
+    },
+    "consistency_verification": {
+      "status": "passed",
+      "issues": [],
+      "logical_score": 5,
+      "logical_score_normalized": 1.0,
+      "terminology_score": 3,
+      "terminology_consistency_ratio": 0.75
+    },
+    "universal_verification": {
+      "verification_summary": {
+        "total_constraints": 33,
+        "total_conflicts": 0,
+        "critical_conflicts": 0,
+        "quality_score": 100.0,
+        "verification_passed": true
+      },
+      "constraint_analysis": {
+        "extracted_constraints": [
+          {
+            "clause": "Requirement 1 (Issue #21318: enhancement base class for sklearn models)",
+            "best_overlap": 0.27907,
+            "matched": false
+          },
+          {
+            "clause": "Describe the workflow you want to enable",
+            "best_overlap": 0.166667,
+            "matched": false
+          },
+          {
+            "clause": "Sklearn does not provide an abstract class for the fit method and transform method which is not friendly to code hints",
+            "best_overlap": 0.32,
+            "matched": false
+          },
+          {
+            "clause": "In Python project, type hints is very important",
+            "best_overlap": 0.2,
+            "matched": false
+          },
+          {
+            "clause": "This would be helpful for python type hints if sklearn had abstract classes with fit and transform methods",
+            "best_overlap": 0.340426,
+            "matched": false
+          },
+          {
+            "clause": "===================================",
+            "best_overlap": 0.0,
+            "matched": false
+          },
+          {
+            "clause": "i hope a abstract class like this",
+            "best_overlap": 0.111111,
+            "matched": false
+          },
+          {
+            "clause": "Describe your proposed solution",
+            "best_overlap": 0.0,
+            "matched": false
+          },
+          {
+            "clause": "Describe alternatives you've considered, if relevant",
+            "best_overlap": 0.040816,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 2 (Issue #21356: SequentialFeatureSelector",
+            "best_overlap": 0.111111,
+            "matched": false
+          },
+          {
+            "clause": "fit() groups parameter)",
+            "best_overlap": 0.0625,
+            "matched": false
+          },
+          {
+            "clause": "Describe the workflow you want to enable",
+            "best_overlap": 0.166667,
+            "matched": false
+          },
+          {
+            "clause": "SequentialFeatureSelector allows specifying a cross-validation splitter via the cv parameter in the constructor, but...",
+            "best_overlap": 0.123077,
+            "matched": false
+          },
+          {
+            "clause": "Describe your proposed solution",
+            "best_overlap": 0.0,
+            "matched": false
+          },
+          {
+            "clause": "Add a groups parameter to SequentialFeatureSelector",
+            "best_overlap": 0.086957,
+            "matched": false
+          },
+          {
+            "clause": "fit() to allow groups to be passed into the cross-validation splitter:",
+            "best_overlap": 0.15,
+            "matched": false
+          },
+          {
+            "clause": "This will need to be passed through to _get_best_new_feature() and then to cross_val_score()",
+            "best_overlap": 0.113208,
+            "matched": false
+          },
+          {
+            "clause": "Describe alternatives you've considered, if relevant",
+            "best_overlap": 0.040816,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 3 (Issue #21521: Add option to choose OOB scorer in RandomForest)",
+            "best_overlap": 0.136364,
+            "matched": false
+          },
+          {
+            "clause": "Describe the workflow you want to enable Random forests provide for free an estimate of its out-of-sample performance...",
+            "best_overlap": 0.113208,
+            "matched": false
+          },
+          {
+            "clause": "In practice, it works well when 1",
+            "best_overlap": 0.108108,
+            "matched": false
+          },
+          {
+            "clause": "rows are independent 2",
+            "best_overlap": 0.058824,
+            "matched": false
+          },
+          {
+            "clause": "the number of trees is large (500+)",
+            "best_overlap": 0.108108,
+            "matched": false
+          },
+          {
+            "clause": "If oob_score=True, currently the following scoring is applied to the OOB predictions: - RandomForestRegressor() alway...",
+            "best_overlap": 0.090909,
+            "matched": false
+          },
+          {
+            "clause": "R-squared is mainly relevant for the MSE",
+            "best_overlap": 0.108108,
+            "matched": false
+          },
+          {
+            "clause": "What do you mean, @lorentzenchr",
+            "best_overlap": 0.0,
+            "matched": false
+          },
+          {
+            "clause": "- RandomForestClassifier() always returns accuracy, even if it does not enjoy many good properties",
+            "best_overlap": 0.08,
+            "matched": false
+          },
+          {
+            "clause": "For instance, if my criterion is \"entropy\" and I am modelling a binary target, then the corresponding scoring function",
+            "best_overlap": 0.125,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 4 (Issue #21639: Default Value for SimpleImputer with all missing values)",
+            "best_overlap": 0.136364,
+            "matched": false
+          },
+          {
+            "clause": "Describe the workflow you want to enable In the _Notes_ of the SimpleImputer, it says that: > Columns which only cont...",
+            "best_overlap": 0.166667,
+            "matched": false
+          },
+          {
+            "clause": "It'd be nice to be able to set this to a default value in transform instead of dropping those columns if there is no...",
+            "best_overlap": 0.145455,
+            "matched": false
+          },
+          {
+            "clause": "I recognize that it may only be a couple of lines, but it seems useful to have the logic captured within the class in...",
+            "best_overlap": 0.169492,
+            "matched": false
+          },
+          {
+            "clause": "Describe your proposed solution Near the lines We could add something like Describe alternatives you've considered, i...",
+            "best_overlap": 0.089552,
+            "matched": false
+          }
+        ]
+      },
+      "conflict_analysis": {
+        "detected_conflicts": []
+      },
+      "resolutions": {
+        "applied": []
+      },
+      "recommendations": [
+        "No contradiction detected"
+      ],
+      "session_log": {
+        "status": "passed"
+      }
+    },
+    "compliance_coverage": {
+      "satisfied_applicable_clauses": 0,
+      "total_applicable_clauses": 33,
+      "coverage_ratio": 0.0,
+      "clauses": [
+        {
+          "clause": "Requirement 1 (Issue #21318: enhancement base class for sklearn models)",
+          "best_overlap": 0.27907,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable",
+          "best_overlap": 0.166667,
+          "matched": false
+        },
+        {
+          "clause": "Sklearn does not provide an abstract class for the fit method and transform method which is not friendly to code hints",
+          "best_overlap": 0.32,
+          "matched": false
+        },
+        {
+          "clause": "In Python project, type hints is very important",
+          "best_overlap": 0.2,
+          "matched": false
+        },
+        {
+          "clause": "This would be helpful for python type hints if sklearn had abstract classes with fit and transform methods",
+          "best_overlap": 0.340426,
+          "matched": false
+        },
+        {
+          "clause": "===================================",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "i hope a abstract class like this",
+          "best_overlap": 0.111111,
+          "matched": false
+        },
+        {
+          "clause": "Describe your proposed solution",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "Describe alternatives you've considered, if relevant",
+          "best_overlap": 0.040816,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #21356: SequentialFeatureSelector",
+          "best_overlap": 0.111111,
+          "matched": false
+        },
+        {
+          "clause": "fit() groups parameter)",
+          "best_overlap": 0.0625,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable",
+          "best_overlap": 0.166667,
+          "matched": false
+        },
+        {
+          "clause": "SequentialFeatureSelector allows specifying a cross-validation splitter via the cv parameter in the constructor, but...",
+          "best_overlap": 0.123077,
+          "matched": false
+        },
+        {
+          "clause": "Describe your proposed solution",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "Add a groups parameter to SequentialFeatureSelector",
+          "best_overlap": 0.086957,
+          "matched": false
+        },
+        {
+          "clause": "fit() to allow groups to be passed into the cross-validation splitter:",
+          "best_overlap": 0.15,
+          "matched": false
+        },
+        {
+          "clause": "This will need to be passed through to _get_best_new_feature() and then to cross_val_score()",
+          "best_overlap": 0.113208,
+          "matched": false
+        },
+        {
+          "clause": "Describe alternatives you've considered, if relevant",
+          "best_overlap": 0.040816,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #21521: Add option to choose OOB scorer in RandomForest)",
+          "best_overlap": 0.136364,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable Random forests provide for free an estimate of its out-of-sample performance...",
+          "best_overlap": 0.113208,
+          "matched": false
+        },
+        {
+          "clause": "In practice, it works well when 1",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "rows are independent 2",
+          "best_overlap": 0.058824,
+          "matched": false
+        },
+        {
+          "clause": "the number of trees is large (500+)",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "If oob_score=True, currently the following scoring is applied to the OOB predictions: - RandomForestRegressor() alway...",
+          "best_overlap": 0.090909,
+          "matched": false
+        },
+        {
+          "clause": "R-squared is mainly relevant for the MSE",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "What do you mean, @lorentzenchr",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "- RandomForestClassifier() always returns accuracy, even if it does not enjoy many good properties",
+          "best_overlap": 0.08,
+          "matched": false
+        },
+        {
+          "clause": "For instance, if my criterion is \"entropy\" and I am modelling a binary target, then the corresponding scoring function",
+          "best_overlap": 0.125,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 4 (Issue #21639: Default Value for SimpleImputer with all missing values)",
+          "best_overlap": 0.136364,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable In the _Notes_ of the SimpleImputer, it says that: > Columns which only cont...",
+          "best_overlap": 0.166667,
+          "matched": false
+        },
+        {
+          "clause": "It'd be nice to be able to set this to a default value in transform instead of dropping those columns if there is no...",
+          "best_overlap": 0.145455,
+          "matched": false
+        },
+        {
+          "clause": "I recognize that it may only be a couple of lines, but it seems useful to have the logic captured within the class in...",
+          "best_overlap": 0.169492,
+          "matched": false
+        },
+        {
+          "clause": "Describe your proposed solution Near the lines We could add something like Describe alternatives you've considered, i...",
+          "best_overlap": 0.089552,
+          "matched": false
+        }
+      ]
+    },
+    "terminology_consistency": {
+      "score": 3,
+      "consistency_ratio": 0.75,
+      "conflicts": [
+        {
+          "concept": "verify",
+          "terms_used": [
+            "check",
+            "validate"
+          ],
+          "requirements": [
+            "DEP-L2-003-02",
+            "DEP-L2-003-03",
+            "END-L1-002",
+            "END-L2-002-01",
+            "END-L2-002-03",
+            "INT-L1-001",
+            "INT-L2-001-01"
+          ]
+        }
+      ],
+      "total_concepts": 4,
+      "consistent_concepts": 3
+    },
+    "s_logic": 1.0,
+    "s_term": 0.75
+  },
+  "fact_checking": {
+    "hallucination_reports": [],
+    "flagged_elements": [],
+    "total_checked": 30
+  },
+  "deterministic_validation": {
+    "is_valid": true,
+    "violations": [],
+    "passed_rules": [
+      "topology_validity",
+      "traceability",
+      "logical_consistency"
+    ]
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "consistency_verification": {
+    "status": "passed",
+    "issues": [],
+    "logical_score": 5,
+    "logical_score_normalized": 1.0,
+    "terminology_score": 3,
+    "terminology_consistency_ratio": 0.75
+  },
+  "universal_verification": {
+    "verification_summary": {
+      "total_constraints": 33,
+      "total_conflicts": 0,
+      "critical_conflicts": 0,
+      "quality_score": 100.0,
+      "verification_passed": true
+    },
+    "constraint_analysis": {
+      "extracted_constraints": [
+        {
+          "clause": "Requirement 1 (Issue #21318: enhancement base class for sklearn models)",
+          "best_overlap": 0.27907,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable",
+          "best_overlap": 0.166667,
+          "matched": false
+        },
+        {
+          "clause": "Sklearn does not provide an abstract class for the fit method and transform method which is not friendly to code hints",
+          "best_overlap": 0.32,
+          "matched": false
+        },
+        {
+          "clause": "In Python project, type hints is very important",
+          "best_overlap": 0.2,
+          "matched": false
+        },
+        {
+          "clause": "This would be helpful for python type hints if sklearn had abstract classes with fit and transform methods",
+          "best_overlap": 0.340426,
+          "matched": false
+        },
+        {
+          "clause": "===================================",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "i hope a abstract class like this",
+          "best_overlap": 0.111111,
+          "matched": false
+        },
+        {
+          "clause": "Describe your proposed solution",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "Describe alternatives you've considered, if relevant",
+          "best_overlap": 0.040816,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #21356: SequentialFeatureSelector",
+          "best_overlap": 0.111111,
+          "matched": false
+        },
+        {
+          "clause": "fit() groups parameter)",
+          "best_overlap": 0.0625,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable",
+          "best_overlap": 0.166667,
+          "matched": false
+        },
+        {
+          "clause": "SequentialFeatureSelector allows specifying a cross-validation splitter via the cv parameter in the constructor, but...",
+          "best_overlap": 0.123077,
+          "matched": false
+        },
+        {
+          "clause": "Describe your proposed solution",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "Add a groups parameter to SequentialFeatureSelector",
+          "best_overlap": 0.086957,
+          "matched": false
+        },
+        {
+          "clause": "fit() to allow groups to be passed into the cross-validation splitter:",
+          "best_overlap": 0.15,
+          "matched": false
+        },
+        {
+          "clause": "This will need to be passed through to _get_best_new_feature() and then to cross_val_score()",
+          "best_overlap": 0.113208,
+          "matched": false
+        },
+        {
+          "clause": "Describe alternatives you've considered, if relevant",
+          "best_overlap": 0.040816,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #21521: Add option to choose OOB scorer in RandomForest)",
+          "best_overlap": 0.136364,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable Random forests provide for free an estimate of its out-of-sample performance...",
+          "best_overlap": 0.113208,
+          "matched": false
+        },
+        {
+          "clause": "In practice, it works well when 1",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "rows are independent 2",
+          "best_overlap": 0.058824,
+          "matched": false
+        },
+        {
+          "clause": "the number of trees is large (500+)",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "If oob_score=True, currently the following scoring is applied to the OOB predictions: - RandomForestRegressor() alway...",
+          "best_overlap": 0.090909,
+          "matched": false
+        },
+        {
+          "clause": "R-squared is mainly relevant for the MSE",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "What do you mean, @lorentzenchr",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "- RandomForestClassifier() always returns accuracy, even if it does not enjoy many good properties",
+          "best_overlap": 0.08,
+          "matched": false
+        },
+        {
+          "clause": "For instance, if my criterion is \"entropy\" and I am modelling a binary target, then the corresponding scoring function",
+          "best_overlap": 0.125,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 4 (Issue #21639: Default Value for SimpleImputer with all missing values)",
+          "best_overlap": 0.136364,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable In the _Notes_ of the SimpleImputer, it says that: > Columns which only cont...",
+          "best_overlap": 0.166667,
+          "matched": false
+        },
+        {
+          "clause": "It'd be nice to be able to set this to a default value in transform instead of dropping those columns if there is no...",
+          "best_overlap": 0.145455,
+          "matched": false
+        },
+        {
+          "clause": "I recognize that it may only be a couple of lines, but it seems useful to have the logic captured within the class in...",
+          "best_overlap": 0.169492,
+          "matched": false
+        },
+        {
+          "clause": "Describe your proposed solution Near the lines We could add something like Describe alternatives you've considered, i...",
+          "best_overlap": 0.089552,
+          "matched": false
+        }
+      ]
+    },
+    "conflict_analysis": {
+      "detected_conflicts": []
+    },
+    "resolutions": {
+      "applied": []
+    },
+    "recommendations": [
+      "No contradiction detected"
+    ],
+    "session_log": {
+      "status": "passed"
+    }
+  },
+  "correction_summary": {
+    "total_corrections": 0,
+    "corrections": []
+  }
+}

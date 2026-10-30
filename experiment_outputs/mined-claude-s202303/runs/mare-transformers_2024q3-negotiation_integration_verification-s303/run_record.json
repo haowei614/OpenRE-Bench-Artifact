@@ -1,0 +1,269 @@
+{
+  "run_id": "mare-transformers_2024q3-negotiation_integration_verification-s303",
+  "case_id": "transformers_2024q3",
+  "system": "mare",
+  "setting": "negotiation_integration_verification",
+  "seed": 303,
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "mare",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.13",
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 0.7,
+    "seed": 303,
+    "prompt_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": false,
+    "fallback_tainted": false,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": true,
+    "non_comparable_reasons": []
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-09-30T02:30:42Z",
+  "end_timestamp": "2026-09-30T02:31:20Z",
+  "runtime_seconds": 37.976276,
+  "artifacts_dir": "experiment_outputs/mined-claude-s202303/runs/mare-transformers_2024q3-negotiation_integration_verification-s303",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/mined-claude-s202303/runs/mare-transformers_2024q3-negotiation_integration_verification-s303/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/mined-claude-s202303/runs/mare-transformers_2024q3-negotiation_integration_verification-s303/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/mined-claude-s202303/runs/mare-transformers_2024q3-negotiation_integration_verification-s303/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/mined-claude-s202303/runs/mare-transformers_2024q3-negotiation_integration_verification-s303/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "2445b4af2ba75286957dff731bd87940ef656dd7061348457de6c7bab36eb0ff",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "mare_paper_workflow_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "negotiation_integration_verification",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 303,
+      "llm_seed_applied_turns": 9,
+      "llm_turns": 9,
+      "llm_fallback_turns": 0,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 9,
+      "execution_mode": "llm_driven",
+      "llm_actions": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "fallback_actions": [],
+      "roles_executed": [
+        "Stakeholders",
+        "Collector",
+        "Modeler",
+        "Checker",
+        "Documenter"
+      ],
+      "actions_executed": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "role_action_map": {
+        "Stakeholders": [
+          "SpeakUserStories",
+          "AnswerQuestion"
+        ],
+        "Collector": [
+          "ProposeQuestion",
+          "WriteReqDraft"
+        ],
+        "Modeler": [
+          "ExtractEntity",
+          "ExtractRelation"
+        ],
+        "Checker": [
+          "CheckRequirement"
+        ],
+        "Documenter": [
+          "WriteSRS",
+          "WriteCheckReport"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Stakeholders",
+          "action": "SpeakUserStories",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Four user stories capturing the need for numpy 2.0 support, reduced tensorflow coupling, and flexible dependency options in transformers 2024q3."
+        },
+        {
+          "role": "Collector",
+          "action": "ProposeQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Clarification needed on: numpy 2.0 support scope (full vs. minimum compatibility), versioning strategy (mandatory vs. optional), tensorflow dependency handling (installation profile vs. conditional imports), feature coverage, breaking change handling, and timeline expectations."
+        },
+        {
+          "role": "Stakeholders",
+          "action": "AnswerQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Stakeholders confirm numpy 2.0 as mandatory minimum dependency with full API compatibility across all transformers features. TensorFlow becomes optional via installation extra with conditional imports. No fallback to numpy 1.x in this release cycle."
+        },
+        {
+          "role": "Collector",
+          "action": "WriteReqDraft",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Six measurable requirements drafted for numpy 2.0 support with mandatory minimum version enforcement, optional tensorflow dependency structure, and full feature compatibility validation across inference, training, and preprocessing pipelines."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractEntity",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 21 candidate requirement entities from draft requirements REQ-4.1 through REQ-4.6, covering numpy 2.0 support, dependency management, conditional imports, model pipelines, and test coverage. Entities span library components, operations, mechanisms, and quality attributes."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractRelation",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 12 entity relations from requirement fragments defining transformers library dependencies on numpy 2.0, optional tensorflow support, core tensor operations, and validation mechanisms across model pipelines."
+        },
+        {
+          "role": "Checker",
+          "action": "CheckRequirement",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "7 quality findings identified: 4 ambiguities (API scope, mandatory enforcement clarity, test criteria, error handling scope), 3 conflict risks (numpy version policy contradiction, overlapping requirements, conditional import timing). Recommend refining API lists, test metrics, and resolving numpy fallback strategy before implementation."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteSRS",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "SRS sections drafted for numpy 2.0 support and optional tensorflow integration. Six sections cover functional requirements (numpy APIs, conditional tf imports), non-functional requirements (dependency enforcement, compatibility scope), acceptance criteria (quantified test verification), and clarifications resolving ambiguities and conflicts identified in workspace findings."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteCheckReport",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Eight check report items tie REQ-4.1 through REQ-4.6 and findings to verification expectations: dependency declaration, installation behavior, optional extras, conditional imports, model compatibility across modalities, test suite execution, API specificity, and constraint consistency."
+        }
+      ],
+      "workspace_summary": {
+        "user_stories": 4,
+        "questions": 4,
+        "answers": 4,
+        "requirement_draft": 6,
+        "entities": 8,
+        "relations": 8,
+        "findings": 6,
+        "srs_sections": 4,
+        "check_report": 8,
+        "llm_turns": 9,
+        "llm_fallback_turns": 0
+      },
+      "workspace_digest": "4928fc7033c992e82d3a4db6b8da0927ed7886d085b026107ab73a431b01ae95"
+    },
+    "case_description": "Feature requests mined from the huggingface/transformers project (ML / NLP), aggregated from GitHub issues in 2024Q3.",
+    "system": "mare",
+    "setting": "negotiation_integration_verification",
+    "negotiation_enabled": true,
+    "verification_executed": true,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 303,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 303,
+      "seed_applied_turns": 9,
+      "turns": 9,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 9,
+      "execution_mode": "llm_driven"
+    },
+    "rag_corpus_dir": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c"
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "run_id": "mare-rollcall-negotiation_integration_verification-s101",
+  "case_id": "RollCall",
+  "system": "mare",
+  "setting": "negotiation_integration_verification",
+  "seed": 101,
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "mare",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.13",
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 0.7,
+    "seed": 101,
+    "prompt_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": false,
+    "fallback_tainted": false,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": true,
+    "non_comparable_reasons": []
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-09-30T04:53:39Z",
+  "end_timestamp": "2026-09-30T04:54:13Z",
+  "runtime_seconds": 34.621329,
+  "artifacts_dir": "experiment_outputs/handbuilt-claude/runs/mare-rollcall-negotiation_integration_verification-s101",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/handbuilt-claude/runs/mare-rollcall-negotiation_integration_verification-s101/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/handbuilt-claude/runs/mare-rollcall-negotiation_integration_verification-s101/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/handbuilt-claude/runs/mare-rollcall-negotiation_integration_verification-s101/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/handbuilt-claude/runs/mare-rollcall-negotiation_integration_verification-s101/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "2445b4af2ba75286957dff731bd87940ef656dd7061348457de6c7bab36eb0ff",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "mare_paper_workflow_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "negotiation_integration_verification",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 101,
+      "llm_seed_applied_turns": 9,
+      "llm_turns": 9,
+      "llm_fallback_turns": 0,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 7,
+      "execution_mode": "llm_driven",
+      "llm_actions": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "fallback_actions": [],
+      "roles_executed": [
+        "Stakeholders",
+        "Collector",
+        "Modeler",
+        "Checker",
+        "Documenter"
+      ],
+      "actions_executed": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "role_action_map": {
+        "Stakeholders": [
+          "SpeakUserStories",
+          "AnswerQuestion"
+        ],
+        "Collector": [
+          "ProposeQuestion",
+          "WriteReqDraft"
+        ],
+        "Modeler": [
+          "ExtractEntity",
+          "ExtractRelation"
+        ],
+        "Checker": [
+          "CheckRequirement"
+        ],
+        "Documenter": [
+          "WriteSRS",
+          "WriteCheckReport"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Stakeholders",
+          "action": "SpeakUserStories",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "Five user stories capturing teacher, student, and administrator needs for attendance tracking, reporting, and historical data management across multiple classes and semesters."
+        },
+        {
+          "role": "Collector",
+          "action": "ProposeQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Eight clarification questions proposed to resolve ambiguities regarding attendance marking criteria, data modification policies, reporting granularity, enrollment edge cases, automated actions, student involvement, retention requirements, and policy differentiation."
+        },
+        {
+          "role": "Stakeholders",
+          "action": "AnswerQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Stakeholders establish concrete constraints for late/absent time windows (5-minute threshold), audit-enabled record modification (24-hour window with logging), multi-level report granularity (daily through semester), and enrollment-aware percentage calculations that handle mid-semester changes and withdrawals appropriately."
+        },
+        {
+          "role": "Collector",
+          "action": "WriteReqDraft",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Ten requirement draft statements generated for RollCall system with explicit 'shall' language covering attendance marking (presence/absence/late), student record access, administrator reporting, modification controls, multi-class support, and historical data management."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractEntity",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 17 candidate requirement entities from RollCall draft requirements, including actors (Teacher, Student, Administrator), core concepts (Attendance Status, Class Session, Attendance Record), temporal constraints (Late Window, Enrollment Date), report artifacts (Attendance Report, Report Granularity), and system capabilities (Audit Trail, Historical Data, Attendance Percentage Calculation)."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractRelation",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 10 entity relations from RollCall requirements defining interactions between Teachers, Students, Administrators, Attendance Records, Class Sessions, and system outputs for marking, viewing, and reporting attendance data."
+        },
+        {
+          "role": "Checker",
+          "action": "CheckRequirement",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Six quality findings identified: three ambiguities (marking timing, student visibility scope, report granularity selection), two conflict risks (arrival recording mechanism, withdrawn student handling), two verifiability gaps (clock synchronization, enrollment date source definition), and one missing requirement (record modification with audit trail). Recommend clarifying marking workflow, access controls, and data source dependencies before finalization."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteSRS",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "SRS sections drafted covering attendance marking workflows, student access controls, multi-granular reporting, historical data management, audit logging, and enrollment-aware percentage calculations. Six sections align requirements REQ-RC-001 through REQ-RC-006 with resolved ambiguities on marking timing, access scope, report generation mechanics, arrival recording, withdrawn student handling, and clock synchronization."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteCheckReport",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Ten numbered check report items verify six requirements and four critical findings against user stories and workspace answers. Items confirm attendance marking interface, late/absent threshold logic, student record access controls, multi-level reporting, historical data handling, and clock synchronization for deterministic verification."
+        }
+      ],
+      "workspace_summary": {
+        "user_stories": 5,
+        "questions": 4,
+        "answers": 4,
+        "requirement_draft": 6,
+        "entities": 8,
+        "relations": 8,
+        "findings": 6,
+        "srs_sections": 4,
+        "check_report": 8,
+        "llm_turns": 9,
+        "llm_fallback_turns": 0
+      },
+      "workspace_digest": "2d230c30d2f2ebdd812b21bb4cbe1db93f21e04b7700108c7a620597ee06b0e9"
+    },
+    "case_description": "Roll Call Attendance Tracking System",
+    "system": "mare",
+    "setting": "negotiation_integration_verification",
+    "negotiation_enabled": true,
+    "verification_executed": true,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 101,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 101,
+      "seed_applied_turns": 9,
+      "turns": 9,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 7,
+      "execution_mode": "llm_driven"
+    },
+    "rag_corpus_dir": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c"
+  }
+}

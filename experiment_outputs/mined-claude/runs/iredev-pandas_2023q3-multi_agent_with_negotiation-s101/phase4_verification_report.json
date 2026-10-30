@@ -1,0 +1,569 @@
+{
+  "verification_results": {
+    "fact_checking": {
+      "hallucination_reports": [],
+      "flagged_elements": [],
+      "total_checked": 7
+    },
+    "deterministic_validation": {
+      "is_valid": false,
+      "violations": [],
+      "passed_rules": [],
+      "status": "not_executed"
+    },
+    "topology_status": {
+      "status": "Valid",
+      "is_valid": true,
+      "is_dag": true,
+      "orphan_count": 0,
+      "cycle_count": 0,
+      "invalid_leaf_count": 0,
+      "orphan_elements": [],
+      "cycles": [],
+      "invalid_leaves": []
+    },
+    "consistency_verification": {
+      "status": "not_executed",
+      "issues": [],
+      "logical_score": 5,
+      "logical_score_normalized": 1.0,
+      "terminology_score": 5,
+      "terminology_consistency_ratio": 1.0
+    },
+    "universal_verification": {
+      "verification_summary": {
+        "total_constraints": 29,
+        "total_conflicts": 0,
+        "critical_conflicts": 0,
+        "quality_score": 100.0,
+        "verification_passed": false
+      },
+      "constraint_analysis": {
+        "extracted_constraints": [
+          {
+            "clause": "Requirement 1 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame",
+            "best_overlap": 0.130435,
+            "matched": false
+          },
+          {
+            "clause": "attrs and load it back)",
+            "best_overlap": 0.052632,
+            "matched": false
+          },
+          {
+            "clause": "- [ ] Adding new functionality to pandas",
+            "best_overlap": 0.117647,
+            "matched": false
+          },
+          {
+            "clause": "- [X] Changing existing functionality in pandas",
+            "best_overlap": 0.0625,
+            "matched": false
+          },
+          {
+            "clause": "- [ ] Removing existing functionality in pandas",
+            "best_overlap": 0.064516,
+            "matched": false
+          },
+          {
+            "clause": "Pandas allow one to store metadata in DataFrame",
+            "best_overlap": 0.108108,
+            "matched": false
+          },
+          {
+            "clause": "Similarly pyarrow allow one to store meta data via the metadata option in pa",
+            "best_overlap": 0.170213,
+            "matched": false
+          },
+          {
+            "clause": "However, if one try to use DataFrame",
+            "best_overlap": 0.055556,
+            "matched": false
+          },
+          {
+            "clause": "to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back",
+            "best_overlap": 0.122449,
+            "matched": false
+          },
+          {
+            "clause": "The metadata has been lost",
+            "best_overlap": 0.064516,
+            "matched": false
+          },
+          {
+            "clause": "Alternative Solutions",
+            "best_overlap": 0.0,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 2 (Issue #54938: ENH: Series",
+            "best_overlap": 0.105263,
+            "matched": false
+          },
+          {
+            "clause": "struct accessor with Series",
+            "best_overlap": 0.181818,
+            "matched": false
+          },
+          {
+            "clause": "field(\"sub-column name\") for ArrowDtype)",
+            "best_overlap": 0.171429,
+            "matched": false
+          },
+          {
+            "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+            "best_overlap": 0.196078,
+            "matched": false
+          },
+          {
+            "clause": ")), I'd like to be able to extract sub-fields from them",
+            "best_overlap": 0.108108,
+            "matched": false
+          },
+          {
+            "clause": "For example, I have a pandas Series with the ArrowDtype(pyarrow",
+            "best_overlap": 0.3,
+            "matched": false
+          },
+          {
+            "clause": "struct([(\"int_col\", pyarrow",
+            "best_overlap": 0.111111,
+            "matched": false
+          },
+          {
+            "clause": "int64()), (\"string_col\", pyarrow",
+            "best_overlap": 0.068966,
+            "matched": false
+          },
+          {
+            "clause": "I'd like to extract just the int_col field from this Series as another Series",
+            "best_overlap": 0.232558,
+            "matched": false
+          },
+          {
+            "clause": "Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(",
+            "best_overlap": 0.190476,
+            "matched": false
+          },
+          {
+            "clause": "This struct accessor provides a field() method which returns a Series containing only the specified sub-field",
+            "best_overlap": 0.181818,
+            "matched": false
+          },
+          {
+            "clause": "Alternative Solutions I can currently do this via pyarrow",
+            "best_overlap": 0.057143,
+            "matched": false
+          },
+          {
+            "clause": "struct_field on the underlying pyarrow array: Additional Context This issue is",
+            "best_overlap": 0.108108,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 3 (Issue #55030: ENH: make read_excel dtype parameter compatible with multiple sheets (e",
+            "best_overlap": 0.085106,
+            "matched": false
+          },
+          {
+            "clause": "g sheet_name =[0,\"list_of_sheets\"]))",
+            "best_overlap": 0.055556,
+            "matched": false
+          },
+          {
+            "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+            "best_overlap": 0.169492,
+            "matched": false
+          },
+          {
+            "clause": "Feature Description when a list of sheets is passed, dtype could be a dictionary with {elem_on_list: usual_dtype_para...",
+            "best_overlap": 0.097561,
+            "matched": false
+          },
+          {
+            "clause": "It always assumes numbers, even if the column has explicitly been marked as \"text\" in Excel, so I need to",
+            "best_overlap": 0.113208,
+            "matched": false
+          }
+        ]
+      },
+      "conflict_analysis": {
+        "detected_conflicts": []
+      },
+      "resolutions": {
+        "applied": []
+      },
+      "recommendations": [
+        "No contradiction detected"
+      ],
+      "session_log": {
+        "status": "not_executed"
+      }
+    },
+    "compliance_coverage": {
+      "satisfied_applicable_clauses": 0,
+      "total_applicable_clauses": 29,
+      "coverage_ratio": 0.0,
+      "clauses": [
+        {
+          "clause": "Requirement 1 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame",
+          "best_overlap": 0.130435,
+          "matched": false
+        },
+        {
+          "clause": "attrs and load it back)",
+          "best_overlap": 0.052632,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] Adding new functionality to pandas",
+          "best_overlap": 0.117647,
+          "matched": false
+        },
+        {
+          "clause": "- [X] Changing existing functionality in pandas",
+          "best_overlap": 0.0625,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] Removing existing functionality in pandas",
+          "best_overlap": 0.064516,
+          "matched": false
+        },
+        {
+          "clause": "Pandas allow one to store metadata in DataFrame",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "Similarly pyarrow allow one to store meta data via the metadata option in pa",
+          "best_overlap": 0.170213,
+          "matched": false
+        },
+        {
+          "clause": "However, if one try to use DataFrame",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back",
+          "best_overlap": 0.122449,
+          "matched": false
+        },
+        {
+          "clause": "The metadata has been lost",
+          "best_overlap": 0.064516,
+          "matched": false
+        },
+        {
+          "clause": "Alternative Solutions",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #54938: ENH: Series",
+          "best_overlap": 0.105263,
+          "matched": false
+        },
+        {
+          "clause": "struct accessor with Series",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "field(\"sub-column name\") for ArrowDtype)",
+          "best_overlap": 0.171429,
+          "matched": false
+        },
+        {
+          "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+          "best_overlap": 0.196078,
+          "matched": false
+        },
+        {
+          "clause": ")), I'd like to be able to extract sub-fields from them",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "For example, I have a pandas Series with the ArrowDtype(pyarrow",
+          "best_overlap": 0.3,
+          "matched": false
+        },
+        {
+          "clause": "struct([(\"int_col\", pyarrow",
+          "best_overlap": 0.111111,
+          "matched": false
+        },
+        {
+          "clause": "int64()), (\"string_col\", pyarrow",
+          "best_overlap": 0.068966,
+          "matched": false
+        },
+        {
+          "clause": "I'd like to extract just the int_col field from this Series as another Series",
+          "best_overlap": 0.232558,
+          "matched": false
+        },
+        {
+          "clause": "Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(",
+          "best_overlap": 0.190476,
+          "matched": false
+        },
+        {
+          "clause": "This struct accessor provides a field() method which returns a Series containing only the specified sub-field",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "Alternative Solutions I can currently do this via pyarrow",
+          "best_overlap": 0.057143,
+          "matched": false
+        },
+        {
+          "clause": "struct_field on the underlying pyarrow array: Additional Context This issue is",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #55030: ENH: make read_excel dtype parameter compatible with multiple sheets (e",
+          "best_overlap": 0.085106,
+          "matched": false
+        },
+        {
+          "clause": "g sheet_name =[0,\"list_of_sheets\"]))",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+          "best_overlap": 0.169492,
+          "matched": false
+        },
+        {
+          "clause": "Feature Description when a list of sheets is passed, dtype could be a dictionary with {elem_on_list: usual_dtype_para...",
+          "best_overlap": 0.097561,
+          "matched": false
+        },
+        {
+          "clause": "It always assumes numbers, even if the column has explicitly been marked as \"text\" in Excel, so I need to",
+          "best_overlap": 0.113208,
+          "matched": false
+        }
+      ]
+    },
+    "terminology_consistency": {
+      "score": 5,
+      "consistency_ratio": 1.0,
+      "conflicts": [],
+      "total_concepts": 4,
+      "consistent_concepts": 4
+    },
+    "s_logic": 1.0,
+    "s_term": 1.0
+  },
+  "fact_checking": {
+    "hallucination_reports": [],
+    "flagged_elements": [],
+    "total_checked": 7
+  },
+  "deterministic_validation": {
+    "is_valid": false,
+    "violations": [],
+    "passed_rules": [],
+    "status": "not_executed"
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "consistency_verification": {
+    "status": "not_executed",
+    "issues": [],
+    "logical_score": 5,
+    "logical_score_normalized": 1.0,
+    "terminology_score": 5,
+    "terminology_consistency_ratio": 1.0
+  },
+  "universal_verification": {
+    "verification_summary": {
+      "total_constraints": 29,
+      "total_conflicts": 0,
+      "critical_conflicts": 0,
+      "quality_score": 100.0,
+      "verification_passed": false
+    },
+    "constraint_analysis": {
+      "extracted_constraints": [
+        {
+          "clause": "Requirement 1 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame",
+          "best_overlap": 0.130435,
+          "matched": false
+        },
+        {
+          "clause": "attrs and load it back)",
+          "best_overlap": 0.052632,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] Adding new functionality to pandas",
+          "best_overlap": 0.117647,
+          "matched": false
+        },
+        {
+          "clause": "- [X] Changing existing functionality in pandas",
+          "best_overlap": 0.0625,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] Removing existing functionality in pandas",
+          "best_overlap": 0.064516,
+          "matched": false
+        },
+        {
+          "clause": "Pandas allow one to store metadata in DataFrame",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "Similarly pyarrow allow one to store meta data via the metadata option in pa",
+          "best_overlap": 0.170213,
+          "matched": false
+        },
+        {
+          "clause": "However, if one try to use DataFrame",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back",
+          "best_overlap": 0.122449,
+          "matched": false
+        },
+        {
+          "clause": "The metadata has been lost",
+          "best_overlap": 0.064516,
+          "matched": false
+        },
+        {
+          "clause": "Alternative Solutions",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #54938: ENH: Series",
+          "best_overlap": 0.105263,
+          "matched": false
+        },
+        {
+          "clause": "struct accessor with Series",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "field(\"sub-column name\") for ArrowDtype)",
+          "best_overlap": 0.171429,
+          "matched": false
+        },
+        {
+          "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+          "best_overlap": 0.196078,
+          "matched": false
+        },
+        {
+          "clause": ")), I'd like to be able to extract sub-fields from them",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "For example, I have a pandas Series with the ArrowDtype(pyarrow",
+          "best_overlap": 0.3,
+          "matched": false
+        },
+        {
+          "clause": "struct([(\"int_col\", pyarrow",
+          "best_overlap": 0.111111,
+          "matched": false
+        },
+        {
+          "clause": "int64()), (\"string_col\", pyarrow",
+          "best_overlap": 0.068966,
+          "matched": false
+        },
+        {
+          "clause": "I'd like to extract just the int_col field from this Series as another Series",
+          "best_overlap": 0.232558,
+          "matched": false
+        },
+        {
+          "clause": "Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(",
+          "best_overlap": 0.190476,
+          "matched": false
+        },
+        {
+          "clause": "This struct accessor provides a field() method which returns a Series containing only the specified sub-field",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "Alternative Solutions I can currently do this via pyarrow",
+          "best_overlap": 0.057143,
+          "matched": false
+        },
+        {
+          "clause": "struct_field on the underlying pyarrow array: Additional Context This issue is",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #55030: ENH: make read_excel dtype parameter compatible with multiple sheets (e",
+          "best_overlap": 0.085106,
+          "matched": false
+        },
+        {
+          "clause": "g sheet_name =[0,\"list_of_sheets\"]))",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+          "best_overlap": 0.169492,
+          "matched": false
+        },
+        {
+          "clause": "Feature Description when a list of sheets is passed, dtype could be a dictionary with {elem_on_list: usual_dtype_para...",
+          "best_overlap": 0.097561,
+          "matched": false
+        },
+        {
+          "clause": "It always assumes numbers, even if the column has explicitly been marked as \"text\" in Excel, so I need to",
+          "best_overlap": 0.113208,
+          "matched": false
+        }
+      ]
+    },
+    "conflict_analysis": {
+      "detected_conflicts": []
+    },
+    "resolutions": {
+      "applied": []
+    },
+    "recommendations": [
+      "No contradiction detected"
+    ],
+    "session_log": {
+      "status": "not_executed"
+    }
+  },
+  "correction_summary": {
+    "total_corrections": 0,
+    "corrections": []
+  }
+}

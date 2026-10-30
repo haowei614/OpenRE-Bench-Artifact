@@ -1,0 +1,642 @@
+{
+  "verification_results": {
+    "fact_checking": {
+      "hallucination_reports": [],
+      "flagged_elements": [],
+      "total_checked": 30
+    },
+    "deterministic_validation": {
+      "is_valid": true,
+      "violations": [],
+      "passed_rules": [
+        "topology_validity",
+        "traceability",
+        "logical_consistency"
+      ]
+    },
+    "topology_status": {
+      "status": "Valid",
+      "is_valid": true,
+      "is_dag": true,
+      "orphan_count": 0,
+      "cycle_count": 0,
+      "invalid_leaf_count": 0,
+      "orphan_elements": [],
+      "cycles": [],
+      "invalid_leaves": []
+    },
+    "consistency_verification": {
+      "status": "passed",
+      "issues": [],
+      "logical_score": 5,
+      "logical_score_normalized": 1.0,
+      "terminology_score": 2,
+      "terminology_consistency_ratio": 0.5
+    },
+    "universal_verification": {
+      "verification_summary": {
+        "total_constraints": 30,
+        "total_conflicts": 0,
+        "critical_conflicts": 0,
+        "quality_score": 100.0,
+        "verification_passed": true
+      },
+      "constraint_analysis": {
+        "extracted_constraints": [
+          {
+            "clause": "Project: Baidu Apollo Autonomous Driving System (Planning & Control Module)",
+            "best_overlap": 0.108108,
+            "matched": false
+          },
+          {
+            "clause": "The system is a Level 4 autonomous driving platform operating in mixed traffic environments",
+            "best_overlap": 0.222222,
+            "matched": false
+          },
+          {
+            "clause": "It must strictly adhere to the \"Apollo Pilot Safety Report\" and the \"EM Motion Planner\" specifications",
+            "best_overlap": 0.16,
+            "matched": false
+          },
+          {
+            "clause": "[Safety Requirements - Based on Apollo Pilot Safety Report]",
+            "best_overlap": 0.114286,
+            "matched": false
+          },
+          {
+            "clause": "Multi-Layer Safety Architecture:",
+            "best_overlap": 0.275862,
+            "matched": false
+          },
+          {
+            "clause": "- The system must implement \"Passive Safety\" (collision protection), \"Active Safety\" (ACC, AEB, LKA), and \"Functional...",
+            "best_overlap": 0.510638,
+            "matched": true
+          },
+          {
+            "clause": "Minimal Risk Maneuver (MRM):",
+            "best_overlap": 0.228571,
+            "matched": false
+          },
+          {
+            "clause": "- Upon detecting a critical system failure (e",
+            "best_overlap": 0.157895,
+            "matched": false
+          },
+          {
+            "clause": ", sensor loss, localization failure) or exiting the ODD, the vehicle must NOT simply stop in lane immediately if unsafe",
+            "best_overlap": 0.313725,
+            "matched": false
+          },
+          {
+            "clause": "It must execute an MRM to safely pull over or stop in a low-risk zone within a specific time window",
+            "best_overlap": 0.225806,
+            "matched": false
+          },
+          {
+            "clause": "ODD (Operational Design Domain):",
+            "best_overlap": 0.153846,
+            "matched": false
+          },
+          {
+            "clause": "- The system operates in specific urban and highway scenarios",
+            "best_overlap": 0.3,
+            "matched": false
+          },
+          {
+            "clause": "It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached",
+            "best_overlap": 0.122449,
+            "matched": false
+          },
+          {
+            "clause": "[Efficiency & Planning Requirements - Based on EM Motion Planner]",
+            "best_overlap": 0.055556,
+            "matched": false
+          },
+          {
+            "clause": "Multiobjective Optimization:",
+            "best_overlap": 0.0,
+            "matched": false
+          },
+          {
+            "clause": "- The planner must simultaneously optimize for three conflicting objectives: Safety (collision avoidance), Smoothness...",
+            "best_overlap": 0.24,
+            "matched": false
+          },
+          {
+            "clause": "Path-Speed Decoupling (EM Framework):",
+            "best_overlap": 0.055556,
+            "matched": false
+          },
+          {
+            "clause": "- The system must use the Expectation-Maximization (EM) framework",
+            "best_overlap": 0.186047,
+            "matched": false
+          },
+          {
+            "clause": "- Step 1 (E-step): Generate an optimal path in the Frenet Frame (SL-Graph)",
+            "best_overlap": 0.146341,
+            "matched": false
+          },
+          {
+            "clause": "- Step 2 (M-step): Generate an optimal speed profile in the Station-Time Frame (ST-Graph)",
+            "best_overlap": 0.156863,
+            "matched": false
+          },
+          {
+            "clause": "Hard Constraints (Mathematical):",
+            "best_overlap": 0.05,
+            "matched": false
+          },
+          {
+            "clause": "- Trajectory smoothness is critical",
+            "best_overlap": 0.068966,
+            "matched": false
+          },
+          {
+            "clause": "The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+            "best_overlap": 0.166667,
+            "matched": false
+          },
+          {
+            "clause": "- Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip",
+            "best_overlap": 0.148148,
+            "matched": false
+          },
+          {
+            "clause": "- Non-convex obstacle constraints must be handled using iterative quadratic programming (QP)",
+            "best_overlap": 0.05,
+            "matched": false
+          },
+          {
+            "clause": "[Conflict Scenario for Negotiation]",
+            "best_overlap": 0.068966,
+            "matched": false
+          },
+          {
+            "clause": "- The SafetyAgent prioritizes \"Passive Safety\" and strictly enforcing safe distances and MRM execution",
+            "best_overlap": 0.2,
+            "matched": false
+          },
+          {
+            "clause": "- The EfficiencyAgent prioritizes \"Smoothness\" and \"Speed\" using the QP function to minimize Jerk",
+            "best_overlap": 0.139535,
+            "matched": false
+          },
+          {
+            "clause": "- **Potential Conflict**: An emergency MRM (Safety) triggered by a fault might violate the Jerk/Smoothness constraint...",
+            "best_overlap": 0.122449,
+            "matched": false
+          },
+          {
+            "clause": ", relaxing smoothness constraints during MRM)",
+            "best_overlap": 0.055556,
+            "matched": false
+          }
+        ]
+      },
+      "conflict_analysis": {
+        "detected_conflicts": []
+      },
+      "resolutions": {
+        "applied": []
+      },
+      "recommendations": [
+        "No contradiction detected"
+      ],
+      "session_log": {
+        "status": "passed"
+      }
+    },
+    "compliance_coverage": {
+      "satisfied_applicable_clauses": 1,
+      "total_applicable_clauses": 30,
+      "coverage_ratio": 0.033333,
+      "clauses": [
+        {
+          "clause": "Project: Baidu Apollo Autonomous Driving System (Planning & Control Module)",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "The system is a Level 4 autonomous driving platform operating in mixed traffic environments",
+          "best_overlap": 0.222222,
+          "matched": false
+        },
+        {
+          "clause": "It must strictly adhere to the \"Apollo Pilot Safety Report\" and the \"EM Motion Planner\" specifications",
+          "best_overlap": 0.16,
+          "matched": false
+        },
+        {
+          "clause": "[Safety Requirements - Based on Apollo Pilot Safety Report]",
+          "best_overlap": 0.114286,
+          "matched": false
+        },
+        {
+          "clause": "Multi-Layer Safety Architecture:",
+          "best_overlap": 0.275862,
+          "matched": false
+        },
+        {
+          "clause": "- The system must implement \"Passive Safety\" (collision protection), \"Active Safety\" (ACC, AEB, LKA), and \"Functional...",
+          "best_overlap": 0.510638,
+          "matched": true
+        },
+        {
+          "clause": "Minimal Risk Maneuver (MRM):",
+          "best_overlap": 0.228571,
+          "matched": false
+        },
+        {
+          "clause": "- Upon detecting a critical system failure (e",
+          "best_overlap": 0.157895,
+          "matched": false
+        },
+        {
+          "clause": ", sensor loss, localization failure) or exiting the ODD, the vehicle must NOT simply stop in lane immediately if unsafe",
+          "best_overlap": 0.313725,
+          "matched": false
+        },
+        {
+          "clause": "It must execute an MRM to safely pull over or stop in a low-risk zone within a specific time window",
+          "best_overlap": 0.225806,
+          "matched": false
+        },
+        {
+          "clause": "ODD (Operational Design Domain):",
+          "best_overlap": 0.153846,
+          "matched": false
+        },
+        {
+          "clause": "- The system operates in specific urban and highway scenarios",
+          "best_overlap": 0.3,
+          "matched": false
+        },
+        {
+          "clause": "It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached",
+          "best_overlap": 0.122449,
+          "matched": false
+        },
+        {
+          "clause": "[Efficiency & Planning Requirements - Based on EM Motion Planner]",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "Multiobjective Optimization:",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "- The planner must simultaneously optimize for three conflicting objectives: Safety (collision avoidance), Smoothness...",
+          "best_overlap": 0.24,
+          "matched": false
+        },
+        {
+          "clause": "Path-Speed Decoupling (EM Framework):",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "- The system must use the Expectation-Maximization (EM) framework",
+          "best_overlap": 0.186047,
+          "matched": false
+        },
+        {
+          "clause": "- Step 1 (E-step): Generate an optimal path in the Frenet Frame (SL-Graph)",
+          "best_overlap": 0.146341,
+          "matched": false
+        },
+        {
+          "clause": "- Step 2 (M-step): Generate an optimal speed profile in the Station-Time Frame (ST-Graph)",
+          "best_overlap": 0.156863,
+          "matched": false
+        },
+        {
+          "clause": "Hard Constraints (Mathematical):",
+          "best_overlap": 0.05,
+          "matched": false
+        },
+        {
+          "clause": "- Trajectory smoothness is critical",
+          "best_overlap": 0.068966,
+          "matched": false
+        },
+        {
+          "clause": "The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+          "best_overlap": 0.166667,
+          "matched": false
+        },
+        {
+          "clause": "- Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip",
+          "best_overlap": 0.148148,
+          "matched": false
+        },
+        {
+          "clause": "- Non-convex obstacle constraints must be handled using iterative quadratic programming (QP)",
+          "best_overlap": 0.05,
+          "matched": false
+        },
+        {
+          "clause": "[Conflict Scenario for Negotiation]",
+          "best_overlap": 0.068966,
+          "matched": false
+        },
+        {
+          "clause": "- The SafetyAgent prioritizes \"Passive Safety\" and strictly enforcing safe distances and MRM execution",
+          "best_overlap": 0.2,
+          "matched": false
+        },
+        {
+          "clause": "- The EfficiencyAgent prioritizes \"Smoothness\" and \"Speed\" using the QP function to minimize Jerk",
+          "best_overlap": 0.139535,
+          "matched": false
+        },
+        {
+          "clause": "- **Potential Conflict**: An emergency MRM (Safety) triggered by a fault might violate the Jerk/Smoothness constraint...",
+          "best_overlap": 0.122449,
+          "matched": false
+        },
+        {
+          "clause": ", relaxing smoothness constraints during MRM)",
+          "best_overlap": 0.055556,
+          "matched": false
+        }
+      ]
+    },
+    "terminology_consistency": {
+      "score": 2,
+      "consistency_ratio": 0.5,
+      "conflicts": [
+        {
+          "concept": "system",
+          "terms_used": [
+            "platform",
+            "system"
+          ],
+          "requirements": [
+            "ANA-L1-004",
+            "ANA-L2-004-01",
+            "ANA-L2-004-02",
+            "ANA-L2-004-03",
+            "ANA-L2-004-04",
+            "ARC-L1-005",
+            "ARC-L2-005-01",
+            "ARC-L2-005-02",
+            "ARC-L2-005-03",
+            "ARC-L2-005-04",
+            "DEP-L2-003-01",
+            "DEP-L2-003-02",
+            "DEP-L2-003-03",
+            "DEP-L2-003-04",
+            "END-L1-002",
+            "END-L2-002-01",
+            "END-L2-002-02",
+            "END-L2-002-03",
+            "END-L2-002-04",
+            "INT-L2-001-01",
+            "INT-L2-001-02",
+            "INT-L2-001-03",
+            "INT-L2-001-04",
+            "REV-L2-006-01",
+            "REV-L2-006-02",
+            "REV-L2-006-03",
+            "REV-L2-006-04"
+          ]
+        },
+        {
+          "concept": "transaction",
+          "terms_used": [
+            "action",
+            "operation"
+          ],
+          "requirements": [
+            "END-L1-002",
+            "END-L2-002-01",
+            "END-L2-002-02",
+            "END-L2-002-04",
+            "INT-L1-001",
+            "INT-L2-001-01"
+          ]
+        }
+      ],
+      "total_concepts": 4,
+      "consistent_concepts": 2
+    },
+    "s_logic": 1.0,
+    "s_term": 0.5
+  },
+  "fact_checking": {
+    "hallucination_reports": [],
+    "flagged_elements": [],
+    "total_checked": 30
+  },
+  "deterministic_validation": {
+    "is_valid": true,
+    "violations": [],
+    "passed_rules": [
+      "topology_validity",
+      "traceability",
+      "logical_consistency"
+    ]
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "consistency_verification": {
+    "status": "passed",
+    "issues": [],
+    "logical_score": 5,
+    "logical_score_normalized": 1.0,
+    "terminology_score": 2,
+    "terminology_consistency_ratio": 0.5
+  },
+  "universal_verification": {
+    "verification_summary": {
+      "total_constraints": 30,
+      "total_conflicts": 0,
+      "critical_conflicts": 0,
+      "quality_score": 100.0,
+      "verification_passed": true
+    },
+    "constraint_analysis": {
+      "extracted_constraints": [
+        {
+          "clause": "Project: Baidu Apollo Autonomous Driving System (Planning & Control Module)",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "The system is a Level 4 autonomous driving platform operating in mixed traffic environments",
+          "best_overlap": 0.222222,
+          "matched": false
+        },
+        {
+          "clause": "It must strictly adhere to the \"Apollo Pilot Safety Report\" and the \"EM Motion Planner\" specifications",
+          "best_overlap": 0.16,
+          "matched": false
+        },
+        {
+          "clause": "[Safety Requirements - Based on Apollo Pilot Safety Report]",
+          "best_overlap": 0.114286,
+          "matched": false
+        },
+        {
+          "clause": "Multi-Layer Safety Architecture:",
+          "best_overlap": 0.275862,
+          "matched": false
+        },
+        {
+          "clause": "- The system must implement \"Passive Safety\" (collision protection), \"Active Safety\" (ACC, AEB, LKA), and \"Functional...",
+          "best_overlap": 0.510638,
+          "matched": true
+        },
+        {
+          "clause": "Minimal Risk Maneuver (MRM):",
+          "best_overlap": 0.228571,
+          "matched": false
+        },
+        {
+          "clause": "- Upon detecting a critical system failure (e",
+          "best_overlap": 0.157895,
+          "matched": false
+        },
+        {
+          "clause": ", sensor loss, localization failure) or exiting the ODD, the vehicle must NOT simply stop in lane immediately if unsafe",
+          "best_overlap": 0.313725,
+          "matched": false
+        },
+        {
+          "clause": "It must execute an MRM to safely pull over or stop in a low-risk zone within a specific time window",
+          "best_overlap": 0.225806,
+          "matched": false
+        },
+        {
+          "clause": "ODD (Operational Design Domain):",
+          "best_overlap": 0.153846,
+          "matched": false
+        },
+        {
+          "clause": "- The system operates in specific urban and highway scenarios",
+          "best_overlap": 0.3,
+          "matched": false
+        },
+        {
+          "clause": "It must continuously monitor ODD compliance and request human takeover (HMI warning) if boundaries are reached",
+          "best_overlap": 0.122449,
+          "matched": false
+        },
+        {
+          "clause": "[Efficiency & Planning Requirements - Based on EM Motion Planner]",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "Multiobjective Optimization:",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "- The planner must simultaneously optimize for three conflicting objectives: Safety (collision avoidance), Smoothness...",
+          "best_overlap": 0.24,
+          "matched": false
+        },
+        {
+          "clause": "Path-Speed Decoupling (EM Framework):",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "- The system must use the Expectation-Maximization (EM) framework",
+          "best_overlap": 0.186047,
+          "matched": false
+        },
+        {
+          "clause": "- Step 1 (E-step): Generate an optimal path in the Frenet Frame (SL-Graph)",
+          "best_overlap": 0.146341,
+          "matched": false
+        },
+        {
+          "clause": "- Step 2 (M-step): Generate an optimal speed profile in the Station-Time Frame (ST-Graph)",
+          "best_overlap": 0.156863,
+          "matched": false
+        },
+        {
+          "clause": "Hard Constraints (Mathematical):",
+          "best_overlap": 0.05,
+          "matched": false
+        },
+        {
+          "clause": "- Trajectory smoothness is critical",
+          "best_overlap": 0.068966,
+          "matched": false
+        },
+        {
+          "clause": "The system must minimize \"Jerk\" (rate of change of acceleration) to ensure passenger comfort",
+          "best_overlap": 0.166667,
+          "matched": false
+        },
+        {
+          "clause": "- Curvature constraints ($kappa$) must be satisfied to prevent rollover or tire slip",
+          "best_overlap": 0.148148,
+          "matched": false
+        },
+        {
+          "clause": "- Non-convex obstacle constraints must be handled using iterative quadratic programming (QP)",
+          "best_overlap": 0.05,
+          "matched": false
+        },
+        {
+          "clause": "[Conflict Scenario for Negotiation]",
+          "best_overlap": 0.068966,
+          "matched": false
+        },
+        {
+          "clause": "- The SafetyAgent prioritizes \"Passive Safety\" and strictly enforcing safe distances and MRM execution",
+          "best_overlap": 0.2,
+          "matched": false
+        },
+        {
+          "clause": "- The EfficiencyAgent prioritizes \"Smoothness\" and \"Speed\" using the QP function to minimize Jerk",
+          "best_overlap": 0.139535,
+          "matched": false
+        },
+        {
+          "clause": "- **Potential Conflict**: An emergency MRM (Safety) triggered by a fault might violate the Jerk/Smoothness constraint...",
+          "best_overlap": 0.122449,
+          "matched": false
+        },
+        {
+          "clause": ", relaxing smoothness constraints during MRM)",
+          "best_overlap": 0.055556,
+          "matched": false
+        }
+      ]
+    },
+    "conflict_analysis": {
+      "detected_conflicts": []
+    },
+    "resolutions": {
+      "applied": []
+    },
+    "recommendations": [
+      "No contradiction detected"
+    ],
+    "session_log": {
+      "status": "passed"
+    }
+  },
+  "correction_summary": {
+    "total_corrections": 0,
+    "corrections": []
+  }
+}

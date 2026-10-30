@@ -1,0 +1,269 @@
+{
+  "run_id": "mare-atm-negotiation_integration_verification-s202",
+  "case_id": "ATM",
+  "system": "mare",
+  "setting": "negotiation_integration_verification",
+  "seed": 202,
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "mare",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.13",
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 0.7,
+    "seed": 202,
+    "prompt_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": false,
+    "fallback_tainted": false,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": true,
+    "non_comparable_reasons": []
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-09-30T03:56:52Z",
+  "end_timestamp": "2026-09-30T03:57:26Z",
+  "runtime_seconds": 34.294675,
+  "artifacts_dir": "experiment_outputs/handbuilt-claude/runs/mare-atm-negotiation_integration_verification-s202",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/handbuilt-claude/runs/mare-atm-negotiation_integration_verification-s202/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/handbuilt-claude/runs/mare-atm-negotiation_integration_verification-s202/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/handbuilt-claude/runs/mare-atm-negotiation_integration_verification-s202/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/handbuilt-claude/runs/mare-atm-negotiation_integration_verification-s202/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "2445b4af2ba75286957dff731bd87940ef656dd7061348457de6c7bab36eb0ff",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "mare_paper_workflow_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "negotiation_integration_verification",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 202,
+      "llm_seed_applied_turns": 9,
+      "llm_turns": 9,
+      "llm_fallback_turns": 0,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 6,
+      "execution_mode": "llm_driven",
+      "llm_actions": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "fallback_actions": [],
+      "roles_executed": [
+        "Stakeholders",
+        "Collector",
+        "Modeler",
+        "Checker",
+        "Documenter"
+      ],
+      "actions_executed": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "role_action_map": {
+        "Stakeholders": [
+          "SpeakUserStories",
+          "AnswerQuestion"
+        ],
+        "Collector": [
+          "ProposeQuestion",
+          "WriteReqDraft"
+        ],
+        "Modeler": [
+          "ExtractEntity",
+          "ExtractRelation"
+        ],
+        "Checker": [
+          "CheckRequirement"
+        ],
+        "Documenter": [
+          "WriteSRS",
+          "WriteCheckReport"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Stakeholders",
+          "action": "SpeakUserStories",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "Five user stories capturing stakeholder needs for secure PIN-based access, detailed transaction recording, dual account management with balance protection, and account relationship enforcement in the ATM system."
+        },
+        {
+          "role": "Collector",
+          "action": "ProposeQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Six clarification questions proposed to resolve ambiguities around transaction logging scope, balance reporting in linked accounts, account creation dependencies, transaction type definitions, negative balance enforcement mechanism, and PIN security requirements."
+        },
+        {
+          "role": "Stakeholders",
+          "action": "AnswerQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Stakeholders answered four collector questions with concrete constraints: access logging is separate from transactions; balance reporting is account-specific; checking accounts may exist independently while savings accounts require a checking account link; transaction types include only financial operations (debit/credit/transfer); all accounts must maintain non-negative balances as a hard constraint."
+        },
+        {
+          "role": "Collector",
+          "action": "WriteReqDraft",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Six requirement draft statements written with explicit 'shall' language and measurable intent covering transaction recording, account types, account relationships, PIN authentication, balance constraints, and balance tracking for the ATM case."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractEntity",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 24 candidate requirement entities from ATM case fragments, including core domain objects (Transaction, Account types, Client), transaction attributes (Date, Time, Type, Amount, Balance), security concepts (PIN, Verification, Credentials), and constraint-related entities (Negative Balance, Account Relationship). Entities align with existing user stories, clarified Q&A, and draft requirements REQ-ATM-001 through REQ-ATM-006."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractRelation",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 15 entity relations from ATM requirements covering transaction structure, account types, client relationships, PIN access, balance constraints, and transaction type classifications."
+        },
+        {
+          "role": "Checker",
+          "action": "CheckRequirement",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Seven quality findings identified: three ambiguities regarding account multiplicity and balance reporting, three conflict risks between account relationship constraints, and three verifiability gaps in PIN verification and transaction timestamp specifications. Clarification needed on account cardinality rules and transaction rejection handling."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteSRS",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "SRS sections drafted covering transaction auditing, account types, relationship enforcement, PIN authentication, balance constraints, and independent balance tracking. Sections align with 6 refined requirements and address key ambiguities from findings (account multiplicity, balance independence, authentication mechanisms)."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteCheckReport",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Eight check report items documented for ATM requirements, linking six findings and four clarified answers to eight verification expectations across transaction recording, account types, authentication, balance management, and account relationship enforcement."
+        }
+      ],
+      "workspace_summary": {
+        "user_stories": 5,
+        "questions": 4,
+        "answers": 4,
+        "requirement_draft": 6,
+        "entities": 8,
+        "relations": 8,
+        "findings": 6,
+        "srs_sections": 4,
+        "check_report": 8,
+        "llm_turns": 9,
+        "llm_fallback_turns": 0
+      },
+      "workspace_digest": "f17f01a91a24d94ae8a5ec4a2abb8863621c25d8fffcdceed65f1062d45b978b"
+    },
+    "case_description": "Automated Teller Machine System",
+    "system": "mare",
+    "setting": "negotiation_integration_verification",
+    "negotiation_enabled": true,
+    "verification_executed": true,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 202,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 202,
+      "seed_applied_turns": 9,
+      "turns": 9,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 6,
+      "execution_mode": "llm_driven"
+    },
+    "rag_corpus_dir": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c"
+  }
+}

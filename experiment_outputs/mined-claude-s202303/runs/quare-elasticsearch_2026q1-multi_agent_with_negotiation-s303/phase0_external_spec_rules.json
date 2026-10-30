@@ -1,0 +1,85 @@
+{
+  "phase": "0_external_spec_processing",
+  "case_id": "elasticsearch_2026q1",
+  "setting": "multi_agent_with_negotiation",
+  "generated_at": "2026-09-30T00:46:35Z",
+  "extracted_rules": [
+    {
+      "rule_id": "R001",
+      "rule_type": "constraint",
+      "statement": "Requirement 1 (Issue #142340: [DiskBBQ] Fix our silly imbalanced cluster issue)",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R002",
+      "rule_type": "constraint",
+      "statement": "Cluster imbalance is a known issue and yeah, we are hitting it",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R003",
+      "rule_type": "constraint",
+      "statement": "I consistently see oversized clusters (multiples in size of our configured limit)",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R004",
+      "rule_type": "trigger",
+      "statement": "This can lead to inconsistent search latency behavior for different queries (what if the query is nearer only tiny clusters or nearer only the huge ones",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R005",
+      "rule_type": "constraint",
+      "statement": ") and can harm our logic for fetching postings lists",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R006",
+      "rule_type": "obligation",
+      "statement": "We should strive for cluster size consistency, even with SOAR overspilling",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R007",
+      "rule_type": "constraint",
+      "statement": "Requirement 2 (Issue #140470: Query planner rewrite SUM(X+a) as SUM(X) + a*COUNT(X))",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R008",
+      "rule_type": "obligation",
+      "statement": "We should be able to optimize stats of the form SUM(X + a) where a is a constant to SUM(X) + aCOUNT(X)",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R009",
+      "rule_type": "trigger",
+      "statement": "This should result in fewer addition operations, and reuse of SUM(X) if it is used elsewhere in the query",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R010",
+      "rule_type": "constraint",
+      "statement": "There is a problem with doing this optimization due to multivaluedness",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R011",
+      "rule_type": "trigger",
+      "statement": "Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R012",
+      "rule_type": "trigger",
+      "statement": "For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS SUM(X), SUM(X + 4) evaluates to 18, 7 because both single and multi values are in the first sum, but only sin...",
+      "source": "requirement_text"
+    }
+  ],
+  "extraction_metadata": {
+    "rule_count": 12,
+    "rag_enabled": true,
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426"
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "run_id": "mare-pandas_2023q3-multi_agent_without_negotiation-s303",
+  "case_id": "pandas_2023q3",
+  "system": "mare",
+  "setting": "multi_agent_without_negotiation",
+  "seed": 303,
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "mare",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.13",
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 0.7,
+    "seed": 303,
+    "prompt_hash": "06cbc20ef67bd89fcd55c241a20fd51198570d14757e8868968744b7fd2ca67b",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": false,
+    "fallback_tainted": false,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": false,
+    "non_comparable_reasons": [
+      "negotiation_and_verification_not_executed_for_setting"
+    ]
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-09-30T01:10:15Z",
+  "end_timestamp": "2026-09-30T01:10:49Z",
+  "runtime_seconds": 34.243109,
+  "artifacts_dir": "experiment_outputs/mined-claude-s202303/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s303",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/mined-claude-s202303/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s303/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/mined-claude-s202303/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s303/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/mined-claude-s202303/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s303/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/mined-claude-s202303/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s303/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "2445b4af2ba75286957dff731bd87940ef656dd7061348457de6c7bab36eb0ff",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "mare_paper_workflow_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "multi_agent_without_negotiation",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 303,
+      "llm_seed_applied_turns": 9,
+      "llm_turns": 9,
+      "llm_fallback_turns": 0,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 9,
+      "execution_mode": "llm_driven",
+      "llm_actions": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "fallback_actions": [],
+      "roles_executed": [
+        "Stakeholders",
+        "Collector",
+        "Modeler",
+        "Checker",
+        "Documenter"
+      ],
+      "actions_executed": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "role_action_map": {
+        "Stakeholders": [
+          "SpeakUserStories",
+          "AnswerQuestion"
+        ],
+        "Collector": [
+          "ProposeQuestion",
+          "WriteReqDraft"
+        ],
+        "Modeler": [
+          "ExtractEntity",
+          "ExtractRelation"
+        ],
+        "Checker": [
+          "CheckRequirement"
+        ],
+        "Documenter": [
+          "WriteSRS",
+          "WriteCheckReport"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Stakeholders",
+          "action": "SpeakUserStories",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Users need native support for extracting sub-fields from pandas Series with ArrowDtype struct types using field() syntax to access nested columns efficiently."
+        },
+        {
+          "role": "Collector",
+          "action": "ProposeQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Clarifying questions on field extraction syntax, scope (nested vs. single-level), error handling, PyArrow compatibility, integration with pandas operations, and API design pattern for ArrowDtype struct field access."
+        },
+        {
+          "role": "Stakeholders",
+          "action": "AnswerQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Stakeholders confirm field extraction returns Series objects for single-level struct fields; missing fields raise KeyError; all PyArrow struct types are supported; nested access deferred."
+        },
+        {
+          "role": "Collector",
+          "action": "WriteReqDraft",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "Five requirement draft statements specifying field extraction functionality for ArrowDtype struct Series, including return type, scope boundaries, error handling, compatibility, and method signature with explicit 'shall' language and measurable intent."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractEntity",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 13 candidate requirement entities from pandas ArrowDtype struct field extraction feature: core data structures (Series, ArrowDtype, struct), functional components (field extraction method, PyArrow type, sub-column name), error handling (KeyError exception), system scope (pandas library, nested access deferral), configuration variants (nullable/repeated/mixed-type fields), and design principles (API consistency)."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractRelation",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 12 entity relations defining the field extraction feature for ArrowDtype Series: the method operates on Series objects containing struct types, accepts string field names, returns Series with preserved PyArrow types, raises KeyError for missing fields, and supports all struct configurations including nullable and repeated fields."
+        },
+        {
+          "role": "Checker",
+          "action": "CheckRequirement",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Seven quality findings identified: three ambiguities regarding API syntax and scope boundaries, one conflict risk between deferral and universal compatibility claims, and three verifiability gaps lacking concrete acceptance criteria for type preservation, error messaging, and convention compliance."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteSRS",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "SRS drafted with six sections covering field() method signature, return semantics, error handling, scope limitations, and verification criteria for ArrowDtype struct field extraction feature; ambiguities regarding invocation syntax, error message format, and nested access deferral are clarified and scoped."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteCheckReport",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Six verification checks confirm field() method syntax, single-level scope enforcement, KeyError handling with descriptive messages, PyArrow struct configuration compatibility, type preservation rules, and conflict resolution between scope deferral and unlimited compatibility claims."
+        }
+      ],
+      "workspace_summary": {
+        "user_stories": 4,
+        "questions": 4,
+        "answers": 4,
+        "requirement_draft": 5,
+        "entities": 8,
+        "relations": 8,
+        "findings": 6,
+        "srs_sections": 4,
+        "check_report": 6,
+        "llm_turns": 9,
+        "llm_fallback_turns": 0
+      },
+      "workspace_digest": "7645d6a4c9f29d7443b428073104644a4e03f08783ef260850eb85784e96cb7d"
+    },
+    "case_description": "Feature requests mined from the pandas-dev/pandas project (Data Processing), aggregated from GitHub issues in 2023Q3.",
+    "system": "mare",
+    "setting": "multi_agent_without_negotiation",
+    "negotiation_enabled": false,
+    "verification_executed": false,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 303,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 303,
+      "seed_applied_turns": 9,
+      "turns": 9,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 9,
+      "execution_mode": "llm_driven"
+    },
+    "rag_corpus_dir": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "06cbc20ef67bd89fcd55c241a20fd51198570d14757e8868968744b7fd2ca67b"
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "run_id": "mare-ad-negotiation_integration_verification-s202",
+  "case_id": "AD",
+  "system": "mare",
+  "setting": "negotiation_integration_verification",
+  "seed": 202,
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "mare",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.13",
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 0.7,
+    "seed": 202,
+    "prompt_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": false,
+    "fallback_tainted": false,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": true,
+    "non_comparable_reasons": []
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-09-30T03:22:52Z",
+  "end_timestamp": "2026-09-30T03:23:39Z",
+  "runtime_seconds": 47.307735,
+  "artifacts_dir": "experiment_outputs/handbuilt-claude/runs/mare-ad-negotiation_integration_verification-s202",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/handbuilt-claude/runs/mare-ad-negotiation_integration_verification-s202/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/handbuilt-claude/runs/mare-ad-negotiation_integration_verification-s202/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/handbuilt-claude/runs/mare-ad-negotiation_integration_verification-s202/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/handbuilt-claude/runs/mare-ad-negotiation_integration_verification-s202/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "2445b4af2ba75286957dff731bd87940ef656dd7061348457de6c7bab36eb0ff",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "mare_paper_workflow_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "negotiation_integration_verification",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 202,
+      "llm_seed_applied_turns": 9,
+      "llm_turns": 9,
+      "llm_fallback_turns": 0,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 8,
+      "execution_mode": "llm_driven",
+      "llm_actions": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "fallback_actions": [],
+      "roles_executed": [
+        "Stakeholders",
+        "Collector",
+        "Modeler",
+        "Checker",
+        "Documenter"
+      ],
+      "actions_executed": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "role_action_map": {
+        "Stakeholders": [
+          "SpeakUserStories",
+          "AnswerQuestion"
+        ],
+        "Collector": [
+          "ProposeQuestion",
+          "WriteReqDraft"
+        ],
+        "Modeler": [
+          "ExtractEntity",
+          "ExtractRelation"
+        ],
+        "Checker": [
+          "CheckRequirement"
+        ],
+        "Documenter": [
+          "WriteSRS",
+          "WriteCheckReport"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Stakeholders",
+          "action": "SpeakUserStories",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "Five user stories capture stakeholder needs across passenger comfort, vehicle dynamics safety, computational efficiency, passive safety enforcement, and balanced efficiency-safety optimization for the AD autonomous driving system."
+        },
+        {
+          "role": "Collector",
+          "action": "ProposeQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Clarification questions target quantitative definitions of Jerk and curvature thresholds, QP solver termination criteria, SafetyAgent/EfficiencyAgent priority resolution, safe distance metrics, constraint conflict handling, and obstacle geometry to make requirements verifiable and implementable."
+        },
+        {
+          "role": "Stakeholders",
+          "action": "AnswerQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Stakeholders provide quantitative answers: Jerk thresholds (1.5–3.0 m/s³ context-dependent), curvature limits (0.08–0.15 m⁻¹ surface-dependent), QP termination criteria (1e-4 tolerance, 50 iterations, 50ms deadline), and priority hierarchy (Safety absolute veto, weighted trade-offs 0.6/0.3/0.1 for Safety/Smoothness/Speed)."
+        },
+        {
+          "role": "Collector",
+          "action": "WriteReqDraft",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "Five explicit requirement statements drafted with 'shall' language and measurable parameters for Jerk thresholds, curvature constraints, QP solver termination criteria, and agent priority hierarchy in the AD motion planning system."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractEntity",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 20 candidate requirement entities from AD case including control parameters (Jerk thresholds, curvature limits, QP solver settings), system components (SafetyAgent, EfficiencyAgent, motion planner), safety constraints (headway, passive safety), and optimization objectives (smoothness, speed). Entities grounded in requirement draft REQ-AD-001 through REQ-AD-005."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractRelation",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 10 entity relations mapping Jerk minimization, curvature constraints, QP-based obstacle avoidance, and agent priority hierarchy (SafetyAgent veto over EfficiencyAgent) from AD case requirements and workspace artifacts."
+        },
+        {
+          "role": "Checker",
+          "action": "CheckRequirement",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Five requirements checked. Key findings: Jerk sampling window and QP failure handling lack specificity; SafetyAgent–EfficiencyAgent conflict resolution undefined for infeasible scenarios; passenger comfort and road surface classification acceptance criteria missing; 'absolute veto authority' not measurably verifiable. Recommend clarifying computational feasibility, escalation procedures, and test acceptance criteria before finalization."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteSRS",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Drafted 4 SRS sections (Functional, Safety, Performance, Verification) with 14 requirement intents addressing Jerk minimization, curvature enforcement, iterative QP solving, SafetyAgent veto authority, and conflict resolution. Sections directly map checked requirements and workspace findings; highlighted 4 ambiguities and 2 conflict risks requiring clarification before formal SRS finalization."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteCheckReport",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Eight numbered check report items tie findings to verification expectations across Jerk minimization, curvature enforcement, iterative QP solver termination, agent conflict resolution, computational feasibility, passenger comfort metrics, road surface classification, and safe distance maintenance. Each item specifies verification approach and test strategy grounded in REQ-AD-001 through REQ-AD-005."
+        }
+      ],
+      "workspace_summary": {
+        "user_stories": 5,
+        "questions": 4,
+        "answers": 4,
+        "requirement_draft": 5,
+        "entities": 8,
+        "relations": 8,
+        "findings": 6,
+        "srs_sections": 4,
+        "check_report": 8,
+        "llm_turns": 9,
+        "llm_fallback_turns": 0
+      },
+      "workspace_digest": "d569b743b879f00604b88a08479169a38f47f1c050c16e3ee6e5177de5cf827b"
+    },
+    "case_description": "Autonomous Driving System (Baidu Apollo Planning & Control Module)",
+    "system": "mare",
+    "setting": "negotiation_integration_verification",
+    "negotiation_enabled": true,
+    "verification_executed": true,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 202,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 202,
+      "seed_applied_turns": 9,
+      "turns": 9,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 8,
+      "execution_mode": "llm_driven"
+    },
+    "rag_corpus_dir": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c"
+  }
+}

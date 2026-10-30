@@ -1,0 +1,269 @@
+{
+  "run_id": "mare-ad-negotiation_integration_verification-s101",
+  "case_id": "AD",
+  "system": "mare",
+  "setting": "negotiation_integration_verification",
+  "seed": 101,
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "mare",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.13",
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 0.7,
+    "seed": 101,
+    "prompt_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": false,
+    "fallback_tainted": false,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": true,
+    "non_comparable_reasons": []
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-09-30T03:15:09Z",
+  "end_timestamp": "2026-09-30T03:15:54Z",
+  "runtime_seconds": 44.962033,
+  "artifacts_dir": "experiment_outputs/handbuilt-claude/runs/mare-ad-negotiation_integration_verification-s101",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/handbuilt-claude/runs/mare-ad-negotiation_integration_verification-s101/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/handbuilt-claude/runs/mare-ad-negotiation_integration_verification-s101/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/handbuilt-claude/runs/mare-ad-negotiation_integration_verification-s101/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/handbuilt-claude/runs/mare-ad-negotiation_integration_verification-s101/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "2445b4af2ba75286957dff731bd87940ef656dd7061348457de6c7bab36eb0ff",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "mare_paper_workflow_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "negotiation_integration_verification",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 101,
+      "llm_seed_applied_turns": 9,
+      "llm_turns": 9,
+      "llm_fallback_turns": 0,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 8,
+      "execution_mode": "llm_driven",
+      "llm_actions": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "fallback_actions": [],
+      "roles_executed": [
+        "Stakeholders",
+        "Collector",
+        "Modeler",
+        "Checker",
+        "Documenter"
+      ],
+      "actions_executed": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "role_action_map": {
+        "Stakeholders": [
+          "SpeakUserStories",
+          "AnswerQuestion"
+        ],
+        "Collector": [
+          "ProposeQuestion",
+          "WriteReqDraft"
+        ],
+        "Modeler": [
+          "ExtractEntity",
+          "ExtractRelation"
+        ],
+        "Checker": [
+          "CheckRequirement"
+        ],
+        "Documenter": [
+          "WriteSRS",
+          "WriteCheckReport"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Stakeholders",
+          "action": "SpeakUserStories",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Six user stories capture stakeholder needs for ODD monitoring, multi-objective motion planning, path-speed decoupling, and scenario-specific optimization across safety, comfort, and efficiency dimensions."
+        },
+        {
+          "role": "Collector",
+          "action": "ProposeQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Clarification questions target: (1) ODD boundary definitions and detection thresholds, (2) objective priority resolution in multiobjective optimization, (3) operational meaning of path-speed decoupling, (4) quantitative comfort constraints, and (5) architectural separation of monitoring and planning functions."
+        },
+        {
+          "role": "Stakeholders",
+          "action": "AnswerQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Stakeholders answered four collector questions with concrete constraints: ODD parameters defined by speed/road-type/weather ranges; boundary detection via 80% threshold monitoring; safety-first objective hierarchy (100-70-30 weighting); path-speed decoupling as sequential modules enabling independent tuning. All answers grounded in measurable thresholds and operational acceptance criteria."
+        },
+        {
+          "role": "Collector",
+          "action": "WriteReqDraft",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Six requirement draft statements with explicit 'shall' language capturing ODD monitoring, boundary detection thresholds, multiobjective motion planning with safety priority, path-speed decoupling architecture, scenario-specific ODD parameters, and HMI warning protocol for the AD case."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractEntity",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 20 candidate requirement entities from AD autonomous driving case. Core concepts include ODD monitoring/boundary detection, multi-objective motion planning (Safety/Smoothness/Speed), decoupled path-speed planning modules, scenario definitions (urban/highway), and HMI warning mechanisms for safe human intervention."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractRelation",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 15 entity relations mapping ODD parameters, scenario definitions, motion planner architecture (path-speed decoupling), objective priorities (Safety→Smoothness→Speed), and boundary detection mechanisms across urban/highway operations."
+        },
+        {
+          "role": "Checker",
+          "action": "CheckRequirement",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Nine findings identified: three ambiguities (monitoring operationalization, objective prioritization formalism, safety margin justification), three conflict risks (speed boundary enforcement, smoothness-safety trade-off, emergency braking fallback), and three verifiability gaps (unmeasurable parent requirements, missing module interfaces, incomplete HMI criteria). One additional gap: missing ODD degradation rules."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteSRS",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Drafted six SRS section headings with intents addressing ODD monitoring operationalization, boundary detection thresholds, motion planning objective hierarchy with conflict resolution, path-speed decoupling architecture with safety margin justification, scenario-specific boundaries, and HMI warning protocol. Each section targets one or more ambiguities and conflict risks identified in the workspace findings to ensure verifiability and implementability."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteCheckReport",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Six verification items address ambiguities and conflicts in ODD monitoring, boundary detection, motion planning hierarchy, safety margins, emergency deceleration fallback, and HMI triggering. Each item ties findings to measurable acceptance criteria for requirements clarification and design validation."
+        }
+      ],
+      "workspace_summary": {
+        "user_stories": 6,
+        "questions": 4,
+        "answers": 4,
+        "requirement_draft": 6,
+        "entities": 8,
+        "relations": 8,
+        "findings": 6,
+        "srs_sections": 4,
+        "check_report": 6,
+        "llm_turns": 9,
+        "llm_fallback_turns": 0
+      },
+      "workspace_digest": "8831f05bf1bf61f8bd452857d0e879ee35140d13ca6207def8f5859cca4ac3aa"
+    },
+    "case_description": "Autonomous Driving System (Baidu Apollo Planning & Control Module)",
+    "system": "mare",
+    "setting": "negotiation_integration_verification",
+    "negotiation_enabled": true,
+    "verification_executed": true,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 101,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 101,
+      "seed_applied_turns": 9,
+      "turns": 9,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 8,
+      "execution_mode": "llm_driven"
+    },
+    "rag_corpus_dir": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "297ba9fdd3d7054cce776abf90284d1509f6fd42f5d59643ec182a413188943c"
+  }
+}

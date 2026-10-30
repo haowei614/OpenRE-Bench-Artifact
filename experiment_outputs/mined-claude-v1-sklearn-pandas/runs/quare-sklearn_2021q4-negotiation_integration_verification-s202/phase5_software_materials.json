@@ -1,0 +1,239 @@
+{
+  "phase": "5_software_materials_generation",
+  "case_id": "sklearn_2021q4",
+  "setting": "negotiation_integration_verification",
+  "generated_at": "2026-10-30T06:58:24Z",
+  "materials": {
+    "srs_outline": [
+      "System Scope and Stakeholders",
+      "Quality-Attribute Requirements (Safety/Efficiency/Green/Trustworthiness/Responsibility)",
+      "Negotiation and Conflict Resolution Decisions",
+      "Verification and Compliance Evidence"
+    ],
+    "implementation_checklist": [
+      "Preserve canonical phase artifact compatibility",
+      "Enforce strict provenance and taint controls",
+      "Trace each integrated requirement to a verification signal"
+    ],
+    "traceability_matrix": [
+      {
+        "element_id": "EFF-L1-002",
+        "quality_attribute": "Efficiency",
+        "statement": "Efficiency objective for sklearn_2021q4: SequentialFeatureSelector allows specifying a cross-validation splitter via the cv parameter in the constructor, but does not allow the...",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "EFF-L2-002-01",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (latency optimization): SequentialFeatureSelector allows specifying a cross-validation splitter via the cv parameter in the constructor, but d...",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "EFF-L2-002-02",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (throughput stability): Describe your proposed solution",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "EFF-L2-002-03",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (resource utilization): Add a groups parameter to SequentialFeatureSelector",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "EFF-L2-002-04",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (latency optimization): fit() to allow groups to be passed into the cross-validation splitter:",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "EFF-L2-002-05",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (throughput stability): This will need to be passed through to _get_best_new_feature() and then to cross_val_score()",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "EFF-L2-002-06",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (resource utilization): Describe alternatives you've considered, if relevant",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L1-005",
+        "quality_attribute": "Responsibility",
+        "statement": "Responsibility objective for sklearn_2021q4: Edit: let's do it by modules since the common test is organized this way: - [x] 22255 cluster - [x] 22119 cross_decomposition - [x]...",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "RES-L2-005-01",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (regulatory accountability): Edit: let's do it by modules since the common test is organized this way: - [x] 22255 cluster - [x] 22119 cro...",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L2-005-02",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (stakeholder transparency): Requirement 2 (Issue #21318: enhancement base class for sklearn models)",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L2-005-03",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (ethical compliance): Describe the workflow you want to enable",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L2-005-04",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (regulatory accountability): Sklearn does not provide an abstract class for the fit method and transform method which is not friendly to c...",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L2-005-05",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (stakeholder transparency): In Python project, type hints is very important",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L2-005-06",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (ethical compliance): This would be helpful for python type hints if sklearn had abstract classes with fit and transform methods",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L1-001",
+        "quality_attribute": "Safety",
+        "statement": "Safety objective for sklearn_2021q4: i hope a abstract class like this",
+        "verification_anchor": "candidate_resolution"
+      },
+      {
+        "element_id": "SAF-L2-001-01",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (hazard prevention): i hope a abstract class like this",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L2-001-02",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (fault tolerance): Describe your proposed solution",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L2-001-03",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (risk mitigation): Describe alternatives you've considered, if relevant",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L2-001-04",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (hazard prevention): Requirement 3 (Issue #21356: SequentialFeatureSelector",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L2-001-05",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (fault tolerance): fit() groups parameter)",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L2-001-06",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (risk mitigation): Describe the workflow you want to enable",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L1-003",
+        "quality_attribute": "Sustainability",
+        "statement": "Sustainability objective for sklearn_2021q4: Requirement 4 (Issue #21521: Add option to choose OOB scorer in RandomForest)",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "SUS-L2-003-01",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (energy footprint reduction): Requirement 4 (Issue #21521: Add option to choose OOB scorer in RandomForest)",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L2-003-02",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (resource lifecycle control): Describe the workflow you want to enable Random forests provide for free an estimate of its out-of-sample pe...",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L2-003-03",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (environmental impact awareness): In practice, it works well when 1",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L2-003-04",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (energy footprint reduction): rows are independent 2",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L2-003-05",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (resource lifecycle control): the number of trees is large (500+)",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L2-003-06",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (environmental impact awareness): If oob_score=True, currently the following scoring is applied to the OOB predictions: - RandomForestRegr...",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L1-004",
+        "quality_attribute": "Trustworthiness",
+        "statement": "Trustworthiness objective for sklearn_2021q4: What do you mean, @USER",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "TRU-L2-004-01",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (security assurance): What do you mean, @USER",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-02",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (auditability): - RandomForestClassifier() always returns accuracy, even if it does not enjoy many good properties",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-03",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (integrity guarantees): For instance, if my criterion is \"entropy\" and I am modelling a binary target, then the corresponding scoring fun...",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-04",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (security assurance): Requirement 1 (Issue #21308: Implement `get_feature_names_out` for all estimators)",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-05",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (auditability): This issue tracks the implementation of get_feature_names_out for all remaining estimators (follow-up work for 18444)",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-06",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (integrity guarantees): @USER do you maybe have a list we could add here to track them",
+        "verification_anchor": "resolved"
+      }
+    ]
+  },
+  "quality_signals": {
+    "topology_is_valid": true,
+    "deterministic_is_valid": true,
+    "compliance_coverage": 0.875,
+    "s_logic": 1.0,
+    "detected_conflict_pairs": 5,
+    "resolved_conflict_pairs": 0
+  }
+}

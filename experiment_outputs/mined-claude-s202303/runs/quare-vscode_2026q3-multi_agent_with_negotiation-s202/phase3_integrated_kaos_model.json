@@ -1,0 +1,307 @@
+{
+  "gsn_elements": [
+    {
+      "id": "EFF-L1-002",
+      "name": "Negotiated Integrated Goal",
+      "description": "Efficiency objective for vscode_2026q3: prioritize x-opencode-session header implementation (deadline 09/05) for OpenCode Go API compliance with <100ms session ID generation latency SLO; defer chat persistence and wor...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Quality-attribute specific requirement analysis",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "EfficiencyAgent to isolate API compliance deadline from architectural state-management changes",
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "EFF-L2-002-06",
+      "name": "Efficiency Requirement 6",
+      "description": "The system shall ensure efficiency (resource utilization): txt from the Terminal), make no changes, then try to exit, it asks if you want to save the file",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Clause-level quality requirement for resource utilization",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "GreenAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "RES-L2-005-06",
+      "name": "Responsibility Requirement 6",
+      "description": "DEFER: File format (jsonl) is implementation detail. Remove from responsibility requirements.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "ResponsibilityAgent",
+      "measurable_criteria": "Clause-level quality requirement for ethical compliance",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "SafetyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SAF-L2-001-06",
+      "name": "Safety Requirement 6",
+      "description": "The system shall ensure safety (risk mitigation): code-workspace file, or renaming/moving a folder all create a new storage hash with an",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "SafetyAgent",
+      "measurable_criteria": "Clause-level quality requirement for risk mitigation",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "EfficiencyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SUS-L2-003-06",
+      "name": "Sustainability Requirement 6",
+      "description": "DEPRECATED: Consolidated into SUS-L2-003-01 to eliminate redundant specification of identical x-opencode-session header requirement.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "GreenAgent",
+      "measurable_criteria": "Clause-level quality requirement for environmental impact awareness",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "TrustworthinessAgent - duplicate requirement merged",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L2-004-06",
+      "name": "Trustworthiness Requirement 6",
+      "description": "The system shall ensure trustworthiness (integrity guarantees): Any stable UUID per conversation works",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Clause-level quality requirement for integrity guarantees",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "ResponsibilityAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L2-004-05",
+      "name": "Trustworthiness Requirement 5",
+      "description": "The system shall ensure trustworthiness (auditability and compliance): Include x-opencode-session header with stable per-conversation UUID on all outbound inference HTTP requests to OpenCode Go API; implementation must be completed before 09/05 deadline; UUID generation must be conversation-scoped and deterministic; specify UUID algorithm (crypto.randomUUID or hash-based) and backward compatibility handling.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Clause-level quality requirement for auditability",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "ResponsibilityAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "EFF-L1-002",
+      "target_id": "EFF-L2-002-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "EFF-L1-002",
+      "target_id": "RES-L2-005-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "EFF-L1-002",
+      "target_id": "SAF-L2-001-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "EFF-L1-002",
+      "target_id": "SUS-L2-003-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "EFF-L1-002",
+      "target_id": "TRU-L2-004-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "EFF-L1-002",
+      "target_id": "TRU-L2-004-05",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_quare-vscode_2026q3-multi_agent_with_negotiation-s202",
+    "name": "OpenRE-Bench Integrated KAOS for vscode_2026q3",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-09-30T02:48:33Z",
+    "requirement_source": "Requirement 1 (Issue #334186: Send x-opencode-session header on API requests (required by OpenCode Go from 09/05))\nHi — we operate the OpenCode Go managed-inference API, and 1685 of your users' orgs call it through GitHub Copilot Chat (UA GitHubCopilotChat/0.63.0).\n\nStarting 09/05, requests without an x-opencode-session header will error on our side — we need a stable per-conversation ID for routing/optimization. Copilot Chat doesn't send it in any version we've seen.\n\nAsk: include x-opencode-session: on all outbound inference HTTP requests. Any stable UUID per conversation works. Happy to confirm from our telemetry once a build ships it. Thanks!\n\nRequirement 2 (Issue #334228: Make chat sessions available across workspaces (global chat history))\nMake chat sessions available across workspaces (global chat history) Problem Copilot chat sessions are strictly workspace-scoped. Each workspace storage folder (workspaceStorage/ ) holds its own chatSessions/.jsonl files plus a chat.ChatSessionStore.index entry in state.vscdb, and the Chat view / \"Show Chats…\" picker only ever lists that one workspace's sessions. As a developer working across many repos daily, this means: - I can never pull up a chat from another workspace without closing my window and reopening the other folder — losing my current context. - Chats \"disappear\" when the workspace identity changes: opening the same folders as a different multi-root combination, saving an untitled workspace as a .code-workspace file, or renaming/moving a folder all create a new storage hash with an ...\n\nRequirement 3 (Issue #327076: Opening a non-existent file should not trigger \"save dirty file\"  (Vim/Emacs-style \"nothing changed, nothing to save\"))\nFeature request Add a setting that prevents a newly created, empty and untouched file from being treated as \"dirty,\" so that closing it does not trigger a \"Do you want to save?\" prompt. In Microsoft VSCode, if you open a new file (\"code doesnotexist.txt from the Terminal), make no changes, then try to exit, it asks if you want to save the file. Other editors, such as Vim and Emacs, do not ask to save the file. The logic of Vim and Emacs is that no changes (including creating the file) have happened, therefore there is nothing to save. I'm requesting a feature to enable the behavior that Vim/Emacs uses. Current behavior When you create a new file that has ...",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Integrated",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "multi_agent_with_negotiation"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "EFF-L1-002",
+        "name": "Negotiated Integrated Goal",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "EFF-L2-002-06",
+        "name": "Efficiency Requirement 6",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "RES-L2-005-06",
+        "name": "Responsibility Requirement 6",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "SAF-L2-001-06",
+        "name": "Safety Requirement 6",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "SUS-L2-003-06",
+        "name": "Sustainability Requirement 6",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "TRU-L2-004-06",
+        "name": "Trustworthiness Requirement 6",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "TRU-L2-004-05",
+        "name": "Trustworthiness Requirement 5",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "EFF-L1-002"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "EFF-L1-002": [
+        "EFF-L2-002-06",
+        "RES-L2-005-06",
+        "SAF-L2-001-06",
+        "SUS-L2-003-06",
+        "TRU-L2-004-06",
+        "TRU-L2-004-05"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_quare-vscode_2026q3-multi_agent_with_negotiation-s202",
+  "created_timestamp": "2026-09-30T02:48:33Z",
+  "total_elements": 7,
+  "total_relations": 6
+}

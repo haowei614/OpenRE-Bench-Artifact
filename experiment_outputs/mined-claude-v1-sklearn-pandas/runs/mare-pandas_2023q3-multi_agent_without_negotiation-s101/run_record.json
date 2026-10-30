@@ -1,0 +1,271 @@
+{
+  "run_id": "mare-pandas_2023q3-multi_agent_without_negotiation-s101",
+  "case_id": "pandas_2023q3",
+  "system": "mare",
+  "setting": "multi_agent_without_negotiation",
+  "seed": 101,
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "mare",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.13",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 0.7,
+    "seed": 101,
+    "prompt_hash": "06cbc20ef67bd89fcd55c241a20fd51198570d14757e8868968744b7fd2ca67b",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei/MSR/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": false,
+    "fallback_tainted": false,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": false,
+    "non_comparable_reasons": [
+      "negotiation_and_verification_not_executed_for_setting"
+    ]
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-10-30T06:28:58Z",
+  "end_timestamp": "2026-10-30T06:29:34Z",
+  "runtime_seconds": 36.404416,
+  "artifacts_dir": "experiment_outputs/mined-claude-v1-sklearn-pandas/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s101",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/mined-claude-v1-sklearn-pandas/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s101/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/mined-claude-v1-sklearn-pandas/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s101/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/mined-claude-v1-sklearn-pandas/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s101/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/mined-claude-v1-sklearn-pandas/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s101/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "2445b4af2ba75286957dff731bd87940ef656dd7061348457de6c7bab36eb0ff",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "mare_paper_workflow_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "multi_agent_without_negotiation",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 101,
+      "llm_seed_applied_turns": 9,
+      "llm_turns": 9,
+      "llm_fallback_turns": 0,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 9,
+      "execution_mode": "llm_driven",
+      "llm_actions": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "fallback_actions": [],
+      "roles_executed": [
+        "Stakeholders",
+        "Collector",
+        "Modeler",
+        "Checker",
+        "Documenter"
+      ],
+      "actions_executed": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "role_action_map": {
+        "Stakeholders": [
+          "SpeakUserStories",
+          "AnswerQuestion"
+        ],
+        "Collector": [
+          "ProposeQuestion",
+          "WriteReqDraft"
+        ],
+        "Modeler": [
+          "ExtractEntity",
+          "ExtractRelation"
+        ],
+        "Checker": [
+          "CheckRequirement"
+        ],
+        "Documenter": [
+          "WriteSRS",
+          "WriteCheckReport"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Stakeholders",
+          "action": "SpeakUserStories",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Enable pandas Series to be written directly to Parquet files via to_parquet() method, eliminating the need for DataFrame conversion and providing consistent API behavior with existing DataFrame functionality."
+        },
+        {
+          "role": "Collector",
+          "action": "ProposeQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Clarification questions to resolve ambiguities around Series.to_parquet() implementation scope, parameter compatibility, dtype handling, metadata preservation, and performance expectations."
+        },
+        {
+          "role": "Stakeholders",
+          "action": "AnswerQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Stakeholders confirm Series.to_parquet() must support full parameter parity with DataFrame, preserve MultiIndex and extension dtypes via metadata, handle unnamed Series consistently, and maintain round-trip fidelity for all pandas type information."
+        },
+        {
+          "role": "Collector",
+          "action": "WriteReqDraft",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Eight requirement draft statements for Series.to_parquet() feature with explicit 'shall' language specifying direct Parquet export, parameter compatibility, index preservation, metadata handling, dtype fidelity, and round-trip consistency."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractEntity",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 20 candidate requirement entities from draft specifications for pandas Series.to_parquet() feature, including method components, data structures, parameters, metadata handling, dtype preservation mechanisms, and round-trip serialization concepts."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractRelation",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 10 entity relations defining Series.to_parquet() method interactions with Parquet format, PyArrow arrays, method parameters, and data preservation requirements for Series objects including MultiIndex, categorical dtypes, and metadata handling."
+        },
+        {
+          "role": "Checker",
+          "action": "CheckRequirement",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Six quality issues identified: two ambiguities regarding parameter semantics and metadata field type handling, one internal conflict between parameter acceptance and partition_cols rejection, and three verifiability gaps in acceptance criteria, test coverage scope, and index reconstruction semantics."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteSRS",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "SRS sections drafted for Series.to_parquet() feature covering functional requirements, parameter semantics, index/metadata preservation, dtype handling, and error cases. Six sections address core implementation intent with focus on parameter parity, metadata integrity, and round-trip fidelity while resolving identified ambiguities and conflicts."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteCheckReport",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Eight check report items document verification of six SHALL requirements for Series.to_parquet() implementation, addressing parameter handling, index preservation, metadata serialization, dtype fidelity, and conflict resolution between parameter parity and Series-specific constraints."
+        }
+      ],
+      "workspace_summary": {
+        "user_stories": 4,
+        "questions": 4,
+        "answers": 4,
+        "requirement_draft": 6,
+        "entities": 8,
+        "relations": 8,
+        "findings": 6,
+        "srs_sections": 4,
+        "check_report": 8,
+        "llm_turns": 9,
+        "llm_fallback_turns": 0
+      },
+      "workspace_digest": "bad3643cdcc22e5a208baeafb9068d5d7b4d02460846b53667a4c30ee5dccc8a"
+    },
+    "case_description": "Feature requests mined from the pandas-dev/pandas project (Data Processing), aggregated from GitHub issues in 2023Q3.",
+    "system": "mare",
+    "setting": "multi_agent_without_negotiation",
+    "negotiation_enabled": false,
+    "verification_executed": false,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 101,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 101,
+      "seed_applied_turns": 9,
+      "turns": 9,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 9,
+      "execution_mode": "llm_driven"
+    },
+    "rag_corpus_dir": "/Users/haowei/MSR/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "06cbc20ef67bd89fcd55c241a20fd51198570d14757e8868968744b7fd2ca67b"
+  }
+}

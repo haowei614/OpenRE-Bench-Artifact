@@ -1,0 +1,650 @@
+{
+  "verification_results": {
+    "fact_checking": {
+      "hallucination_reports": [],
+      "flagged_elements": [],
+      "total_checked": 30
+    },
+    "deterministic_validation": {
+      "is_valid": true,
+      "violations": [],
+      "passed_rules": [
+        "topology_validity",
+        "traceability",
+        "logical_consistency"
+      ]
+    },
+    "topology_status": {
+      "status": "Valid",
+      "is_valid": true,
+      "is_dag": true,
+      "orphan_count": 0,
+      "cycle_count": 0,
+      "invalid_leaf_count": 0,
+      "orphan_elements": [],
+      "cycles": [],
+      "invalid_leaves": []
+    },
+    "consistency_verification": {
+      "status": "passed",
+      "issues": [],
+      "logical_score": 5,
+      "logical_score_normalized": 1.0,
+      "terminology_score": 5,
+      "terminology_consistency_ratio": 1.0
+    },
+    "universal_verification": {
+      "verification_summary": {
+        "total_constraints": 34,
+        "total_conflicts": 0,
+        "critical_conflicts": 0,
+        "quality_score": 100.0,
+        "verification_passed": true
+      },
+      "constraint_analysis": {
+        "extracted_constraints": [
+          {
+            "clause": "Requirement 1 (Issue #54638: ENH: allow writing series to parquet file)",
+            "best_overlap": 0.25,
+            "matched": false
+          },
+          {
+            "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+            "best_overlap": 0.177778,
+            "matched": false
+          },
+          {
+            "clause": "to_parquet() method only work for dataframe",
+            "best_overlap": 0.216216,
+            "matched": false
+          },
+          {
+            "clause": "It would be nicer if the method could work on Series to",
+            "best_overlap": 0.210526,
+            "matched": false
+          },
+          {
+            "clause": "Currently we either have to save the series to another format or involve a pd",
+            "best_overlap": 0.292683,
+            "matched": false
+          },
+          {
+            "clause": "DataFrame(Serie) which seems a bit clunky",
+            "best_overlap": 0.111111,
+            "matched": false
+          },
+          {
+            "clause": "Feature Description For a given pandas Serie, being able to write Serie",
+            "best_overlap": 0.190476,
+            "matched": false
+          },
+          {
+            "clause": "to_parquet() Alternative Solutions Currently the two alternatives are: - save to another format which is a bit convol...",
+            "best_overlap": 0.222222,
+            "matched": false
+          },
+          {
+            "clause": "- convert the series to a DataFrame to use the DF method",
+            "best_overlap": 0.315789,
+            "matched": false
+          },
+          {
+            "clause": "Additional Context _No",
+            "best_overlap": 0.0,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 2 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame",
+            "best_overlap": 0.272727,
+            "matched": false
+          },
+          {
+            "clause": "attrs and load it back)",
+            "best_overlap": 0.064516,
+            "matched": false
+          },
+          {
+            "clause": "- [ ] Adding new functionality to pandas",
+            "best_overlap": 0.176471,
+            "matched": false
+          },
+          {
+            "clause": "- [X] Changing existing functionality in pandas",
+            "best_overlap": 0.102564,
+            "matched": false
+          },
+          {
+            "clause": "- [ ] Removing existing functionality in pandas",
+            "best_overlap": 0.105263,
+            "matched": false
+          },
+          {
+            "clause": "Pandas allow one to store metadata in DataFrame",
+            "best_overlap": 0.171429,
+            "matched": false
+          },
+          {
+            "clause": "Similarly pyarrow allow one to store meta data via the metadata option in pa",
+            "best_overlap": 0.166667,
+            "matched": false
+          },
+          {
+            "clause": "However, if one try to use DataFrame",
+            "best_overlap": 0.176471,
+            "matched": false
+          },
+          {
+            "clause": "to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back",
+            "best_overlap": 0.266667,
+            "matched": false
+          },
+          {
+            "clause": "The metadata has been lost",
+            "best_overlap": 0.1,
+            "matched": false
+          },
+          {
+            "clause": "Alternative Solutions",
+            "best_overlap": 0.055556,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 3 (Issue #54938: ENH: Series",
+            "best_overlap": 0.162162,
+            "matched": false
+          },
+          {
+            "clause": "struct accessor with Series",
+            "best_overlap": 0.133333,
+            "matched": false
+          },
+          {
+            "clause": "field(\"sub-column name\") for ArrowDtype)",
+            "best_overlap": 0.181818,
+            "matched": false
+          },
+          {
+            "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+            "best_overlap": 0.196078,
+            "matched": false
+          },
+          {
+            "clause": ")), I'd like to be able to extract sub-fields from them",
+            "best_overlap": 0.12766,
+            "matched": false
+          },
+          {
+            "clause": "For example, I have a pandas Series with the ArrowDtype(pyarrow",
+            "best_overlap": 0.285714,
+            "matched": false
+          },
+          {
+            "clause": "struct([(\"int_col\", pyarrow",
+            "best_overlap": 0.064516,
+            "matched": false
+          },
+          {
+            "clause": "int64()), (\"string_col\", pyarrow",
+            "best_overlap": 0.064516,
+            "matched": false
+          },
+          {
+            "clause": "I'd like to extract just the int_col field from this Series as another Series",
+            "best_overlap": 0.177778,
+            "matched": false
+          },
+          {
+            "clause": "Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(",
+            "best_overlap": 0.146341,
+            "matched": false
+          },
+          {
+            "clause": "This struct accessor provides a field() method which returns a Series containing only the specified sub-field",
+            "best_overlap": 0.181818,
+            "matched": false
+          },
+          {
+            "clause": "Alternative Solutions I can currently do this via pyarrow",
+            "best_overlap": 0.108108,
+            "matched": false
+          },
+          {
+            "clause": "struct_field on the underlying pyarrow array: Additional Context This issue is",
+            "best_overlap": 0.102564,
+            "matched": false
+          }
+        ]
+      },
+      "conflict_analysis": {
+        "detected_conflicts": []
+      },
+      "resolutions": {
+        "applied": []
+      },
+      "recommendations": [
+        "No contradiction detected"
+      ],
+      "session_log": {
+        "status": "passed"
+      }
+    },
+    "compliance_coverage": {
+      "satisfied_applicable_clauses": 0,
+      "total_applicable_clauses": 34,
+      "coverage_ratio": 0.0,
+      "clauses": [
+        {
+          "clause": "Requirement 1 (Issue #54638: ENH: allow writing series to parquet file)",
+          "best_overlap": 0.25,
+          "matched": false
+        },
+        {
+          "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+          "best_overlap": 0.177778,
+          "matched": false
+        },
+        {
+          "clause": "to_parquet() method only work for dataframe",
+          "best_overlap": 0.216216,
+          "matched": false
+        },
+        {
+          "clause": "It would be nicer if the method could work on Series to",
+          "best_overlap": 0.210526,
+          "matched": false
+        },
+        {
+          "clause": "Currently we either have to save the series to another format or involve a pd",
+          "best_overlap": 0.292683,
+          "matched": false
+        },
+        {
+          "clause": "DataFrame(Serie) which seems a bit clunky",
+          "best_overlap": 0.111111,
+          "matched": false
+        },
+        {
+          "clause": "Feature Description For a given pandas Serie, being able to write Serie",
+          "best_overlap": 0.190476,
+          "matched": false
+        },
+        {
+          "clause": "to_parquet() Alternative Solutions Currently the two alternatives are: - save to another format which is a bit convol...",
+          "best_overlap": 0.222222,
+          "matched": false
+        },
+        {
+          "clause": "- convert the series to a DataFrame to use the DF method",
+          "best_overlap": 0.315789,
+          "matched": false
+        },
+        {
+          "clause": "Additional Context _No",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame",
+          "best_overlap": 0.272727,
+          "matched": false
+        },
+        {
+          "clause": "attrs and load it back)",
+          "best_overlap": 0.064516,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] Adding new functionality to pandas",
+          "best_overlap": 0.176471,
+          "matched": false
+        },
+        {
+          "clause": "- [X] Changing existing functionality in pandas",
+          "best_overlap": 0.102564,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] Removing existing functionality in pandas",
+          "best_overlap": 0.105263,
+          "matched": false
+        },
+        {
+          "clause": "Pandas allow one to store metadata in DataFrame",
+          "best_overlap": 0.171429,
+          "matched": false
+        },
+        {
+          "clause": "Similarly pyarrow allow one to store meta data via the metadata option in pa",
+          "best_overlap": 0.166667,
+          "matched": false
+        },
+        {
+          "clause": "However, if one try to use DataFrame",
+          "best_overlap": 0.176471,
+          "matched": false
+        },
+        {
+          "clause": "to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back",
+          "best_overlap": 0.266667,
+          "matched": false
+        },
+        {
+          "clause": "The metadata has been lost",
+          "best_overlap": 0.1,
+          "matched": false
+        },
+        {
+          "clause": "Alternative Solutions",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #54938: ENH: Series",
+          "best_overlap": 0.162162,
+          "matched": false
+        },
+        {
+          "clause": "struct accessor with Series",
+          "best_overlap": 0.133333,
+          "matched": false
+        },
+        {
+          "clause": "field(\"sub-column name\") for ArrowDtype)",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+          "best_overlap": 0.196078,
+          "matched": false
+        },
+        {
+          "clause": ")), I'd like to be able to extract sub-fields from them",
+          "best_overlap": 0.12766,
+          "matched": false
+        },
+        {
+          "clause": "For example, I have a pandas Series with the ArrowDtype(pyarrow",
+          "best_overlap": 0.285714,
+          "matched": false
+        },
+        {
+          "clause": "struct([(\"int_col\", pyarrow",
+          "best_overlap": 0.064516,
+          "matched": false
+        },
+        {
+          "clause": "int64()), (\"string_col\", pyarrow",
+          "best_overlap": 0.064516,
+          "matched": false
+        },
+        {
+          "clause": "I'd like to extract just the int_col field from this Series as another Series",
+          "best_overlap": 0.177778,
+          "matched": false
+        },
+        {
+          "clause": "Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(",
+          "best_overlap": 0.146341,
+          "matched": false
+        },
+        {
+          "clause": "This struct accessor provides a field() method which returns a Series containing only the specified sub-field",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "Alternative Solutions I can currently do this via pyarrow",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "struct_field on the underlying pyarrow array: Additional Context This issue is",
+          "best_overlap": 0.102564,
+          "matched": false
+        }
+      ]
+    },
+    "terminology_consistency": {
+      "score": 5,
+      "consistency_ratio": 1.0,
+      "conflicts": [],
+      "total_concepts": 5,
+      "consistent_concepts": 5
+    },
+    "s_logic": 1.0,
+    "s_term": 1.0
+  },
+  "fact_checking": {
+    "hallucination_reports": [],
+    "flagged_elements": [],
+    "total_checked": 30
+  },
+  "deterministic_validation": {
+    "is_valid": true,
+    "violations": [],
+    "passed_rules": [
+      "topology_validity",
+      "traceability",
+      "logical_consistency"
+    ]
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "consistency_verification": {
+    "status": "passed",
+    "issues": [],
+    "logical_score": 5,
+    "logical_score_normalized": 1.0,
+    "terminology_score": 5,
+    "terminology_consistency_ratio": 1.0
+  },
+  "universal_verification": {
+    "verification_summary": {
+      "total_constraints": 34,
+      "total_conflicts": 0,
+      "critical_conflicts": 0,
+      "quality_score": 100.0,
+      "verification_passed": true
+    },
+    "constraint_analysis": {
+      "extracted_constraints": [
+        {
+          "clause": "Requirement 1 (Issue #54638: ENH: allow writing series to parquet file)",
+          "best_overlap": 0.25,
+          "matched": false
+        },
+        {
+          "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+          "best_overlap": 0.177778,
+          "matched": false
+        },
+        {
+          "clause": "to_parquet() method only work for dataframe",
+          "best_overlap": 0.216216,
+          "matched": false
+        },
+        {
+          "clause": "It would be nicer if the method could work on Series to",
+          "best_overlap": 0.210526,
+          "matched": false
+        },
+        {
+          "clause": "Currently we either have to save the series to another format or involve a pd",
+          "best_overlap": 0.292683,
+          "matched": false
+        },
+        {
+          "clause": "DataFrame(Serie) which seems a bit clunky",
+          "best_overlap": 0.111111,
+          "matched": false
+        },
+        {
+          "clause": "Feature Description For a given pandas Serie, being able to write Serie",
+          "best_overlap": 0.190476,
+          "matched": false
+        },
+        {
+          "clause": "to_parquet() Alternative Solutions Currently the two alternatives are: - save to another format which is a bit convol...",
+          "best_overlap": 0.222222,
+          "matched": false
+        },
+        {
+          "clause": "- convert the series to a DataFrame to use the DF method",
+          "best_overlap": 0.315789,
+          "matched": false
+        },
+        {
+          "clause": "Additional Context _No",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame",
+          "best_overlap": 0.272727,
+          "matched": false
+        },
+        {
+          "clause": "attrs and load it back)",
+          "best_overlap": 0.064516,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] Adding new functionality to pandas",
+          "best_overlap": 0.176471,
+          "matched": false
+        },
+        {
+          "clause": "- [X] Changing existing functionality in pandas",
+          "best_overlap": 0.102564,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] Removing existing functionality in pandas",
+          "best_overlap": 0.105263,
+          "matched": false
+        },
+        {
+          "clause": "Pandas allow one to store metadata in DataFrame",
+          "best_overlap": 0.171429,
+          "matched": false
+        },
+        {
+          "clause": "Similarly pyarrow allow one to store meta data via the metadata option in pa",
+          "best_overlap": 0.166667,
+          "matched": false
+        },
+        {
+          "clause": "However, if one try to use DataFrame",
+          "best_overlap": 0.176471,
+          "matched": false
+        },
+        {
+          "clause": "to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back",
+          "best_overlap": 0.266667,
+          "matched": false
+        },
+        {
+          "clause": "The metadata has been lost",
+          "best_overlap": 0.1,
+          "matched": false
+        },
+        {
+          "clause": "Alternative Solutions",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #54938: ENH: Series",
+          "best_overlap": 0.162162,
+          "matched": false
+        },
+        {
+          "clause": "struct accessor with Series",
+          "best_overlap": 0.133333,
+          "matched": false
+        },
+        {
+          "clause": "field(\"sub-column name\") for ArrowDtype)",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing...",
+          "best_overlap": 0.196078,
+          "matched": false
+        },
+        {
+          "clause": ")), I'd like to be able to extract sub-fields from them",
+          "best_overlap": 0.12766,
+          "matched": false
+        },
+        {
+          "clause": "For example, I have a pandas Series with the ArrowDtype(pyarrow",
+          "best_overlap": 0.285714,
+          "matched": false
+        },
+        {
+          "clause": "struct([(\"int_col\", pyarrow",
+          "best_overlap": 0.064516,
+          "matched": false
+        },
+        {
+          "clause": "int64()), (\"string_col\", pyarrow",
+          "best_overlap": 0.064516,
+          "matched": false
+        },
+        {
+          "clause": "I'd like to extract just the int_col field from this Series as another Series",
+          "best_overlap": 0.177778,
+          "matched": false
+        },
+        {
+          "clause": "Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(",
+          "best_overlap": 0.146341,
+          "matched": false
+        },
+        {
+          "clause": "This struct accessor provides a field() method which returns a Series containing only the specified sub-field",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "Alternative Solutions I can currently do this via pyarrow",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "struct_field on the underlying pyarrow array: Additional Context This issue is",
+          "best_overlap": 0.102564,
+          "matched": false
+        }
+      ]
+    },
+    "conflict_analysis": {
+      "detected_conflicts": []
+    },
+    "resolutions": {
+      "applied": []
+    },
+    "recommendations": [
+      "No contradiction detected"
+    ],
+    "session_log": {
+      "status": "passed"
+    }
+  },
+  "correction_summary": {
+    "total_corrections": 0,
+    "corrections": []
+  }
+}

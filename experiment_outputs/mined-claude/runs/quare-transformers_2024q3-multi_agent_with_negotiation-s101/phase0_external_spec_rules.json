@@ -1,0 +1,85 @@
+{
+  "phase": "0_external_spec_processing",
+  "case_id": "transformers_2024q3",
+  "setting": "multi_agent_with_negotiation",
+  "generated_at": "2026-09-29T05:27:31Z",
+  "extracted_rules": [
+    {
+      "rule_id": "R001",
+      "rule_type": "trigger",
+      "statement": "Requirement 1 (Issue #32944: clarify the label shifting behavior of llama models when `labels` is given",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R002",
+      "rule_type": "constraint",
+      "statement": "Feature request i believe labels in the training of causal LMs means the value to predict at time n, i",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R003",
+      "rule_type": "trigger",
+      "statement": "in other words, i'd assume, if labels is given, it should be already shifted by one in the data loader w",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R004",
+      "rule_type": "constraint",
+      "statement": "however, in LlamaForCausalLM",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R005",
+      "rule_type": "constraint",
+      "statement": "forward(), i found the labels are always shifted, silently",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R006",
+      "rule_type": "constraint",
+      "statement": "i found it quite unexpected hence calling it \"silently\"",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R007",
+      "rule_type": "obligation",
+      "statement": "as this is for a causal LM, shouldn't it be not shifting the labels by default",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R008",
+      "rule_type": "constraint",
+      "statement": "in modeling GPT2, this is at least documented explicitly",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R009",
+      "rule_type": "constraint",
+      "statement": "in gemma2, it has the same behavior and no explicit mentioning in the docstring",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R010",
+      "rule_type": "trigger",
+      "statement": "i think at least we should force the docstring to mention this, if making",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R011",
+      "rule_type": "constraint",
+      "statement": "Requirement 2 (Issue #32877: Add logit scaling sdpa using `FlexAttention` for Gemma2)",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R012",
+      "rule_type": "constraint",
+      "statement": "With the recent publish of FlexAttention, think it makes senses to support it with sdpa path of Gemma2",
+      "source": "requirement_text"
+    }
+  ],
+  "extraction_metadata": {
+    "rule_count": 12,
+    "rag_enabled": true,
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426"
+  }
+}

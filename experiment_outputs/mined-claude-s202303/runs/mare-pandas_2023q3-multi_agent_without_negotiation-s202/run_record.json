@@ -1,0 +1,271 @@
+{
+  "run_id": "mare-pandas_2023q3-multi_agent_without_negotiation-s202",
+  "case_id": "pandas_2023q3",
+  "system": "mare",
+  "setting": "multi_agent_without_negotiation",
+  "seed": 202,
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "mare",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.13",
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 0.7,
+    "seed": 202,
+    "prompt_hash": "06cbc20ef67bd89fcd55c241a20fd51198570d14757e8868968744b7fd2ca67b",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": false,
+    "fallback_tainted": false,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": false,
+    "non_comparable_reasons": [
+      "negotiation_and_verification_not_executed_for_setting"
+    ]
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-09-30T00:52:50Z",
+  "end_timestamp": "2026-09-30T00:53:24Z",
+  "runtime_seconds": 34.078093,
+  "artifacts_dir": "experiment_outputs/mined-claude-s202303/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s202",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/mined-claude-s202303/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s202/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/mined-claude-s202303/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s202/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/mined-claude-s202303/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s202/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/mined-claude-s202303/runs/mare-pandas_2023q3-multi_agent_without_negotiation-s202/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "2445b4af2ba75286957dff731bd87940ef656dd7061348457de6c7bab36eb0ff",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "mare_paper_workflow_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "multi_agent_without_negotiation",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 202,
+      "llm_seed_applied_turns": 9,
+      "llm_turns": 9,
+      "llm_fallback_turns": 0,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 9,
+      "execution_mode": "llm_driven",
+      "llm_actions": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "fallback_actions": [],
+      "roles_executed": [
+        "Stakeholders",
+        "Collector",
+        "Modeler",
+        "Checker",
+        "Documenter"
+      ],
+      "actions_executed": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "role_action_map": {
+        "Stakeholders": [
+          "SpeakUserStories",
+          "AnswerQuestion"
+        ],
+        "Collector": [
+          "ProposeQuestion",
+          "WriteReqDraft"
+        ],
+        "Modeler": [
+          "ExtractEntity",
+          "ExtractRelation"
+        ],
+        "Checker": [
+          "CheckRequirement"
+        ],
+        "Documenter": [
+          "WriteSRS",
+          "WriteCheckReport"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Stakeholders",
+          "action": "SpeakUserStories",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 3,
+          "summary": "Three user stories capture the need to enhance pandas Parquet serialization with metadata persistence and improve type handling for Excel-sourced data, addressing both data integrity and workflow continuity concerns."
+        },
+        {
+          "role": "Collector",
+          "action": "ProposeQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Clarifying scope of metadata preservation, backward compatibility, type inference control mechanism, and definition of metadata boundaries to make requirements verifiable and implementable."
+        },
+        {
+          "role": "Stakeholders",
+          "action": "AnswerQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Stakeholders confirm metadata round-trip must preserve dtypes, attrs, and index info with backward-compatible versioning. Type inference controlled at read-time via dtype_backend parameter. Metadata overhead minimal in Parquet footer; custom attrs use JSON with size safeguards."
+        },
+        {
+          "role": "Collector",
+          "action": "WriteReqDraft",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Six measurable requirements drafted for pandas Parquet metadata round-trip enhancement, addressing preservation scope, backward compatibility, type inference control, and performance constraints derived from workspace analysis."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractEntity",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 20 candidate requirement entities from pandas_2023q3 case covering core concepts: metadata preservation mechanisms (DataFrame.attrs, dtypes, categorical orderings, index structures), technical implementation details (Parquet footer, versioned schema, JSON encoding), functional parameters (dtype_backend), and quality attributes (backward compatibility, graceful degradation, performance overhead)."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractRelation",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 17 entity relations mapping to_parquet/read_parquet functionality, metadata preservation mechanisms, backward compatibility, and type inference control across the pandas 2023Q3 enhancement requirement."
+        },
+        {
+          "role": "Checker",
+          "action": "CheckRequirement",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Six quality findings identified: three ambiguities (attribute serialization format, dtype_backend behavior, encoding strategy unification), two conflict risks (version negotiation, overhead thresholds), and three verifiability gaps (performance metrics, test coverage, graceful degradation criteria). Recommend clarifying metadata serialization contract, defining dtype_backend parameter specification, and adding measurable acceptance thresholds before implementation."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteSRS",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "SRS sections drafted to address metadata preservation, type inference control, performance thresholds, backward compatibility negotiation, and serialization strategy—resolving ambiguities and conflicts identified in workspace findings."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteCheckReport",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Eight check report items verify REQ-2023Q3-001 through REQ-2023Q3-006 against findings of ambiguity, conflict risk, and verifiability gaps. Items address serialization format unification, dtype_backend parameter specification, quantified performance thresholds, version negotiation logic, and graceful degradation behavior to resolve identified gaps and enable complete requirement validation."
+        }
+      ],
+      "workspace_summary": {
+        "user_stories": 3,
+        "questions": 4,
+        "answers": 4,
+        "requirement_draft": 6,
+        "entities": 8,
+        "relations": 8,
+        "findings": 6,
+        "srs_sections": 4,
+        "check_report": 8,
+        "llm_turns": 9,
+        "llm_fallback_turns": 0
+      },
+      "workspace_digest": "f34580f04758ed406f63e7431c2a583069eb58ea684b0a74bf8f59a7bd14a178"
+    },
+    "case_description": "Feature requests mined from the pandas-dev/pandas project (Data Processing), aggregated from GitHub issues in 2023Q3.",
+    "system": "mare",
+    "setting": "multi_agent_without_negotiation",
+    "negotiation_enabled": false,
+    "verification_executed": false,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 202,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 202,
+      "seed_applied_turns": 9,
+      "turns": 9,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 9,
+      "execution_mode": "llm_driven"
+    },
+    "rag_corpus_dir": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "06cbc20ef67bd89fcd55c241a20fd51198570d14757e8868968744b7fd2ca67b"
+  }
+}

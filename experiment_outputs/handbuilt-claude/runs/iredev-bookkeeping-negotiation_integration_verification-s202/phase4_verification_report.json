@@ -1,0 +1,298 @@
+{
+  "verification_results": {
+    "fact_checking": {
+      "hallucination_reports": [],
+      "flagged_elements": [],
+      "total_checked": 30
+    },
+    "deterministic_validation": {
+      "is_valid": true,
+      "violations": [],
+      "passed_rules": [
+        "topology_validity",
+        "traceability",
+        "logical_consistency"
+      ]
+    },
+    "topology_status": {
+      "status": "Valid",
+      "is_valid": true,
+      "is_dag": true,
+      "orphan_count": 0,
+      "cycle_count": 0,
+      "invalid_leaf_count": 0,
+      "orphan_elements": [],
+      "cycles": [],
+      "invalid_leaves": []
+    },
+    "consistency_verification": {
+      "status": "passed",
+      "issues": [],
+      "logical_score": 5,
+      "logical_score_normalized": 1.0,
+      "terminology_score": 2,
+      "terminology_consistency_ratio": 0.5
+    },
+    "universal_verification": {
+      "verification_summary": {
+        "total_constraints": 5,
+        "total_conflicts": 0,
+        "critical_conflicts": 0,
+        "quality_score": 100.0,
+        "verification_passed": true
+      },
+      "constraint_analysis": {
+        "extracted_constraints": [
+          {
+            "clause": "A bookkeeping system must record financial transactions including income and expenses",
+            "best_overlap": 0.368421,
+            "matched": false
+          },
+          {
+            "clause": "The system must support multiple accounts and categories",
+            "best_overlap": 0.315789,
+            "matched": false
+          },
+          {
+            "clause": "Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements",
+            "best_overlap": 0.415094,
+            "matched": false
+          },
+          {
+            "clause": "The system must ensure double-entry bookkeeping principles are followed and maintain an audit trail of all transactions",
+            "best_overlap": 0.521739,
+            "matched": true
+          },
+          {
+            "clause": "The system must support multiple currencies and handle currency conversion",
+            "best_overlap": 0.25641,
+            "matched": false
+          }
+        ]
+      },
+      "conflict_analysis": {
+        "detected_conflicts": []
+      },
+      "resolutions": {
+        "applied": []
+      },
+      "recommendations": [
+        "No contradiction detected"
+      ],
+      "session_log": {
+        "status": "passed"
+      }
+    },
+    "compliance_coverage": {
+      "satisfied_applicable_clauses": 1,
+      "total_applicable_clauses": 5,
+      "coverage_ratio": 0.2,
+      "clauses": [
+        {
+          "clause": "A bookkeeping system must record financial transactions including income and expenses",
+          "best_overlap": 0.368421,
+          "matched": false
+        },
+        {
+          "clause": "The system must support multiple accounts and categories",
+          "best_overlap": 0.315789,
+          "matched": false
+        },
+        {
+          "clause": "Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements",
+          "best_overlap": 0.415094,
+          "matched": false
+        },
+        {
+          "clause": "The system must ensure double-entry bookkeeping principles are followed and maintain an audit trail of all transactions",
+          "best_overlap": 0.521739,
+          "matched": true
+        },
+        {
+          "clause": "The system must support multiple currencies and handle currency conversion",
+          "best_overlap": 0.25641,
+          "matched": false
+        }
+      ]
+    },
+    "terminology_consistency": {
+      "score": 2,
+      "consistency_ratio": 0.5,
+      "conflicts": [
+        {
+          "concept": "system",
+          "terms_used": [
+            "application",
+            "system"
+          ],
+          "requirements": [
+            "ANA-L1-004",
+            "ANA-L2-004-01",
+            "ANA-L2-004-02",
+            "ANA-L2-004-03",
+            "ANA-L2-004-04",
+            "ARC-L1-005",
+            "ARC-L2-005-01",
+            "ARC-L2-005-02",
+            "ARC-L2-005-03",
+            "ARC-L2-005-04",
+            "DEP-L2-003-01",
+            "DEP-L2-003-02",
+            "DEP-L2-003-03",
+            "DEP-L2-003-04",
+            "END-L2-002-01",
+            "END-L2-002-02",
+            "END-L2-002-03",
+            "END-L2-002-04",
+            "INT-L1-001",
+            "INT-L2-001-01",
+            "INT-L2-001-02",
+            "INT-L2-001-03",
+            "INT-L2-001-04",
+            "REV-L1-006",
+            "REV-L2-006-01",
+            "REV-L2-006-02",
+            "REV-L2-006-03",
+            "REV-L2-006-04"
+          ]
+        },
+        {
+          "concept": "transaction",
+          "terms_used": [
+            "action",
+            "transaction"
+          ],
+          "requirements": [
+            "ANA-L2-004-02",
+            "ANA-L2-004-03",
+            "ANA-L2-004-04",
+            "ARC-L1-005",
+            "ARC-L2-005-01",
+            "ARC-L2-005-02",
+            "ARC-L2-005-04",
+            "DEP-L1-003",
+            "DEP-L2-003-01",
+            "DEP-L2-003-02",
+            "DEP-L2-003-03",
+            "END-L2-002-03",
+            "INT-L2-001-02",
+            "INT-L2-001-03",
+            "INT-L2-001-04",
+            "REV-L1-006",
+            "REV-L2-006-01"
+          ]
+        },
+        {
+          "concept": "data",
+          "terms_used": [
+            "data",
+            "record"
+          ],
+          "requirements": [
+            "ANA-L2-004-02",
+            "ANA-L2-004-04",
+            "ARC-L1-005",
+            "ARC-L2-005-01",
+            "DEP-L1-003",
+            "DEP-L2-003-01",
+            "DEP-L2-003-02",
+            "INT-L2-001-03",
+            "INT-L2-001-04",
+            "REV-L2-006-02"
+          ]
+        }
+      ],
+      "total_concepts": 6,
+      "consistent_concepts": 3
+    },
+    "s_logic": 1.0,
+    "s_term": 0.5
+  },
+  "fact_checking": {
+    "hallucination_reports": [],
+    "flagged_elements": [],
+    "total_checked": 30
+  },
+  "deterministic_validation": {
+    "is_valid": true,
+    "violations": [],
+    "passed_rules": [
+      "topology_validity",
+      "traceability",
+      "logical_consistency"
+    ]
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "consistency_verification": {
+    "status": "passed",
+    "issues": [],
+    "logical_score": 5,
+    "logical_score_normalized": 1.0,
+    "terminology_score": 2,
+    "terminology_consistency_ratio": 0.5
+  },
+  "universal_verification": {
+    "verification_summary": {
+      "total_constraints": 5,
+      "total_conflicts": 0,
+      "critical_conflicts": 0,
+      "quality_score": 100.0,
+      "verification_passed": true
+    },
+    "constraint_analysis": {
+      "extracted_constraints": [
+        {
+          "clause": "A bookkeeping system must record financial transactions including income and expenses",
+          "best_overlap": 0.368421,
+          "matched": false
+        },
+        {
+          "clause": "The system must support multiple accounts and categories",
+          "best_overlap": 0.315789,
+          "matched": false
+        },
+        {
+          "clause": "Users must be able to generate financial reports such as balance sheets, income statements, and cash flow statements",
+          "best_overlap": 0.415094,
+          "matched": false
+        },
+        {
+          "clause": "The system must ensure double-entry bookkeeping principles are followed and maintain an audit trail of all transactions",
+          "best_overlap": 0.521739,
+          "matched": true
+        },
+        {
+          "clause": "The system must support multiple currencies and handle currency conversion",
+          "best_overlap": 0.25641,
+          "matched": false
+        }
+      ]
+    },
+    "conflict_analysis": {
+      "detected_conflicts": []
+    },
+    "resolutions": {
+      "applied": []
+    },
+    "recommendations": [
+      "No contradiction detected"
+    ],
+    "session_log": {
+      "status": "passed"
+    }
+  },
+  "correction_summary": {
+    "total_corrections": 0,
+    "corrections": []
+  }
+}

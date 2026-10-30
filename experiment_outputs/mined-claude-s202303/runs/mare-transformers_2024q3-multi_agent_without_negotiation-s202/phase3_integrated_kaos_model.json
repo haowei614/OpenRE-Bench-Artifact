@@ -1,0 +1,950 @@
+{
+  "gsn_elements": [
+    {
+      "id": "STA-L1-001",
+      "name": "Stakeholders Goal",
+      "description": "Stakeholders objective for transformers_2024q3: As an on-device ML developer, I want to load a pretrained transformer model from HuggingFace with StaticCache enabled, so that I can leverage optimized caching for inference without manual configuration.",
+      "gsn_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-01",
+      "name": "Stakeholders Output 1",
+      "description": "The system shall As an on-device ML developer, I want to load a pretrained transformer model from HuggingFace with StaticCache enabled, so that I can leverage optimized caching for inference without manual configuration.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-02",
+      "name": "Stakeholders Output 2",
+      "description": "The system shall As an ExecuTorch user, I want to export a StaticCache-enabled transformer model to ExecuTorch format, so that I can prepare the model for on-device deployment with preserved optimization.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-03",
+      "name": "Stakeholders Output 3",
+      "description": "The system shall As a performance-conscious developer, I want to lower an exported transformer program to ExecuTorch with performance delegates, so that I can achieve reasonable inference performance on edge devices out-of-the-box.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-04",
+      "name": "Stakeholders Output 4",
+      "description": "The system shall As an end-to-end workflow user, I want a complete pipeline from HuggingFace model loading through StaticCache optimization, ExecuTorch export, and delegate lowering, so that I can deploy transformer models on-device w...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L1-002",
+      "name": "Collector Goal",
+      "description": "Collector objective for transformers_2024q3: The system shall enable loading of pretrained transformer models (BERT, GPT-2, LLaMA) from HuggingFace with StaticCache enabled without requiring manual cache configuration.",
+      "gsn_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-01",
+      "name": "Collector Output 1",
+      "description": "The system shall The system shall enable loading of pretrained transformer models (BERT, GPT-2, LLaMA) from HuggingFace with StaticCache enabled without requiring manual cache configuration.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-02",
+      "name": "Collector Output 2",
+      "description": "The system shall The system shall export StaticCache-enabled transformer models to ExecuTorch format while preserving optimization characteristics and KV cache configuration.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-03",
+      "name": "Collector Output 3",
+      "description": "The system shall The system shall lower exported transformer programs to ExecuTorch with automatic delegate selection (XNNPACK for CPU, CoreML for iOS, NNAPI for Android) based on target platform detection.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-04",
+      "name": "Collector Output 4",
+      "description": "The system shall The system shall achieve inference latency of 500ms or less per token for LLaMA-7B on ARM64 devices with 4GB or more RAM through delegate-optimized execution.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L1-003",
+      "name": "Modeler Goal",
+      "description": "Modeler objective for transformers_2024q3: Entity: Pretrained Transformer Models",
+      "gsn_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-01",
+      "name": "Modeler Output 1",
+      "description": "The system shall Entity: Pretrained Transformer Models",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-02",
+      "name": "Modeler Output 2",
+      "description": "The system shall Entity: HuggingFace",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-03",
+      "name": "Modeler Output 3",
+      "description": "The system shall Entity: StaticCache",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-04",
+      "name": "Modeler Output 4",
+      "description": "The system shall Entity: ExecuTorch",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L1-004",
+      "name": "Checker Goal",
+      "description": "Checker objective for transformers_2024q3: 1. FINDING: Ambiguous 'reasonable performance' terminology resolved to ≤500ms/token latency for LLaMA-7B on ARM64 4GB+ RAM. VERIFICATION: Requirement 4 now specifies quantified latency target matching resolved answer;...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-01",
+      "name": "Checker Output 1",
+      "description": "The system shall 1. FINDING: Ambiguous 'reasonable performance' terminology resolved to ≤500ms/token latency for LLaMA-7B on ARM64 4GB+ RAM. VERIFICATION: Requirement 4 now specifies quantified latency target matching resolved answer;...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-02",
+      "name": "Checker Output 2",
+      "description": "The system shall 2. FINDING: Imprecise 'further lower' language regarding delegate lowering mandatory vs. optional. VERIFICATION: Requirement 3 clarifies automatic delegate selection is mandatory; confirm implementation enforces lower...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "domains/automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-03",
+      "name": "Checker Output 3",
+      "description": "The system shall 3. FINDING: Potential conflict between memory footprint ≤2GB (Req 5) and latency ≤500ms/token (Req 4) due to performance optimization trade-offs. VERIFICATION: Conduct joint performance testing on reference device; do...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-04",
+      "name": "Checker Output 4",
+      "description": "The system shall 4. FINDING: Automatic delegate selection (Req 3) mentions optional explicit override in answers but not documented in draft requirement. VERIFICATION: Confirm implementation includes override mechanism via configurati...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "domains/automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L1-005",
+      "name": "Documenter Goal",
+      "description": "Documenter objective for transformers_2024q3: 1. HuggingFace Model Loading with StaticCache Intent: Enable seamless loading of pretrained transformer models (BERT, GPT-2, LLaMA) from HuggingFace with StaticCache optimization enabled by default, eliminating manual...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-01",
+      "name": "Documenter Output 1",
+      "description": "The system shall 1. HuggingFace Model Loading with StaticCache Intent: Enable seamless loading of pretrained transformer models (BERT, GPT-2, LLaMA) from HuggingFace with StaticCache optimization enabled by default, eliminating manual...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-02",
+      "name": "Documenter Output 2",
+      "description": "The system shall 2. StaticCache-Preserving Export to ExecuTorch Intent: Export StaticCache-enabled transformer models to ExecuTorch format while maintaining KV cache configuration and optimization characteristics for downstream lowering.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-03",
+      "name": "Documenter Output 3",
+      "description": "The system shall 3. Automatic Delegate Selection and Lowering Intent: Lower exported programs to ExecuTorch with platform-aware automatic delegate selection (XNNPACK/CPU, CoreML/iOS, NNAPI/Android) with optional explicit override capa...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-04",
+      "name": "Documenter Output 4",
+      "description": "The system shall 4. On-Device Inference Performance Targets Intent: Achieve quantified performance criteria—latency ≤500ms per token (LLaMA-7B on ARM64 4GB+), memory footprint ≤2GB, throughput ≥2 tokens/sec—through delegate optimization.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-007",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-008",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-009",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-010",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-011",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-012",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-013",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-014",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-015",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-016",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-017",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-018",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-019",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-020",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_mare-transformers_2024q3-multi_agent_without_negotiation-s202",
+    "name": "OpenRE-Bench Integrated KAOS for transformers_2024q3",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-09-30T02:01:41Z",
+    "requirement_source": "Requirement 1 (Issue #32944: clarify the label shifting behavior of llama models when `labels` is given.)\nFeature request i believe labels in the training of causal LMs means the value to predict at time n, i.e., the next token. in other words, i'd assume, if labels is given, it should be already shifted by one in the data loader w.r.t. the input_ids. however, in LlamaForCausalLM.forward(), i found the labels are always shifted, silently. ... i found it quite unexpected hence calling it \"silently\". as this is for a causal LM, shouldn't it be not shifting the labels by default? in modeling GPT2, this is at least documented explicitly. in gemma2, it has the same behavior and no explicit mentioning in the docstring. i think at least we should force the docstring to mention this, if making ...\n\nRequirement 2 (Issue #32877: Add logit scaling sdpa using `FlexAttention` for Gemma2)\nFeature request\n\nWith the recent publish of FlexAttention, think it makes senses to support it with sdpa path of Gemma2.\nLeaving it open to the community:\n\n- [ ] implement the path\n- [ ] make sure integration tests work \n- [ ] add some doc\n\nRelated to 32865\n\nRequirement 3 (Issue #32253: Export to ExecuTorch)\nFeature request Unlock a new workflow for on-device use-cases via torch.export and ExecuTorch. So ideally the users can have an e2e experience by loading a pretrained transformer model from HuggingFace, export and lower it to ExecuTorch and get reasonable performance out-of-the-box. For example: 1. Load a model with StaticCache: 2. Then export the model with StaticCache. and then further lower the exported program to ExecuTorch with delegates for performance: With that you may get a model for on-device with reasonable performance to start with. From there and still within ExecuTorch stack, you can easily tailor the experience for your use-cases, of course, with better performance! Note that ExecuTorch supports delegatation to XNNPACK backend, Apple Core ML and MPS, Qualcomm QNN, ...\n\nRequirement 4 (Issue #31802: Please support numpy 2.0)\nFeature request\n\nAs numpy 2.0 comes out, it brings impressive speed up, please consider add numpy 2.0 support.\n\nBesides, numpy is so foundamental, I think all libs should force to align with it rather than force users with lower numpy version/\n\nCurrently support numpy 2.0 libs:\n\n- torch\n\nThoese don't:\n\n- tensorflow\n- transformers\n\nSo, please just ignore tensorflow, nowadays we don't use it any longer,\n\n Motivation\n\nAt least make us have an option.\n\n Your contribution\n\ndon't force to lower version, just keep up to date.",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "multi_agent_without_negotiation"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "STA-L1-001",
+        "name": "Stakeholders Goal",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": null
+      },
+      {
+        "id": "COL-L1-002",
+        "name": "Collector Goal",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": null
+      },
+      {
+        "id": "MOD-L1-003",
+        "name": "Modeler Goal",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": null
+      },
+      {
+        "id": "CHE-L1-004",
+        "name": "Checker Goal",
+        "quality_attribute": "Safety",
+        "parent_goal_id": null
+      },
+      {
+        "id": "DOC-L1-005",
+        "name": "Documenter Goal",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "STA-L2-001-01",
+        "name": "Stakeholders Output 1",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "STA-L2-001-02",
+        "name": "Stakeholders Output 2",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "STA-L2-001-03",
+        "name": "Stakeholders Output 3",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "STA-L2-001-04",
+        "name": "Stakeholders Output 4",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "COL-L2-002-01",
+        "name": "Collector Output 1",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "COL-L2-002-02",
+        "name": "Collector Output 2",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "COL-L2-002-03",
+        "name": "Collector Output 3",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "COL-L2-002-04",
+        "name": "Collector Output 4",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "MOD-L2-003-01",
+        "name": "Modeler Output 1",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "MOD-L2-003-02",
+        "name": "Modeler Output 2",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "MOD-L2-003-03",
+        "name": "Modeler Output 3",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "MOD-L2-003-04",
+        "name": "Modeler Output 4",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "CHE-L2-004-01",
+        "name": "Checker Output 1",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-02",
+        "name": "Checker Output 2",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-03",
+        "name": "Checker Output 3",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-04",
+        "name": "Checker Output 4",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "DOC-L2-005-01",
+        "name": "Documenter Output 1",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      },
+      {
+        "id": "DOC-L2-005-02",
+        "name": "Documenter Output 2",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      },
+      {
+        "id": "DOC-L2-005-03",
+        "name": "Documenter Output 3",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      },
+      {
+        "id": "DOC-L2-005-04",
+        "name": "Documenter Output 4",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "STA-L1-001": [
+        "STA-L2-001-01",
+        "STA-L2-001-02",
+        "STA-L2-001-03",
+        "STA-L2-001-04"
+      ],
+      "COL-L1-002": [
+        "COL-L2-002-01",
+        "COL-L2-002-02",
+        "COL-L2-002-03",
+        "COL-L2-002-04"
+      ],
+      "MOD-L1-003": [
+        "MOD-L2-003-01",
+        "MOD-L2-003-02",
+        "MOD-L2-003-03",
+        "MOD-L2-003-04"
+      ],
+      "CHE-L1-004": [
+        "CHE-L2-004-01",
+        "CHE-L2-004-02",
+        "CHE-L2-004-03",
+        "CHE-L2-004-04"
+      ],
+      "DOC-L1-005": [
+        "DOC-L2-005-01",
+        "DOC-L2-005-02",
+        "DOC-L2-005-03",
+        "DOC-L2-005-04"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_mare-transformers_2024q3-multi_agent_without_negotiation-s202",
+  "created_timestamp": "2026-09-30T02:01:41Z",
+  "total_elements": 25,
+  "total_relations": 20
+}

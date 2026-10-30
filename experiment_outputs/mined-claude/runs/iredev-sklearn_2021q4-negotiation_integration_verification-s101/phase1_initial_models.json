@@ -1,0 +1,1184 @@
+{
+  "Interviewer": [
+    {
+      "id": "INT-L1-001",
+      "name": "Interviewer Goal",
+      "description": "Interviewer objective for sklearn_2021q4: IR-sklearn-2021q4-001: PAIN POINT - Type Hint Absence. Sklearn's fit() and transform() methods lack type annotations, causing IDE autocomplete failures and mypy type-checking errors in downstream Python projects. Impa...",
+      "element_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:6",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.142857,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "knowledge_guide.py:14",
+          "document": "knowledge_guide.py",
+          "score": 0.107143,
+          "content": "Scenario 2: Performance vs Safety Trade-offs Query: \"Conflicts between safety detection and response time in real-time systems\" Returns: Layered detection strategies + risk assessment methods + success cases"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:1",
+          "document": "cases/real_world_studies.py",
+          "score": 0.071429,
+          "content": "\"\"\" Real Industrial Case Studies KAOS Modeling Experience and Lessons from Actual Projects \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-001-01",
+      "name": "Interviewer Output 1",
+      "description": "The system shall IR-sklearn-2021q4-001: PAIN POINT - Type Hint Absence. Sklearn's fit() and transform() methods lack type annotations, causing IDE autocomplete failures and mypy type-checking errors in downstream Python projects. Impa...",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:6",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.142857,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "knowledge_guide.py:14",
+          "document": "knowledge_guide.py",
+          "score": 0.107143,
+          "content": "Scenario 2: Performance vs Safety Trade-offs Query: \"Conflicts between safety detection and response time in real-time systems\" Returns: Layered detection strategies + risk assessment methods + success cases"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:1",
+          "document": "cases/real_world_studies.py",
+          "score": 0.071429,
+          "content": "\"\"\" Real Industrial Case Studies KAOS Modeling Experience and Lessons from Actual Projects \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-001-02",
+      "name": "Interviewer Output 2",
+      "description": "The system shall IR-sklearn-2021q4-002: ROOT CAUSE - Missing Abstract Base Classes. Sklearn does not provide abstract base classes (BaseEstimator, BaseTransformer) with explicit method signatures, forcing developers to rely on documen...",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.2,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.2,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.08,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-001-03",
+      "name": "Interviewer Output 3",
+      "description": "The system shall IR-sklearn-2021q4-003: REQUIREMENT - Abstract Class Definition. BaseEstimator and BaseTransformer must declare fit(X: ArrayLike, y: Optional[ArrayLike]) -> Self and transform(X: ArrayLike) -> ArrayLike with explicit t...",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:33",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.130435,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.130435,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:20",
+          "document": "cases/real_world_studies.py",
+          "score": 0.086957,
+          "content": "3. Human-machine interaction and customer experience: - Passenger communication: In-vehicle screen displays route and decision reasoning - Remote assistance: Average 3% of trips require human guidance, response time <30 seconds - Emergency handling: Passengers can contact cust..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-001-04",
+      "name": "Interviewer Output 4",
+      "description": "The system shall IR-sklearn-2021q4-004: REQUIREMENT - ArrayLike Protocol Support. Type hints must cover numpy arrays, pandas DataFrames, and scipy sparse matrices via a unified ArrayLike protocol definition to accommodate sklearn's in...",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:6",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.142857,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.107143,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.107143,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "EndUser": [
+    {
+      "id": "END-L1-002",
+      "name": "EndUser Goal",
+      "description": "EndUser objective for sklearn_2021q4: Pain Point: Lack of type hints in sklearn's fit and transform methods causes IDE autocomplete failures and type checking errors in downstream projects, reducing developer productivity",
+      "element_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:6",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.166667,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:20",
+          "document": "cases/real_world_studies.py",
+          "score": 0.125,
+          "content": "3. Human-machine interaction and customer experience: - Passenger communication: In-vehicle screen displays route and decision reasoning - Remote assistance: Average 3% of trips require human guidance, response time <30 seconds - Emergency handling: Passengers can contact cust..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:8",
+          "document": "cases/real_world_studies.py",
+          "score": 0.125,
+          "content": "G2.1: Execute smooth acceleration and deceleration - Indicators: Longitudinal acceleration ≤2.5 m/s², lateral acceleration ≤1.8 m/s² - Actual: 95% of operations within comfort range"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "END-L2-002-01",
+      "name": "EndUser Output 1",
+      "description": "The system shall Pain Point: Lack of type hints in sklearn's fit and transform methods causes IDE autocomplete failures and type checking errors in downstream projects, reducing developer productivity",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:6",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.166667,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:20",
+          "document": "cases/real_world_studies.py",
+          "score": 0.125,
+          "content": "3. Human-machine interaction and customer experience: - Passenger communication: In-vehicle screen displays route and decision reasoning - Remote assistance: Average 3% of trips require human guidance, response time <30 seconds - Emergency handling: Passengers can contact cust..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:8",
+          "document": "cases/real_world_studies.py",
+          "score": 0.125,
+          "content": "G2.1: Execute smooth acceleration and deceleration - Indicators: Longitudinal acceleration ≤2.5 m/s², lateral acceleration ≤1.8 m/s² - Actual: 95% of operations within comfort range"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "END-L2-002-02",
+      "name": "EndUser Output 2",
+      "description": "The system shall Pain Point: Without abstract base classes defining fit/transform contracts, developers must rely on documentation rather than code structure to understand expected method signatures",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:8",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:8",
+          "document": "knowledge_guide.py",
+          "score": 0.125,
+          "content": "❌ Overly abstract theoretical knowledge ❌ Generic information unrelated to KAOS modeling ❌ Outdated standards and specifications ❌ Unverifiable subjective judgments ❌ Overly specific implementation code"
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.083333,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "END-L2-002-03",
+      "name": "EndUser Output 3",
+      "description": "The system shall Expectation: Abstract classes (e.g., BaseEstimator, BaseTransformer) should explicitly declare fit() and transform() method signatures with proper type annotations to enable static type checking",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:33",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.173913,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.173913,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.130435,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "END-L2-002-04",
+      "name": "EndUser Output 4",
+      "description": "The system shall Expectation: Type hints should support both input/output types (e.g., fit(X: ArrayLike, y: Optional[ArrayLike]) -> Self) to improve IDE intellisense and mypy compliance",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:1",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.166667,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:18",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Deployer": [
+    {
+      "id": "DEP-L1-003",
+      "name": "Deployer Goal",
+      "description": "Deployer objective for sklearn_2021q4: INFRASTRUCTURE CONSTRAINT: Python version compatibility - sklearn must support Python 3.8+ to leverage PEP 673 'Self' type hints in BaseEstimator and BaseTransformer abstract classes. Versions pre-3.8 require conditio...",
+      "element_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:20",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:20",
+          "document": "cases/real_world_studies.py",
+          "score": 0.148148,
+          "content": "3. Human-machine interaction and customer experience: - Passenger communication: In-vehicle screen displays route and decision reasoning - Remote assistance: Average 3% of trips require human guidance, response time <30 seconds - Emergency handling: Passengers can contact cust..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:24",
+          "document": "sample_knowledge.py",
+          "score": 0.148148,
+          "content": "Pattern 3: Trustworthiness vs Efficiency Conflict Scenario: Decision explanation generation requires additional 50% computation time Resolution Strategies: - Asynchronous Explanation: Execute decision first, generate explanation later - Tiered Explanation: Brief explanation ge..."
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:24",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.148148,
+          "content": "Pattern 3: Trustworthiness vs Efficiency Conflict Scenario: Decision explanation generation requires additional 50% computation time Resolution Strategies: - Asynchronous Explanation: Execute decision first, generate explanation later - Tiered Explanation: Brief explanation ge..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DEP-L2-003-01",
+      "name": "Deployer Output 1",
+      "description": "The system shall INFRASTRUCTURE CONSTRAINT: Python version compatibility - sklearn must support Python 3.8+ to leverage PEP 673 'Self' type hints in BaseEstimator and BaseTransformer abstract classes. Versions pre-3.8 require conditio...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:20",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:20",
+          "document": "cases/real_world_studies.py",
+          "score": 0.148148,
+          "content": "3. Human-machine interaction and customer experience: - Passenger communication: In-vehicle screen displays route and decision reasoning - Remote assistance: Average 3% of trips require human guidance, response time <30 seconds - Emergency handling: Passengers can contact cust..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:24",
+          "document": "sample_knowledge.py",
+          "score": 0.148148,
+          "content": "Pattern 3: Trustworthiness vs Efficiency Conflict Scenario: Decision explanation generation requires additional 50% computation time Resolution Strategies: - Asynchronous Explanation: Execute decision first, generate explanation later - Tiered Explanation: Brief explanation ge..."
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:24",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.148148,
+          "content": "Pattern 3: Trustworthiness vs Efficiency Conflict Scenario: Decision explanation generation requires additional 50% computation time Resolution Strategies: - Asynchronous Explanation: Execute decision first, generate explanation later - Tiered Explanation: Brief explanation ge..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DEP-L2-003-02",
+      "name": "Deployer Output 2",
+      "description": "The system shall INFRASTRUCTURE CONSTRAINT: Type checking toolchain integration - Deployment requires mypy 0.910+, Pyright 1.1.200+, and IDE support (VSCode Pylance, PyCharm 2021.2+) to validate ArrayLike protocol definitions. Legacy...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:11",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.178571,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "automotive_safety.py:18",
+          "document": "automotive_safety.py",
+          "score": 0.142857,
+          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.142857,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DEP-L2-003-03",
+      "name": "Deployer Output 3",
+      "description": "The system shall SECURITY MANDATE: Type stub distribution - If sklearn uses Protocol-based typing (PEP 544), py.typed marker file must be included in distribution packages to signal PEP 561 compliance and prevent type checker fallback...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:1",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.133333,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "standards/latest_2024.py:23",
+          "document": "standards/latest_2024.py",
+          "score": 0.133333,
+          "content": "US Digital Asset Regulatory Framework (2024): SEC + CFTC Regulatory Division: - Security tokens: SEC jurisdiction, securities law compliance required - Commodity tokens: CFTC jurisdiction, futures trading rules - Payment tokens: FinCEN anti-money laundering requirements - DeFi..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.1,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DEP-L2-003-04",
+      "name": "Deployer Output 4",
+      "description": "The system shall INFRASTRUCTURE CONSTRAINT: Python 3.8+ minimum version required to support PEP 673 'Self' type hints in BaseEstimator and BaseTransformer. For Python 3.7 support, conditional imports from typing_extensions are mandato...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:31",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:31",
+          "document": "cases/real_world_studies.py",
+          "score": 0.185185,
+          "content": "Actual Clinical Trial Results (PROLOG Study): - Participants: 670 patients, 6-month follow-up - Blood glucose improvement: HbA1c decreased from 8.2% to 7.5% - User satisfaction: 93% willing to continue using - Safety events: 2 cases of severe hypoglycemia (0.3%), 0 cases of DKA"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.148148,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.148148,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Analyst": [
+    {
+      "id": "ANA-L1-004",
+      "name": "Analyst Goal",
+      "description": "Analyst objective for sklearn_2021q4: SR-sklearn-2021q4-001: ABSTRACT BASE CLASS DEFINITION - BaseEstimator shall declare method signature fit(X: ArrayLike, y: Optional[ArrayLike] = None) -> Self with explicit type annotations compliant with PEP 673 to en...",
+      "element_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:33",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.103448,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.103448,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.068966,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ANA-L2-004-01",
+      "name": "Analyst Output 1",
+      "description": "The system shall SR-sklearn-2021q4-001: ABSTRACT BASE CLASS DEFINITION - BaseEstimator shall declare method signature fit(X: ArrayLike, y: Optional[ArrayLike] = None) -> Self with explicit type annotations compliant with PEP 673 to en...",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:33",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.103448,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.103448,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.068966,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ANA-L2-004-02",
+      "name": "Analyst Output 2",
+      "description": "The system shall SR-sklearn-2021q4-002: ABSTRACT BASE CLASS DEFINITION - BaseTransformer shall declare method signature transform(X: ArrayLike) -> ArrayLike with explicit type annotations to establish contractual obligation for all sk...",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:15",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:15",
+          "document": "automotive_safety.py",
+          "score": 0.111111,
+          "content": "L5 Level (Full Automation): - Safety requirements: System completely responsible for all scenarios - Current status: Theoretical stage, no commercial products - KAOS goal: \"All-scenario safety equivalent to professional drivers\" \"\"\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.111111,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.111111,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ANA-L2-004-03",
+      "name": "Analyst Output 3",
+      "description": "The system shall SR-sklearn-2021q4-003: TYPE ANNOTATION PROTOCOL - ArrayLike protocol definition shall encompass numpy.ndarray, pandas.DataFrame, pandas.Series, and scipy.sparse matrix types (csr_matrix, csc_matrix, coo_matrix) via un...",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:21",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:21",
+          "document": "cases/real_world_studies.py",
+          "score": 0.076923,
+          "content": "Technical Debt and Continuous Improvement: - Map update frequency: Weekly high-precision map updates - Algorithm iteration cycle: Monthly deployment of new perception algorithms - Hardware maintenance: 40 hours maintenance time per vehicle per month - Data annotation: 1 millio..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.076923,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.076923,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ANA-L2-004-04",
+      "name": "Analyst Output 4",
+      "description": "The system shall SR-sklearn-2021q4-004: INHERITANCE STRATEGY - BaseEstimator and BaseTransformer shall employ traditional Abstract Base Class (ABC) inheritance pattern rather than Protocol-based typing to provide explicit subclassing...",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:11",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.115385,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:1",
+          "document": "domains/automotive_safety.py",
+          "score": 0.115385,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Base Based on ISO 26262 and real automotive industry experience \"\"\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.115385,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Archivist": [
+    {
+      "id": "ARC-L1-005",
+      "name": "Archivist Goal",
+      "description": "Archivist objective for sklearn_2021q4: SRS-sklearn-2021q4-001 | FUNCTIONAL REQUIREMENT | Abstract Base Class Definition for BaseEstimator | BaseEstimator shall inherit from Python's abc.ABC and declare method signature fit(X: ArrayLike, y: Optional[ArrayLi...",
+      "element_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:47",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:47",
+          "document": "cases/real_world_studies.py",
+          "score": 0.107143,
+          "content": "Compliance Costs and Investment: - Compliance team: 500+ full-time compliance staff - Technology investment: $500 million annually for risk control system maintenance - Regulatory fines: $250 million cumulative from 2020-2022 - KYC costs: Average $5 verification cost per new u..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:3",
+          "document": "knowledge_guide.py",
+          "score": 0.107143,
+          "content": "1. [Real Cases and Templates] - Most Important! ✅ Real KAOS model examples (autonomous driving, medical devices, financial systems) ✅ Successful requirement decomposition patterns (strategic→tactical→operational) ✅ Specific quantified indicators for quality attributes ✅ Valida..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.107143,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ARC-L2-005-01",
+      "name": "Archivist Output 1",
+      "description": "The system shall SRS-sklearn-2021q4-001 | FUNCTIONAL REQUIREMENT | Abstract Base Class Definition for BaseEstimator | BaseEstimator shall inherit from Python's abc.ABC and declare method signature fit(X: ArrayLike, y: Optional[ArrayLi...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:47",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:47",
+          "document": "cases/real_world_studies.py",
+          "score": 0.107143,
+          "content": "Compliance Costs and Investment: - Compliance team: 500+ full-time compliance staff - Technology investment: $500 million annually for risk control system maintenance - Regulatory fines: $250 million cumulative from 2020-2022 - KYC costs: Average $5 verification cost per new u..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:3",
+          "document": "knowledge_guide.py",
+          "score": 0.107143,
+          "content": "1. [Real Cases and Templates] - Most Important! ✅ Real KAOS model examples (autonomous driving, medical devices, financial systems) ✅ Successful requirement decomposition patterns (strategic→tactical→operational) ✅ Specific quantified indicators for quality attributes ✅ Valida..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.107143,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ARC-L2-005-02",
+      "name": "Archivist Output 2",
+      "description": "The system shall SRS-sklearn-2021q4-002 | FUNCTIONAL REQUIREMENT | Abstract Base Class Definition for BaseTransformer | BaseTransformer shall inherit from Python's abc.ABC and declare method signature transform(X: ArrayLike) -> ArrayL...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:47",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:47",
+          "document": "cases/real_world_studies.py",
+          "score": 0.115385,
+          "content": "Compliance Costs and Investment: - Compliance team: 500+ full-time compliance staff - Technology investment: $500 million annually for risk control system maintenance - Regulatory fines: $250 million cumulative from 2020-2022 - KYC costs: Average $5 verification cost per new u..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:3",
+          "document": "knowledge_guide.py",
+          "score": 0.115385,
+          "content": "1. [Real Cases and Templates] - Most Important! ✅ Real KAOS model examples (autonomous driving, medical devices, financial systems) ✅ Successful requirement decomposition patterns (strategic→tactical→operational) ✅ Specific quantified indicators for quality attributes ✅ Valida..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.115385,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ARC-L2-005-03",
+      "name": "Archivist Output 3",
+      "description": "The system shall SRS-sklearn-2021q4-003 | NON-FUNCTIONAL REQUIREMENT | ArrayLike Protocol Definition | sklearn shall define a unified ArrayLike protocol type alias encompassing numpy.ndarray, pandas.DataFrame, pandas.Series, and scipy...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:2",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "# ISO 26262 ASIL Levels and Specific Requirements ISO_26262_KNOWLEDGE = \"\"\" [ISO 26262 Automotive Functional Safety Standard]"
+        },
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ARC-L2-005-04",
+      "name": "Archivist Output 4",
+      "description": "The system shall SRS-sklearn-2021q4-004 | DESIGN CONSTRAINT | Inheritance Strategy - ABC over Protocol-Based Typing | sklearn shall adopt traditional Abstract Base Class (ABC) inheritance pattern for BaseEstimator and BaseTransformer...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:23",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:23",
+          "document": "sample_knowledge.py",
+          "score": 0.166667,
+          "content": "Pattern 2: Environmental Friendliness vs Performance Requirements Conflict Scenario: Energy-saving mode reduces CPU frequency affecting computational performance Resolution Strategies: - Smart Frequency Scaling: Dynamically adjust based on task importance - Load Prediction: En..."
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:23",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.166667,
+          "content": "Pattern 2: Environmental Friendliness vs Performance Requirements Conflict Scenario: Energy-saving mode reduces CPU frequency affecting computational performance Resolution Strategies: - Smart Frequency Scaling: Dynamically adjust based on task importance - Load Prediction: En..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.125,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Reviewer": [
+    {
+      "id": "REV-L1-006",
+      "name": "Reviewer Goal",
+      "description": "Reviewer objective for sklearn_2021q4: SRS-sklearn-2021q4-001: CLARITY VIOLATION - Abstract Base Class Definition for BaseEstimator lacks explicit specification of method body behavior. Section states 'fit(X: ArrayLike, y: Optional[ArrayLike]) -> Self' but...",
+      "element_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:21",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:21",
+          "document": "cases/real_world_studies.py",
+          "score": 0.071429,
+          "content": "Technical Debt and Continuous Improvement: - Map update frequency: Weekly high-precision map updates - Algorithm iteration cycle: Monthly deployment of new perception algorithms - Hardware maintenance: 40 hours maintenance time per vehicle per month - Data annotation: 1 millio..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.071429,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:17",
+          "document": "knowledge_guide.py",
+          "score": 0.071429,
+          "content": "def example_knowledge_structure(): \"\"\"Demonstrate the ideal structure of knowledge base\"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "REV-L2-006-01",
+      "name": "Reviewer Output 1",
+      "description": "The system shall SRS-sklearn-2021q4-001: CLARITY VIOLATION - Abstract Base Class Definition for BaseEstimator lacks explicit specification of method body behavior. Section states 'fit(X: ArrayLike, y: Optional[ArrayLike]) -> Self' but...",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:21",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:21",
+          "document": "cases/real_world_studies.py",
+          "score": 0.071429,
+          "content": "Technical Debt and Continuous Improvement: - Map update frequency: Weekly high-precision map updates - Algorithm iteration cycle: Monthly deployment of new perception algorithms - Hardware maintenance: 40 hours maintenance time per vehicle per month - Data annotation: 1 millio..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.071429,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:17",
+          "document": "knowledge_guide.py",
+          "score": 0.071429,
+          "content": "def example_knowledge_structure(): \"\"\"Demonstrate the ideal structure of knowledge base\"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "REV-L2-006-02",
+      "name": "Reviewer Output 2",
+      "description": "The system shall SRS-sklearn-2021q4-002: VERIFIABILITY DEFECT - Abstract Base Class Definition for BaseTransformer missing acceptance criteria. Section declares 'transform(X: ArrayLike) -> ArrayLike' but provides no testable condition...",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:7",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:7",
+          "document": "knowledge_guide.py",
+          "score": 0.12,
+          "content": "5. [Quantitative Indicators and Measurement Standards] ✅ Testable quality attribute metrics ✅ Industry-recognized performance benchmarks ✅ Quantitative methods for risk assessment ✅ Criteria for judging negotiation success"
+        },
+        {
+          "chunk_id": "automotive_safety.py:15",
+          "document": "automotive_safety.py",
+          "score": 0.08,
+          "content": "L5 Level (Full Automation): - Safety requirements: System completely responsible for all scenarios - Current status: Theoretical stage, no commercial products - KAOS goal: \"All-scenario safety equivalent to professional drivers\" \"\"\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:11",
+          "document": "knowledge_guide.py",
+          "score": 0.08,
+          "content": "3. [Ensure Compliance] - Automatically check for missing regulatory requirements - Remind about critical safety/privacy considerations - Ensure generated KAOS models comply with industry standards"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "REV-L2-006-03",
+      "name": "Reviewer Output 3",
+      "description": "The system shall SRS-sklearn-2021q4-003: CONSISTENCY CONFLICT - ArrayLike Protocol Definition contradicts operating_environment constraint. SRS Section 003 defines ArrayLike as unified protocol, but operating_environment specifies 'se...",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:10",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:10",
+          "document": "knowledge_guide.py",
+          "score": 0.105263,
+          "content": "2. [Improve Negotiation Quality] - Provide real conflict resolution cases as references - Use validated compromise strategies - Make decisions based on historical success patterns"
+        },
+        {
+          "chunk_id": "sample_knowledge.py:22",
+          "document": "sample_knowledge.py",
+          "score": 0.105263,
+          "content": "Pattern 1: Safety vs Efficiency Conflict Scenario: In autonomous driving systems, safety detection requires 300ms, but real-time response requires <100ms Resolution Strategies: - Layered Detection: Fast detection (50ms) + Deep verification (250ms in parallel) - Progressive Res..."
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:22",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.105263,
+          "content": "Pattern 1: Safety vs Efficiency Conflict Scenario: In autonomous driving systems, safety detection requires 300ms, but real-time response requires <100ms Resolution Strategies: - Layered Detection: Fast detection (50ms) + Deep verification (250ms in parallel) - Progressive Res..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "REV-L2-006-04",
+      "name": "Reviewer Output 4",
+      "description": "The system shall SRS-sklearn-2021q4-004: FEASIBILITY GAP - Inheritance Strategy (ABC over Protocol) lacks deployment validation. Section mandates ABC inheritance, but deployer_confirmations[1] indicates unresolved Pipeline composition...",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.130435,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.130435,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "automotive_safety.py:18",
+          "document": "automotive_safety.py",
+          "score": 0.086957,
+          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ]
+}

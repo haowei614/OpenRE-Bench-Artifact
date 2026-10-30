@@ -1,0 +1,614 @@
+{
+  "verification_results": {
+    "fact_checking": {
+      "hallucination_reports": [],
+      "flagged_elements": [],
+      "total_checked": 7
+    },
+    "deterministic_validation": {
+      "is_valid": false,
+      "violations": [],
+      "passed_rules": [],
+      "status": "not_executed"
+    },
+    "topology_status": {
+      "status": "Valid",
+      "is_valid": true,
+      "is_dag": true,
+      "orphan_count": 0,
+      "cycle_count": 0,
+      "invalid_leaf_count": 0,
+      "orphan_elements": [],
+      "cycles": [],
+      "invalid_leaves": []
+    },
+    "consistency_verification": {
+      "status": "not_executed",
+      "issues": [],
+      "logical_score": 5,
+      "logical_score_normalized": 1.0,
+      "terminology_score": 5,
+      "terminology_consistency_ratio": 1.0
+    },
+    "universal_verification": {
+      "verification_summary": {
+        "total_constraints": 32,
+        "total_conflicts": 0,
+        "critical_conflicts": 0,
+        "quality_score": 100.0,
+        "verification_passed": false
+      },
+      "constraint_analysis": {
+        "extracted_constraints": [
+          {
+            "clause": "Requirement 1 (Issue #21308: Implement `get_feature_names_out` for all estimators)",
+            "best_overlap": 0.055556,
+            "matched": false
+          },
+          {
+            "clause": "This issue tracks the implementation of get_feature_names_out for all remaining estimators (follow-up work for 18444)",
+            "best_overlap": 0.113208,
+            "matched": false
+          },
+          {
+            "clause": "@USER do you maybe have a list we could add here to track them",
+            "best_overlap": 0.085106,
+            "matched": false
+          },
+          {
+            "clause": "Edit: let's do it by modules since the common test is organized this way: - [x] 22255 cluster - [x] 22119 cross_decom...",
+            "best_overlap": 0.048193,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 2 (Issue #21318: enhancement base class for sklearn models)",
+            "best_overlap": 0.216216,
+            "matched": false
+          },
+          {
+            "clause": "Describe the workflow you want to enable",
+            "best_overlap": 0.2,
+            "matched": false
+          },
+          {
+            "clause": "Sklearn does not provide an abstract class for the fit method and transform method which is not friendly to code hints",
+            "best_overlap": 0.304348,
+            "matched": false
+          },
+          {
+            "clause": "In Python project, type hints is very important",
+            "best_overlap": 0.057143,
+            "matched": false
+          },
+          {
+            "clause": "This would be helpful for python type hints if sklearn had abstract classes with fit and transform methods",
+            "best_overlap": 0.178571,
+            "matched": false
+          },
+          {
+            "clause": "===================================",
+            "best_overlap": 0.0,
+            "matched": false
+          },
+          {
+            "clause": "i hope a abstract class like this",
+            "best_overlap": 0.117647,
+            "matched": false
+          },
+          {
+            "clause": "Describe your proposed solution",
+            "best_overlap": 0.216216,
+            "matched": false
+          },
+          {
+            "clause": "Describe alternatives you've considered, if relevant",
+            "best_overlap": 0.25,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 3 (Issue #21356: SequentialFeatureSelector",
+            "best_overlap": 0.108108,
+            "matched": false
+          },
+          {
+            "clause": "fit() groups parameter)",
+            "best_overlap": 0.171429,
+            "matched": false
+          },
+          {
+            "clause": "Describe the workflow you want to enable",
+            "best_overlap": 0.2,
+            "matched": false
+          },
+          {
+            "clause": "SequentialFeatureSelector allows specifying a cross-validation splitter via the cv parameter in the constructor, but...",
+            "best_overlap": 0.280702,
+            "matched": false
+          },
+          {
+            "clause": "Describe your proposed solution",
+            "best_overlap": 0.216216,
+            "matched": false
+          },
+          {
+            "clause": "Add a groups parameter to SequentialFeatureSelector",
+            "best_overlap": 0.157895,
+            "matched": false
+          },
+          {
+            "clause": "fit() to allow groups to be passed into the cross-validation splitter:",
+            "best_overlap": 0.232558,
+            "matched": false
+          },
+          {
+            "clause": "This will need to be passed through to _get_best_new_feature() and then to cross_val_score()",
+            "best_overlap": 0.097561,
+            "matched": false
+          },
+          {
+            "clause": "Describe alternatives you've considered, if relevant",
+            "best_overlap": 0.25,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 4 (Issue #21521: Add option to choose OOB scorer in RandomForest)",
+            "best_overlap": 0.133333,
+            "matched": false
+          },
+          {
+            "clause": "Describe the workflow you want to enable Random forests provide for free an estimate of its out-of-sample performance...",
+            "best_overlap": 0.156863,
+            "matched": false
+          },
+          {
+            "clause": "In practice, it works well when 1",
+            "best_overlap": 0.05,
+            "matched": false
+          },
+          {
+            "clause": "rows are independent 2",
+            "best_overlap": 0.0,
+            "matched": false
+          },
+          {
+            "clause": "the number of trees is large (500+)",
+            "best_overlap": 0.088889,
+            "matched": false
+          },
+          {
+            "clause": "If oob_score=True, currently the following scoring is applied to the OOB predictions: - RandomForestRegressor() alway...",
+            "best_overlap": 0.075472,
+            "matched": false
+          },
+          {
+            "clause": "R-squared is mainly relevant for the MSE",
+            "best_overlap": 0.114286,
+            "matched": false
+          },
+          {
+            "clause": "What do you mean, @USER",
+            "best_overlap": 0.052632,
+            "matched": false
+          },
+          {
+            "clause": "- RandomForestClassifier() always returns accuracy, even if it does not enjoy many good properties",
+            "best_overlap": 0.0,
+            "matched": false
+          },
+          {
+            "clause": "For instance, if my criterion is \"entropy\" and I am modelling a binary target, then the corresponding scoring function",
+            "best_overlap": 0.105263,
+            "matched": false
+          }
+        ]
+      },
+      "conflict_analysis": {
+        "detected_conflicts": []
+      },
+      "resolutions": {
+        "applied": []
+      },
+      "recommendations": [
+        "No contradiction detected"
+      ],
+      "session_log": {
+        "status": "not_executed"
+      }
+    },
+    "compliance_coverage": {
+      "satisfied_applicable_clauses": 0,
+      "total_applicable_clauses": 32,
+      "coverage_ratio": 0.0,
+      "clauses": [
+        {
+          "clause": "Requirement 1 (Issue #21308: Implement `get_feature_names_out` for all estimators)",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "This issue tracks the implementation of get_feature_names_out for all remaining estimators (follow-up work for 18444)",
+          "best_overlap": 0.113208,
+          "matched": false
+        },
+        {
+          "clause": "@USER do you maybe have a list we could add here to track them",
+          "best_overlap": 0.085106,
+          "matched": false
+        },
+        {
+          "clause": "Edit: let's do it by modules since the common test is organized this way: - [x] 22255 cluster - [x] 22119 cross_decom...",
+          "best_overlap": 0.048193,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #21318: enhancement base class for sklearn models)",
+          "best_overlap": 0.216216,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable",
+          "best_overlap": 0.2,
+          "matched": false
+        },
+        {
+          "clause": "Sklearn does not provide an abstract class for the fit method and transform method which is not friendly to code hints",
+          "best_overlap": 0.304348,
+          "matched": false
+        },
+        {
+          "clause": "In Python project, type hints is very important",
+          "best_overlap": 0.057143,
+          "matched": false
+        },
+        {
+          "clause": "This would be helpful for python type hints if sklearn had abstract classes with fit and transform methods",
+          "best_overlap": 0.178571,
+          "matched": false
+        },
+        {
+          "clause": "===================================",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "i hope a abstract class like this",
+          "best_overlap": 0.117647,
+          "matched": false
+        },
+        {
+          "clause": "Describe your proposed solution",
+          "best_overlap": 0.216216,
+          "matched": false
+        },
+        {
+          "clause": "Describe alternatives you've considered, if relevant",
+          "best_overlap": 0.25,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #21356: SequentialFeatureSelector",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "fit() groups parameter)",
+          "best_overlap": 0.171429,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable",
+          "best_overlap": 0.2,
+          "matched": false
+        },
+        {
+          "clause": "SequentialFeatureSelector allows specifying a cross-validation splitter via the cv parameter in the constructor, but...",
+          "best_overlap": 0.280702,
+          "matched": false
+        },
+        {
+          "clause": "Describe your proposed solution",
+          "best_overlap": 0.216216,
+          "matched": false
+        },
+        {
+          "clause": "Add a groups parameter to SequentialFeatureSelector",
+          "best_overlap": 0.157895,
+          "matched": false
+        },
+        {
+          "clause": "fit() to allow groups to be passed into the cross-validation splitter:",
+          "best_overlap": 0.232558,
+          "matched": false
+        },
+        {
+          "clause": "This will need to be passed through to _get_best_new_feature() and then to cross_val_score()",
+          "best_overlap": 0.097561,
+          "matched": false
+        },
+        {
+          "clause": "Describe alternatives you've considered, if relevant",
+          "best_overlap": 0.25,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 4 (Issue #21521: Add option to choose OOB scorer in RandomForest)",
+          "best_overlap": 0.133333,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable Random forests provide for free an estimate of its out-of-sample performance...",
+          "best_overlap": 0.156863,
+          "matched": false
+        },
+        {
+          "clause": "In practice, it works well when 1",
+          "best_overlap": 0.05,
+          "matched": false
+        },
+        {
+          "clause": "rows are independent 2",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "the number of trees is large (500+)",
+          "best_overlap": 0.088889,
+          "matched": false
+        },
+        {
+          "clause": "If oob_score=True, currently the following scoring is applied to the OOB predictions: - RandomForestRegressor() alway...",
+          "best_overlap": 0.075472,
+          "matched": false
+        },
+        {
+          "clause": "R-squared is mainly relevant for the MSE",
+          "best_overlap": 0.114286,
+          "matched": false
+        },
+        {
+          "clause": "What do you mean, @USER",
+          "best_overlap": 0.052632,
+          "matched": false
+        },
+        {
+          "clause": "- RandomForestClassifier() always returns accuracy, even if it does not enjoy many good properties",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "For instance, if my criterion is \"entropy\" and I am modelling a binary target, then the corresponding scoring function",
+          "best_overlap": 0.105263,
+          "matched": false
+        }
+      ]
+    },
+    "terminology_consistency": {
+      "score": 5,
+      "consistency_ratio": 1.0,
+      "conflicts": [],
+      "total_concepts": 3,
+      "consistent_concepts": 3
+    },
+    "s_logic": 1.0,
+    "s_term": 1.0
+  },
+  "fact_checking": {
+    "hallucination_reports": [],
+    "flagged_elements": [],
+    "total_checked": 7
+  },
+  "deterministic_validation": {
+    "is_valid": false,
+    "violations": [],
+    "passed_rules": [],
+    "status": "not_executed"
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "consistency_verification": {
+    "status": "not_executed",
+    "issues": [],
+    "logical_score": 5,
+    "logical_score_normalized": 1.0,
+    "terminology_score": 5,
+    "terminology_consistency_ratio": 1.0
+  },
+  "universal_verification": {
+    "verification_summary": {
+      "total_constraints": 32,
+      "total_conflicts": 0,
+      "critical_conflicts": 0,
+      "quality_score": 100.0,
+      "verification_passed": false
+    },
+    "constraint_analysis": {
+      "extracted_constraints": [
+        {
+          "clause": "Requirement 1 (Issue #21308: Implement `get_feature_names_out` for all estimators)",
+          "best_overlap": 0.055556,
+          "matched": false
+        },
+        {
+          "clause": "This issue tracks the implementation of get_feature_names_out for all remaining estimators (follow-up work for 18444)",
+          "best_overlap": 0.113208,
+          "matched": false
+        },
+        {
+          "clause": "@USER do you maybe have a list we could add here to track them",
+          "best_overlap": 0.085106,
+          "matched": false
+        },
+        {
+          "clause": "Edit: let's do it by modules since the common test is organized this way: - [x] 22255 cluster - [x] 22119 cross_decom...",
+          "best_overlap": 0.048193,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #21318: enhancement base class for sklearn models)",
+          "best_overlap": 0.216216,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable",
+          "best_overlap": 0.2,
+          "matched": false
+        },
+        {
+          "clause": "Sklearn does not provide an abstract class for the fit method and transform method which is not friendly to code hints",
+          "best_overlap": 0.304348,
+          "matched": false
+        },
+        {
+          "clause": "In Python project, type hints is very important",
+          "best_overlap": 0.057143,
+          "matched": false
+        },
+        {
+          "clause": "This would be helpful for python type hints if sklearn had abstract classes with fit and transform methods",
+          "best_overlap": 0.178571,
+          "matched": false
+        },
+        {
+          "clause": "===================================",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "i hope a abstract class like this",
+          "best_overlap": 0.117647,
+          "matched": false
+        },
+        {
+          "clause": "Describe your proposed solution",
+          "best_overlap": 0.216216,
+          "matched": false
+        },
+        {
+          "clause": "Describe alternatives you've considered, if relevant",
+          "best_overlap": 0.25,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #21356: SequentialFeatureSelector",
+          "best_overlap": 0.108108,
+          "matched": false
+        },
+        {
+          "clause": "fit() groups parameter)",
+          "best_overlap": 0.171429,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable",
+          "best_overlap": 0.2,
+          "matched": false
+        },
+        {
+          "clause": "SequentialFeatureSelector allows specifying a cross-validation splitter via the cv parameter in the constructor, but...",
+          "best_overlap": 0.280702,
+          "matched": false
+        },
+        {
+          "clause": "Describe your proposed solution",
+          "best_overlap": 0.216216,
+          "matched": false
+        },
+        {
+          "clause": "Add a groups parameter to SequentialFeatureSelector",
+          "best_overlap": 0.157895,
+          "matched": false
+        },
+        {
+          "clause": "fit() to allow groups to be passed into the cross-validation splitter:",
+          "best_overlap": 0.232558,
+          "matched": false
+        },
+        {
+          "clause": "This will need to be passed through to _get_best_new_feature() and then to cross_val_score()",
+          "best_overlap": 0.097561,
+          "matched": false
+        },
+        {
+          "clause": "Describe alternatives you've considered, if relevant",
+          "best_overlap": 0.25,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 4 (Issue #21521: Add option to choose OOB scorer in RandomForest)",
+          "best_overlap": 0.133333,
+          "matched": false
+        },
+        {
+          "clause": "Describe the workflow you want to enable Random forests provide for free an estimate of its out-of-sample performance...",
+          "best_overlap": 0.156863,
+          "matched": false
+        },
+        {
+          "clause": "In practice, it works well when 1",
+          "best_overlap": 0.05,
+          "matched": false
+        },
+        {
+          "clause": "rows are independent 2",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "the number of trees is large (500+)",
+          "best_overlap": 0.088889,
+          "matched": false
+        },
+        {
+          "clause": "If oob_score=True, currently the following scoring is applied to the OOB predictions: - RandomForestRegressor() alway...",
+          "best_overlap": 0.075472,
+          "matched": false
+        },
+        {
+          "clause": "R-squared is mainly relevant for the MSE",
+          "best_overlap": 0.114286,
+          "matched": false
+        },
+        {
+          "clause": "What do you mean, @USER",
+          "best_overlap": 0.052632,
+          "matched": false
+        },
+        {
+          "clause": "- RandomForestClassifier() always returns accuracy, even if it does not enjoy many good properties",
+          "best_overlap": 0.0,
+          "matched": false
+        },
+        {
+          "clause": "For instance, if my criterion is \"entropy\" and I am modelling a binary target, then the corresponding scoring function",
+          "best_overlap": 0.105263,
+          "matched": false
+        }
+      ]
+    },
+    "conflict_analysis": {
+      "detected_conflicts": []
+    },
+    "resolutions": {
+      "applied": []
+    },
+    "recommendations": [
+      "No contradiction detected"
+    ],
+    "session_log": {
+      "status": "not_executed"
+    }
+  },
+  "correction_summary": {
+    "total_corrections": 0,
+    "corrections": []
+  }
+}

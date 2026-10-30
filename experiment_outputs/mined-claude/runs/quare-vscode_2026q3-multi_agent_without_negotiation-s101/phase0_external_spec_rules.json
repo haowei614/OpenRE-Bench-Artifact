@@ -1,0 +1,85 @@
+{
+  "phase": "0_external_spec_processing",
+  "case_id": "vscode_2026q3",
+  "setting": "multi_agent_without_negotiation",
+  "generated_at": "2026-09-29T05:29:19Z",
+  "extracted_rules": [
+    {
+      "rule_id": "R001",
+      "rule_type": "constraint",
+      "statement": "Requirement 1 (Issue #334186: Send x-opencode-session header on API requests (required by OpenCode Go from 09/05))",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R002",
+      "rule_type": "constraint",
+      "statement": "Hi — we operate the OpenCode Go managed-inference API, and 1685 of your users' orgs call it through GitHub Copilot Chat (UA GitHubCopilotChat/0",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R003",
+      "rule_type": "constraint",
+      "statement": "Starting 09/05, requests without an x-opencode-session header will error on our side — we need a stable per-conversation ID for routing/optimization",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R004",
+      "rule_type": "constraint",
+      "statement": "Copilot Chat doesn't send it in any version we've seen",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R005",
+      "rule_type": "constraint",
+      "statement": "Ask: include x-opencode-session: on all outbound inference HTTP requests",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R006",
+      "rule_type": "constraint",
+      "statement": "Any stable UUID per conversation works",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R007",
+      "rule_type": "constraint",
+      "statement": "Happy to confirm from our telemetry once a build ships it",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R008",
+      "rule_type": "constraint",
+      "statement": "Requirement 2 (Issue #334228: Make chat sessions available across workspaces (global chat history))",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R009",
+      "rule_type": "constraint",
+      "statement": "Make chat sessions available across workspaces (global chat history) Problem Copilot chat sessions are strictly workspace-scoped",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R010",
+      "rule_type": "constraint",
+      "statement": "Each workspace storage folder (workspaceStorage/ ) holds its own chatSessions/",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R011",
+      "rule_type": "constraint",
+      "statement": "jsonl files plus a chat",
+      "source": "requirement_text"
+    },
+    {
+      "rule_id": "R012",
+      "rule_type": "constraint",
+      "statement": "index entry in state",
+      "source": "requirement_text"
+    }
+  ],
+  "extraction_metadata": {
+    "rule_count": 12,
+    "rag_enabled": true,
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426"
+  }
+}

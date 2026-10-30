@@ -1,0 +1,611 @@
+{
+  "verification_results": {
+    "fact_checking": {
+      "hallucination_reports": [],
+      "flagged_elements": [],
+      "total_checked": 25
+    },
+    "deterministic_validation": {
+      "is_valid": false,
+      "violations": [],
+      "passed_rules": [],
+      "status": "not_executed"
+    },
+    "topology_status": {
+      "status": "Valid",
+      "is_valid": true,
+      "is_dag": true,
+      "orphan_count": 0,
+      "cycle_count": 0,
+      "invalid_leaf_count": 0,
+      "orphan_elements": [],
+      "cycles": [],
+      "invalid_leaves": []
+    },
+    "consistency_verification": {
+      "status": "not_executed",
+      "issues": [],
+      "logical_score": 5,
+      "logical_score_normalized": 1.0,
+      "terminology_score": 3,
+      "terminology_consistency_ratio": 0.8
+    },
+    "universal_verification": {
+      "verification_summary": {
+        "total_constraints": 31,
+        "total_conflicts": 0,
+        "critical_conflicts": 0,
+        "quality_score": 100.0,
+        "verification_passed": false
+      },
+      "constraint_analysis": {
+        "extracted_constraints": [
+          {
+            "clause": "Requirement 1 (Issue #32944: clarify the label shifting behavior of llama models when `labels` is given",
+            "best_overlap": 0.153846,
+            "matched": false
+          },
+          {
+            "clause": "Feature request i believe labels in the training of causal LMs means the value to predict at time n, i",
+            "best_overlap": 0.133333,
+            "matched": false
+          },
+          {
+            "clause": "in other words, i'd assume, if labels is given, it should be already shifted by one in the data loader w",
+            "best_overlap": 0.12,
+            "matched": false
+          },
+          {
+            "clause": "however, in LlamaForCausalLM",
+            "best_overlap": 0.068966,
+            "matched": false
+          },
+          {
+            "clause": "forward(), i found the labels are always shifted, silently",
+            "best_overlap": 0.111111,
+            "matched": false
+          },
+          {
+            "clause": "i found it quite unexpected hence calling it \"silently\"",
+            "best_overlap": 0.057143,
+            "matched": false
+          },
+          {
+            "clause": "as this is for a causal LM, shouldn't it be not shifting the labels by default",
+            "best_overlap": 0.181818,
+            "matched": false
+          },
+          {
+            "clause": "in modeling GPT2, this is at least documented explicitly",
+            "best_overlap": 0.097561,
+            "matched": false
+          },
+          {
+            "clause": "in gemma2, it has the same behavior and no explicit mentioning in the docstring",
+            "best_overlap": 0.12766,
+            "matched": false
+          },
+          {
+            "clause": "i think at least we should force the docstring to mention this, if making",
+            "best_overlap": 0.146341,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 2 (Issue #32877: Add logit scaling sdpa using `FlexAttention` for Gemma2)",
+            "best_overlap": 0.146341,
+            "matched": false
+          },
+          {
+            "clause": "With the recent publish of FlexAttention, think it makes senses to support it with sdpa path of Gemma2",
+            "best_overlap": 0.142857,
+            "matched": false
+          },
+          {
+            "clause": "Leaving it open to the community:",
+            "best_overlap": 0.125,
+            "matched": false
+          },
+          {
+            "clause": "- [ ] implement the path",
+            "best_overlap": 0.153846,
+            "matched": false
+          },
+          {
+            "clause": "- [ ] make sure integration tests work",
+            "best_overlap": 0.060606,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 3 (Issue #32253: Export to ExecuTorch)",
+            "best_overlap": 0.117647,
+            "matched": false
+          },
+          {
+            "clause": "Feature request Unlock a new workflow for on-device use-cases via torch",
+            "best_overlap": 0.102564,
+            "matched": false
+          },
+          {
+            "clause": "export and ExecuTorch",
+            "best_overlap": 0.066667,
+            "matched": false
+          },
+          {
+            "clause": "So ideally the users can have an e2e experience by loading a pretrained transformer model from HuggingFace, export an...",
+            "best_overlap": 0.214286,
+            "matched": false
+          },
+          {
+            "clause": "Load a model with StaticCache: 2",
+            "best_overlap": 0.181818,
+            "matched": false
+          },
+          {
+            "clause": "Then export the model with StaticCache",
+            "best_overlap": 0.125,
+            "matched": false
+          },
+          {
+            "clause": "and then further lower the exported program to ExecuTorch with delegates for performance: With that you may get a mod...",
+            "best_overlap": 0.2,
+            "matched": false
+          },
+          {
+            "clause": "From there and still within ExecuTorch stack, you can easily tailor the experience for your use-cases, of course, wit...",
+            "best_overlap": 0.163265,
+            "matched": false
+          },
+          {
+            "clause": "Note that ExecuTorch supports delegatation to XNNPACK backend, Apple Core ML and MPS, Qualcomm QNN,",
+            "best_overlap": 0.12766,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 4 (Issue #31802: Please support numpy 2",
+            "best_overlap": 0.285714,
+            "matched": false
+          },
+          {
+            "clause": "0 comes out, it brings impressive speed up, please consider add numpy 2",
+            "best_overlap": 0.230769,
+            "matched": false
+          },
+          {
+            "clause": "Besides, numpy is so foundamental, I think all libs should force to align with it rather than force users with lower...",
+            "best_overlap": 0.297872,
+            "matched": false
+          },
+          {
+            "clause": "Currently support numpy 2",
+            "best_overlap": 0.352941,
+            "matched": false
+          },
+          {
+            "clause": "So, please just ignore tensorflow, nowadays we don't use it any longer,",
+            "best_overlap": 0.15,
+            "matched": false
+          },
+          {
+            "clause": "At least make us have an option",
+            "best_overlap": 0.117647,
+            "matched": false
+          },
+          {
+            "clause": "don't force to lower version, just keep up to date",
+            "best_overlap": 0.111111,
+            "matched": false
+          }
+        ]
+      },
+      "conflict_analysis": {
+        "detected_conflicts": []
+      },
+      "resolutions": {
+        "applied": []
+      },
+      "recommendations": [
+        "No contradiction detected"
+      ],
+      "session_log": {
+        "status": "not_executed"
+      }
+    },
+    "compliance_coverage": {
+      "satisfied_applicable_clauses": 0,
+      "total_applicable_clauses": 31,
+      "coverage_ratio": 0.0,
+      "clauses": [
+        {
+          "clause": "Requirement 1 (Issue #32944: clarify the label shifting behavior of llama models when `labels` is given",
+          "best_overlap": 0.153846,
+          "matched": false
+        },
+        {
+          "clause": "Feature request i believe labels in the training of causal LMs means the value to predict at time n, i",
+          "best_overlap": 0.133333,
+          "matched": false
+        },
+        {
+          "clause": "in other words, i'd assume, if labels is given, it should be already shifted by one in the data loader w",
+          "best_overlap": 0.12,
+          "matched": false
+        },
+        {
+          "clause": "however, in LlamaForCausalLM",
+          "best_overlap": 0.068966,
+          "matched": false
+        },
+        {
+          "clause": "forward(), i found the labels are always shifted, silently",
+          "best_overlap": 0.111111,
+          "matched": false
+        },
+        {
+          "clause": "i found it quite unexpected hence calling it \"silently\"",
+          "best_overlap": 0.057143,
+          "matched": false
+        },
+        {
+          "clause": "as this is for a causal LM, shouldn't it be not shifting the labels by default",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "in modeling GPT2, this is at least documented explicitly",
+          "best_overlap": 0.097561,
+          "matched": false
+        },
+        {
+          "clause": "in gemma2, it has the same behavior and no explicit mentioning in the docstring",
+          "best_overlap": 0.12766,
+          "matched": false
+        },
+        {
+          "clause": "i think at least we should force the docstring to mention this, if making",
+          "best_overlap": 0.146341,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #32877: Add logit scaling sdpa using `FlexAttention` for Gemma2)",
+          "best_overlap": 0.146341,
+          "matched": false
+        },
+        {
+          "clause": "With the recent publish of FlexAttention, think it makes senses to support it with sdpa path of Gemma2",
+          "best_overlap": 0.142857,
+          "matched": false
+        },
+        {
+          "clause": "Leaving it open to the community:",
+          "best_overlap": 0.125,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] implement the path",
+          "best_overlap": 0.153846,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] make sure integration tests work",
+          "best_overlap": 0.060606,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #32253: Export to ExecuTorch)",
+          "best_overlap": 0.117647,
+          "matched": false
+        },
+        {
+          "clause": "Feature request Unlock a new workflow for on-device use-cases via torch",
+          "best_overlap": 0.102564,
+          "matched": false
+        },
+        {
+          "clause": "export and ExecuTorch",
+          "best_overlap": 0.066667,
+          "matched": false
+        },
+        {
+          "clause": "So ideally the users can have an e2e experience by loading a pretrained transformer model from HuggingFace, export an...",
+          "best_overlap": 0.214286,
+          "matched": false
+        },
+        {
+          "clause": "Load a model with StaticCache: 2",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "Then export the model with StaticCache",
+          "best_overlap": 0.125,
+          "matched": false
+        },
+        {
+          "clause": "and then further lower the exported program to ExecuTorch with delegates for performance: With that you may get a mod...",
+          "best_overlap": 0.2,
+          "matched": false
+        },
+        {
+          "clause": "From there and still within ExecuTorch stack, you can easily tailor the experience for your use-cases, of course, wit...",
+          "best_overlap": 0.163265,
+          "matched": false
+        },
+        {
+          "clause": "Note that ExecuTorch supports delegatation to XNNPACK backend, Apple Core ML and MPS, Qualcomm QNN,",
+          "best_overlap": 0.12766,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 4 (Issue #31802: Please support numpy 2",
+          "best_overlap": 0.285714,
+          "matched": false
+        },
+        {
+          "clause": "0 comes out, it brings impressive speed up, please consider add numpy 2",
+          "best_overlap": 0.230769,
+          "matched": false
+        },
+        {
+          "clause": "Besides, numpy is so foundamental, I think all libs should force to align with it rather than force users with lower...",
+          "best_overlap": 0.297872,
+          "matched": false
+        },
+        {
+          "clause": "Currently support numpy 2",
+          "best_overlap": 0.352941,
+          "matched": false
+        },
+        {
+          "clause": "So, please just ignore tensorflow, nowadays we don't use it any longer,",
+          "best_overlap": 0.15,
+          "matched": false
+        },
+        {
+          "clause": "At least make us have an option",
+          "best_overlap": 0.117647,
+          "matched": false
+        },
+        {
+          "clause": "don't force to lower version, just keep up to date",
+          "best_overlap": 0.111111,
+          "matched": false
+        }
+      ]
+    },
+    "terminology_consistency": {
+      "score": 3,
+      "consistency_ratio": 0.8,
+      "conflicts": [
+        {
+          "concept": "verify",
+          "terms_used": [
+            "check",
+            "validate"
+          ],
+          "requirements": [
+            "CHE-L1-004",
+            "CHE-L2-004-01"
+          ]
+        }
+      ],
+      "total_concepts": 5,
+      "consistent_concepts": 4
+    },
+    "s_logic": 1.0,
+    "s_term": 0.8
+  },
+  "fact_checking": {
+    "hallucination_reports": [],
+    "flagged_elements": [],
+    "total_checked": 25
+  },
+  "deterministic_validation": {
+    "is_valid": false,
+    "violations": [],
+    "passed_rules": [],
+    "status": "not_executed"
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "consistency_verification": {
+    "status": "not_executed",
+    "issues": [],
+    "logical_score": 5,
+    "logical_score_normalized": 1.0,
+    "terminology_score": 3,
+    "terminology_consistency_ratio": 0.8
+  },
+  "universal_verification": {
+    "verification_summary": {
+      "total_constraints": 31,
+      "total_conflicts": 0,
+      "critical_conflicts": 0,
+      "quality_score": 100.0,
+      "verification_passed": false
+    },
+    "constraint_analysis": {
+      "extracted_constraints": [
+        {
+          "clause": "Requirement 1 (Issue #32944: clarify the label shifting behavior of llama models when `labels` is given",
+          "best_overlap": 0.153846,
+          "matched": false
+        },
+        {
+          "clause": "Feature request i believe labels in the training of causal LMs means the value to predict at time n, i",
+          "best_overlap": 0.133333,
+          "matched": false
+        },
+        {
+          "clause": "in other words, i'd assume, if labels is given, it should be already shifted by one in the data loader w",
+          "best_overlap": 0.12,
+          "matched": false
+        },
+        {
+          "clause": "however, in LlamaForCausalLM",
+          "best_overlap": 0.068966,
+          "matched": false
+        },
+        {
+          "clause": "forward(), i found the labels are always shifted, silently",
+          "best_overlap": 0.111111,
+          "matched": false
+        },
+        {
+          "clause": "i found it quite unexpected hence calling it \"silently\"",
+          "best_overlap": 0.057143,
+          "matched": false
+        },
+        {
+          "clause": "as this is for a causal LM, shouldn't it be not shifting the labels by default",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "in modeling GPT2, this is at least documented explicitly",
+          "best_overlap": 0.097561,
+          "matched": false
+        },
+        {
+          "clause": "in gemma2, it has the same behavior and no explicit mentioning in the docstring",
+          "best_overlap": 0.12766,
+          "matched": false
+        },
+        {
+          "clause": "i think at least we should force the docstring to mention this, if making",
+          "best_overlap": 0.146341,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #32877: Add logit scaling sdpa using `FlexAttention` for Gemma2)",
+          "best_overlap": 0.146341,
+          "matched": false
+        },
+        {
+          "clause": "With the recent publish of FlexAttention, think it makes senses to support it with sdpa path of Gemma2",
+          "best_overlap": 0.142857,
+          "matched": false
+        },
+        {
+          "clause": "Leaving it open to the community:",
+          "best_overlap": 0.125,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] implement the path",
+          "best_overlap": 0.153846,
+          "matched": false
+        },
+        {
+          "clause": "- [ ] make sure integration tests work",
+          "best_overlap": 0.060606,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #32253: Export to ExecuTorch)",
+          "best_overlap": 0.117647,
+          "matched": false
+        },
+        {
+          "clause": "Feature request Unlock a new workflow for on-device use-cases via torch",
+          "best_overlap": 0.102564,
+          "matched": false
+        },
+        {
+          "clause": "export and ExecuTorch",
+          "best_overlap": 0.066667,
+          "matched": false
+        },
+        {
+          "clause": "So ideally the users can have an e2e experience by loading a pretrained transformer model from HuggingFace, export an...",
+          "best_overlap": 0.214286,
+          "matched": false
+        },
+        {
+          "clause": "Load a model with StaticCache: 2",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "Then export the model with StaticCache",
+          "best_overlap": 0.125,
+          "matched": false
+        },
+        {
+          "clause": "and then further lower the exported program to ExecuTorch with delegates for performance: With that you may get a mod...",
+          "best_overlap": 0.2,
+          "matched": false
+        },
+        {
+          "clause": "From there and still within ExecuTorch stack, you can easily tailor the experience for your use-cases, of course, wit...",
+          "best_overlap": 0.163265,
+          "matched": false
+        },
+        {
+          "clause": "Note that ExecuTorch supports delegatation to XNNPACK backend, Apple Core ML and MPS, Qualcomm QNN,",
+          "best_overlap": 0.12766,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 4 (Issue #31802: Please support numpy 2",
+          "best_overlap": 0.285714,
+          "matched": false
+        },
+        {
+          "clause": "0 comes out, it brings impressive speed up, please consider add numpy 2",
+          "best_overlap": 0.230769,
+          "matched": false
+        },
+        {
+          "clause": "Besides, numpy is so foundamental, I think all libs should force to align with it rather than force users with lower...",
+          "best_overlap": 0.297872,
+          "matched": false
+        },
+        {
+          "clause": "Currently support numpy 2",
+          "best_overlap": 0.352941,
+          "matched": false
+        },
+        {
+          "clause": "So, please just ignore tensorflow, nowadays we don't use it any longer,",
+          "best_overlap": 0.15,
+          "matched": false
+        },
+        {
+          "clause": "At least make us have an option",
+          "best_overlap": 0.117647,
+          "matched": false
+        },
+        {
+          "clause": "don't force to lower version, just keep up to date",
+          "best_overlap": 0.111111,
+          "matched": false
+        }
+      ]
+    },
+    "conflict_analysis": {
+      "detected_conflicts": []
+    },
+    "resolutions": {
+      "applied": []
+    },
+    "recommendations": [
+      "No contradiction detected"
+    ],
+    "session_log": {
+      "status": "not_executed"
+    }
+  },
+  "correction_summary": {
+    "total_corrections": 0,
+    "corrections": []
+  }
+}

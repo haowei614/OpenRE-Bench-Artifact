@@ -1,0 +1,302 @@
+{
+  "gsn_elements": [
+    {
+      "id": "INT-L1-001",
+      "name": "Integrated Goal",
+      "description": "Integrated single-agent objective for elasticsearch_2026q1: Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Integrated coverage across all requirement clauses",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001",
+      "name": "Integrated Requirement 1",
+      "description": "The system shall satisfy: Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-002",
+      "name": "Integrated Requirement 2",
+      "description": "The system shall satisfy: For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS SUM(X), SUM(X + 4) evaluates to 18, 7 because both single and multi values are in the first sum, but only sin...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-003",
+      "name": "Integrated Requirement 3",
+      "description": "The system shall satisfy: Requirement 3 (Issue #144641: ES|QL: improve error message for unbounded sort before MV_EXPAND)",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-004",
+      "name": "Integrated Requirement 4",
+      "description": "The system shall satisfy: Some queries with SORT + MV_EXPAND can result in an unbounded sort, that cannot be executed for now",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-005",
+      "name": "Integrated Requirement 5",
+      "description": "The system shall satisfy: Current error message is Unbounded SORT not supported yet [SORT something] please add a LIMIT, that is too generic to understand what the problem could be in the query",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-006",
+      "name": "Integrated Requirement 6",
+      "description": "The system shall satisfy: We should make it more clear, explicitly mentioning the command (eg",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "SingleAgent",
+      "measurable_criteria": "Clause-level integrated requirement",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-001",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-002",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-003",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-004",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-005",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-006",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_iredev-elasticsearch_2026q1-single_agent-s202",
+    "name": "OpenRE-Bench Integrated KAOS for elasticsearch_2026q1",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-09-30T00:17:22Z",
+    "requirement_source": "Requirement 1 (Issue #142340: [DiskBBQ] Fix our silly imbalanced cluster issue)\nDescription\n\nCluster imbalance is a known issue and yeah, we are hitting it. I consistently see oversized clusters (multiples in size of our configured limit). This can lead to inconsistent search latency behavior for different queries (what if the query is nearer only tiny clusters or nearer only the huge ones?) and can harm our logic for fetching postings lists.\n\nWe should strive for cluster size consistency, even with SOAR overspilling.\n\nRequirement 2 (Issue #140470: Query planner rewrite SUM(X+a) as SUM(X) + a*COUNT(X))\nWe should be able to optimize stats of the form SUM(X + a) where a is a constant to SUM(X) + aCOUNT(X). This should result in fewer addition operations, and reuse of SUM(X) if it is used elsewhere in the query. There is a problem with doing this optimization due to multivaluedness. Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result. For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS SUM(X), SUM(X + 4) evaluates to 18, 7 because both single and multi values are in the first sum, but only single values are in the ...\n\nRequirement 3 (Issue #144641: ES|QL: improve error message for unbounded sort before MV_EXPAND)\nSome queries with SORT + MV_EXPAND can result in an unbounded sort, that cannot be executed for now.\n\neg.\n\n \n\nCurrent error message is Unbounded SORT not supported yet [SORT something] please add a LIMIT, that is too generic to understand what the problem could be in the query. \nWe should make it more clear, explicitly mentioning the command (eg. MV_EXPAND) that caused the sort to remain unbounded, and suggest possible solutions.\n\nRequirement 4 (Issue #140103: [ES|QL] First/Last aliases and types)\nThis issue was created out of a small number of remaining work from that was deemed not necessary for a tech preview, essentially all the items from the \"_Things to circle back to after tech preview_\" section in the aforementioned ticket. 1. Vector-only dispatch. Special handling for block values that can be vectorized has been disabled in it was a no-op. At some point, we'd like to enable it back and actually have it implemented for performance reasons as the vector path won't have to check for nulls, or mult-ivalues. 2. Add support for date / data_nanos / float in the value parameter 3. Make aliases that default to @timestamp for the second parameter, and call them EARLIEST/LATEST. For example ...",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Integrated"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "single_agent"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "INT-L1-001",
+        "name": "Integrated Goal",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "INT-L2-001",
+        "name": "Integrated Requirement 1",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-002",
+        "name": "Integrated Requirement 2",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-003",
+        "name": "Integrated Requirement 3",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-004",
+        "name": "Integrated Requirement 4",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-005",
+        "name": "Integrated Requirement 5",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-006",
+        "name": "Integrated Requirement 6",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "INT-L1-001"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "INT-L1-001": [
+        "INT-L2-001",
+        "INT-L2-002",
+        "INT-L2-003",
+        "INT-L2-004",
+        "INT-L2-005",
+        "INT-L2-006"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_iredev-elasticsearch_2026q1-single_agent-s202",
+  "created_timestamp": "2026-09-30T00:17:22Z",
+  "total_elements": 7,
+  "total_relations": 6
+}

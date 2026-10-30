@@ -1,0 +1,271 @@
+{
+  "run_id": "mare-elasticsearch_2026q1-multi_agent_with_negotiation-s101",
+  "case_id": "elasticsearch_2026q1",
+  "system": "mare",
+  "setting": "multi_agent_with_negotiation",
+  "seed": 101,
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": 0.7,
+  "round_cap": 3,
+  "system_identity": {
+    "system_name": "mare",
+    "implementation": "deterministic-parity-pipeline",
+    "implementation_version": "0.1.0",
+    "python_version": "3.13.13",
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "provenance": {
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 0.7,
+    "seed": 101,
+    "prompt_hash": "f827b566911d86b942d2e7afbc8493cd084dc856ddfa713c31a30792b1311e5c",
+    "corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "corpus_path": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base"
+  },
+  "execution_flags": {
+    "rag_fallback_used": false,
+    "llm_fallback_used": false,
+    "fallback_tainted": false,
+    "retry_used": false,
+    "retry_count": 0
+  },
+  "comparability": {
+    "is_comparable": false,
+    "non_comparable_reasons": [
+      "verification_not_executed_for_setting"
+    ]
+  },
+  "max_tokens": 4000,
+  "rag_enabled": true,
+  "rag_backend": "local_tfidf",
+  "rag_fallback_used": false,
+  "start_timestamp": "2026-09-29T05:06:00Z",
+  "end_timestamp": "2026-09-29T05:06:37Z",
+  "runtime_seconds": 36.489995,
+  "artifacts_dir": "experiment_outputs/mined-claude/runs/mare-elasticsearch_2026q1-multi_agent_with_negotiation-s101",
+  "artifact_paths": {
+    "phase1_initial_models.json": "experiment_outputs/mined-claude/runs/mare-elasticsearch_2026q1-multi_agent_with_negotiation-s101/phase1_initial_models.json",
+    "phase2_negotiation_trace.json": "experiment_outputs/mined-claude/runs/mare-elasticsearch_2026q1-multi_agent_with_negotiation-s101/phase2_negotiation_trace.json",
+    "phase3_integrated_kaos_model.json": "experiment_outputs/mined-claude/runs/mare-elasticsearch_2026q1-multi_agent_with_negotiation-s101/phase3_integrated_kaos_model.json",
+    "phase4_verification_report.json": "experiment_outputs/mined-claude/runs/mare-elasticsearch_2026q1-multi_agent_with_negotiation-s101/phase4_verification_report.json"
+  },
+  "artifact_blinded": false,
+  "blinding_scheme_version": "",
+  "blind_eval_run_id": "",
+  "judge_pipeline_hash": "2445b4af2ba75286957dff731bd87940ef656dd7061348457de6c7bab36eb0ff",
+  "trace_audit_path": "",
+  "notes": {
+    "phase_a_b": true,
+    "generation_mode": "deterministic-parity-pipeline",
+    "runtime_semantics": {
+      "mode": "mare_paper_workflow_v1",
+      "workflow_version": "1",
+      "paper_workflow_enabled": true,
+      "setting": "multi_agent_with_negotiation",
+      "llm_required": true,
+      "llm_source": "openai",
+      "llm_enabled": true,
+      "llm_seed": 101,
+      "llm_seed_applied_turns": 9,
+      "llm_turns": 9,
+      "llm_fallback_turns": 0,
+      "llm_retry_count": 0,
+      "llm_parse_recoveries": 9,
+      "execution_mode": "llm_driven",
+      "llm_actions": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "fallback_actions": [],
+      "roles_executed": [
+        "Stakeholders",
+        "Collector",
+        "Modeler",
+        "Checker",
+        "Documenter"
+      ],
+      "actions_executed": [
+        "SpeakUserStories",
+        "ProposeQuestion",
+        "AnswerQuestion",
+        "WriteReqDraft",
+        "ExtractEntity",
+        "ExtractRelation",
+        "CheckRequirement",
+        "WriteSRS",
+        "WriteCheckReport"
+      ],
+      "role_action_map": {
+        "Stakeholders": [
+          "SpeakUserStories",
+          "AnswerQuestion"
+        ],
+        "Collector": [
+          "ProposeQuestion",
+          "WriteReqDraft"
+        ],
+        "Modeler": [
+          "ExtractEntity",
+          "ExtractRelation"
+        ],
+        "Checker": [
+          "CheckRequirement"
+        ],
+        "Documenter": [
+          "WriteSRS",
+          "WriteCheckReport"
+        ]
+      },
+      "action_trace": [
+        {
+          "role": "Stakeholders",
+          "action": "SpeakUserStories",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Four user stories capturing cluster consistency, algebraic query optimization for SUM expressions, safe handling of multivalued fields, and performance gains from query rewriting for elasticsearch_2026q1."
+        },
+        {
+          "role": "Collector",
+          "action": "ProposeQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Clarification questions targeting the SUM(X+a) optimization's handling of multivalued fields, cluster sizing consistency thresholds, null treatment semantics, performance acceptance criteria, and type constraints."
+        },
+        {
+          "role": "Stakeholders",
+          "action": "AnswerQuestion",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "Stakeholders answered four collector questions with concrete constraints: SUM(X+a) optimization restricted to single-valued fields with COUNT(X) excluding multivalued documents; cluster consistency measured per-shard with ±10% variance tolerance; 15% operation reduction and 8% execution time improvement required as success metrics; pre-flight cardinality validation implemented to safely gate optimization application."
+        },
+        {
+          "role": "Collector",
+          "action": "WriteReqDraft",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 5,
+          "summary": "Five requirements drafted with explicit 'shall' language addressing cluster consistency under SOAR overflow, SUM(X+a) algebraic rewriting for single-valued fields, multivalued field handling via optimization disablement and COUNT exclusion, and measurable performance targets of 15% operation reduction and 8% execution time improvement."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractEntity",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 15 candidate requirement entities from elasticsearch_2026q1 fragments, covering cluster management concepts (shard consistency, SOAR overspilling), query optimization components (SUM(X+a) rewriting, COUNT(X) handling), field characteristics (single-valued, multivalued), and performance metrics (15% operation reduction, 8% execution time improvement)."
+        },
+        {
+          "role": "Modeler",
+          "action": "ExtractRelation",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 8,
+          "summary": "Extracted 10 entity relations from elasticsearch_2026q1 requirements covering cluster consistency constraints, SUM(X+a) query optimization mechanics, multivalued field handling, and performance success metrics."
+        },
+        {
+          "role": "Checker",
+          "action": "CheckRequirement",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Five quality issues identified: two ambiguities (scope/measurement definitions, rebalancing timing), two conflicts (redundant multivalued exclusion logic, dual success metrics), and two verifiability gaps (missing acceptance criteria, baseline definitions). Recommend consolidating overlapping multivalued field requirements and establishing single primary optimization metric before requirement approval."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteSRS",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 4,
+          "summary": "SRS drafted with six requirement sections addressing cluster sizing consistency, query optimization framework, multivalued field exclusion logic, applicability rules, dual performance metrics, and scope clarification for SOAR overspilling behavior. Consolidated overlapping multivalued exclusion requirements (REQ-003/004) and flagged ambiguities in variance measurement scope and baseline definition for metric verification."
+        },
+        {
+          "role": "Documenter",
+          "action": "WriteCheckReport",
+          "execution_mode": "llm",
+          "llm_generated": true,
+          "llm_source": "openai",
+          "fallback_reason": "",
+          "output_count": 6,
+          "summary": "Check report documents six verification points tying requirement ambiguities and conflicts to acceptance criteria: cluster measurement scope, optimization baseline definition, multivalued exclusion consolidation, dual success metrics alignment, auto-rebalancing SLA specification, and single-valued field validation logic."
+        }
+      ],
+      "workspace_summary": {
+        "user_stories": 4,
+        "questions": 4,
+        "answers": 4,
+        "requirement_draft": 5,
+        "entities": 8,
+        "relations": 8,
+        "findings": 6,
+        "srs_sections": 4,
+        "check_report": 6,
+        "llm_turns": 9,
+        "llm_fallback_turns": 0
+      },
+      "workspace_digest": "e715b58ce1dee59659f6f8adbbf7ab60f8e53e0160c1d65e690f59190032b3bd"
+    },
+    "case_description": "Feature requests mined from the elastic/elasticsearch project (Database / Search), aggregated from GitHub issues in 2026Q1.",
+    "system": "mare",
+    "setting": "multi_agent_with_negotiation",
+    "negotiation_enabled": true,
+    "verification_executed": false,
+    "system_behaviors": {
+      "phase2_uses_llm": false,
+      "phase2_llm_active": false,
+      "optional_artifact_count": 0
+    },
+    "optional_artifacts": {},
+    "phase2_llm": {
+      "source": "disabled",
+      "enabled": false,
+      "seed": 101,
+      "seed_applied_turns": 0,
+      "turns": 0,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 0
+    },
+    "runtime_llm": {
+      "source": "openai",
+      "enabled": true,
+      "seed": 101,
+      "seed_applied_turns": 9,
+      "turns": 9,
+      "fallback_turns": 0,
+      "retry_count": 0,
+      "parse_recoveries": 9,
+      "execution_mode": "llm_driven"
+    },
+    "rag_corpus_dir": "/Users/haowei.cheng/Desktop/MSR/OpenRE-Bench-Artifact/data/knowledge_base",
+    "rag_corpus_hash": "b19718a4c597411e991d8da3bb909214ef94e624631cde0d8fb9dfd53dd71426",
+    "rag_chunk_count": 308,
+    "prompt_contract_hash": "f827b566911d86b942d2e7afbc8493cd084dc856ddfa713c31a30792b1311e5c"
+  }
+}

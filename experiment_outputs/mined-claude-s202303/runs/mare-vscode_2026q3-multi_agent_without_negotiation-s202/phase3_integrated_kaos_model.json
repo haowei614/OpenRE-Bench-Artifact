@@ -1,0 +1,950 @@
+{
+  "gsn_elements": [
+    {
+      "id": "STA-L1-001",
+      "name": "Stakeholders Goal",
+      "description": "Stakeholders objective for vscode_2026q3: As a developer working across multiple repositories, I need to access chats from different workspaces without closing my current window, so I can maintain context and switch between projects efficiently.",
+      "gsn_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-01",
+      "name": "Stakeholders Output 1",
+      "description": "The system shall As a developer working across multiple repositories, I need to access chats from different workspaces without closing my current window, so I can maintain context and switch between projects efficiently.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-02",
+      "name": "Stakeholders Output 2",
+      "description": "The system shall As a developer, I need chat sessions to persist when workspace identity changes (multi-root combinations, workspace file saves, folder renames/moves), so I don't lose conversation history and context.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-03",
+      "name": "Stakeholders Output 3",
+      "description": "The system shall As a developer, I need the Chat view picker to display sessions from all workspaces, not just the current one, so I can quickly locate and switch between relevant conversations across my projects.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-04",
+      "name": "Stakeholders Output 4",
+      "description": "The system shall As a developer, I need chat data stored in jsonl files with workspace-indexed state entries, so sessions remain accessible and recoverable regardless of workspace configuration changes.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L1-002",
+      "name": "Collector Goal",
+      "description": "Collector objective for vscode_2026q3: The system shall store chat sessions in jsonl files organized by workspace identity hash in the global state directory (~/.vscode/chats/), with each entry containing workspaceIdentityHash, folderUris array, workspaceN...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-01",
+      "name": "Collector Output 1",
+      "description": "The system shall The system shall store chat sessions in jsonl files organized by workspace identity hash in the global state directory (~/.vscode/chats/), with each entry containing workspaceIdentityHash, folderUris array, workspaceN...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-02",
+      "name": "Collector Output 2",
+      "description": "The system shall The system shall compute workspace identity deterministically as a hash derived from: sorted array of folder URIs, workspace file URI if present, and workspace name if untitled, ensuring consistent identification acro...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-03",
+      "name": "Collector Output 3",
+      "description": "The system shall The Chat view picker shall display and index chat sessions from up to 50 workspaces with automatic LRU eviction, grouped primarily by workspace name and secondarily by last-accessed timestamp.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-04",
+      "name": "Collector Output 4",
+      "description": "The system shall The system shall maintain chat accessibility across workspace identity changes by implementing identity alias mappings in the global index, allowing chats to be accessed via both old and new identity hashes.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L1-003",
+      "name": "Modeler Goal",
+      "description": "Modeler objective for vscode_2026q3: Entity: Chat Session",
+      "gsn_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "metrics/quantified_benchmarks.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-01",
+      "name": "Modeler Output 1",
+      "description": "The system shall Entity: Chat Session",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "metrics/quantified_benchmarks.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-02",
+      "name": "Modeler Output 2",
+      "description": "The system shall Entity: Workspace Identity Hash",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-03",
+      "name": "Modeler Output 3",
+      "description": "The system shall Entity: JSONL File",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-04",
+      "name": "Modeler Output 4",
+      "description": "The system shall Entity: Global State Directory",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L1-004",
+      "name": "Checker Goal",
+      "description": "Checker objective for vscode_2026q3: 1. JSONL Storage Organization: Verify that chat sessions are persisted in jsonl files within ~/.vscode/chats/ directory, organized by workspace identity hash, with each entry containing workspaceIdentityHash, folderUr...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-01",
+      "name": "Checker Output 1",
+      "description": "The system shall 1. JSONL Storage Organization: Verify that chat sessions are persisted in jsonl files within ~/.vscode/chats/ directory, organized by workspace identity hash, with each entry containing workspaceIdentityHash, folderUr...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-02",
+      "name": "Checker Output 2",
+      "description": "The system shall 2. Workspace Identity Hash Computation: Confirm that workspace identity is computed deterministically using SHA-256 hash of sorted folder URIs + workspace file URI (if present) + workspace name (if untitled), matching...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "metrics/quantified_benchmarks.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-03",
+      "name": "Checker Output 3",
+      "description": "The system shall 3. Chat Picker Multi-Workspace Display: Validate that Chat view picker displays sessions from up to 50 workspaces with primary grouping by workspace name and secondary grouping by last-accessed timestamp, as specified...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-04",
+      "name": "Checker Output 4",
+      "description": "The system shall 4. Identity Alias Mapping Implementation: Verify that identity alias mappings are maintained in global index to enable chat accessibility via both old and new identity hashes when workspace identity changes, per requi...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L1-005",
+      "name": "Documenter Goal",
+      "description": "Documenter objective for vscode_2026q3: 1. Chat Session Storage & Organization | Establish jsonl-based persistent storage in global state directory with workspace identity hash-based organization and index schema definition",
+      "gsn_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-01",
+      "name": "Documenter Output 1",
+      "description": "The system shall 1. Chat Session Storage & Organization | Establish jsonl-based persistent storage in global state directory with workspace identity hash-based organization and index schema definition",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-02",
+      "name": "Documenter Output 2",
+      "description": "The system shall 2. Workspace Identity Computation | Define deterministic hash algorithm (SHA-256), input normalization rules (sorted URIs, workspace file URI, workspace name), and cross-platform reproducibility criteria",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "metrics/quantified_benchmarks.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-03",
+      "name": "Documenter Output 3",
+      "description": "The system shall 3. Chat Session Indexing & Retrieval | Specify global state index structure, lookup precedence rules, and performance requirements for multi-workspace chat discovery",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-04",
+      "name": "Documenter Output 4",
+      "description": "The system shall 4. Chat View Picker Functionality | Define picker display logic, grouping (workspace name primary, last-accessed secondary), filtering (workspace name/chat title search), and 50-workspace LRU eviction trigger conditions",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-007",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-008",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-009",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-010",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-011",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-012",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-013",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-014",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-015",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-016",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-017",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-018",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-019",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-020",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_mare-vscode_2026q3-multi_agent_without_negotiation-s202",
+    "name": "OpenRE-Bench Integrated KAOS for vscode_2026q3",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-09-30T02:37:32Z",
+    "requirement_source": "Requirement 1 (Issue #334186: Send x-opencode-session header on API requests (required by OpenCode Go from 09/05))\nHi — we operate the OpenCode Go managed-inference API, and 1685 of your users' orgs call it through GitHub Copilot Chat (UA GitHubCopilotChat/0.63.0).\n\nStarting 09/05, requests without an x-opencode-session header will error on our side — we need a stable per-conversation ID for routing/optimization. Copilot Chat doesn't send it in any version we've seen.\n\nAsk: include x-opencode-session: on all outbound inference HTTP requests. Any stable UUID per conversation works. Happy to confirm from our telemetry once a build ships it. Thanks!\n\nRequirement 2 (Issue #334228: Make chat sessions available across workspaces (global chat history))\nMake chat sessions available across workspaces (global chat history) Problem Copilot chat sessions are strictly workspace-scoped. Each workspace storage folder (workspaceStorage/ ) holds its own chatSessions/.jsonl files plus a chat.ChatSessionStore.index entry in state.vscdb, and the Chat view / \"Show Chats…\" picker only ever lists that one workspace's sessions. As a developer working across many repos daily, this means: - I can never pull up a chat from another workspace without closing my window and reopening the other folder — losing my current context. - Chats \"disappear\" when the workspace identity changes: opening the same folders as a different multi-root combination, saving an untitled workspace as a .code-workspace file, or renaming/moving a folder all create a new storage hash with an ...\n\nRequirement 3 (Issue #327076: Opening a non-existent file should not trigger \"save dirty file\"  (Vim/Emacs-style \"nothing changed, nothing to save\"))\nFeature request Add a setting that prevents a newly created, empty and untouched file from being treated as \"dirty,\" so that closing it does not trigger a \"Do you want to save?\" prompt. In Microsoft VSCode, if you open a new file (\"code doesnotexist.txt from the Terminal), make no changes, then try to exit, it asks if you want to save the file. Other editors, such as Vim and Emacs, do not ask to save the file. The logic of Vim and Emacs is that no changes (including creating the file) have happened, therefore there is nothing to save. I'm requesting a feature to enable the behavior that Vim/Emacs uses. Current behavior When you create a new file that has ...",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "multi_agent_without_negotiation"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "STA-L1-001",
+        "name": "Stakeholders Goal",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": null
+      },
+      {
+        "id": "COL-L1-002",
+        "name": "Collector Goal",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": null
+      },
+      {
+        "id": "MOD-L1-003",
+        "name": "Modeler Goal",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": null
+      },
+      {
+        "id": "CHE-L1-004",
+        "name": "Checker Goal",
+        "quality_attribute": "Safety",
+        "parent_goal_id": null
+      },
+      {
+        "id": "DOC-L1-005",
+        "name": "Documenter Goal",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "STA-L2-001-01",
+        "name": "Stakeholders Output 1",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "STA-L2-001-02",
+        "name": "Stakeholders Output 2",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "STA-L2-001-03",
+        "name": "Stakeholders Output 3",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "STA-L2-001-04",
+        "name": "Stakeholders Output 4",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "COL-L2-002-01",
+        "name": "Collector Output 1",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "COL-L2-002-02",
+        "name": "Collector Output 2",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "COL-L2-002-03",
+        "name": "Collector Output 3",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "COL-L2-002-04",
+        "name": "Collector Output 4",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "MOD-L2-003-01",
+        "name": "Modeler Output 1",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "MOD-L2-003-02",
+        "name": "Modeler Output 2",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "MOD-L2-003-03",
+        "name": "Modeler Output 3",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "MOD-L2-003-04",
+        "name": "Modeler Output 4",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "CHE-L2-004-01",
+        "name": "Checker Output 1",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-02",
+        "name": "Checker Output 2",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-03",
+        "name": "Checker Output 3",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-04",
+        "name": "Checker Output 4",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "DOC-L2-005-01",
+        "name": "Documenter Output 1",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      },
+      {
+        "id": "DOC-L2-005-02",
+        "name": "Documenter Output 2",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      },
+      {
+        "id": "DOC-L2-005-03",
+        "name": "Documenter Output 3",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      },
+      {
+        "id": "DOC-L2-005-04",
+        "name": "Documenter Output 4",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "STA-L1-001": [
+        "STA-L2-001-01",
+        "STA-L2-001-02",
+        "STA-L2-001-03",
+        "STA-L2-001-04"
+      ],
+      "COL-L1-002": [
+        "COL-L2-002-01",
+        "COL-L2-002-02",
+        "COL-L2-002-03",
+        "COL-L2-002-04"
+      ],
+      "MOD-L1-003": [
+        "MOD-L2-003-01",
+        "MOD-L2-003-02",
+        "MOD-L2-003-03",
+        "MOD-L2-003-04"
+      ],
+      "CHE-L1-004": [
+        "CHE-L2-004-01",
+        "CHE-L2-004-02",
+        "CHE-L2-004-03",
+        "CHE-L2-004-04"
+      ],
+      "DOC-L1-005": [
+        "DOC-L2-005-01",
+        "DOC-L2-005-02",
+        "DOC-L2-005-03",
+        "DOC-L2-005-04"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_mare-vscode_2026q3-multi_agent_without_negotiation-s202",
+  "created_timestamp": "2026-09-30T02:37:32Z",
+  "total_elements": 25,
+  "total_relations": 20
+}

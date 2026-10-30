@@ -1,0 +1,546 @@
+{
+  "verification_results": {
+    "fact_checking": {
+      "hallucination_reports": [],
+      "flagged_elements": [],
+      "total_checked": 30
+    },
+    "deterministic_validation": {
+      "is_valid": false,
+      "violations": [],
+      "passed_rules": [],
+      "status": "not_executed"
+    },
+    "topology_status": {
+      "status": "Valid",
+      "is_valid": true,
+      "is_dag": true,
+      "orphan_count": 0,
+      "cycle_count": 0,
+      "invalid_leaf_count": 0,
+      "orphan_elements": [],
+      "cycles": [],
+      "invalid_leaves": []
+    },
+    "consistency_verification": {
+      "status": "not_executed",
+      "issues": [],
+      "logical_score": 5,
+      "logical_score_normalized": 1.0,
+      "terminology_score": 1,
+      "terminology_consistency_ratio": 0.333333
+    },
+    "universal_verification": {
+      "verification_summary": {
+        "total_constraints": 24,
+        "total_conflicts": 0,
+        "critical_conflicts": 0,
+        "quality_score": 100.0,
+        "verification_passed": false
+      },
+      "constraint_analysis": {
+        "extracted_constraints": [
+          {
+            "clause": "Requirement 1 (Issue #334186: Send x-opencode-session header on API requests (required by OpenCode Go from 09/05))",
+            "best_overlap": 0.125,
+            "matched": false
+          },
+          {
+            "clause": "Hi — we operate the OpenCode Go managed-inference API, and 1685 of your users' orgs call it through GitHub Copilot Ch...",
+            "best_overlap": 0.074074,
+            "matched": false
+          },
+          {
+            "clause": "Starting 09/05, requests without an x-opencode-session header will error on our side — we need a stable per-conversat...",
+            "best_overlap": 0.103448,
+            "matched": false
+          },
+          {
+            "clause": "Copilot Chat doesn't send it in any version we've seen",
+            "best_overlap": 0.085106,
+            "matched": false
+          },
+          {
+            "clause": "Ask: include x-opencode-session: on all outbound inference HTTP requests",
+            "best_overlap": 0.045455,
+            "matched": false
+          },
+          {
+            "clause": "Any stable UUID per conversation works",
+            "best_overlap": 0.051282,
+            "matched": false
+          },
+          {
+            "clause": "Happy to confirm from our telemetry once a build ships it",
+            "best_overlap": 0.093023,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 2 (Issue #334228: Make chat sessions available across workspaces (global chat history))",
+            "best_overlap": 0.093023,
+            "matched": false
+          },
+          {
+            "clause": "Make chat sessions available across workspaces (global chat history) Problem Copilot chat sessions are strictly works...",
+            "best_overlap": 0.044444,
+            "matched": false
+          },
+          {
+            "clause": "Each workspace storage folder (workspaceStorage/ ) holds its own chatSessions/",
+            "best_overlap": 0.047619,
+            "matched": false
+          },
+          {
+            "clause": "jsonl files plus a chat",
+            "best_overlap": 0.105263,
+            "matched": false
+          },
+          {
+            "clause": "index entry in state",
+            "best_overlap": 0.102564,
+            "matched": false
+          },
+          {
+            "clause": "vscdb, and the Chat view / \"Show Chats…\" picker only ever lists that one workspace's sessions",
+            "best_overlap": 0.122449,
+            "matched": false
+          },
+          {
+            "clause": "As a developer working across many repos daily, this means: - I can never pull up a chat from another workspace witho...",
+            "best_overlap": 0.125,
+            "matched": false
+          },
+          {
+            "clause": "- Chats \"disappear\" when the workspace identity changes: opening the same folders as a different multi-root combinati...",
+            "best_overlap": 0.181818,
+            "matched": false
+          },
+          {
+            "clause": "code-workspace file, or renaming/moving a folder all create a new storage hash with an",
+            "best_overlap": 0.15,
+            "matched": false
+          },
+          {
+            "clause": "Requirement 3 (Issue #327076: Opening a non-existent file should not trigger \"save dirty file\" (Vim/Emacs-style \"noth...",
+            "best_overlap": 0.311111,
+            "matched": false
+          },
+          {
+            "clause": "Feature request Add a setting that prevents a newly created, empty and untouched file from being treated as \"dirty,\"...",
+            "best_overlap": 0.290323,
+            "matched": false
+          },
+          {
+            "clause": "In Microsoft VSCode, if you open a new file (\"code doesnotexist",
+            "best_overlap": 0.195122,
+            "matched": false
+          },
+          {
+            "clause": "txt from the Terminal), make no changes, then try to exit, it asks if you want to save the file",
+            "best_overlap": 0.192308,
+            "matched": false
+          },
+          {
+            "clause": "Other editors, such as Vim and Emacs, do not ask to save the file",
+            "best_overlap": 0.238095,
+            "matched": false
+          },
+          {
+            "clause": "The logic of Vim and Emacs is that no changes (including creating the file) have happened, therefore there is nothing...",
+            "best_overlap": 0.208333,
+            "matched": false
+          },
+          {
+            "clause": "I'm requesting a feature to enable the behavior that Vim/Emacs uses",
+            "best_overlap": 0.195122,
+            "matched": false
+          },
+          {
+            "clause": "Current behavior When you create a new file that has",
+            "best_overlap": 0.177778,
+            "matched": false
+          }
+        ]
+      },
+      "conflict_analysis": {
+        "detected_conflicts": []
+      },
+      "resolutions": {
+        "applied": []
+      },
+      "recommendations": [
+        "No contradiction detected"
+      ],
+      "session_log": {
+        "status": "not_executed"
+      }
+    },
+    "compliance_coverage": {
+      "satisfied_applicable_clauses": 0,
+      "total_applicable_clauses": 24,
+      "coverage_ratio": 0.0,
+      "clauses": [
+        {
+          "clause": "Requirement 1 (Issue #334186: Send x-opencode-session header on API requests (required by OpenCode Go from 09/05))",
+          "best_overlap": 0.125,
+          "matched": false
+        },
+        {
+          "clause": "Hi — we operate the OpenCode Go managed-inference API, and 1685 of your users' orgs call it through GitHub Copilot Ch...",
+          "best_overlap": 0.074074,
+          "matched": false
+        },
+        {
+          "clause": "Starting 09/05, requests without an x-opencode-session header will error on our side — we need a stable per-conversat...",
+          "best_overlap": 0.103448,
+          "matched": false
+        },
+        {
+          "clause": "Copilot Chat doesn't send it in any version we've seen",
+          "best_overlap": 0.085106,
+          "matched": false
+        },
+        {
+          "clause": "Ask: include x-opencode-session: on all outbound inference HTTP requests",
+          "best_overlap": 0.045455,
+          "matched": false
+        },
+        {
+          "clause": "Any stable UUID per conversation works",
+          "best_overlap": 0.051282,
+          "matched": false
+        },
+        {
+          "clause": "Happy to confirm from our telemetry once a build ships it",
+          "best_overlap": 0.093023,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #334228: Make chat sessions available across workspaces (global chat history))",
+          "best_overlap": 0.093023,
+          "matched": false
+        },
+        {
+          "clause": "Make chat sessions available across workspaces (global chat history) Problem Copilot chat sessions are strictly works...",
+          "best_overlap": 0.044444,
+          "matched": false
+        },
+        {
+          "clause": "Each workspace storage folder (workspaceStorage/ ) holds its own chatSessions/",
+          "best_overlap": 0.047619,
+          "matched": false
+        },
+        {
+          "clause": "jsonl files plus a chat",
+          "best_overlap": 0.105263,
+          "matched": false
+        },
+        {
+          "clause": "index entry in state",
+          "best_overlap": 0.102564,
+          "matched": false
+        },
+        {
+          "clause": "vscdb, and the Chat view / \"Show Chats…\" picker only ever lists that one workspace's sessions",
+          "best_overlap": 0.122449,
+          "matched": false
+        },
+        {
+          "clause": "As a developer working across many repos daily, this means: - I can never pull up a chat from another workspace witho...",
+          "best_overlap": 0.125,
+          "matched": false
+        },
+        {
+          "clause": "- Chats \"disappear\" when the workspace identity changes: opening the same folders as a different multi-root combinati...",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "code-workspace file, or renaming/moving a folder all create a new storage hash with an",
+          "best_overlap": 0.15,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #327076: Opening a non-existent file should not trigger \"save dirty file\" (Vim/Emacs-style \"noth...",
+          "best_overlap": 0.311111,
+          "matched": false
+        },
+        {
+          "clause": "Feature request Add a setting that prevents a newly created, empty and untouched file from being treated as \"dirty,\"...",
+          "best_overlap": 0.290323,
+          "matched": false
+        },
+        {
+          "clause": "In Microsoft VSCode, if you open a new file (\"code doesnotexist",
+          "best_overlap": 0.195122,
+          "matched": false
+        },
+        {
+          "clause": "txt from the Terminal), make no changes, then try to exit, it asks if you want to save the file",
+          "best_overlap": 0.192308,
+          "matched": false
+        },
+        {
+          "clause": "Other editors, such as Vim and Emacs, do not ask to save the file",
+          "best_overlap": 0.238095,
+          "matched": false
+        },
+        {
+          "clause": "The logic of Vim and Emacs is that no changes (including creating the file) have happened, therefore there is nothing...",
+          "best_overlap": 0.208333,
+          "matched": false
+        },
+        {
+          "clause": "I'm requesting a feature to enable the behavior that Vim/Emacs uses",
+          "best_overlap": 0.195122,
+          "matched": false
+        },
+        {
+          "clause": "Current behavior When you create a new file that has",
+          "best_overlap": 0.177778,
+          "matched": false
+        }
+      ]
+    },
+    "terminology_consistency": {
+      "score": 1,
+      "consistency_ratio": 0.333333,
+      "conflicts": [
+        {
+          "concept": "system",
+          "terms_used": [
+            "service",
+            "system"
+          ],
+          "requirements": [
+            "ANA-L2-004-01",
+            "ANA-L2-004-02",
+            "ANA-L2-004-03",
+            "ANA-L2-004-04",
+            "ARC-L1-005",
+            "ARC-L2-005-01",
+            "ARC-L2-005-02",
+            "ARC-L2-005-03",
+            "ARC-L2-005-04",
+            "DEP-L1-003",
+            "DEP-L2-003-01",
+            "DEP-L2-003-02",
+            "DEP-L2-003-03",
+            "DEP-L2-003-04",
+            "END-L2-002-01",
+            "END-L2-002-02",
+            "END-L2-002-03",
+            "END-L2-002-04",
+            "INT-L2-001-01",
+            "INT-L2-001-02",
+            "INT-L2-001-03",
+            "INT-L2-001-04",
+            "REV-L2-006-01",
+            "REV-L2-006-02",
+            "REV-L2-006-03",
+            "REV-L2-006-04"
+          ]
+        },
+        {
+          "concept": "user",
+          "terms_used": [
+            "client",
+            "user"
+          ],
+          "requirements": [
+            "ANA-L2-004-02",
+            "ARC-L2-005-04",
+            "DEP-L1-003",
+            "DEP-L2-003-01",
+            "DEP-L2-003-04",
+            "END-L1-002",
+            "INT-L2-001-02"
+          ]
+        }
+      ],
+      "total_concepts": 3,
+      "consistent_concepts": 1
+    },
+    "s_logic": 1.0,
+    "s_term": 0.333333
+  },
+  "fact_checking": {
+    "hallucination_reports": [],
+    "flagged_elements": [],
+    "total_checked": 30
+  },
+  "deterministic_validation": {
+    "is_valid": false,
+    "violations": [],
+    "passed_rules": [],
+    "status": "not_executed"
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "consistency_verification": {
+    "status": "not_executed",
+    "issues": [],
+    "logical_score": 5,
+    "logical_score_normalized": 1.0,
+    "terminology_score": 1,
+    "terminology_consistency_ratio": 0.333333
+  },
+  "universal_verification": {
+    "verification_summary": {
+      "total_constraints": 24,
+      "total_conflicts": 0,
+      "critical_conflicts": 0,
+      "quality_score": 100.0,
+      "verification_passed": false
+    },
+    "constraint_analysis": {
+      "extracted_constraints": [
+        {
+          "clause": "Requirement 1 (Issue #334186: Send x-opencode-session header on API requests (required by OpenCode Go from 09/05))",
+          "best_overlap": 0.125,
+          "matched": false
+        },
+        {
+          "clause": "Hi — we operate the OpenCode Go managed-inference API, and 1685 of your users' orgs call it through GitHub Copilot Ch...",
+          "best_overlap": 0.074074,
+          "matched": false
+        },
+        {
+          "clause": "Starting 09/05, requests without an x-opencode-session header will error on our side — we need a stable per-conversat...",
+          "best_overlap": 0.103448,
+          "matched": false
+        },
+        {
+          "clause": "Copilot Chat doesn't send it in any version we've seen",
+          "best_overlap": 0.085106,
+          "matched": false
+        },
+        {
+          "clause": "Ask: include x-opencode-session: on all outbound inference HTTP requests",
+          "best_overlap": 0.045455,
+          "matched": false
+        },
+        {
+          "clause": "Any stable UUID per conversation works",
+          "best_overlap": 0.051282,
+          "matched": false
+        },
+        {
+          "clause": "Happy to confirm from our telemetry once a build ships it",
+          "best_overlap": 0.093023,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 2 (Issue #334228: Make chat sessions available across workspaces (global chat history))",
+          "best_overlap": 0.093023,
+          "matched": false
+        },
+        {
+          "clause": "Make chat sessions available across workspaces (global chat history) Problem Copilot chat sessions are strictly works...",
+          "best_overlap": 0.044444,
+          "matched": false
+        },
+        {
+          "clause": "Each workspace storage folder (workspaceStorage/ ) holds its own chatSessions/",
+          "best_overlap": 0.047619,
+          "matched": false
+        },
+        {
+          "clause": "jsonl files plus a chat",
+          "best_overlap": 0.105263,
+          "matched": false
+        },
+        {
+          "clause": "index entry in state",
+          "best_overlap": 0.102564,
+          "matched": false
+        },
+        {
+          "clause": "vscdb, and the Chat view / \"Show Chats…\" picker only ever lists that one workspace's sessions",
+          "best_overlap": 0.122449,
+          "matched": false
+        },
+        {
+          "clause": "As a developer working across many repos daily, this means: - I can never pull up a chat from another workspace witho...",
+          "best_overlap": 0.125,
+          "matched": false
+        },
+        {
+          "clause": "- Chats \"disappear\" when the workspace identity changes: opening the same folders as a different multi-root combinati...",
+          "best_overlap": 0.181818,
+          "matched": false
+        },
+        {
+          "clause": "code-workspace file, or renaming/moving a folder all create a new storage hash with an",
+          "best_overlap": 0.15,
+          "matched": false
+        },
+        {
+          "clause": "Requirement 3 (Issue #327076: Opening a non-existent file should not trigger \"save dirty file\" (Vim/Emacs-style \"noth...",
+          "best_overlap": 0.311111,
+          "matched": false
+        },
+        {
+          "clause": "Feature request Add a setting that prevents a newly created, empty and untouched file from being treated as \"dirty,\"...",
+          "best_overlap": 0.290323,
+          "matched": false
+        },
+        {
+          "clause": "In Microsoft VSCode, if you open a new file (\"code doesnotexist",
+          "best_overlap": 0.195122,
+          "matched": false
+        },
+        {
+          "clause": "txt from the Terminal), make no changes, then try to exit, it asks if you want to save the file",
+          "best_overlap": 0.192308,
+          "matched": false
+        },
+        {
+          "clause": "Other editors, such as Vim and Emacs, do not ask to save the file",
+          "best_overlap": 0.238095,
+          "matched": false
+        },
+        {
+          "clause": "The logic of Vim and Emacs is that no changes (including creating the file) have happened, therefore there is nothing...",
+          "best_overlap": 0.208333,
+          "matched": false
+        },
+        {
+          "clause": "I'm requesting a feature to enable the behavior that Vim/Emacs uses",
+          "best_overlap": 0.195122,
+          "matched": false
+        },
+        {
+          "clause": "Current behavior When you create a new file that has",
+          "best_overlap": 0.177778,
+          "matched": false
+        }
+      ]
+    },
+    "conflict_analysis": {
+      "detected_conflicts": []
+    },
+    "resolutions": {
+      "applied": []
+    },
+    "recommendations": [
+      "No contradiction detected"
+    ],
+    "session_log": {
+      "status": "not_executed"
+    }
+  },
+  "correction_summary": {
+    "total_corrections": 0,
+    "corrections": []
+  }
+}

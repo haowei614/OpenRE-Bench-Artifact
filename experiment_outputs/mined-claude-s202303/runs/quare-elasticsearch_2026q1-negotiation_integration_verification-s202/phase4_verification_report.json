@@ -1,0 +1,500 @@
+{
+  "verification_results": {
+    "fact_checking": {
+      "hallucination_reports": [],
+      "flagged_elements": [],
+      "total_checked": 35
+    },
+    "deterministic_validation": {
+      "is_valid": true,
+      "violations": [],
+      "passed_rules": [
+        "topology_validity",
+        "traceability",
+        "logical_consistency"
+      ]
+    },
+    "topology_status": {
+      "status": "Valid",
+      "is_valid": true,
+      "is_dag": true,
+      "orphan_count": 0,
+      "cycle_count": 0,
+      "invalid_leaf_count": 0,
+      "orphan_elements": [],
+      "cycles": [],
+      "invalid_leaves": []
+    },
+    "consistency_verification": {
+      "status": "passed",
+      "issues": [],
+      "logical_score": 5,
+      "logical_score_normalized": 1.0,
+      "terminology_score": 5,
+      "terminology_consistency_ratio": 1.0
+    },
+    "universal_verification": {
+      "verification_summary": {
+        "total_constraints": 24,
+        "total_conflicts": 0,
+        "critical_conflicts": 0,
+        "quality_score": 100.0,
+        "verification_passed": true
+      },
+      "constraint_analysis": {
+        "extracted_constraints": [
+          {
+            "clause": "Requirement 1 (Issue #142340: [DiskBBQ] Fix our silly imbalanced cluster issue)",
+            "best_overlap": 0.8,
+            "matched": true
+          },
+          {
+            "clause": "Cluster imbalance is a known issue and yeah, we are hitting it",
+            "best_overlap": 0.75,
+            "matched": true
+          },
+          {
+            "clause": "I consistently see oversized clusters (multiples in size of our configured limit)",
+            "best_overlap": 0.727273,
+            "matched": true
+          },
+          {
+            "clause": "This can lead to inconsistent search latency behavior for different queries (what if the query is nearer only tiny cl...",
+            "best_overlap": 0.851852,
+            "matched": true
+          },
+          {
+            "clause": ") and can harm our logic for fetching postings lists",
+            "best_overlap": 0.692308,
+            "matched": true
+          },
+          {
+            "clause": "We should strive for cluster size consistency, even with SOAR overspilling",
+            "best_overlap": 0.846154,
+            "matched": true
+          },
+          {
+            "clause": "Requirement 2 (Issue #140470: Query planner rewrite SUM(X+a) as SUM(X) + a*COUNT(X))",
+            "best_overlap": 0.774194,
+            "matched": true
+          },
+          {
+            "clause": "We should be able to optimize stats of the form SUM(X + a) where a is a constant to SUM(X) + aCOUNT(X)",
+            "best_overlap": 0.809524,
+            "matched": true
+          },
+          {
+            "clause": "This should result in fewer addition operations, and reuse of SUM(X) if it is used elsewhere in the query",
+            "best_overlap": 0.826087,
+            "matched": true
+          },
+          {
+            "clause": "There is a problem with doing this optimization due to multivaluedness",
+            "best_overlap": 0.709677,
+            "matched": true
+          },
+          {
+            "clause": "Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result",
+            "best_overlap": 0.904762,
+            "matched": true
+          },
+          {
+            "clause": "For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS SUM(X), S...",
+            "best_overlap": 0.883117,
+            "matched": true
+          },
+          {
+            "clause": "Requirement 3 (Issue #144641: ES|QL: improve error message for unbounded sort before MV_EXPAND)",
+            "best_overlap": 0.8,
+            "matched": true
+          },
+          {
+            "clause": "Some queries with SORT + MV_EXPAND can result in an unbounded sort, that cannot be executed for now",
+            "best_overlap": 0.780488,
+            "matched": true
+          },
+          {
+            "clause": "Current error message is Unbounded SORT not supported yet [SORT something] please add a LIMIT, that is too generic to...",
+            "best_overlap": 0.912281,
+            "matched": true
+          },
+          {
+            "clause": "We should make it more clear, explicitly mentioning the command (eg",
+            "best_overlap": 0.733333,
+            "matched": true
+          },
+          {
+            "clause": "MV_EXPAND) that caused the sort to remain unbounded, and suggest possible solutions",
+            "best_overlap": 0.75,
+            "matched": true
+          },
+          {
+            "clause": "Requirement 4 (Issue #140103: [ES|QL] First/Last aliases and types)",
+            "best_overlap": 0.758621,
+            "matched": true
+          },
+          {
+            "clause": "This issue was created out of a small number of remaining work from that was deemed not necessary for a tech preview,...",
+            "best_overlap": 0.861111,
+            "matched": true
+          },
+          {
+            "clause": "Vector-only dispatch",
+            "best_overlap": 0.545455,
+            "matched": true
+          },
+          {
+            "clause": "Special handling for block values that can be vectorized has been disabled in it was a no-op",
+            "best_overlap": 0.782609,
+            "matched": true
+          },
+          {
+            "clause": "At some point, we'd like to enable it back and actually have it implemented for performance reasons as the vector pat...",
+            "best_overlap": 0.861538,
+            "matched": true
+          },
+          {
+            "clause": "Add support for date / data_nanos / float in the value parameter 3",
+            "best_overlap": 0.709677,
+            "matched": true
+          },
+          {
+            "clause": "Make aliases that default to @timestamp for the second parameter, and call them EARLIEST/LATEST",
+            "best_overlap": 0.769231,
+            "matched": true
+          }
+        ]
+      },
+      "conflict_analysis": {
+        "detected_conflicts": []
+      },
+      "resolutions": {
+        "applied": []
+      },
+      "recommendations": [
+        "No contradiction detected"
+      ],
+      "session_log": {
+        "status": "passed"
+      }
+    },
+    "compliance_coverage": {
+      "satisfied_applicable_clauses": 24,
+      "total_applicable_clauses": 24,
+      "coverage_ratio": 1.0,
+      "clauses": [
+        {
+          "clause": "Requirement 1 (Issue #142340: [DiskBBQ] Fix our silly imbalanced cluster issue)",
+          "best_overlap": 0.8,
+          "matched": true
+        },
+        {
+          "clause": "Cluster imbalance is a known issue and yeah, we are hitting it",
+          "best_overlap": 0.75,
+          "matched": true
+        },
+        {
+          "clause": "I consistently see oversized clusters (multiples in size of our configured limit)",
+          "best_overlap": 0.727273,
+          "matched": true
+        },
+        {
+          "clause": "This can lead to inconsistent search latency behavior for different queries (what if the query is nearer only tiny cl...",
+          "best_overlap": 0.851852,
+          "matched": true
+        },
+        {
+          "clause": ") and can harm our logic for fetching postings lists",
+          "best_overlap": 0.692308,
+          "matched": true
+        },
+        {
+          "clause": "We should strive for cluster size consistency, even with SOAR overspilling",
+          "best_overlap": 0.846154,
+          "matched": true
+        },
+        {
+          "clause": "Requirement 2 (Issue #140470: Query planner rewrite SUM(X+a) as SUM(X) + a*COUNT(X))",
+          "best_overlap": 0.774194,
+          "matched": true
+        },
+        {
+          "clause": "We should be able to optimize stats of the form SUM(X + a) where a is a constant to SUM(X) + aCOUNT(X)",
+          "best_overlap": 0.809524,
+          "matched": true
+        },
+        {
+          "clause": "This should result in fewer addition operations, and reuse of SUM(X) if it is used elsewhere in the query",
+          "best_overlap": 0.826087,
+          "matched": true
+        },
+        {
+          "clause": "There is a problem with doing this optimization due to multivaluedness",
+          "best_overlap": 0.709677,
+          "matched": true
+        },
+        {
+          "clause": "Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result",
+          "best_overlap": 0.904762,
+          "matched": true
+        },
+        {
+          "clause": "For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS SUM(X), S...",
+          "best_overlap": 0.883117,
+          "matched": true
+        },
+        {
+          "clause": "Requirement 3 (Issue #144641: ES|QL: improve error message for unbounded sort before MV_EXPAND)",
+          "best_overlap": 0.8,
+          "matched": true
+        },
+        {
+          "clause": "Some queries with SORT + MV_EXPAND can result in an unbounded sort, that cannot be executed for now",
+          "best_overlap": 0.780488,
+          "matched": true
+        },
+        {
+          "clause": "Current error message is Unbounded SORT not supported yet [SORT something] please add a LIMIT, that is too generic to...",
+          "best_overlap": 0.912281,
+          "matched": true
+        },
+        {
+          "clause": "We should make it more clear, explicitly mentioning the command (eg",
+          "best_overlap": 0.733333,
+          "matched": true
+        },
+        {
+          "clause": "MV_EXPAND) that caused the sort to remain unbounded, and suggest possible solutions",
+          "best_overlap": 0.75,
+          "matched": true
+        },
+        {
+          "clause": "Requirement 4 (Issue #140103: [ES|QL] First/Last aliases and types)",
+          "best_overlap": 0.758621,
+          "matched": true
+        },
+        {
+          "clause": "This issue was created out of a small number of remaining work from that was deemed not necessary for a tech preview,...",
+          "best_overlap": 0.861111,
+          "matched": true
+        },
+        {
+          "clause": "Vector-only dispatch",
+          "best_overlap": 0.545455,
+          "matched": true
+        },
+        {
+          "clause": "Special handling for block values that can be vectorized has been disabled in it was a no-op",
+          "best_overlap": 0.782609,
+          "matched": true
+        },
+        {
+          "clause": "At some point, we'd like to enable it back and actually have it implemented for performance reasons as the vector pat...",
+          "best_overlap": 0.861538,
+          "matched": true
+        },
+        {
+          "clause": "Add support for date / data_nanos / float in the value parameter 3",
+          "best_overlap": 0.709677,
+          "matched": true
+        },
+        {
+          "clause": "Make aliases that default to @timestamp for the second parameter, and call them EARLIEST/LATEST",
+          "best_overlap": 0.769231,
+          "matched": true
+        }
+      ]
+    },
+    "terminology_consistency": {
+      "score": 5,
+      "consistency_ratio": 1.0,
+      "conflicts": [],
+      "total_concepts": 5,
+      "consistent_concepts": 5
+    },
+    "s_logic": 1.0,
+    "s_term": 1.0
+  },
+  "fact_checking": {
+    "hallucination_reports": [],
+    "flagged_elements": [],
+    "total_checked": 35
+  },
+  "deterministic_validation": {
+    "is_valid": true,
+    "violations": [],
+    "passed_rules": [
+      "topology_validity",
+      "traceability",
+      "logical_consistency"
+    ]
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "consistency_verification": {
+    "status": "passed",
+    "issues": [],
+    "logical_score": 5,
+    "logical_score_normalized": 1.0,
+    "terminology_score": 5,
+    "terminology_consistency_ratio": 1.0
+  },
+  "universal_verification": {
+    "verification_summary": {
+      "total_constraints": 24,
+      "total_conflicts": 0,
+      "critical_conflicts": 0,
+      "quality_score": 100.0,
+      "verification_passed": true
+    },
+    "constraint_analysis": {
+      "extracted_constraints": [
+        {
+          "clause": "Requirement 1 (Issue #142340: [DiskBBQ] Fix our silly imbalanced cluster issue)",
+          "best_overlap": 0.8,
+          "matched": true
+        },
+        {
+          "clause": "Cluster imbalance is a known issue and yeah, we are hitting it",
+          "best_overlap": 0.75,
+          "matched": true
+        },
+        {
+          "clause": "I consistently see oversized clusters (multiples in size of our configured limit)",
+          "best_overlap": 0.727273,
+          "matched": true
+        },
+        {
+          "clause": "This can lead to inconsistent search latency behavior for different queries (what if the query is nearer only tiny cl...",
+          "best_overlap": 0.851852,
+          "matched": true
+        },
+        {
+          "clause": ") and can harm our logic for fetching postings lists",
+          "best_overlap": 0.692308,
+          "matched": true
+        },
+        {
+          "clause": "We should strive for cluster size consistency, even with SOAR overspilling",
+          "best_overlap": 0.846154,
+          "matched": true
+        },
+        {
+          "clause": "Requirement 2 (Issue #140470: Query planner rewrite SUM(X+a) as SUM(X) + a*COUNT(X))",
+          "best_overlap": 0.774194,
+          "matched": true
+        },
+        {
+          "clause": "We should be able to optimize stats of the form SUM(X + a) where a is a constant to SUM(X) + aCOUNT(X)",
+          "best_overlap": 0.809524,
+          "matched": true
+        },
+        {
+          "clause": "This should result in fewer addition operations, and reuse of SUM(X) if it is used elsewhere in the query",
+          "best_overlap": 0.826087,
+          "matched": true
+        },
+        {
+          "clause": "There is a problem with doing this optimization due to multivaluedness",
+          "best_overlap": 0.709677,
+          "matched": true
+        },
+        {
+          "clause": "Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result",
+          "best_overlap": 0.904762,
+          "matched": true
+        },
+        {
+          "clause": "For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS SUM(X), S...",
+          "best_overlap": 0.883117,
+          "matched": true
+        },
+        {
+          "clause": "Requirement 3 (Issue #144641: ES|QL: improve error message for unbounded sort before MV_EXPAND)",
+          "best_overlap": 0.8,
+          "matched": true
+        },
+        {
+          "clause": "Some queries with SORT + MV_EXPAND can result in an unbounded sort, that cannot be executed for now",
+          "best_overlap": 0.780488,
+          "matched": true
+        },
+        {
+          "clause": "Current error message is Unbounded SORT not supported yet [SORT something] please add a LIMIT, that is too generic to...",
+          "best_overlap": 0.912281,
+          "matched": true
+        },
+        {
+          "clause": "We should make it more clear, explicitly mentioning the command (eg",
+          "best_overlap": 0.733333,
+          "matched": true
+        },
+        {
+          "clause": "MV_EXPAND) that caused the sort to remain unbounded, and suggest possible solutions",
+          "best_overlap": 0.75,
+          "matched": true
+        },
+        {
+          "clause": "Requirement 4 (Issue #140103: [ES|QL] First/Last aliases and types)",
+          "best_overlap": 0.758621,
+          "matched": true
+        },
+        {
+          "clause": "This issue was created out of a small number of remaining work from that was deemed not necessary for a tech preview,...",
+          "best_overlap": 0.861111,
+          "matched": true
+        },
+        {
+          "clause": "Vector-only dispatch",
+          "best_overlap": 0.545455,
+          "matched": true
+        },
+        {
+          "clause": "Special handling for block values that can be vectorized has been disabled in it was a no-op",
+          "best_overlap": 0.782609,
+          "matched": true
+        },
+        {
+          "clause": "At some point, we'd like to enable it back and actually have it implemented for performance reasons as the vector pat...",
+          "best_overlap": 0.861538,
+          "matched": true
+        },
+        {
+          "clause": "Add support for date / data_nanos / float in the value parameter 3",
+          "best_overlap": 0.709677,
+          "matched": true
+        },
+        {
+          "clause": "Make aliases that default to @timestamp for the second parameter, and call them EARLIEST/LATEST",
+          "best_overlap": 0.769231,
+          "matched": true
+        }
+      ]
+    },
+    "conflict_analysis": {
+      "detected_conflicts": []
+    },
+    "resolutions": {
+      "applied": []
+    },
+    "recommendations": [
+      "No contradiction detected"
+    ],
+    "session_log": {
+      "status": "passed"
+    }
+  },
+  "correction_summary": {
+    "total_corrections": 0,
+    "corrections": []
+  }
+}

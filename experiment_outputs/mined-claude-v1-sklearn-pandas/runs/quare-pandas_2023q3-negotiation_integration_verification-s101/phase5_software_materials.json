@@ -1,0 +1,239 @@
+{
+  "phase": "5_software_materials_generation",
+  "case_id": "pandas_2023q3",
+  "setting": "negotiation_integration_verification",
+  "generated_at": "2026-10-30T06:34:39Z",
+  "materials": {
+    "srs_outline": [
+      "System Scope and Stakeholders",
+      "Quality-Attribute Requirements (Safety/Efficiency/Green/Trustworthiness/Responsibility)",
+      "Negotiation and Conflict Resolution Decisions",
+      "Verification and Compliance Evidence"
+    ],
+    "implementation_checklist": [
+      "Preserve canonical phase artifact compatibility",
+      "Enforce strict provenance and taint controls",
+      "Trace each integrated requirement to a verification signal"
+    ],
+    "traceability_matrix": [
+      {
+        "element_id": "EFF-L1-002",
+        "quality_attribute": "Efficiency",
+        "statement": "Efficiency objective for pandas_2023q3: DataFrame(Serie) which seems a bit clunky",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "EFF-L2-002-01",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (latency optimization): DataFrame(Serie) which seems a bit clunky",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "EFF-L2-002-02",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (throughput stability): Feature Description For a given pandas Serie, being able to write Serie",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "EFF-L2-002-03",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (resource utilization): to_parquet() Alternative Solutions Currently the two alternatives are: - save to another format which is a bit convolu...",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "EFF-L2-002-04",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (latency optimization): - convert the series to a DataFrame to use the DF method",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "EFF-L2-002-05",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (throughput stability): Additional Context _No",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "EFF-L2-002-06",
+        "quality_attribute": "Efficiency",
+        "statement": "The system shall ensure efficiency (resource utilization): Requirement 2 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L1-005",
+        "quality_attribute": "Responsibility",
+        "statement": "Responsibility objective for pandas_2023q3: For example, I have a pandas Series with the ArrowDtype(pyarrow",
+        "verification_anchor": "candidate_resolution"
+      },
+      {
+        "element_id": "RES-L2-005-01",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (regulatory accountability): For example, I have a pandas Series with the ArrowDtype(pyarrow",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L2-005-02",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (stakeholder transparency): struct([(\"int_col\", pyarrow",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L2-005-03",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (ethical compliance): int64()), (\"string_col\", pyarrow",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L2-005-04",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (regulatory accountability): I'd like to extract just the int_col field from this Series as another Series",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L2-005-05",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (stakeholder transparency): Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "RES-L2-005-06",
+        "quality_attribute": "Responsibility",
+        "statement": "The system shall ensure responsibility (ethical compliance): This struct accessor provides a field() method which returns a Series containing only the specified sub-field",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L1-001",
+        "quality_attribute": "Safety",
+        "statement": "Safety objective for pandas_2023q3: struct_field on the underlying pyarrow array: Additional Context This issue is",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "SAF-L2-001-01",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (hazard prevention): struct_field on the underlying pyarrow array: Additional Context This issue is",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L2-001-02",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (fault tolerance): Requirement 1 (Issue #54638: ENH: allow writing series to parquet file)",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L2-001-03",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (risk mitigation): Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing f...",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L2-001-04",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (hazard prevention): to_parquet() method only work for dataframe",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L2-001-05",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (fault tolerance): It would be nicer if the method could work on Series to",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SAF-L2-001-06",
+        "quality_attribute": "Safety",
+        "statement": "The system shall ensure safety (risk mitigation): Currently we either have to save the series to another format or involve a pd",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L1-003",
+        "quality_attribute": "Sustainability",
+        "statement": "Sustainability objective for pandas_2023q3: - [ ] Adding new functionality to pandas",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "SUS-L2-003-01",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (energy footprint reduction): - [ ] Adding new functionality to pandas",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L2-003-02",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (resource lifecycle control): - [X] Changing existing functionality in pandas",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L2-003-03",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (environmental impact awareness): - [ ] Removing existing functionality in pandas",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L2-003-04",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (energy footprint reduction): Pandas allow one to store metadata in DataFrame",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L2-003-05",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (resource lifecycle control): Similarly pyarrow allow one to store meta data via the metadata option in pa",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "SUS-L2-003-06",
+        "quality_attribute": "Sustainability",
+        "statement": "The system shall ensure sustainability (environmental impact awareness): However, if one try to use DataFrame",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L1-004",
+        "quality_attribute": "Trustworthiness",
+        "statement": "Trustworthiness objective for pandas_2023q3: The metadata has been lost",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "TRU-L2-004-01",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (security assurance): The metadata has been lost",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-02",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (auditability): Alternative Solutions",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-03",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (integrity guarantees): Requirement 3 (Issue #54938: ENH: Series",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-04",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (security assurance): struct accessor with Series",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-05",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (auditability): field(\"sub-column name\") for ArrowDtype)",
+        "verification_anchor": "resolved"
+      },
+      {
+        "element_id": "TRU-L2-004-06",
+        "quality_attribute": "Trustworthiness",
+        "statement": "The system shall ensure trustworthiness (integrity guarantees): Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Remov...",
+        "verification_anchor": "resolved"
+      }
+    ]
+  },
+  "quality_signals": {
+    "topology_is_valid": true,
+    "deterministic_is_valid": true,
+    "compliance_coverage": 0.764706,
+    "s_logic": 1.0,
+    "detected_conflict_pairs": 5,
+    "resolved_conflict_pairs": 0
+  }
+}

@@ -1,0 +1,1184 @@
+{
+  "Interviewer": [
+    {
+      "id": "INT-L1-001",
+      "name": "Interviewer Goal",
+      "description": "Interviewer objective for pandas_2023q3: IR-001 | EXCEL_IMPORT_TEXT_RESPECT | Functional | MUST | Excel columns explicitly marked as 'text' shall be imported as strings without automatic numeric type coercion, preserving leading zeros and mixed-format data (...",
+      "element_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:9",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:9",
+          "document": "standards/latest_2024.py",
+          "score": 0.148148,
+          "content": "ISO/IEC 23053:2022 Framework for AI Systems and ML Models: Practical Application Requirements: - Model interpretability: Critical decisions must be explainable - Data quality management: Training data bias detection and mitigation - Model validation: Independent test dataset v..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.111111,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.111111,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-001-01",
+      "name": "Interviewer Output 1",
+      "description": "The system shall IR-001 | EXCEL_IMPORT_TEXT_RESPECT | Functional | MUST | Excel columns explicitly marked as 'text' shall be imported as strings without automatic numeric type coercion, preserving leading zeros and mixed-format data (...",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:9",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:9",
+          "document": "standards/latest_2024.py",
+          "score": 0.148148,
+          "content": "ISO/IEC 23053:2022 Framework for AI Systems and ML Models: Practical Application Requirements: - Model interpretability: Critical decisions must be explainable - Data quality management: Training data bias detection and mitigation - Model validation: Independent test dataset v..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.111111,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.111111,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-001-02",
+      "name": "Interviewer Output 2",
+      "description": "The system shall IR-002 | PARQUET_METADATA_PRESERVATION | Functional | MUST | to_parquet() shall serialize and to_parquet().read() shall deserialize complete DataFrame metadata including: (a) column dtypes, (b) index metadata, (c) cat...",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:10",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:10",
+          "document": "sample_knowledge.py",
+          "score": 0.136364,
+          "content": "ASIL Level Assignment: - ASIL D (Highest): Braking system, steering system failure - ASIL C: Airbag, collision warning failure - ASIL B: Lighting system, windshield wiper failure - ASIL A (Lowest): Entertainment system, air conditioning failure"
+        },
+        {
+          "chunk_id": "sample_knowledge.py:13",
+          "document": "sample_knowledge.py",
+          "score": 0.136364,
+          "content": "Safety Classification: - Class C: Software failure may cause death or serious injury - Class B: Software failure may cause non-serious injury - Class A: Software failure will not cause injury"
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:10",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.136364,
+          "content": "ASIL Level Assignment: - ASIL D (Highest): Braking system, steering system failure - ASIL C: Airbag, collision warning failure - ASIL B: Lighting system, windshield wiper failure - ASIL A (Lowest): Entertainment system, air conditioning failure"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-001-03",
+      "name": "Interviewer Output 3",
+      "description": "The system shall IR-003 | BACKWARD_COMPATIBILITY_EXCEL | Non-Functional | MUST | Excel import behavior change shall be opt-in via parameter; existing code depending on current numeric coercion remains unaffected. Default behavior unch...",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.074074,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:12",
+          "document": "cases/real_world_studies.py",
+          "score": 0.074074,
+          "content": "Actual Challenges and Solutions: - Challenge: Camera performance degraded 30% in rain Solution: Image enhancement algorithms + radar data fusion weight adjustment - Challenge: Misidentification in construction zones Solution: Added construction sign specialized training data -..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:24",
+          "document": "cases/real_world_studies.py",
+          "score": 0.074074,
+          "content": "Software Safety Classification: Class C (Highest Risk) - Reason: Software failure may result in death or serious injury - Development standards: IEC 62304 + ISO 13485 - Validation requirements: 100% code coverage + formal verification"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "INT-L2-001-04",
+      "name": "Interviewer Output 4",
+      "description": "The system shall IR-004 | NUMERIC_INFERENCE_PRIORITY_EXCEL | Functional | SHOULD | When strict mode enabled for Excel text-marked columns containing numeric-like values (e.g., '001.5'), preservation of original string formatting takes...",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:12",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:12",
+          "document": "automotive_safety.py",
+          "score": 0.071429,
+          "content": "L2 Level (Partial Automation): - Safety requirements: Driver continuous monitoring + system monitors driver state - System examples: Tesla Autopilot, GM Super Cruise - KAOS goals: - \"Detect driver distraction < 3 seconds\" - \"Safely exit automatic mode when lane lines are lost\"..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:14",
+          "document": "automotive_safety.py",
+          "score": 0.071429,
+          "content": "L4 Level (High Automation): - Safety requirements: Complete system responsibility within ODD + minimal risk state capability - System examples: Waymo, Cruise (defined areas) - KAOS goals: - \"All safety-critical functions with redundant design\" - \"Safe parking success rate when..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.071429,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "EndUser": [
+    {
+      "id": "END-L1-002",
+      "name": "EndUser Goal",
+      "description": "EndUser objective for pandas_2023q3: Pain Point: Excel imports with numeric columns marked as 'text' are automatically converted to numbers, causing data integrity issues and requiring manual workarounds in downstream analysis",
+      "element_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:32",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:32",
+          "document": "cases/real_world_studies.py",
+          "score": 0.192308,
+          "content": "FDA Review Key Issues and Solutions: 1. Algorithm transparency: Provided detailed control algorithm documentation and clinical validation 2. Cybersecurity: Implemented end-to-end encryption and secure authentication mechanisms 3. User training: Mandatory 6-hour training + onli..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.153846,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "END-L2-002-01",
+      "name": "EndUser Output 1",
+      "description": "The system shall Pain Point: Excel imports with numeric columns marked as 'text' are automatically converted to numbers, causing data integrity issues and requiring manual workarounds in downstream analysis",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:32",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:32",
+          "document": "cases/real_world_studies.py",
+          "score": 0.192308,
+          "content": "FDA Review Key Issues and Solutions: 1. Algorithm transparency: Provided detailed control algorithm documentation and clinical validation 2. Cybersecurity: Implemented end-to-end encryption and secure authentication mechanisms 3. User training: Mandatory 6-hour training + onli..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.153846,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "END-L2-002-02",
+      "name": "EndUser Output 2",
+      "description": "The system shall Pain Point: DataFrame metadata (column types, custom attributes, formatting rules) is lost during parquet serialization, forcing re-application of schema information after deserialization",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:16",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:16",
+          "document": "knowledge_guide.py",
+          "score": 0.173913,
+          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:22",
+          "document": "automotive_safety.py",
+          "score": 0.086957,
+          "content": "Cybersecurity Goal Hierarchy: High-level goal: \"Protect vehicle from cyber attacks\" ├── Confidentiality: Sensitive information not accessed by unauthorized parties ├── Integrity: Data and system functions not maliciously modified ├── Availability: Critical functions remain ava..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.086957,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "END-L2-002-03",
+      "name": "EndUser Output 3",
+      "description": "The system shall Expectation: to_parquet() should preserve and restore complete DataFrame metadata including explicit column type designations and custom attributes without data loss",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:22",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:22",
+          "document": "automotive_safety.py",
+          "score": 0.105263,
+          "content": "Cybersecurity Goal Hierarchy: High-level goal: \"Protect vehicle from cyber attacks\" ├── Confidentiality: Sensitive information not accessed by unauthorized parties ├── Integrity: Data and system functions not maliciously modified ├── Availability: Critical functions remain ava..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.105263,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:12",
+          "document": "cases/real_world_studies.py",
+          "score": 0.105263,
+          "content": "Actual Challenges and Solutions: - Challenge: Camera performance degraded 30% in rain Solution: Image enhancement algorithms + radar data fusion weight adjustment - Challenge: Misidentification in construction zones Solution: Added construction sign specialized training data -..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "END-L2-002-04",
+      "name": "EndUser Output 4",
+      "description": "The system shall Expectation: Excel import behavior should respect explicit 'text' column formatting to prevent unintended numeric coercion of mixed-format or leading-zero data",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.136364,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.136364,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.136364,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Deployer": [
+    {
+      "id": "DEP-L1-003",
+      "name": "Deployer Goal",
+      "description": "Deployer objective for pandas_2023q3: INFRASTRUCTURE: Parquet serialization/deserialization must support streaming I/O for large DataFrames (>1GB); metadata payloads shall not exceed 5% of total file size to maintain performance targets",
+      "element_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:26",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:26",
+          "document": "standards/latest_2024.py",
+          "score": 0.148148,
+          "content": "Actual Compliance Costs (2024 Data): - Large bank digital transformation: Annual investment $5-10 billion - RegTech solutions: Market size $38 billion - Compliance staff ratio: 20% of IT personnel engaged in compliance-related work - Regulatory reporting automation: 90% of rep..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:31",
+          "document": "cases/real_world_studies.py",
+          "score": 0.111111,
+          "content": "Actual Clinical Trial Results (PROLOG Study): - Participants: 670 patients, 6-month follow-up - Blood glucose improvement: HbA1c decreased from 8.2% to 7.5% - User satisfaction: 93% willing to continue using - Safety events: 2 cases of severe hypoglycemia (0.3%), 0 cases of DKA"
+        },
+        {
+          "chunk_id": "knowledge_guide.py:7",
+          "document": "knowledge_guide.py",
+          "score": 0.111111,
+          "content": "5. [Quantitative Indicators and Measurement Standards] ✅ Testable quality attribute metrics ✅ Industry-recognized performance benchmarks ✅ Quantitative methods for risk assessment ✅ Criteria for judging negotiation success"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DEP-L2-003-01",
+      "name": "Deployer Output 1",
+      "description": "The system shall INFRASTRUCTURE: Parquet serialization/deserialization must support streaming I/O for large DataFrames (>1GB); metadata payloads shall not exceed 5% of total file size to maintain performance targets",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:26",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:26",
+          "document": "standards/latest_2024.py",
+          "score": 0.148148,
+          "content": "Actual Compliance Costs (2024 Data): - Large bank digital transformation: Annual investment $5-10 billion - RegTech solutions: Market size $38 billion - Compliance staff ratio: 20% of IT personnel engaged in compliance-related work - Regulatory reporting automation: 90% of rep..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:31",
+          "document": "cases/real_world_studies.py",
+          "score": 0.111111,
+          "content": "Actual Clinical Trial Results (PROLOG Study): - Participants: 670 patients, 6-month follow-up - Blood glucose improvement: HbA1c decreased from 8.2% to 7.5% - User satisfaction: 93% willing to continue using - Safety events: 2 cases of severe hypoglycemia (0.3%), 0 cases of DKA"
+        },
+        {
+          "chunk_id": "knowledge_guide.py:7",
+          "document": "knowledge_guide.py",
+          "score": 0.111111,
+          "content": "5. [Quantitative Indicators and Measurement Standards] ✅ Testable quality attribute metrics ✅ Industry-recognized performance benchmarks ✅ Quantitative methods for risk assessment ✅ Criteria for judging negotiation success"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DEP-L2-003-02",
+      "name": "Deployer Output 2",
+      "description": "The system shall INFRASTRUCTURE: Excel import pipeline requires in-memory schema validation layer; processing latency for 100K-row files must remain <2 seconds on standard deployment nodes (8GB RAM, 4-core CPU)",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:23",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:23",
+          "document": "sample_knowledge.py",
+          "score": 0.172414,
+          "content": "Pattern 2: Environmental Friendliness vs Performance Requirements Conflict Scenario: Energy-saving mode reduces CPU frequency affecting computational performance Resolution Strategies: - Smart Frequency Scaling: Dynamically adjust based on task importance - Load Prediction: En..."
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:23",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.172414,
+          "content": "Pattern 2: Environmental Friendliness vs Performance Requirements Conflict Scenario: Energy-saving mode reduces CPU frequency affecting computational performance Resolution Strategies: - Smart Frequency Scaling: Dynamically adjust based on task importance - Load Prediction: En..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.137931,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DEP-L2-003-03",
+      "name": "Deployer Output 3",
+      "description": "The system shall SECURITY: Metadata preservation in parquet files must sanitize custom DataFrame.attrs to prevent code injection via malicious attribute values; implement allowlist validation for user-defined attributes",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:6",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.153846,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:24",
+          "document": "cases/real_world_studies.py",
+          "score": 0.115385,
+          "content": "Software Safety Classification: Class C (Highest Risk) - Reason: Software failure may result in death or serious injury - Development standards: IEC 62304 + ISO 13485 - Validation requirements: 100% code coverage + formal verification"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DEP-L2-003-04",
+      "name": "Deployer Output 4",
+      "description": "The system shall INFRASTRUCTURE-PARQUET-001: Parquet I/O must support streaming operations for DataFrames >1GB; metadata serialization overhead capped at 5% of total file size to preserve read/write performance targets (<2s for standa...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:31",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:31",
+          "document": "cases/real_world_studies.py",
+          "score": 0.1,
+          "content": "Actual Clinical Trial Results (PROLOG Study): - Participants: 670 patients, 6-month follow-up - Blood glucose improvement: HbA1c decreased from 8.2% to 7.5% - User satisfaction: 93% willing to continue using - Safety events: 2 cases of severe hypoglycemia (0.3%), 0 cases of DKA"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:8",
+          "document": "cases/real_world_studies.py",
+          "score": 0.1,
+          "content": "G2.1: Execute smooth acceleration and deceleration - Indicators: Longitudinal acceleration ≤2.5 m/s², lateral acceleration ≤1.8 m/s² - Actual: 95% of operations within comfort range"
+        },
+        {
+          "chunk_id": "knowledge_guide.py:7",
+          "document": "knowledge_guide.py",
+          "score": 0.1,
+          "content": "5. [Quantitative Indicators and Measurement Standards] ✅ Testable quality attribute metrics ✅ Industry-recognized performance benchmarks ✅ Quantitative methods for risk assessment ✅ Criteria for judging negotiation success"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Analyst": [
+    {
+      "id": "ANA-L1-004",
+      "name": "Analyst Goal",
+      "description": "Analyst objective for pandas_2023q3: SYS-REQ-001 | EXCEL_TEXT_COLUMN_IMPORT | Functional | MUST | The system shall import Excel columns explicitly marked as 'text' as string data types without automatic numeric type coercion, preserving leading zeros, mi...",
+      "element_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:4",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:4",
+          "document": "standards/latest_2024.py",
+          "score": 0.142857,
+          "content": "UN-R157 (Revised March 2024): New requirements for Automated Lane Keeping Systems: - System activation speed range: 60-130 km/h (previously 60-120) - Lane change function: Automatic lane changes allowed under specific conditions - Monitoring requirements: Driver attention moni..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.107143,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.107143,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ANA-L2-004-01",
+      "name": "Analyst Output 1",
+      "description": "The system shall SYS-REQ-001 | EXCEL_TEXT_COLUMN_IMPORT | Functional | MUST | The system shall import Excel columns explicitly marked as 'text' as string data types without automatic numeric type coercion, preserving leading zeros, mi...",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:4",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:4",
+          "document": "standards/latest_2024.py",
+          "score": 0.142857,
+          "content": "UN-R157 (Revised March 2024): New requirements for Automated Lane Keeping Systems: - System activation speed range: 60-130 km/h (previously 60-120) - Lane change function: Automatic lane changes allowed under specific conditions - Monitoring requirements: Driver attention moni..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.107143,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.107143,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ANA-L2-004-02",
+      "name": "Analyst Output 2",
+      "description": "The system shall SYS-REQ-002 | EXCEL_IMPORT_BACKWARD_COMPATIBILITY | Non-Functional | MUST | Excel import behavior modification shall be opt-in via new parameter (dtype_backend='excel_native' or respect_text_format=True); default beha...",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:24",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:24",
+          "document": "cases/real_world_studies.py",
+          "score": 0.08,
+          "content": "Software Safety Classification: Class C (Highest Risk) - Reason: Software failure may result in death or serious injury - Development standards: IEC 62304 + ISO 13485 - Validation requirements: 100% code coverage + formal verification"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:40",
+          "document": "cases/real_world_studies.py",
+          "score": 0.08,
+          "content": "G1.2: Abnormal behavior pattern recognition - Accuracy: True positive rate >90%, false positive rate <5% - Actual: True positive 92.3%, false positive 4.1%"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:45",
+          "document": "cases/real_world_studies.py",
+          "score": 0.08,
+          "content": "3. New fraud pattern response: - Challenge: 300% increase in synthetic identity fraud - Solution: Graph database correlation analysis, enhanced identity verification"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ANA-L2-004-03",
+      "name": "Analyst Output 3",
+      "description": "The system shall SYS-REQ-003 | PARQUET_METADATA_SERIALIZATION | Functional | MUST | The to_parquet() function shall serialize complete DataFrame metadata including: (a) column data types, (b) index metadata and RangeIndex properties,...",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.166667,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.125,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "standards/latest_2024.py:4",
+          "document": "standards/latest_2024.py",
+          "score": 0.125,
+          "content": "UN-R157 (Revised March 2024): New requirements for Automated Lane Keeping Systems: - System activation speed range: 60-130 km/h (previously 60-120) - Lane change function: Automatic lane changes allowed under specific conditions - Monitoring requirements: Driver attention moni..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ANA-L2-004-04",
+      "name": "Analyst Output 4",
+      "description": "The system shall SYS-REQ-004 | PARQUET_METADATA_DESERIALIZATION | Functional | MUST | The read_parquet() function shall deserialize and restore all serialized metadata (column dtypes, index metadata, categorical definitions, RangeInde...",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.090909,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:2",
+          "document": "automotive_safety.py",
+          "score": 0.090909,
+          "content": "# ISO 26262 ASIL Levels and Specific Requirements ISO_26262_KNOWLEDGE = \"\"\" [ISO 26262 Automotive Functional Safety Standard]"
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:7",
+          "document": "domains/automotive_safety.py",
+          "score": 0.090909,
+          "content": "Functional Safety Concept Development Process: 1. Hazard Analysis and Risk Assessment (HARA) 2. Functional Safety Concept (FSC) 3. Technical Safety Concept (TSC) 4. System design and implementation 5. Safety verification and validation"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Archivist": [
+    {
+      "id": "ARC-L1-005",
+      "name": "Archivist Goal",
+      "description": "Archivist objective for pandas_2023q3: SRS-1.1 PURPOSE: This Software Requirements Specification consolidates functional and non-functional requirements for pandas_2023q3 enhancements addressing Excel import text-column preservation and Parquet metadata se...",
+      "element_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:3",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:3",
+          "document": "standards/latest_2024.py",
+          "score": 0.26087,
+          "content": "ISO 26262:2018 Amendment 1 (Released 2024): New Content: - Enhanced semiconductor guidelines (Part 11 extension) - Simplified software tool qualification process - Dedicated guidelines for motorcycle applications - Integrated cybersecurity and functional safety requirements"
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.130435,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:2",
+          "document": "automotive_safety.py",
+          "score": 0.130435,
+          "content": "# ISO 26262 ASIL Levels and Specific Requirements ISO_26262_KNOWLEDGE = \"\"\" [ISO 26262 Automotive Functional Safety Standard]"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ARC-L2-005-01",
+      "name": "Archivist Output 1",
+      "description": "The system shall SRS-1.1 PURPOSE: This Software Requirements Specification consolidates functional and non-functional requirements for pandas_2023q3 enhancements addressing Excel import text-column preservation and Parquet metadata se...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:3",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:3",
+          "document": "standards/latest_2024.py",
+          "score": 0.26087,
+          "content": "ISO 26262:2018 Amendment 1 (Released 2024): New Content: - Enhanced semiconductor guidelines (Part 11 extension) - Simplified software tool qualification process - Dedicated guidelines for motorcycle applications - Integrated cybersecurity and functional safety requirements"
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.130435,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:2",
+          "document": "automotive_safety.py",
+          "score": 0.130435,
+          "content": "# ISO 26262 ASIL Levels and Specific Requirements ISO_26262_KNOWLEDGE = \"\"\" [ISO 26262 Automotive Functional Safety Standard]"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ARC-L2-005-02",
+      "name": "Archivist Output 2",
+      "description": "The system shall SRS-1.2 SCOPE: Two interrelated subsystems: (a) Excel import pipeline with schema validation and opt-in text-format respect parameter; (b) Parquet I/O with complete DataFrame metadata preservation including structural...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:7",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:7",
+          "document": "sample_knowledge.py",
+          "score": 0.16129,
+          "content": "Tactical Level Refinement: - G1.1: Detect and avoid collision threats - G1.2: Comply with traffic regulations and standards - G1.3: Safely park in abnormal situations - G2.1: Optimize path planning algorithms - G2.2: Reduce unnecessary braking and acceleration - G3.1: Minimize..."
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:7",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.16129,
+          "content": "Tactical Level Refinement: - G1.1: Detect and avoid collision threats - G1.2: Comply with traffic regulations and standards - G1.3: Safely park in abnormal situations - G2.1: Optimize path planning algorithms - G2.2: Reduce unnecessary braking and acceleration - G3.1: Minimize..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:18",
+          "document": "automotive_safety.py",
+          "score": 0.129032,
+          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ARC-L2-005-03",
+      "name": "Archivist Output 3",
+      "description": "The system shall SRS-2.1 FUNCTIONAL REQUIREMENT FR-001 [MUST]: System shall import Excel columns explicitly marked as 'text' as string data types without automatic numeric type coercion, preserving leading zeros and mixed-format data...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:18",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:18",
+          "document": "automotive_safety.py",
+          "score": 0.16129,
+          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:7",
+          "document": "domains/automotive_safety.py",
+          "score": 0.16129,
+          "content": "Functional Safety Concept Development Process: 1. Hazard Analysis and Risk Assessment (HARA) 2. Functional Safety Concept (FSC) 3. Technical Safety Concept (TSC) 4. System design and implementation 5. Safety verification and validation"
+        },
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.16129,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "ARC-L2-005-04",
+      "name": "Archivist Output 4",
+      "description": "The system shall SRS-2.2 FUNCTIONAL REQUIREMENT FR-002 [MUST]: to_parquet() function shall serialize complete DataFrame metadata: (a) column data types, (b) index metadata and RangeIndex properties, (c) categorical definitions and cat...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.148148,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.111111,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:32",
+          "document": "cases/real_world_studies.py",
+          "score": 0.111111,
+          "content": "FDA Review Key Issues and Solutions: 1. Algorithm transparency: Provided detailed control algorithm documentation and clinical validation 2. Cybersecurity: Implemented end-to-end encryption and secure authentication mechanisms 3. User training: Mandatory 6-hour training + onli..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Reviewer": [
+    {
+      "id": "REV-L1-006",
+      "name": "Reviewer Goal",
+      "description": "Reviewer objective for pandas_2023q3: CLARITY VIOLATION - SRS-2.2 (FR-002): Metadata serialization list truncated at '(c) categorical definitions and cat...' - incomplete enumeration prevents verifiable implementation of serialization scope. ISO 29148 §4....",
+      "element_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:11",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.153846,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:7",
+          "document": "domains/automotive_safety.py",
+          "score": 0.153846,
+          "content": "Functional Safety Concept Development Process: 1. Hazard Analysis and Risk Assessment (HARA) 2. Functional Safety Concept (FSC) 3. Technical Safety Concept (TSC) 4. System design and implementation 5. Safety verification and validation"
+        },
+        {
+          "chunk_id": "knowledge_guide.py:16",
+          "document": "knowledge_guide.py",
+          "score": 0.153846,
+          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "REV-L2-006-01",
+      "name": "Reviewer Output 1",
+      "description": "The system shall CLARITY VIOLATION - SRS-2.2 (FR-002): Metadata serialization list truncated at '(c) categorical definitions and cat...' - incomplete enumeration prevents verifiable implementation of serialization scope. ISO 29148 §4....",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:11",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.153846,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:7",
+          "document": "domains/automotive_safety.py",
+          "score": 0.153846,
+          "content": "Functional Safety Concept Development Process: 1. Hazard Analysis and Risk Assessment (HARA) 2. Functional Safety Concept (FSC) 3. Technical Safety Concept (TSC) 4. System design and implementation 5. Safety verification and validation"
+        },
+        {
+          "chunk_id": "knowledge_guide.py:16",
+          "document": "knowledge_guide.py",
+          "score": 0.153846,
+          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "REV-L2-006-02",
+      "name": "Reviewer Output 2",
+      "description": "The system shall CLARITY VIOLATION - Requirement Fragment #1: 'It always assumes numbers, even if the column has explicitly been marked as \\\"text\\\" in Excel, so I need to' - sentence incomplete, lacks resolution statement or desired b...",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:1",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.121212,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.090909,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:16",
+          "document": "knowledge_guide.py",
+          "score": 0.090909,
+          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "REV-L2-006-03",
+      "name": "Reviewer Output 3",
+      "description": "The system shall FEASIBILITY CONCERN - SYS-REQ-001 vs SYS-REQ-005 CONFLICT: SYS-REQ-001 mandates string preservation for text-marked columns (MUST); SYS-REQ-005 introduces conditional numeric inference when strict mode enabled (SHOULD...",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:23",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:23",
+          "document": "sample_knowledge.py",
+          "score": 0.16,
+          "content": "Pattern 2: Environmental Friendliness vs Performance Requirements Conflict Scenario: Energy-saving mode reduces CPU frequency affecting computational performance Resolution Strategies: - Smart Frequency Scaling: Dynamically adjust based on task importance - Load Prediction: En..."
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:23",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.16,
+          "content": "Pattern 2: Environmental Friendliness vs Performance Requirements Conflict Scenario: Energy-saving mode reduces CPU frequency affecting computational performance Resolution Strategies: - Smart Frequency Scaling: Dynamically adjust based on task importance - Load Prediction: En..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:12",
+          "document": "automotive_safety.py",
+          "score": 0.08,
+          "content": "L2 Level (Partial Automation): - Safety requirements: Driver continuous monitoring + system monitors driver state - System examples: Tesla Autopilot, GM Super Cruise - KAOS goals: - \"Detect driver distraction < 3 seconds\" - \"Safely exit automatic mode when lane lines are lost\"..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "REV-L2-006-04",
+      "name": "Reviewer Output 4",
+      "description": "The system shall TRACEABILITY GAP - CLARIFICATION-PARQUET-METADATA-SCOPE (Deployer Question): Unresolved whether 5% serialization overhead cap (INFRASTRUCTURE-PARQUET-001) applies to structural metadata alone or includes DataFrame.att...",
+      "element_type": "Task",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:31",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:31",
+          "document": "cases/real_world_studies.py",
+          "score": 0.083333,
+          "content": "Actual Clinical Trial Results (PROLOG Study): - Participants: 670 patients, 6-month follow-up - Blood glucose improvement: HbA1c decreased from 8.2% to 7.5% - User satisfaction: 93% willing to continue using - Safety events: 2 cases of severe hypoglycemia (0.3%), 0 cases of DKA"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:7",
+          "document": "cases/real_world_studies.py",
+          "score": 0.083333,
+          "content": "G1.2: Maintain safe following distance - Indicators: Following distance = 1.0-2.2 second time gap (adjustable) - Actual: Users average setting 1.5 second time gap"
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:24",
+          "document": "domains/automotive_safety.py",
+          "score": 0.083333,
+          "content": "Steering System Benchmarks: - Steering response time: ≤100ms - Steering angle accuracy: ±0.5° - Centering capability: Return to center ±2° within 3s - Maximum torque when power assist fails: ≤60Nm"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ]
+}
