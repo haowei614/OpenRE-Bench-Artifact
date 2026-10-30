@@ -1,0 +1,49 @@
+{
+  "aggregation_method": "time_window",
+  "domain": "Database / Search",
+  "fetched_at": "2026-09-29T04:11:06Z",
+  "repo": "elastic/elasticsearch",
+  "selected_count": 4,
+  "selected_issues": [
+    {
+      "body_for_case": "Description\n\nCluster imbalance is a known issue and yeah, we are hitting it. I consistently see oversized clusters (multiples in size of our configured limit). This can lead to inconsistent search latency behavior for different queries (what if the query is nearer only tiny clusters or nearer only the huge ones?) and can harm our logic for fetching postings lists.\n\nWe should strive for cluster size consistency, even with SOAR overspilling.",
+      "created_at": "2026-02-11T19:50:37Z",
+      "html_url": "https://github.com/elastic/elasticsearch/issues/142340",
+      "number": 142340,
+      "reactions": 2,
+      "state": "closed",
+      "title": "[DiskBBQ] Fix our silly imbalanced cluster issue"
+    },
+    {
+      "body_for_case": "We should be able to optimize stats of the form SUM(X + a) where a is a constant to SUM(X) + aCOUNT(X). This should result in fewer addition operations, and reuse of SUM(X) if it is used elsewhere in the query. There is a problem with doing this optimization due to multivaluedness. Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result. For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS SUM(X), SUM(X + 4) evaluates to 18, 7 because both single and multi values are in the first sum, but only single values are in the ...",
+      "created_at": "2026-01-09T19:05:35Z",
+      "html_url": "https://github.com/elastic/elasticsearch/issues/140470",
+      "number": 140470,
+      "reactions": 1,
+      "state": "closed",
+      "title": "Query planner rewrite SUM(X+a) as SUM(X) + a*COUNT(X)"
+    },
+    {
+      "body_for_case": "Some queries with SORT + MV_EXPAND can result in an unbounded sort, that cannot be executed for now.\n\neg.\n\n \n\nCurrent error message is Unbounded SORT not supported yet [SORT something] please add a LIMIT, that is too generic to understand what the problem could be in the query. \nWe should make it more clear, explicitly mentioning the command (eg. MV_EXPAND) that caused the sort to remain unbounded, and suggest possible solutions.",
+      "created_at": "2026-03-20T11:48:51Z",
+      "html_url": "https://github.com/elastic/elasticsearch/issues/144641",
+      "number": 144641,
+      "reactions": 1,
+      "state": "closed",
+      "title": "ES|QL: improve error message for unbounded sort before MV_EXPAND"
+    },
+    {
+      "body_for_case": "This issue was created out of a small number of remaining work from that was deemed not necessary for a tech preview, essentially all the items from the \"_Things to circle back to after tech preview_\" section in the aforementioned ticket. 1. Vector-only dispatch. Special handling for block values that can be vectorized has been disabled in it was a no-op. At some point, we'd like to enable it back and actually have it implemented for performance reasons as the vector path won't have to check for nulls, or mult-ivalues. 2. Add support for date / data_nanos / float in the value parameter 3. Make aliases that default to @timestamp for the second parameter, and call them EARLIEST/LATEST. For example ...",
+      "created_at": "2026-01-01T09:19:08Z",
+      "html_url": "https://github.com/elastic/elasticsearch/issues/140103",
+      "number": 140103,
+      "reactions": 0,
+      "state": "closed",
+      "title": "[ES|QL] First/Last aliases and types"
+    }
+  ],
+  "slug": "elasticsearch",
+  "total_words": 384,
+  "window_issue_count": 62,
+  "window_label": "2026q1"
+}
