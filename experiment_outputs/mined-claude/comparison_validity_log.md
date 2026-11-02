@@ -1,0 +1,97 @@
+# Comparison Validity Log
+
+- Generated at: 2026-09-29T05:41:06Z
+- Cases dir: `data/mined_cases`
+- Output dir: `experiment_outputs/mined-claude`
+- Seeds: `[101]`
+- Settings: `['single_agent', 'multi_agent_without_negotiation', 'multi_agent_with_negotiation', 'negotiation_integration_verification']`
+- Systems: `['mare', 'iredev', 'quare']`
+- Matrix workers: `3`
+- Model: `claude-haiku-4-5-20251001`
+- Temperature: `0.7`
+- Round cap: `3`
+- Max tokens: `4000`
+- RAG enabled: `True`
+- RAG backend: `local_tfidf`
+- RAG corpus dir: `data/knowledge_base`
+
+## Completeness
+- Expected runs: 60
+- Actual runs: 60
+
+## Strict Fail Conditions
+- Missing required deliverables.
+- Run count mismatch versus expected matrix cardinality.
+- Missing required keys in `comparison_runs.jsonl`.
+- Missing or malformed provenance metadata (hash contracts).
+- Missing or malformed execution/comparability metadata contracts.
+- Missing required columns in required CSV outputs.
+- Any run with `validation_passed=false`.
+- Any run with `rag_enabled=false` or missing `rag_backend`.
+- Any run with `rag_fallback_used=true`.
+- Any run with `fallback_tainted=true` or retry-tainted metadata.
+
+## Errors
+- None
+
+## Warnings
+- mare-elasticsearch_2026q1-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-elasticsearch_2026q1-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-elasticsearch_2026q1-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-elasticsearch_2026q1-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-elasticsearch_2026q1-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-elasticsearch_2026q1-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-elasticsearch_2026q1-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-elasticsearch_2026q1-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-elasticsearch_2026q1-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-elasticsearch_2026q1-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-elasticsearch_2026q1-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-elasticsearch_2026q1-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-pandas_2023q3-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-pandas_2023q3-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-pandas_2023q3-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-pandas_2023q3-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-pandas_2023q3-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-pandas_2023q3-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-pandas_2023q3-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-pandas_2023q3-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-pandas_2023q3-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-pandas_2023q3-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-pandas_2023q3-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-pandas_2023q3-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-sklearn_2021q4-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-sklearn_2021q4-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-sklearn_2021q4-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-sklearn_2021q4-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-sklearn_2021q4-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-sklearn_2021q4-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-sklearn_2021q4-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-sklearn_2021q4-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-sklearn_2021q4-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-sklearn_2021q4-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-sklearn_2021q4-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-sklearn_2021q4-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-transformers_2024q3-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-transformers_2024q3-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-transformers_2024q3-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-transformers_2024q3-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-transformers_2024q3-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-transformers_2024q3-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-transformers_2024q3-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-transformers_2024q3-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-transformers_2024q3-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-transformers_2024q3-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-transformers_2024q3-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-transformers_2024q3-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-vscode_2026q3-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-vscode_2026q3-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-vscode_2026q3-single_agent-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-vscode_2026q3-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-vscode_2026q3-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-vscode_2026q3-multi_agent_without_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-vscode_2026q3-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-vscode_2026q3-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-vscode_2026q3-multi_agent_with_negotiation-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- mare-vscode_2026q3-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- iredev-vscode_2026q3-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'
+- quare-vscode_2026q3-negotiation_integration_verification-s101: Model drift: expected 'gpt-4o-mini', got 'claude-haiku-4-5-20251001'

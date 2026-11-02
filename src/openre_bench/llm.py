@@ -188,6 +188,9 @@ class LLMClient:
             "api_key": self._settings.api_key,
             "timeout": float(self._settings.timeout_seconds),
             "num_retries": int(self._settings.request_retries),
+            # Anthropic (and some other providers) reject unsupported knobs such
+            # as `seed`; drop them instead of failing the whole call.
+            "drop_params": True,
         }
         if self._settings.base_url:
             request["api_base"] = self._settings.base_url

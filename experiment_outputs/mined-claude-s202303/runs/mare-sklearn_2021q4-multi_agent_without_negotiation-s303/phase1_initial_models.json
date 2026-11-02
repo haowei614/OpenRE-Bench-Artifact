@@ -1,0 +1,987 @@
+{
+  "Stakeholders": [
+    {
+      "id": "STA-L1-001",
+      "name": "Stakeholders Goal",
+      "description": "Stakeholders objective for sklearn_2021q4: As a scikit-learn contributor, I want an abstract class pattern for SequentialFeatureSelector so that I can enforce consistent interface contracts across feature selection implementations.",
+      "element_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:23",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:13",
+          "document": "sample_knowledge.py",
+          "score": 0.083333,
+          "content": "Safety Classification: - Class C: Software failure may cause death or serious injury - Class B: Software failure may cause non-serious injury - Class A: Software failure will not cause injury"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-01",
+      "name": "Stakeholders Output 1",
+      "description": "The system shall As a scikit-learn contributor, I want an abstract class pattern for SequentialFeatureSelector so that I can enforce consistent interface contracts across feature selection implementations.",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:23",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:13",
+          "document": "sample_knowledge.py",
+          "score": 0.083333,
+          "content": "Safety Classification: - Class C: Software failure may cause death or serious injury - Class B: Software failure may cause non-serious injury - Class A: Software failure will not cause injury"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-02",
+      "name": "Stakeholders Output 2",
+      "description": "The system shall As a data scientist, I want the fit() method to accept a groups parameter so that I can perform grouped cross-validation during feature selection with stratified data.",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.12,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:32",
+          "document": "cases/real_world_studies.py",
+          "score": 0.12,
+          "content": "FDA Review Key Issues and Solutions: 1. Algorithm transparency: Provided detailed control algorithm documentation and clinical validation 2. Cybersecurity: Implemented end-to-end encryption and secure authentication mechanisms 3. User training: Mandatory 6-hour training + onli..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:18",
+          "document": "automotive_safety.py",
+          "score": 0.08,
+          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-03",
+      "name": "Stakeholders Output 3",
+      "description": "The system shall As a library user, I want clear documentation of the proposed solution so that I understand how the new abstract class improves the existing API and migration path.",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:1",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.16,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:12",
+          "document": "cases/real_world_studies.py",
+          "score": 0.12,
+          "content": "Actual Challenges and Solutions: - Challenge: Camera performance degraded 30% in rain Solution: Image enhancement algorithms + radar data fusion weight adjustment - Challenge: Misidentification in construction zones Solution: Added construction sign specialized training data -..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:21",
+          "document": "cases/real_world_studies.py",
+          "score": 0.12,
+          "content": "Technical Debt and Continuous Improvement: - Map update frequency: Weekly high-precision map updates - Algorithm iteration cycle: Monthly deployment of new perception algorithms - Hardware maintenance: 40 hours maintenance time per vehicle per month - Data annotation: 1 millio..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-04",
+      "name": "Stakeholders Output 4",
+      "description": "The system shall As a maintainer, I want to evaluate alternative approaches to the abstract class design so that we select the most maintainable and backward-compatible solution.",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.130435,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.130435,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.130435,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Collector": [
+    {
+      "id": "COL-L1-002",
+      "name": "Collector Goal",
+      "description": "Collector objective for sklearn_2021q4: REQ-001: The system shall define an abstract base class that enforces a consistent interface contract for SequentialFeatureSelector and estimators within the BaseFeatureSelector hierarchy, excluding ensemble-based sel...",
+      "element_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:33",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.185185,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.185185,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:22",
+          "document": "knowledge_guide.py",
+          "score": 0.148148,
+          "content": "print(\"\\n💡 Next Step Recommendations:\") print(\"1. Based on your main application domain, prioritize filling relevant knowledge\") print(\"2. Add more real cases and quantitative indicators\") print(\"3. Regularly update industry standards and best practices\") print(\"4. Validate th..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-01",
+      "name": "Collector Output 1",
+      "description": "The system shall REQ-001: The system shall define an abstract base class that enforces a consistent interface contract for SequentialFeatureSelector and estimators within the BaseFeatureSelector hierarchy, excluding ensemble-based sel...",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:33",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.185185,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.185185,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:22",
+          "document": "knowledge_guide.py",
+          "score": 0.148148,
+          "content": "print(\"\\n💡 Next Step Recommendations:\") print(\"1. Based on your main application domain, prioritize filling relevant knowledge\") print(\"2. Add more real cases and quantitative indicators\") print(\"3. Regularly update industry standards and best practices\") print(\"4. Validate th..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-02",
+      "name": "Collector Output 2",
+      "description": "The system shall REQ-002: The fit() method shall accept an optional groups parameter with default value None that enables grouped cross-validation during feature selection.",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:11",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.130435,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:12",
+          "document": "sample_knowledge.py",
+          "score": 0.130435,
+          "content": "Example: \"During high-speed driving, when main braking system fails, backup braking system shall activate within 1 second, with failure probability <10^-8/hour (ASIL D)\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:11",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.130435,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-03",
+      "name": "Collector Output 3",
+      "description": "The system shall REQ-003: The groups parameter shall complement existing cv settings by passing groups to cv.split(X, y, groups) without overriding the cv object; if cv is None, the groups parameter shall be ignored.",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:1",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.125,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:16",
+          "document": "knowledge_guide.py",
+          "score": 0.083333,
+          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.083333,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-04",
+      "name": "Collector Output 4",
+      "description": "The system shall REQ-004: The fit(X, y, groups=None) method signature shall remain backward compatible such that all existing calls to SequentialFeatureSelector.fit(X, y) execute identically without modification.",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:15",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:15",
+          "document": "automotive_safety.py",
+          "score": 0.08,
+          "content": "L5 Level (Full Automation): - Safety requirements: System completely responsible for all scenarios - Current status: Theoretical stage, no commercial products - KAOS goal: \"All-scenario safety equivalent to professional drivers\" \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.08,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:20",
+          "document": "domains/automotive_safety.py",
+          "score": 0.08,
+          "content": "Specific Security Measures: - Secure boot: Verify all ECU firmware signatures - Secure communication: CAN-SEC protocol, AES-256 encryption - Intrusion detection: Behavioral analysis + abnormal traffic detection - Security updates: OTA updates, digital signature verification -..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Modeler": [
+    {
+      "id": "MOD-L1-003",
+      "name": "Modeler Goal",
+      "description": "Modeler objective for sklearn_2021q4: Entity: abstract base class",
+      "element_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:23",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:23",
+          "document": "cases/real_world_studies.py",
+          "score": 0.25,
+          "content": "Project Background: - System: MiniMed 770G Automated Insulin Delivery System - Certification: FDA Class III medical device, CE certification - Users: 500,000+ Type 1 diabetes patients worldwide"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:24",
+          "document": "cases/real_world_studies.py",
+          "score": 0.25,
+          "content": "Software Safety Classification: Class C (Highest Risk) - Reason: Software failure may result in death or serious injury - Development standards: IEC 62304 + ISO 13485 - Validation requirements: 100% code coverage + formal verification"
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:1",
+          "document": "domains/automotive_safety.py",
+          "score": 0.25,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Base Based on ISO 26262 and real automotive industry experience \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-01",
+      "name": "Modeler Output 1",
+      "description": "The system shall Entity: abstract base class",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:23",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:23",
+          "document": "cases/real_world_studies.py",
+          "score": 0.25,
+          "content": "Project Background: - System: MiniMed 770G Automated Insulin Delivery System - Certification: FDA Class III medical device, CE certification - Users: 500,000+ Type 1 diabetes patients worldwide"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:24",
+          "document": "cases/real_world_studies.py",
+          "score": 0.25,
+          "content": "Software Safety Classification: Class C (Highest Risk) - Reason: Software failure may result in death or serious injury - Development standards: IEC 62304 + ISO 13485 - Validation requirements: 100% code coverage + formal verification"
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:1",
+          "document": "domains/automotive_safety.py",
+          "score": 0.25,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Base Based on ISO 26262 and real automotive industry experience \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-02",
+      "name": "Modeler Output 2",
+      "description": "The system shall Entity: SequentialFeatureSelector",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-03",
+      "name": "Modeler Output 3",
+      "description": "The system shall Entity: BaseFeatureSelector hierarchy",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:22",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:22",
+          "document": "automotive_safety.py",
+          "score": 0.333333,
+          "content": "Cybersecurity Goal Hierarchy: High-level goal: \"Protect vehicle from cyber attacks\" ├── Confidentiality: Sensitive information not accessed by unauthorized parties ├── Integrity: Data and system functions not maliciously modified ├── Availability: Critical functions remain ava..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:40",
+          "document": "sample_knowledge.py",
+          "score": 0.333333,
+          "content": "Safety Goal Hierarchy: - System-level safety goals - Subsystem safety requirements - Component safety measures"
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:40",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.333333,
+          "content": "Safety Goal Hierarchy: - System-level safety goals - Subsystem safety requirements - Component safety measures"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-04",
+      "name": "Modeler Output 4",
+      "description": "The system shall Entity: interface contract",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:60",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:60",
+          "document": "sample_knowledge.py",
+          "score": 0.333333,
+          "content": "Negotiation Protocols: - Contract Net Protocol - Alternating Offers Protocol - Auction-based Negotiation - Argumentation Framework"
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:60",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.333333,
+          "content": "Negotiation Protocols: - Contract Net Protocol - Alternating Offers Protocol - Auction-based Negotiation - Argumentation Framework"
+        },
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Checker": [
+    {
+      "id": "CHE-L1-004",
+      "name": "Checker Goal",
+      "description": "Checker objective for sklearn_2021q4: 1. AMBIGUITY-001 verification: REQ-001 'consistent interface contract' lacks definition. Expectation: Requirement must specify whether consistency applies to method signatures, behavior semantics, return types, or com...",
+      "element_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-01",
+      "name": "Checker Output 1",
+      "description": "The system shall 1. AMBIGUITY-001 verification: REQ-001 'consistent interface contract' lacks definition. Expectation: Requirement must specify whether consistency applies to method signatures, behavior semantics, return types, or com...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-02",
+      "name": "Checker Output 2",
+      "description": "The system shall 2. AMBIGUITY-002 verification: REQ-005 sentence fragment 'each rais[e]' incomplete. Expectation: Requirement must explicitly state which methods raise NotImplementedError and under what conditions. Status: UNMET. Reme...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.142857,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.142857,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.142857,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-03",
+      "name": "Checker Output 3",
+      "description": "The system shall 3. AMBIGUITY-003 verification: REQ-003 specifies cv.split(X, y, groups) but cv type undefined. Expectation: Requirement must clarify cv object contract (e.g., 'cv must implement BaseCrossValidator interface supporting...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:23",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.076923,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.076923,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:4",
+          "document": "automotive_safety.py",
+          "score": 0.076923,
+          "content": "ASIL D (Most Stringent): - Failure rate requirement: < 10^-8 /hour - Applicable systems: Braking system, steering system, airbags - Development requirements: Formal methods, comprehensive verification, independent confirmation"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-04",
+      "name": "Checker Output 4",
+      "description": "The system shall 4. CONFLICT-001 verification: REQ-004 backward compatibility vs. REQ-005 signature change. Expectation: Requirements must resolve whether existing subclass overrides of fit(X, y) without groups parameter remain compat...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:4",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:4",
+          "document": "standards/latest_2024.py",
+          "score": 0.137931,
+          "content": "UN-R157 (Revised March 2024): New requirements for Automated Lane Keeping Systems: - System activation speed range: 60-130 km/h (previously 60-120) - Lane change function: Automatic lane changes allowed under specific conditions - Monitoring requirements: Driver attention moni..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:16",
+          "document": "knowledge_guide.py",
+          "score": 0.103448,
+          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:22",
+          "document": "sample_knowledge.py",
+          "score": 0.103448,
+          "content": "Pattern 1: Safety vs Efficiency Conflict Scenario: In autonomous driving systems, safety detection requires 300ms, but real-time response requires <100ms Resolution Strategies: - Layered Detection: Fast detection (50ms) + Deep verification (250ms in parallel) - Progressive Res..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Documenter": [
+    {
+      "id": "DOC-L1-005",
+      "name": "Documenter Goal",
+      "description": "Documenter objective for sklearn_2021q4: 1. System Purpose & Scope: Define abstract base class for SequentialFeatureSelector and BaseFeatureSelector hierarchy (excluding ensemble-based selectors) to enforce consistent interface contracts for feature selectio...",
+      "element_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:17",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:17",
+          "document": "cases/real_world_studies.py",
+          "score": 0.166667,
+          "content": "Operational Data (2022 Phoenix Service): - Service availability: 99.5% (excluding weather and system maintenance) - Average pickup response time: 5.8 minutes - Completion rate: 99.1% (0.9% required human remote assistance) - Safety metrics: 0 serious accidents / 800,000 trips"
+        },
+        {
+          "chunk_id": "knowledge_guide.py:22",
+          "document": "knowledge_guide.py",
+          "score": 0.166667,
+          "content": "print(\"\\n💡 Next Step Recommendations:\") print(\"1. Based on your main application domain, prioritize filling relevant knowledge\") print(\"2. Add more real cases and quantitative indicators\") print(\"3. Regularly update industry standards and best practices\") print(\"4. Validate th..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.166667,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-01",
+      "name": "Documenter Output 1",
+      "description": "The system shall 1. System Purpose & Scope: Define abstract base class for SequentialFeatureSelector and BaseFeatureSelector hierarchy (excluding ensemble-based selectors) to enforce consistent interface contracts for feature selectio...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:17",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:17",
+          "document": "cases/real_world_studies.py",
+          "score": 0.166667,
+          "content": "Operational Data (2022 Phoenix Service): - Service availability: 99.5% (excluding weather and system maintenance) - Average pickup response time: 5.8 minutes - Completion rate: 99.1% (0.9% required human remote assistance) - Safety metrics: 0 serious accidents / 800,000 trips"
+        },
+        {
+          "chunk_id": "knowledge_guide.py:22",
+          "document": "knowledge_guide.py",
+          "score": 0.166667,
+          "content": "print(\"\\n💡 Next Step Recommendations:\") print(\"1. Based on your main application domain, prioritize filling relevant knowledge\") print(\"2. Add more real cases and quantitative indicators\") print(\"3. Regularly update industry standards and best practices\") print(\"4. Validate th..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.166667,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-02",
+      "name": "Documenter Output 2",
+      "description": "The system shall 2. Functional Requirements: fit(X, y, groups=None) with optional groups parameter for grouped cross-validation; transform(X), get_support(indices=False), get_feature_names_out(input_features=None) as mandatory methods...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:32",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:32",
+          "document": "cases/real_world_studies.py",
+          "score": 0.125,
+          "content": "FDA Review Key Issues and Solutions: 1. Algorithm transparency: Provided detailed control algorithm documentation and clinical validation 2. Cybersecurity: Implemented end-to-end encryption and secure authentication mechanisms 3. User training: Mandatory 6-hour training + onli..."
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:7",
+          "document": "domains/automotive_safety.py",
+          "score": 0.125,
+          "content": "Functional Safety Concept Development Process: 1. Hazard Analysis and Risk Assessment (HARA) 2. Functional Safety Concept (FSC) 3. Technical Safety Concept (TSC) 4. System design and implementation 5. Safety verification and validation"
+        },
+        {
+          "chunk_id": "knowledge_guide.py:11",
+          "document": "knowledge_guide.py",
+          "score": 0.125,
+          "content": "3. [Ensure Compliance] - Automatically check for missing regulatory requirements - Remind about critical safety/privacy considerations - Ensure generated KAOS models comply with industry standards"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-03",
+      "name": "Documenter Output 3",
+      "description": "The system shall 3. Behavioral Requirements: Groups parameter complements cv settings by passing to cv.split(X, y, groups); ignored if cv is None. All mandatory methods raise NotImplementedError in abstract class.",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:16",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:16",
+          "document": "knowledge_guide.py",
+          "score": 0.153846,
+          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:15",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "L5 Level (Full Automation): - Safety requirements: System completely responsible for all scenarios - Current status: Theoretical stage, no commercial products - KAOS goal: \"All-scenario safety equivalent to professional drivers\" \"\"\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:24",
+          "document": "cases/real_world_studies.py",
+          "score": 0.115385,
+          "content": "Software Safety Classification: Class C (Highest Risk) - Reason: Software failure may result in death or serious injury - Development standards: IEC 62304 + ISO 13485 - Validation requirements: 100% code coverage + formal verification"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-04",
+      "name": "Documenter Output 4",
+      "description": "The system shall 4. Backward Compatibility: Existing SequentialFeatureSelector.fit(X, y) calls execute identically; groups parameter optional with default None; no breaking signature changes.",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:10",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.047619,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:14",
+          "document": "automotive_safety.py",
+          "score": 0.047619,
+          "content": "L4 Level (High Automation): - Safety requirements: Complete system responsibility within ODD + minimal risk state capability - System examples: Waymo, Cruise (defined areas) - KAOS goals: - \"All safety-critical functions with redundant design\" - \"Safe parking success rate when..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:15",
+          "document": "automotive_safety.py",
+          "score": 0.047619,
+          "content": "L5 Level (Full Automation): - Safety requirements: System completely responsible for all scenarios - Current status: Theoretical stage, no commercial products - KAOS goal: \"All-scenario safety equivalent to professional drivers\" \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ]
+}

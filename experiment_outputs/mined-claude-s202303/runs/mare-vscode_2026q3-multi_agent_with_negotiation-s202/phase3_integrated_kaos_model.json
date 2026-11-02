@@ -1,0 +1,269 @@
+{
+  "gsn_elements": [
+    {
+      "id": "CHE-L1-004",
+      "name": "Negotiated Integrated Goal",
+      "description": "Checker objective for vscode_2026q3: 1. UUID Invariance Verification: Confirm that chat sessions retain their workspace-agnostic UUID when workspace identity changes (folder rename, move, multi-root recombination); te...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-04",
+      "name": "Collector Output 4",
+      "description": "The system shall Chat sessions shall remain accessible and not be duplicated when the same folders are opened in different multi-root combinations; the picker shall present a unified view by UUID identity.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-04",
+      "name": "Stakeholders Output 4",
+      "description": "The system shall As a developer, I need chat data stored in jsonl files with index entries in workspace state, so my chat sessions are reliably persisted and retrievable across vscode sessions. Negotiated trade-off accepted by Collector.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "Collector",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-04",
+      "name": "Checker Output 4",
+      "description": "The system shall 4. Lazy-Loading Performance Criteria: Measure picker rendering time and chat list retrieval latency with 50+ indexed workspaces; confirm lazy-loading reduces initial load time by at least 40% compared to eager loading.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-04",
+      "name": "Documenter Output 4",
+      "description": "The system shall 4. Unified Chat Session View | Chat sessions shall not be duplicated when identical folders are opened in different multi-root combinations; the picker shall present a single unified view keyed by UUID identity, not s... Negotiated trade-off accepted by Stakeholders.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": "Stakeholders",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-04",
+      "name": "Modeler Output 4",
+      "description": "The system shall Entity: JSONL File",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "CHE-L1-004",
+      "target_id": "COL-L2-002-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "CHE-L1-004",
+      "target_id": "STA-L2-001-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "CHE-L1-004",
+      "target_id": "DOC-L2-005-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "CHE-L1-004",
+      "target_id": "MOD-L2-003-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_mare-vscode_2026q3-multi_agent_with_negotiation-s202",
+    "name": "OpenRE-Bench Integrated KAOS for vscode_2026q3",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-09-30T02:42:25Z",
+    "requirement_source": "Requirement 1 (Issue #334186: Send x-opencode-session header on API requests (required by OpenCode Go from 09/05))\nHi — we operate the OpenCode Go managed-inference API, and 1685 of your users' orgs call it through GitHub Copilot Chat (UA GitHubCopilotChat/0.63.0).\n\nStarting 09/05, requests without an x-opencode-session header will error on our side — we need a stable per-conversation ID for routing/optimization. Copilot Chat doesn't send it in any version we've seen.\n\nAsk: include x-opencode-session: on all outbound inference HTTP requests. Any stable UUID per conversation works. Happy to confirm from our telemetry once a build ships it. Thanks!\n\nRequirement 2 (Issue #334228: Make chat sessions available across workspaces (global chat history))\nMake chat sessions available across workspaces (global chat history) Problem Copilot chat sessions are strictly workspace-scoped. Each workspace storage folder (workspaceStorage/ ) holds its own chatSessions/.jsonl files plus a chat.ChatSessionStore.index entry in state.vscdb, and the Chat view / \"Show Chats…\" picker only ever lists that one workspace's sessions. As a developer working across many repos daily, this means: - I can never pull up a chat from another workspace without closing my window and reopening the other folder — losing my current context. - Chats \"disappear\" when the workspace identity changes: opening the same folders as a different multi-root combination, saving an untitled workspace as a .code-workspace file, or renaming/moving a folder all create a new storage hash with an ...\n\nRequirement 3 (Issue #327076: Opening a non-existent file should not trigger \"save dirty file\"  (Vim/Emacs-style \"nothing changed, nothing to save\"))\nFeature request Add a setting that prevents a newly created, empty and untouched file from being treated as \"dirty,\" so that closing it does not trigger a \"Do you want to save?\" prompt. In Microsoft VSCode, if you open a new file (\"code doesnotexist.txt from the Terminal), make no changes, then try to exit, it asks if you want to save the file. Other editors, such as Vim and Emacs, do not ask to save the file. The logic of Vim and Emacs is that no changes (including creating the file) have happened, therefore there is nothing to save. I'm requesting a feature to enable the behavior that Vim/Emacs uses. Current behavior When you create a new file that has ...",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Integrated",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "multi_agent_with_negotiation"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "CHE-L1-004",
+        "name": "Negotiated Integrated Goal",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "COL-L2-002-04",
+        "name": "Collector Output 4",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "STA-L2-001-04",
+        "name": "Stakeholders Output 4",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-04",
+        "name": "Checker Output 4",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "DOC-L2-005-04",
+        "name": "Documenter Output 4",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "MOD-L2-003-04",
+        "name": "Modeler Output 4",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "CHE-L1-004"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "CHE-L1-004": [
+        "COL-L2-002-04",
+        "STA-L2-001-04",
+        "CHE-L2-004-04",
+        "DOC-L2-005-04",
+        "MOD-L2-003-04"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_mare-vscode_2026q3-multi_agent_with_negotiation-s202",
+  "created_timestamp": "2026-09-30T02:42:25Z",
+  "total_elements": 6,
+  "total_relations": 5
+}

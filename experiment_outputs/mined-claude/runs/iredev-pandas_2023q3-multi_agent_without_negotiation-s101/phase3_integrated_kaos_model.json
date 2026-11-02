@@ -1,0 +1,1131 @@
+{
+  "gsn_elements": [
+    {
+      "id": "INT-L1-001",
+      "name": "Interviewer Goal",
+      "description": "Interviewer objective for pandas_2023q3: IR-PANDAS-001 | FUNCTIONAL: Series.struct accessor shall enable field extraction from ArrowDtype(struct) columns using dot notation (series.struct.field_name) consistent with pandas accessor patterns (.str, .dt)",
+      "gsn_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001-01",
+      "name": "Interviewer Output 1",
+      "description": "The system shall IR-PANDAS-001 | FUNCTIONAL: Series.struct accessor shall enable field extraction from ArrowDtype(struct) columns using dot notation (series.struct.field_name) consistent with pandas accessor patterns (.str, .dt)",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001-02",
+      "name": "Interviewer Output 2",
+      "description": "The system shall IR-PANDAS-002 | FUNCTIONAL: Field extraction shall return a new Series with ArrowDtype preserved, maintaining PyArrow computational efficiency and type safety for downstream operations",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001-03",
+      "name": "Interviewer Output 3",
+      "description": "The system shall IR-PANDAS-003 | FUNCTIONAL: API shall support single-field extraction returning Series; multi-field selection (series.struct[['field1', 'field2']]) shall return DataFrame with ArrowDtype columns",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001-04",
+      "name": "Interviewer Output 4",
+      "description": "The system shall IR-PANDAS-004 | FUNCTIONAL: Nested struct extraction shall support sequential dot notation (series.struct.parent_field.child_field) for hierarchical field access without intermediate steps",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L1-002",
+      "name": "EndUser Goal",
+      "description": "EndUser objective for pandas_2023q3: Pain Point: Currently, extracting nested fields from PyArrow struct columns requires manual iteration or external conversion, creating workflow friction when working with complex hierarchical data in pandas",
+      "gsn_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L2-002-01",
+      "name": "EndUser Output 1",
+      "description": "The system shall Pain Point: Currently, extracting nested fields from PyArrow struct columns requires manual iteration or external conversion, creating workflow friction when working with complex hierarchical data in pandas",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L2-002-02",
+      "name": "EndUser Output 2",
+      "description": "The system shall Pain Point: Data scientists lose type safety and performance benefits when converting PyArrow structs to alternative formats just to access individual fields",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L2-002-03",
+      "name": "EndUser Output 3",
+      "description": "The system shall Expectation: Users expect intuitive field extraction syntax (e.g., series.struct.field or series['field_name']) consistent with pandas' accessor pattern",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L2-002-04",
+      "name": "EndUser Output 4",
+      "description": "The system shall Expectation: Extracted sub-fields should maintain ArrowDtype and preserve PyArrow's computational efficiency for downstream operations",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L1-003",
+      "name": "Deployer Goal",
+      "description": "Deployer objective for pandas_2023q3: INFRASTRUCTURE: pandas build pipeline must support PyArrow C++ extensions compilation; deployment targets CPython 3.9+ with PyArrow >=10.0.0 as mandatory dependency to enable struct accessor implementation without run...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L2-003-01",
+      "name": "Deployer Output 1",
+      "description": "The system shall INFRASTRUCTURE: pandas build pipeline must support PyArrow C++ extensions compilation; deployment targets CPython 3.9+ with PyArrow >=10.0.0 as mandatory dependency to enable struct accessor implementation without run...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L2-003-02",
+      "name": "Deployer Output 2",
+      "description": "The system shall INFRASTRUCTURE: CI/CD pipeline shall execute struct accessor tests across Linux (glibc/musl), macOS (Intel/ARM), Windows platforms to ensure consistent PyArrow FFI behavior across deployment environments",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L2-003-03",
+      "name": "Deployer Output 3",
+      "description": "The system shall SECURITY: Struct field extraction shall validate field names against PyArrow schema at extraction time; reject malformed field references before accessing underlying arrow buffers to prevent out-of-bounds memory access",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L2-003-04",
+      "name": "Deployer Output 4",
+      "description": "The system shall INFRASTRUCTURE: Deployment requires CPython 3.9+ runtime with PyArrow >=10.0.0 as mandatory dependency; pandas build pipeline must support PyArrow C++ FFI compilation across Linux (glibc/musl), macOS (Intel/ARM), and...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L1-004",
+      "name": "Analyst Goal",
+      "description": "Analyst objective for pandas_2023q3: SYS-REQ-001 | FUNCTIONAL: The pandas Series.struct accessor shall enable single-field extraction from ArrowDtype(struct) columns using dot notation (series.struct.field_name) consistent with pandas accessor patterns (...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L2-004-01",
+      "name": "Analyst Output 1",
+      "description": "The system shall SYS-REQ-001 | FUNCTIONAL: The pandas Series.struct accessor shall enable single-field extraction from ArrowDtype(struct) columns using dot notation (series.struct.field_name) consistent with pandas accessor patterns (...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L2-004-02",
+      "name": "Analyst Output 2",
+      "description": "The system shall SYS-REQ-002 | FUNCTIONAL: Field extraction operations shall return a new Series with ArrowDtype preserved, maintaining PyArrow computational efficiency and type safety for downstream operations without implicit type c...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L2-004-03",
+      "name": "Analyst Output 3",
+      "description": "The system shall SYS-REQ-003 | FUNCTIONAL: The struct accessor API shall support multi-field selection via bracket notation (series.struct[['field1', 'field2']]) returning a DataFrame with ArrowDtype columns to enable batch field extr...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L2-004-04",
+      "name": "Analyst Output 4",
+      "description": "The system shall SYS-REQ-004 | FUNCTIONAL: Nested struct extraction shall support sequential dot notation (series.struct.parent_field.child_field) enabling hierarchical field access without requiring intermediate extraction steps",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L1-005",
+      "name": "Archivist Goal",
+      "description": "Archivist objective for pandas_2023q3: SRS-PANDAS-2023Q3-001 | PURPOSE AND SCOPE: This Software Requirements Specification documents functional and non-functional requirements for the Series.struct accessor feature enabling field extraction from ArrowDtype...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-01",
+      "name": "Archivist Output 1",
+      "description": "The system shall SRS-PANDAS-2023Q3-001 | PURPOSE AND SCOPE: This Software Requirements Specification documents functional and non-functional requirements for the Series.struct accessor feature enabling field extraction from ArrowDtype...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-02",
+      "name": "Archivist Output 2",
+      "description": "The system shall SRS-PANDAS-2023Q3-002 | OVERALL DESCRIPTION: The Series.struct accessor extends pandas with intuitive field extraction syntax consistent with existing accessor patterns (.str, .dt), enabling data scientists to extract...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-03",
+      "name": "Archivist Output 3",
+      "description": "The system shall SRS-PANDAS-2023Q3-003 | FUNCTIONAL REQUIREMENT - Single-Field Extraction: Series.struct accessor shall support dot notation (series.struct.field_name) for single-field extraction from ArrowDtype(struct) columns, retur...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-04",
+      "name": "Archivist Output 4",
+      "description": "The system shall SRS-PANDAS-2023Q3-004 | FUNCTIONAL REQUIREMENT - Multi-Field Extraction: Series.struct accessor shall support bracket notation (series.struct[['field1', 'field2']]) for multi-field selection, returning a DataFrame wit...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L1-006",
+      "name": "Reviewer Goal",
+      "description": "Reviewer objective for pandas_2023q3: CLARITY VIOLATION (SRS-PANDAS-2023Q3-003): Single-field extraction requirement lacks specification of return type consistency - states 'return a new Series with ArrowDtype preserved' but does not explicitly clarify wh...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L2-006-01",
+      "name": "Reviewer Output 1",
+      "description": "The system shall CLARITY VIOLATION (SRS-PANDAS-2023Q3-003): Single-field extraction requirement lacks specification of return type consistency - states 'return a new Series with ArrowDtype preserved' but does not explicitly clarify wh...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L2-006-02",
+      "name": "Reviewer Output 2",
+      "description": "The system shall CLARITY VIOLATION (SRS-PANDAS-2023Q3-005): Nested struct access requirement uses phrase 'sequential dot notation' without defining maximum nesting depth or circular reference handling; example 'series.struct.parent_fi...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L2-006-03",
+      "name": "Reviewer Output 3",
+      "description": "The system shall FEASIBILITY CONCERN (SRS-PANDAS-2023Q3-004): Multi-field extraction returning DataFrame conflicts with stated accessor pattern consistency - pandas .str and .dt accessors do not support bracket notation returning Data...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L2-006-04",
+      "name": "Reviewer Output 4",
+      "description": "The system shall VERIFIABILITY DEFICIENCY (SRS-PANDAS-2023Q3-006): Null propagation requirement states 'shall not raise errors on null struct entries' but lacks acceptance criteria for null handling - does not specify whether null str...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-001-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-001-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-001-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-001-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "END-L1-002",
+      "target_id": "END-L2-002-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "END-L1-002",
+      "target_id": "END-L2-002-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-007",
+      "source_id": "END-L1-002",
+      "target_id": "END-L2-002-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-008",
+      "source_id": "END-L1-002",
+      "target_id": "END-L2-002-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-009",
+      "source_id": "DEP-L1-003",
+      "target_id": "DEP-L2-003-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-010",
+      "source_id": "DEP-L1-003",
+      "target_id": "DEP-L2-003-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-011",
+      "source_id": "DEP-L1-003",
+      "target_id": "DEP-L2-003-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-012",
+      "source_id": "DEP-L1-003",
+      "target_id": "DEP-L2-003-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-013",
+      "source_id": "ANA-L1-004",
+      "target_id": "ANA-L2-004-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-014",
+      "source_id": "ANA-L1-004",
+      "target_id": "ANA-L2-004-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-015",
+      "source_id": "ANA-L1-004",
+      "target_id": "ANA-L2-004-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-016",
+      "source_id": "ANA-L1-004",
+      "target_id": "ANA-L2-004-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-017",
+      "source_id": "ARC-L1-005",
+      "target_id": "ARC-L2-005-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-018",
+      "source_id": "ARC-L1-005",
+      "target_id": "ARC-L2-005-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-019",
+      "source_id": "ARC-L1-005",
+      "target_id": "ARC-L2-005-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-020",
+      "source_id": "ARC-L1-005",
+      "target_id": "ARC-L2-005-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-021",
+      "source_id": "REV-L1-006",
+      "target_id": "REV-L2-006-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-022",
+      "source_id": "REV-L1-006",
+      "target_id": "REV-L2-006-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-023",
+      "source_id": "REV-L1-006",
+      "target_id": "REV-L2-006-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-024",
+      "source_id": "REV-L1-006",
+      "target_id": "REV-L2-006-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_iredev-pandas_2023q3-multi_agent_without_negotiation-s101",
+    "name": "OpenRE-Bench Integrated KAOS for pandas_2023q3",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-09-29T05:15:11Z",
+    "requirement_source": "Requirement 1 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame.attrs and load it back)\nFeature Type\n\n- [ ] Adding new functionality to pandas\n\n- [X] Changing existing functionality in pandas\n\n- [ ] Removing existing functionality in pandas\n\n Problem Description\n\nPandas allow one to store metadata in DataFrame.attrs. Similarly pyarrow allow one to store meta data via the metadata option in pa.schema.\nHowever, if one try to use DataFrame.to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back. The metadata has been lost.\n\n Feature Description\n\n \n\n Alternative Solutions\n\nN/A\n\n Additional Context\n\n_No response_\n\nRequirement 2 (Issue #54938: ENH: Series.struct accessor with Series.struct.field(\"sub-column name\") for ArrowDtype)\nFeature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing functionality in pandas Problem Description When I have a Series of type ArrowDtype(struct(...)), I'd like to be able to extract sub-fields from them. For example, I have a pandas Series with the ArrowDtype(pyarrow.struct([(\"int_col\", pyarrow.int64()), (\"string_col\", pyarrow.string())])). I'd like to extract just the int_col field from this Series as another Series. Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(...)). This struct accessor provides a field() method which returns a Series containing only the specified sub-field. Alternative Solutions I can currently do this via pyarrow.compute.struct_field on the underlying pyarrow array: Additional Context This issue is ...\n\nRequirement 3 (Issue #55030: ENH: make read_excel dtype parameter compatible with multiple sheets (e.g sheet_name =[0,\"list_of_sheets\"]))\nFeature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing functionality in pandas Problem Description I would like the dtype parameter to be compatible with opening multiple sheets. Feature Description when a list of sheets is passed, dtype could be a dictionary with {elem_on_list: usual_dtype_parameter} so if sheet_name = [0,'Sheet3'] dtype could be dtype={0:{'colA':str, 'colB': 'float64'}, 'Sheet3':{'colA':'datetime64[ns]', 'colB': str} Alternative Solutions Iterate yourself and create the dictionary yourself with Additional Context In my case, pandas automatic decision of what the object is, doesn't work well in my scenarios. It always assumes numbers, even if the column has explicitly been marked as \"text\" in Excel, so I need to ...",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Integrated",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "multi_agent_without_negotiation"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "INT-L1-001",
+        "name": "Interviewer Goal",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": null
+      },
+      {
+        "id": "END-L1-002",
+        "name": "EndUser Goal",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": null
+      },
+      {
+        "id": "DEP-L1-003",
+        "name": "Deployer Goal",
+        "quality_attribute": "Safety",
+        "parent_goal_id": null
+      },
+      {
+        "id": "ANA-L1-004",
+        "name": "Analyst Goal",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": null
+      },
+      {
+        "id": "ARC-L1-005",
+        "name": "Archivist Goal",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": null
+      },
+      {
+        "id": "REV-L1-006",
+        "name": "Reviewer Goal",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "INT-L2-001-01",
+        "name": "Interviewer Output 1",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-001-02",
+        "name": "Interviewer Output 2",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-001-03",
+        "name": "Interviewer Output 3",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-001-04",
+        "name": "Interviewer Output 4",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "END-L2-002-01",
+        "name": "EndUser Output 1",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "END-L1-002"
+      },
+      {
+        "id": "END-L2-002-02",
+        "name": "EndUser Output 2",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "END-L1-002"
+      },
+      {
+        "id": "END-L2-002-03",
+        "name": "EndUser Output 3",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "END-L1-002"
+      },
+      {
+        "id": "END-L2-002-04",
+        "name": "EndUser Output 4",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "END-L1-002"
+      },
+      {
+        "id": "DEP-L2-003-01",
+        "name": "Deployer Output 1",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "DEP-L1-003"
+      },
+      {
+        "id": "DEP-L2-003-02",
+        "name": "Deployer Output 2",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "DEP-L1-003"
+      },
+      {
+        "id": "DEP-L2-003-03",
+        "name": "Deployer Output 3",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "DEP-L1-003"
+      },
+      {
+        "id": "DEP-L2-003-04",
+        "name": "Deployer Output 4",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "DEP-L1-003"
+      },
+      {
+        "id": "ANA-L2-004-01",
+        "name": "Analyst Output 1",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ANA-L2-004-02",
+        "name": "Analyst Output 2",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ANA-L2-004-03",
+        "name": "Analyst Output 3",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ANA-L2-004-04",
+        "name": "Analyst Output 4",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ARC-L2-005-01",
+        "name": "Archivist Output 1",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "ARC-L1-005"
+      },
+      {
+        "id": "ARC-L2-005-02",
+        "name": "Archivist Output 2",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "ARC-L1-005"
+      },
+      {
+        "id": "ARC-L2-005-03",
+        "name": "Archivist Output 3",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "ARC-L1-005"
+      },
+      {
+        "id": "ARC-L2-005-04",
+        "name": "Archivist Output 4",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "ARC-L1-005"
+      },
+      {
+        "id": "REV-L2-006-01",
+        "name": "Reviewer Output 1",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "REV-L1-006"
+      },
+      {
+        "id": "REV-L2-006-02",
+        "name": "Reviewer Output 2",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "REV-L1-006"
+      },
+      {
+        "id": "REV-L2-006-03",
+        "name": "Reviewer Output 3",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "REV-L1-006"
+      },
+      {
+        "id": "REV-L2-006-04",
+        "name": "Reviewer Output 4",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "REV-L1-006"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "INT-L1-001": [
+        "INT-L2-001-01",
+        "INT-L2-001-02",
+        "INT-L2-001-03",
+        "INT-L2-001-04"
+      ],
+      "END-L1-002": [
+        "END-L2-002-01",
+        "END-L2-002-02",
+        "END-L2-002-03",
+        "END-L2-002-04"
+      ],
+      "DEP-L1-003": [
+        "DEP-L2-003-01",
+        "DEP-L2-003-02",
+        "DEP-L2-003-03",
+        "DEP-L2-003-04"
+      ],
+      "ANA-L1-004": [
+        "ANA-L2-004-01",
+        "ANA-L2-004-02",
+        "ANA-L2-004-03",
+        "ANA-L2-004-04"
+      ],
+      "ARC-L1-005": [
+        "ARC-L2-005-01",
+        "ARC-L2-005-02",
+        "ARC-L2-005-03",
+        "ARC-L2-005-04"
+      ],
+      "REV-L1-006": [
+        "REV-L2-006-01",
+        "REV-L2-006-02",
+        "REV-L2-006-03",
+        "REV-L2-006-04"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_iredev-pandas_2023q3-multi_agent_without_negotiation-s101",
+  "created_timestamp": "2026-09-29T05:15:11Z",
+  "total_elements": 30,
+  "total_relations": 24
+}

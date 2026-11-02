@@ -17,13 +17,14 @@ COPY data ./data
 COPY docs ./docs
 COPY experiment_outputs ./experiment_outputs
 COPY human_eval ./human_eval
+COPY ingestion ./ingestion
 COPY openre_bench_iredev ./openre_bench_iredev
 COPY openre_bench_mare ./openre_bench_mare
 COPY openre_bench_quare ./openre_bench_quare
 COPY scripts ./scripts
 COPY src ./src
 COPY tests ./tests
-COPY LICENSE LICENSE.md CITATION.cff ./
+COPY LICENSE LICENSE.md DATA_LICENSE CITATION.cff ./
 
 RUN uv sync --frozen --all-groups
 

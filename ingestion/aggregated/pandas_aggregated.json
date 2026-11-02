@@ -1,0 +1,40 @@
+{
+  "aggregation_method": "time_window",
+  "domain": "Data Processing",
+  "fetched_at": "2026-09-29T04:11:24Z",
+  "repo": "pandas-dev/pandas",
+  "selected_count": 3,
+  "selected_issues": [
+    {
+      "body_for_case": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing functionality in pandas Problem Description Currently the .to_parquet() method only work for dataframe. It would be nicer if the method could work on Series to. Currently we either have to save the series to another format or involve a pd.DataFrame(Serie) which seems a bit clunky. Feature Description For a given pandas Serie, being able to write Serie.to_parquet() Alternative Solutions Currently the two alternatives are: - save to another format which is a bit convoluted as we now have to deal with multiple formats. - convert the series to a DataFrame to use the DF method. Additional Context _No ...",
+      "created_at": "2023-08-19T07:53:05Z",
+      "html_url": "https://github.com/pandas-dev/pandas/issues/54638",
+      "number": 54638,
+      "reactions": 7,
+      "state": "open",
+      "title": "ENH: allow writing series to parquet file"
+    },
+    {
+      "body_for_case": "Feature Type\n\n- [ ] Adding new functionality to pandas\n\n- [X] Changing existing functionality in pandas\n\n- [ ] Removing existing functionality in pandas\n\n Problem Description\n\nPandas allow one to store metadata in DataFrame.attrs. Similarly pyarrow allow one to store meta data via the metadata option in pa.schema.\nHowever, if one try to use DataFrame.to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back. The metadata has been lost.\n\n Feature Description\n\n \n\n Alternative Solutions\n\nN/A\n\n Additional Context\n\n_No response_",
+      "created_at": "2023-07-31T13:21:22Z",
+      "html_url": "https://github.com/pandas-dev/pandas/issues/54321",
+      "number": 54321,
+      "reactions": 2,
+      "state": "closed",
+      "title": "ENH: Allow to_parquet to save the metadata from DataFrame.attrs and load it back"
+    },
+    {
+      "body_for_case": "Feature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing functionality in pandas Problem Description When I have a Series of type ArrowDtype(struct(...)), I'd like to be able to extract sub-fields from them. For example, I have a pandas Series with the ArrowDtype(pyarrow.struct([(\"int_col\", pyarrow.int64()), (\"string_col\", pyarrow.string())])). I'd like to extract just the int_col field from this Series as another Series. Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(...)). This struct accessor provides a field() method which returns a Series containing only the specified sub-field. Alternative Solutions I can currently do this via pyarrow.compute.struct_field on the underlying pyarrow array: Additional Context This issue is ...",
+      "created_at": "2023-09-01T20:17:35Z",
+      "html_url": "https://github.com/pandas-dev/pandas/issues/54938",
+      "number": 54938,
+      "reactions": 2,
+      "state": "closed",
+      "title": "ENH: Series.struct accessor with Series.struct.field(\"sub-column name\") for ArrowDtype"
+    }
+  ],
+  "slug": "pandas",
+  "total_words": 328,
+  "window_issue_count": 44,
+  "window_label": "2023q3"
+}

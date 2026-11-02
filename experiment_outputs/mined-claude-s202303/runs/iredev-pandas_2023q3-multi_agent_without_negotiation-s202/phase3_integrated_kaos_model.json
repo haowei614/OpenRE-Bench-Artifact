@@ -1,0 +1,1131 @@
+{
+  "gsn_elements": [
+    {
+      "id": "INT-L1-001",
+      "name": "Interviewer Goal",
+      "description": "Interviewer objective for pandas_2023q3: IR-001: Excel Type Preservation Requirement - When Excel columns are explicitly marked as 'text' format, pandas read operations shall preserve numeric-looking values (e.g., '00123', '1.5E+10') as string types rather t...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001-01",
+      "name": "Interviewer Output 1",
+      "description": "The system shall IR-001: Excel Type Preservation Requirement - When Excel columns are explicitly marked as 'text' format, pandas read operations shall preserve numeric-looking values (e.g., '00123', '1.5E+10') as string types rather t...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001-02",
+      "name": "Interviewer Output 2",
+      "description": "The system shall IR-002: DataFrame Metadata Preservation in Parquet - to_parquet() shall preserve standard DataFrame properties (dtypes, column names, index names) AND custom attributes via df.attrs during serialization. Scope include...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001-03",
+      "name": "Interviewer Output 3",
+      "description": "The system shall IR-003: Automatic Metadata Restoration Strategy - read_parquet() shall automatically restore all preserved metadata by default to ensure seamless round-trip fidelity. An optional restore_metadata=False parameter shall...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001-04",
+      "name": "Interviewer Output 4",
+      "description": "The system shall IR-004: Scope Clarification - Metadata preservation includes both standard DataFrame structural properties and user-defined custom attributes, enabling comprehensive data context preservation across serialization cycl...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "INT-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L1-002",
+      "name": "EndUser Goal",
+      "description": "EndUser objective for pandas_2023q3: Pain Point: Excel imports with text-marked columns are incorrectly coerced to numeric types, causing data integrity issues and requiring manual post-processing to fix type mismatches",
+      "gsn_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L2-002-01",
+      "name": "EndUser Output 1",
+      "description": "The system shall Pain Point: Excel imports with text-marked columns are incorrectly coerced to numeric types, causing data integrity issues and requiring manual post-processing to fix type mismatches",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L2-002-02",
+      "name": "EndUser Output 2",
+      "description": "The system shall Pain Point: DataFrame metadata (column types, descriptions, units) is lost during parquet serialization, necessitating external documentation systems and increasing data lineage complexity",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L2-002-03",
+      "name": "EndUser Output 3",
+      "description": "The system shall Expectation: to_parquet() should preserve and restore all DataFrame attributes and column-level metadata without requiring additional configuration steps",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L2-002-04",
+      "name": "EndUser Output 4",
+      "description": "The system shall Expectation: Type inference should respect explicit Excel column formatting declarations rather than overriding with automatic numeric conversion",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "END-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L1-003",
+      "name": "Deployer Goal",
+      "description": "Deployer objective for pandas_2023q3: INFRASTRUCTURE: Parquet serialization must support in-memory metadata storage without requiring additional external systems; pandas I/O layer must handle metadata encoding/decoding without performance degradation on D...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L2-003-01",
+      "name": "Deployer Output 1",
+      "description": "The system shall INFRASTRUCTURE: Parquet serialization must support in-memory metadata storage without requiring additional external systems; pandas I/O layer must handle metadata encoding/decoding without performance degradation on D...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L2-003-02",
+      "name": "Deployer Output 2",
+      "description": "The system shall INFRASTRUCTURE: Excel import pipeline requires optional type-preservation mode that bypasses numeric coercion; must maintain backward compatibility with existing read_excel() default behavior via dtype parameter",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L2-003-03",
+      "name": "Deployer Output 3",
+      "description": "The system shall SECURITY: Metadata preservation in parquet must sanitize custom df.attrs to prevent injection attacks; validate attribute keys/values conform to safe serialization formats (no arbitrary Python objects)",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L2-003-04",
+      "name": "Deployer Output 4",
+      "description": "The system shall INFRASTRUCTURE: Parquet I/O layer must support metadata encoding/decoding within pandas serialization pipeline without external dependencies; in-memory storage of df.attrs and standard properties (dtypes, column names...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DEP-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L1-004",
+      "name": "Analyst Goal",
+      "description": "Analyst objective for pandas_2023q3: SYS-REQ-001: Excel Type Preservation - read_excel() shall support dtype_backend parameter to respect explicit 'text' column formatting declarations in Excel files, preserving numeric-looking values (e.g., '00123', '1....",
+      "gsn_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L2-004-01",
+      "name": "Analyst Output 1",
+      "description": "The system shall SYS-REQ-001: Excel Type Preservation - read_excel() shall support dtype_backend parameter to respect explicit 'text' column formatting declarations in Excel files, preserving numeric-looking values (e.g., '00123', '1....",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L2-004-02",
+      "name": "Analyst Output 2",
+      "description": "The system shall SYS-REQ-002: Backward Compatibility for Excel Import - read_excel() shall maintain existing default behavior (numeric coercion) when dtype_backend parameter is not specified, ensuring no breaking changes to current wo...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L2-004-03",
+      "name": "Analyst Output 3",
+      "description": "The system shall SYS-REQ-003: DataFrame Metadata Serialization in Parquet - to_parquet() shall serialize and preserve standard DataFrame properties (dtypes, column names, index names) AND custom attributes via df.attrs in Parquet foot...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L2-004-04",
+      "name": "Analyst Output 4",
+      "description": "The system shall SYS-REQ-004: Metadata Scope Definition - Metadata preservation shall include: (1) standard structural properties (dtypes, column names, index names), (2) custom user-defined attributes via df.attrs restricted to JSON-...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L1-005",
+      "name": "Archivist Goal",
+      "description": "Archivist objective for pandas_2023q3: SRS-INTRO-001: Document Title and Version Control - Software Requirements Specification for pandas 2023 Q3 Release: Excel Type Preservation and DataFrame Metadata Serialization; Version 1.0; Date: [current]; Status: A...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-01",
+      "name": "Archivist Output 1",
+      "description": "The system shall SRS-INTRO-001: Document Title and Version Control - Software Requirements Specification for pandas 2023 Q3 Release: Excel Type Preservation and DataFrame Metadata Serialization; Version 1.0; Date: [current]; Status: A...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-02",
+      "name": "Archivist Output 2",
+      "description": "The system shall SRS-INTRO-002: Purpose and Scope - This SRS consolidates requirements for two interconnected enhancements: (1) Excel column type preservation via dtype_backend parameter in read_excel(), (2) DataFrame metadata seriali...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-03",
+      "name": "Archivist Output 3",
+      "description": "The system shall SRS-REQ-001: Excel Type Preservation Requirement - read_excel() shall support dtype_backend parameter. When dtype_backend='text' is specified, numeric-looking values in Excel columns explicitly marked as 'text' format...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-04",
+      "name": "Archivist Output 4",
+      "description": "The system shall SRS-REQ-002: Excel Import Backward Compatibility - read_excel() shall maintain existing default behavior (automatic numeric coercion) when dtype_backend parameter is unspecified, ensuring no breaking changes to curren...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ARC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L1-006",
+      "name": "Reviewer Goal",
+      "description": "Reviewer objective for pandas_2023q3: SRS-REQ-001 (Excel Type Preservation): CLARITY VIOLATION - Section uses vague phrase 'numeric-looking values' without defining boundary conditions. Examples ('00123', '1.5E+10') provided but no algorithmic specificati...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L2-006-01",
+      "name": "Reviewer Output 1",
+      "description": "The system shall SRS-REQ-001 (Excel Type Preservation): CLARITY VIOLATION - Section uses vague phrase 'numeric-looking values' without defining boundary conditions. Examples ('00123', '1.5E+10') provided but no algorithmic specificati...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L2-006-02",
+      "name": "Reviewer Output 2",
+      "description": "The system shall SRS-REQ-001 & SRS-REQ-002: CONSISTENCY VIOLATION - Default behavior for dtype_backend parameter unspecified in REQ-001 but stated as 'unspecified=numeric coercion' in REQ-002. Recommend explicit default value declarat...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L2-006-03",
+      "name": "Reviewer Output 3",
+      "description": "The system shall SRS-REQ-003 & SRS-REQ-004: CLARITY VIOLATION - 'Standard DataFrame properties' term used inconsistently. REQ-003 lists 'dtypes, column names, index names' but REQ-004 adds scope constraints without defining which prop...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L2-006-04",
+      "name": "Reviewer Output 4",
+      "description": "The system shall SRS-REQ-003: VERIFIABILITY VIOLATION - Success criterion for 'serialize and preserve' undefined. No acceptance test criteria specified (e.g., round-trip equality assertion, byte-level preservation, schema validation)....",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "REV-L1-006",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-001-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-001-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-001-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "INT-L1-001",
+      "target_id": "INT-L2-001-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "END-L1-002",
+      "target_id": "END-L2-002-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "END-L1-002",
+      "target_id": "END-L2-002-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-007",
+      "source_id": "END-L1-002",
+      "target_id": "END-L2-002-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-008",
+      "source_id": "END-L1-002",
+      "target_id": "END-L2-002-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-009",
+      "source_id": "DEP-L1-003",
+      "target_id": "DEP-L2-003-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-010",
+      "source_id": "DEP-L1-003",
+      "target_id": "DEP-L2-003-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-011",
+      "source_id": "DEP-L1-003",
+      "target_id": "DEP-L2-003-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-012",
+      "source_id": "DEP-L1-003",
+      "target_id": "DEP-L2-003-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-013",
+      "source_id": "ANA-L1-004",
+      "target_id": "ANA-L2-004-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-014",
+      "source_id": "ANA-L1-004",
+      "target_id": "ANA-L2-004-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-015",
+      "source_id": "ANA-L1-004",
+      "target_id": "ANA-L2-004-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-016",
+      "source_id": "ANA-L1-004",
+      "target_id": "ANA-L2-004-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-017",
+      "source_id": "ARC-L1-005",
+      "target_id": "ARC-L2-005-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-018",
+      "source_id": "ARC-L1-005",
+      "target_id": "ARC-L2-005-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-019",
+      "source_id": "ARC-L1-005",
+      "target_id": "ARC-L2-005-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-020",
+      "source_id": "ARC-L1-005",
+      "target_id": "ARC-L2-005-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-021",
+      "source_id": "REV-L1-006",
+      "target_id": "REV-L2-006-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-022",
+      "source_id": "REV-L1-006",
+      "target_id": "REV-L2-006-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-023",
+      "source_id": "REV-L1-006",
+      "target_id": "REV-L2-006-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-024",
+      "source_id": "REV-L1-006",
+      "target_id": "REV-L2-006-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_iredev-pandas_2023q3-multi_agent_without_negotiation-s202",
+    "name": "OpenRE-Bench Integrated KAOS for pandas_2023q3",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-09-30T00:56:48Z",
+    "requirement_source": "Requirement 1 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame.attrs and load it back)\nFeature Type\n\n- [ ] Adding new functionality to pandas\n\n- [X] Changing existing functionality in pandas\n\n- [ ] Removing existing functionality in pandas\n\n Problem Description\n\nPandas allow one to store metadata in DataFrame.attrs. Similarly pyarrow allow one to store meta data via the metadata option in pa.schema.\nHowever, if one try to use DataFrame.to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back. The metadata has been lost.\n\n Feature Description\n\n \n\n Alternative Solutions\n\nN/A\n\n Additional Context\n\n_No response_\n\nRequirement 2 (Issue #54938: ENH: Series.struct accessor with Series.struct.field(\"sub-column name\") for ArrowDtype)\nFeature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing functionality in pandas Problem Description When I have a Series of type ArrowDtype(struct(...)), I'd like to be able to extract sub-fields from them. For example, I have a pandas Series with the ArrowDtype(pyarrow.struct([(\"int_col\", pyarrow.int64()), (\"string_col\", pyarrow.string())])). I'd like to extract just the int_col field from this Series as another Series. Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(...)). This struct accessor provides a field() method which returns a Series containing only the specified sub-field. Alternative Solutions I can currently do this via pyarrow.compute.struct_field on the underlying pyarrow array: Additional Context This issue is ...\n\nRequirement 3 (Issue #55030: ENH: make read_excel dtype parameter compatible with multiple sheets (e.g sheet_name =[0,\"list_of_sheets\"]))\nFeature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing functionality in pandas Problem Description I would like the dtype parameter to be compatible with opening multiple sheets. Feature Description when a list of sheets is passed, dtype could be a dictionary with {elem_on_list: usual_dtype_parameter} so if sheet_name = [0,'Sheet3'] dtype could be dtype={0:{'colA':str, 'colB': 'float64'}, 'Sheet3':{'colA':'datetime64[ns]', 'colB': str} Alternative Solutions Iterate yourself and create the dictionary yourself with Additional Context In my case, pandas automatic decision of what the object is, doesn't work well in my scenarios. It always assumes numbers, even if the column has explicitly been marked as \"text\" in Excel, so I need to ...",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Integrated",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "multi_agent_without_negotiation"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "INT-L1-001",
+        "name": "Interviewer Goal",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": null
+      },
+      {
+        "id": "END-L1-002",
+        "name": "EndUser Goal",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": null
+      },
+      {
+        "id": "DEP-L1-003",
+        "name": "Deployer Goal",
+        "quality_attribute": "Safety",
+        "parent_goal_id": null
+      },
+      {
+        "id": "ANA-L1-004",
+        "name": "Analyst Goal",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": null
+      },
+      {
+        "id": "ARC-L1-005",
+        "name": "Archivist Goal",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": null
+      },
+      {
+        "id": "REV-L1-006",
+        "name": "Reviewer Goal",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "INT-L2-001-01",
+        "name": "Interviewer Output 1",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-001-02",
+        "name": "Interviewer Output 2",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-001-03",
+        "name": "Interviewer Output 3",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "INT-L2-001-04",
+        "name": "Interviewer Output 4",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "INT-L1-001"
+      },
+      {
+        "id": "END-L2-002-01",
+        "name": "EndUser Output 1",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "END-L1-002"
+      },
+      {
+        "id": "END-L2-002-02",
+        "name": "EndUser Output 2",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "END-L1-002"
+      },
+      {
+        "id": "END-L2-002-03",
+        "name": "EndUser Output 3",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "END-L1-002"
+      },
+      {
+        "id": "END-L2-002-04",
+        "name": "EndUser Output 4",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "END-L1-002"
+      },
+      {
+        "id": "DEP-L2-003-01",
+        "name": "Deployer Output 1",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "DEP-L1-003"
+      },
+      {
+        "id": "DEP-L2-003-02",
+        "name": "Deployer Output 2",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "DEP-L1-003"
+      },
+      {
+        "id": "DEP-L2-003-03",
+        "name": "Deployer Output 3",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "DEP-L1-003"
+      },
+      {
+        "id": "DEP-L2-003-04",
+        "name": "Deployer Output 4",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "DEP-L1-003"
+      },
+      {
+        "id": "ANA-L2-004-01",
+        "name": "Analyst Output 1",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ANA-L2-004-02",
+        "name": "Analyst Output 2",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ANA-L2-004-03",
+        "name": "Analyst Output 3",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ANA-L2-004-04",
+        "name": "Analyst Output 4",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ARC-L2-005-01",
+        "name": "Archivist Output 1",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "ARC-L1-005"
+      },
+      {
+        "id": "ARC-L2-005-02",
+        "name": "Archivist Output 2",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "ARC-L1-005"
+      },
+      {
+        "id": "ARC-L2-005-03",
+        "name": "Archivist Output 3",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "ARC-L1-005"
+      },
+      {
+        "id": "ARC-L2-005-04",
+        "name": "Archivist Output 4",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "ARC-L1-005"
+      },
+      {
+        "id": "REV-L2-006-01",
+        "name": "Reviewer Output 1",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "REV-L1-006"
+      },
+      {
+        "id": "REV-L2-006-02",
+        "name": "Reviewer Output 2",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "REV-L1-006"
+      },
+      {
+        "id": "REV-L2-006-03",
+        "name": "Reviewer Output 3",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "REV-L1-006"
+      },
+      {
+        "id": "REV-L2-006-04",
+        "name": "Reviewer Output 4",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "REV-L1-006"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "INT-L1-001": [
+        "INT-L2-001-01",
+        "INT-L2-001-02",
+        "INT-L2-001-03",
+        "INT-L2-001-04"
+      ],
+      "END-L1-002": [
+        "END-L2-002-01",
+        "END-L2-002-02",
+        "END-L2-002-03",
+        "END-L2-002-04"
+      ],
+      "DEP-L1-003": [
+        "DEP-L2-003-01",
+        "DEP-L2-003-02",
+        "DEP-L2-003-03",
+        "DEP-L2-003-04"
+      ],
+      "ANA-L1-004": [
+        "ANA-L2-004-01",
+        "ANA-L2-004-02",
+        "ANA-L2-004-03",
+        "ANA-L2-004-04"
+      ],
+      "ARC-L1-005": [
+        "ARC-L2-005-01",
+        "ARC-L2-005-02",
+        "ARC-L2-005-03",
+        "ARC-L2-005-04"
+      ],
+      "REV-L1-006": [
+        "REV-L2-006-01",
+        "REV-L2-006-02",
+        "REV-L2-006-03",
+        "REV-L2-006-04"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_iredev-pandas_2023q3-multi_agent_without_negotiation-s202",
+  "created_timestamp": "2026-09-30T00:56:48Z",
+  "total_elements": 30,
+  "total_relations": 24
+}

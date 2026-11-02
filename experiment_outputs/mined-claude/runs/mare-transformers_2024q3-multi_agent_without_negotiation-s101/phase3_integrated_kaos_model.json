@@ -1,0 +1,950 @@
+{
+  "gsn_elements": [
+    {
+      "id": "STA-L1-001",
+      "name": "Stakeholders Goal",
+      "description": "Stakeholders objective for transformers_2024q3: As a Gemma2 model user, I want the docstring to explicitly document the logit scaling behavior so I can understand how the model handles attention scaling without searching external sources.",
+      "gsn_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-01",
+      "name": "Stakeholders Output 1",
+      "description": "The system shall As a Gemma2 model user, I want the docstring to explicitly document the logit scaling behavior so I can understand how the model handles attention scaling without searching external sources.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-02",
+      "name": "Stakeholders Output 2",
+      "description": "The system shall As a Gemma2 developer, I want to implement FlexAttention support in the SDPA path so that the model can leverage recent PyTorch optimizations for scaled dot-product attention.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-03",
+      "name": "Stakeholders Output 3",
+      "description": "The system shall As a framework maintainer, I want consistent documentation across similar model implementations so that users can rely on clear, explicit behavior descriptions for logit scaling in Gemma2.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "STA-L2-001-04",
+      "name": "Stakeholders Output 4",
+      "description": "The system shall As a community contributor, I want a clear implementation path for FlexAttention integration so that I can contribute to extending Gemma2's attention mechanism capabilities.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L1-002",
+      "name": "Collector Goal",
+      "description": "Collector objective for transformers_2024q3: REQ-GEMMA2-DOC-001: The Gemma2 model docstring shall explicitly document the logit scaling behavior applied to attention scores before softmax computation, including the scaling factor parameter and its application po...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-01",
+      "name": "Collector Output 1",
+      "description": "The system shall REQ-GEMMA2-DOC-001: The Gemma2 model docstring shall explicitly document the logit scaling behavior applied to attention scores before softmax computation, including the scaling factor parameter and its application po...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-02",
+      "name": "Collector Output 2",
+      "description": "The system shall REQ-GEMMA2-DOC-002: The Gemma2 docstring shall clarify how logit scaling in Gemma2 differs from standard SDPA implementations, enabling users to understand attention scaling behavior without external references.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-03",
+      "name": "Collector Output 3",
+      "description": "The system shall REQ-GEMMA2-FLEX-001: The Gemma2 SDPA implementation shall support FlexAttention as the preferred path when PyTorch version >= 2.5.0 is available, while maintaining backward compatibility with graceful fallback to stan...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "domains/automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "COL-L2-002-04",
+      "name": "Collector Output 4",
+      "description": "The system shall REQ-GEMMA2-FLEX-002: The FlexAttention integration for Gemma2 shall preserve the documented logit scaling behavior and apply scaling factors consistently across both standard SDPA and FlexAttention code paths.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L1-003",
+      "name": "Modeler Goal",
+      "description": "Modeler objective for transformers_2024q3: Entity: Gemma2 model",
+      "gsn_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-01",
+      "name": "Modeler Output 1",
+      "description": "The system shall Entity: Gemma2 model",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-02",
+      "name": "Modeler Output 2",
+      "description": "The system shall Entity: logit scaling behavior",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-03",
+      "name": "Modeler Output 3",
+      "description": "The system shall Entity: attention mechanism",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "MOD-L2-003-04",
+      "name": "Modeler Output 4",
+      "description": "The system shall Entity: docstring",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L1-004",
+      "name": "Checker Goal",
+      "description": "Checker objective for transformers_2024q3: 1. DOCSTRING DOCUMENTATION VERIFICATION: Confirm Gemma2 docstring explicitly documents logit scaling behavior at parameter level, including scaling factor value, application point (before softmax), and differentiation...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-01",
+      "name": "Checker Output 1",
+      "description": "The system shall 1. DOCSTRING DOCUMENTATION VERIFICATION: Confirm Gemma2 docstring explicitly documents logit scaling behavior at parameter level, including scaling factor value, application point (before softmax), and differentiation...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-02",
+      "name": "Checker Output 2",
+      "description": "The system shall 2. FLEXATTENTION IMPLEMENTATION VERIFICATION: Confirm FlexAttention support implemented in Gemma2 SDPA path with version detection logic (PyTorch >= 2.5.0) and graceful fallback to standard SDPA - maps to REQ-GEMMA2-F...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "domains/automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-03",
+      "name": "Checker Output 3",
+      "description": "The system shall 3. LOGIT SCALING PRESERVATION VERIFICATION: Confirm FlexAttention code path applies identical logit scaling factors as standard SDPA path, with no behavioral divergence across implementation routes - maps to REQ-GEMMA...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "CHE-L2-004-04",
+      "name": "Checker Output 4",
+      "description": "The system shall 4. IMPLEMENTATION NOTES CROSS-REFERENCE VERIFICATION: Confirm FlexAttention implementation includes parameter-level documentation and notes explicitly referencing the docstring-established logit scaling behavior - map...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "domains/automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L1-005",
+      "name": "Documenter Goal",
+      "description": "Documenter objective for transformers_2024q3: 1. Functional Requirements: Gemma2 shall document logit scaling behavior in docstring (parameter-level, scaling factor, application point before softmax); Gemma2 SDPA shall support FlexAttention as preferred path when...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-01",
+      "name": "Documenter Output 1",
+      "description": "The system shall 1. Functional Requirements: Gemma2 shall document logit scaling behavior in docstring (parameter-level, scaling factor, application point before softmax); Gemma2 SDPA shall support FlexAttention as preferred path when...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-02",
+      "name": "Documenter Output 2",
+      "description": "The system shall 2. Documentation Requirements: Docstring shall explicitly clarify how Gemma2 logit scaling differs from standard SDPA; implementation notes shall reference documented scaling behavior; docstring updates are prerequisi...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-03",
+      "name": "Documenter Output 3",
+      "description": "The system shall 3. Non-Functional Requirements: FlexAttention integration shall maintain backward compatibility; version detection mechanism shall automatically select optimal SDPA path; logit scaling behavior shall be applied consis...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DOC-L2-005-04",
+      "name": "Documenter Output 4",
+      "description": "The system shall 4. Acceptance Criteria: (a) Docstring includes parameter-level documentation with scaling factor and computation point; (b) FlexAttention path implemented with version detection logic (>= 2.5.0); (c) Fallback mechanis...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "STA-L1-001",
+      "target_id": "STA-L2-001-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-007",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-008",
+      "source_id": "COL-L1-002",
+      "target_id": "COL-L2-002-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-009",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-010",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-011",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-012",
+      "source_id": "MOD-L1-003",
+      "target_id": "MOD-L2-003-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-013",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-014",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-015",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-016",
+      "source_id": "CHE-L1-004",
+      "target_id": "CHE-L2-004-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-017",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-018",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-019",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-020",
+      "source_id": "DOC-L1-005",
+      "target_id": "DOC-L2-005-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_mare-transformers_2024q3-multi_agent_without_negotiation-s101",
+    "name": "OpenRE-Bench Integrated KAOS for transformers_2024q3",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-09-29T05:22:38Z",
+    "requirement_source": "Requirement 1 (Issue #32944: clarify the label shifting behavior of llama models when `labels` is given.)\nFeature request i believe labels in the training of causal LMs means the value to predict at time n, i.e., the next token. in other words, i'd assume, if labels is given, it should be already shifted by one in the data loader w.r.t. the input_ids. however, in LlamaForCausalLM.forward(), i found the labels are always shifted, silently. ... i found it quite unexpected hence calling it \"silently\". as this is for a causal LM, shouldn't it be not shifting the labels by default? in modeling GPT2, this is at least documented explicitly. in gemma2, it has the same behavior and no explicit mentioning in the docstring. i think at least we should force the docstring to mention this, if making ...\n\nRequirement 2 (Issue #32877: Add logit scaling sdpa using `FlexAttention` for Gemma2)\nFeature request\n\nWith the recent publish of FlexAttention, think it makes senses to support it with sdpa path of Gemma2.\nLeaving it open to the community:\n\n- [ ] implement the path\n- [ ] make sure integration tests work \n- [ ] add some doc\n\nRelated to 32865\n\nRequirement 3 (Issue #32253: Export to ExecuTorch)\nFeature request Unlock a new workflow for on-device use-cases via torch.export and ExecuTorch. So ideally the users can have an e2e experience by loading a pretrained transformer model from HuggingFace, export and lower it to ExecuTorch and get reasonable performance out-of-the-box. For example: 1. Load a model with StaticCache: 2. Then export the model with StaticCache. and then further lower the exported program to ExecuTorch with delegates for performance: With that you may get a model for on-device with reasonable performance to start with. From there and still within ExecuTorch stack, you can easily tailor the experience for your use-cases, of course, with better performance! Note that ExecuTorch supports delegatation to XNNPACK backend, Apple Core ML and MPS, Qualcomm QNN, ...\n\nRequirement 4 (Issue #31802: Please support numpy 2.0)\nFeature request\n\nAs numpy 2.0 comes out, it brings impressive speed up, please consider add numpy 2.0 support.\n\nBesides, numpy is so foundamental, I think all libs should force to align with it rather than force users with lower numpy version/\n\nCurrently support numpy 2.0 libs:\n\n- torch\n\nThoese don't:\n\n- tensorflow\n- transformers\n\nSo, please just ignore tensorflow, nowadays we don't use it any longer,\n\n Motivation\n\nAt least make us have an option.\n\n Your contribution\n\ndon't force to lower version, just keep up to date.",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "multi_agent_without_negotiation"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "STA-L1-001",
+        "name": "Stakeholders Goal",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": null
+      },
+      {
+        "id": "COL-L1-002",
+        "name": "Collector Goal",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": null
+      },
+      {
+        "id": "MOD-L1-003",
+        "name": "Modeler Goal",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": null
+      },
+      {
+        "id": "CHE-L1-004",
+        "name": "Checker Goal",
+        "quality_attribute": "Safety",
+        "parent_goal_id": null
+      },
+      {
+        "id": "DOC-L1-005",
+        "name": "Documenter Goal",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "STA-L2-001-01",
+        "name": "Stakeholders Output 1",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "STA-L2-001-02",
+        "name": "Stakeholders Output 2",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "STA-L2-001-03",
+        "name": "Stakeholders Output 3",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "STA-L2-001-04",
+        "name": "Stakeholders Output 4",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "STA-L1-001"
+      },
+      {
+        "id": "COL-L2-002-01",
+        "name": "Collector Output 1",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "COL-L2-002-02",
+        "name": "Collector Output 2",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "COL-L2-002-03",
+        "name": "Collector Output 3",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "COL-L2-002-04",
+        "name": "Collector Output 4",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "COL-L1-002"
+      },
+      {
+        "id": "MOD-L2-003-01",
+        "name": "Modeler Output 1",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "MOD-L2-003-02",
+        "name": "Modeler Output 2",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "MOD-L2-003-03",
+        "name": "Modeler Output 3",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "MOD-L2-003-04",
+        "name": "Modeler Output 4",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "MOD-L1-003"
+      },
+      {
+        "id": "CHE-L2-004-01",
+        "name": "Checker Output 1",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-02",
+        "name": "Checker Output 2",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-03",
+        "name": "Checker Output 3",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "CHE-L2-004-04",
+        "name": "Checker Output 4",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "CHE-L1-004"
+      },
+      {
+        "id": "DOC-L2-005-01",
+        "name": "Documenter Output 1",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      },
+      {
+        "id": "DOC-L2-005-02",
+        "name": "Documenter Output 2",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      },
+      {
+        "id": "DOC-L2-005-03",
+        "name": "Documenter Output 3",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      },
+      {
+        "id": "DOC-L2-005-04",
+        "name": "Documenter Output 4",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "DOC-L1-005"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "STA-L1-001": [
+        "STA-L2-001-01",
+        "STA-L2-001-02",
+        "STA-L2-001-03",
+        "STA-L2-001-04"
+      ],
+      "COL-L1-002": [
+        "COL-L2-002-01",
+        "COL-L2-002-02",
+        "COL-L2-002-03",
+        "COL-L2-002-04"
+      ],
+      "MOD-L1-003": [
+        "MOD-L2-003-01",
+        "MOD-L2-003-02",
+        "MOD-L2-003-03",
+        "MOD-L2-003-04"
+      ],
+      "CHE-L1-004": [
+        "CHE-L2-004-01",
+        "CHE-L2-004-02",
+        "CHE-L2-004-03",
+        "CHE-L2-004-04"
+      ],
+      "DOC-L1-005": [
+        "DOC-L2-005-01",
+        "DOC-L2-005-02",
+        "DOC-L2-005-03",
+        "DOC-L2-005-04"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_mare-transformers_2024q3-multi_agent_without_negotiation-s101",
+  "created_timestamp": "2026-09-29T05:22:38Z",
+  "total_elements": 25,
+  "total_relations": 20
+}

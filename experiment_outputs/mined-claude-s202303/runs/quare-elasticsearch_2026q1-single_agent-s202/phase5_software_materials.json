@@ -1,0 +1,71 @@
+{
+  "phase": "5_software_materials_generation",
+  "case_id": "elasticsearch_2026q1",
+  "setting": "single_agent",
+  "generated_at": "2026-09-30T00:17:22Z",
+  "materials": {
+    "srs_outline": [
+      "System Scope and Stakeholders",
+      "Quality-Attribute Requirements (Safety/Efficiency/Green/Trustworthiness/Responsibility)",
+      "Negotiation and Conflict Resolution Decisions",
+      "Verification and Compliance Evidence"
+    ],
+    "implementation_checklist": [
+      "Preserve canonical phase artifact compatibility",
+      "Enforce strict provenance and taint controls",
+      "Trace each integrated requirement to a verification signal"
+    ],
+    "traceability_matrix": [
+      {
+        "element_id": "INT-L1-001",
+        "quality_attribute": "Integrated",
+        "statement": "Integrated single-agent objective for elasticsearch_2026q1: Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result For exa...",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "INT-L2-001",
+        "quality_attribute": "Integrated",
+        "statement": "The system shall satisfy: Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "INT-L2-002",
+        "quality_attribute": "Integrated",
+        "statement": "The system shall satisfy: For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS SUM(X), SUM(X + 4) evaluates to 18, 7 becau...",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "INT-L2-003",
+        "quality_attribute": "Integrated",
+        "statement": "The system shall satisfy: Requirement 3 (Issue #144641: ES|QL: improve error message for unbounded sort before MV_EXPAND)",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "INT-L2-004",
+        "quality_attribute": "Integrated",
+        "statement": "The system shall satisfy: Some queries with SORT + MV_EXPAND can result in an unbounded sort, that cannot be executed for now",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "INT-L2-005",
+        "quality_attribute": "Integrated",
+        "statement": "The system shall satisfy: Current error message is Unbounded SORT not supported yet [SORT something] please add a LIMIT, that is too generic to understand what the problem could...",
+        "verification_anchor": "pending"
+      },
+      {
+        "element_id": "INT-L2-006",
+        "quality_attribute": "Integrated",
+        "statement": "The system shall satisfy: We should make it more clear, explicitly mentioning the command (eg",
+        "verification_anchor": "pending"
+      }
+    ]
+  },
+  "quality_signals": {
+    "topology_is_valid": true,
+    "deterministic_is_valid": false,
+    "compliance_coverage": 0.25,
+    "s_logic": 1.0,
+    "detected_conflict_pairs": 0,
+    "resolved_conflict_pairs": 0
+  }
+}

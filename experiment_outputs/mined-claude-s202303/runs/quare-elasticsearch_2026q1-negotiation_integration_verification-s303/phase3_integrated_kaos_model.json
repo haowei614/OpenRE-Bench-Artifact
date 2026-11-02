@@ -1,0 +1,1330 @@
+{
+  "gsn_elements": [
+    {
+      "id": "EFF-L1-002",
+      "name": "Efficiency Goal",
+      "description": "Efficiency objective for elasticsearch_2026q1: Vector-only dispatch",
+      "gsn_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Quality-attribute specific requirement analysis",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "EFF-L2-002-01",
+      "name": "Efficiency Requirement 1",
+      "description": "The system shall ensure efficiency (latency optimization): Vector-only dispatch",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Clause-level quality requirement for latency optimization",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "GreenAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "EFF-L2-002-02",
+      "name": "Efficiency Requirement 2",
+      "description": "The system shall ensure efficiency (throughput stability): Special handling for block values that can be vectorized has been disabled in it was a no-op",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Clause-level quality requirement for throughput stability",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "GreenAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "EFF-L2-002-03",
+      "name": "Efficiency Requirement 3",
+      "description": "The system shall ensure efficiency (resource utilization): At some point, we'd like to enable it back and actually have it implemented for performance reasons as the vector path won't have to check for nulls, or mult-ivalues",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Clause-level quality requirement for resource utilization",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "GreenAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "EFF-L2-002-04",
+      "name": "Efficiency Requirement 4",
+      "description": "The system shall ensure efficiency (latency optimization): Add support for date / data_nanos / float in the value parameter 3",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Clause-level quality requirement for latency optimization",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "GreenAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "EFF-L2-002-05",
+      "name": "Efficiency Requirement 5",
+      "description": "The system shall ensure efficiency (throughput stability): Make aliases that default to @timestamp for the second parameter, and call them EARLIEST/LATEST",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Clause-level quality requirement for throughput stability",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "GreenAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "EFF-L2-002-06",
+      "name": "Efficiency Requirement 6",
+      "description": "The system shall ensure efficiency (resource utilization): Requirement 1 (Issue #142340: [DiskBBQ] Fix our silly imbalanced cluster issue)",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Clause-level quality requirement for resource utilization",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "GreenAgent - cluster size consistency enables both efficiency and sustainability goals; rebalancing is foundational for vector dispatch effectiveness",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "RES-L1-005",
+      "name": "Responsibility Goal",
+      "description": "Responsibility objective for elasticsearch_2026q1: Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result",
+      "gsn_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "ResponsibilityAgent",
+      "measurable_criteria": "Quality-attribute specific requirement analysis",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "Clarified scope to include cluster imbalance as primary accountability concern",
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "RES-L2-005-01",
+      "name": "Responsibility Requirement 1",
+      "description": "The system shall ensure responsibility (regulatory accountability): Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "ResponsibilityAgent",
+      "measurable_criteria": "Clause-level quality requirement for regulatory accountability",
+      "hierarchy_level": 2,
+      "parent_goal_id": "RES-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "SafetyAgent acknowledged deterministic semantics reduce fault propagation risk",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "RES-L2-005-02",
+      "name": "Responsibility Requirement 2",
+      "description": "The system shall ensure responsibility (stakeholder transparency): For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS SUM(X), SUM(X + 4) evaluates to 18, 7 because both single and multi values are in the first sum, but only sin...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "ResponsibilityAgent",
+      "measurable_criteria": "Clause-level quality requirement for stakeholder transparency",
+      "hierarchy_level": 2,
+      "parent_goal_id": "RES-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "SafetyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "RES-L2-005-03",
+      "name": "Responsibility Requirement 3",
+      "description": "The system shall ensure responsibility (ethical compliance): Requirement 3 (Issue #144641: ES|QL: improve error message for unbounded sort before MV_EXPAND)",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "ResponsibilityAgent",
+      "measurable_criteria": "Clause-level quality requirement for ethical compliance",
+      "hierarchy_level": 2,
+      "parent_goal_id": "RES-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "SafetyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "RES-L2-005-04",
+      "name": "Responsibility Requirement 4",
+      "description": "The system shall ensure responsibility (regulatory accountability): Some queries with SORT + MV_EXPAND can result in an unbounded sort, that cannot be executed for now",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "ResponsibilityAgent",
+      "measurable_criteria": "Clause-level quality requirement for regulatory accountability",
+      "hierarchy_level": 2,
+      "parent_goal_id": "RES-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "SafetyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "RES-L2-005-05",
+      "name": "Responsibility Requirement 5",
+      "description": "The system shall ensure responsibility (stakeholder transparency): Current error message is Unbounded SORT not supported yet [SORT something] please add a LIMIT, that is too generic to understand what the problem could be in the query",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "ResponsibilityAgent",
+      "measurable_criteria": "Clause-level quality requirement for stakeholder transparency",
+      "hierarchy_level": 2,
+      "parent_goal_id": "RES-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "SafetyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "RES-L2-005-06",
+      "name": "Responsibility Requirement 6",
+      "description": "The system shall ensure responsibility (ethical compliance): We should make it more clear, explicitly mentioning the command (eg",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "ResponsibilityAgent",
+      "measurable_criteria": "Clause-level quality requirement for ethical compliance",
+      "hierarchy_level": 2,
+      "parent_goal_id": "RES-L1-005",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "SafetyAgent confirmed improved error messaging prevents operational misconfigurations",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SAF-L1-001",
+      "name": "Safety Goal",
+      "description": "Safety objective for elasticsearch_2026q1: We should make it more clear, explicitly mentioning the command (eg",
+      "gsn_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "SafetyAgent",
+      "measurable_criteria": "Quality-attribute specific requirement analysis",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "EfficiencyAgent acknowledged complementary nature of bounds",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SAF-L2-001-01",
+      "name": "Safety Requirement 1",
+      "description": "The system shall ensure safety (hazard prevention): We should make it more clear, explicitly mentioning the command (eg",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "SafetyAgent",
+      "measurable_criteria": "Clause-level quality requirement for hazard prevention",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SAF-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "EfficiencyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SAF-L2-001-02",
+      "name": "Safety Requirement 2",
+      "description": "The system shall ensure safety (fault tolerance): MV_EXPAND) that caused the sort to remain unbounded, and suggest possible solutions",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "SafetyAgent",
+      "measurable_criteria": "Clause-level quality requirement for fault tolerance",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SAF-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "EfficiencyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SAF-L2-001-03",
+      "name": "Safety Requirement 3",
+      "description": "The system shall ensure safety (risk mitigation): Requirement 4 (Issue #140103: [ES|QL] First/Last aliases and types)",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "SafetyAgent",
+      "measurable_criteria": "Clause-level quality requirement for risk mitigation",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SAF-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "EfficiencyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SAF-L2-001-04",
+      "name": "Safety Requirement 4",
+      "description": "The system shall ensure safety (hazard prevention): This issue was created out of a small number of remaining work from that was deemed not necessary for a tech preview, essentially all the items from the \"_Things to circle back to after tech preview_\" section in the a...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "SafetyAgent",
+      "measurable_criteria": "Clause-level quality requirement for hazard prevention",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SAF-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "EfficiencyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SAF-L2-001-05",
+      "name": "Safety Requirement 5",
+      "description": "The system shall ensure safety (fault tolerance): Vector-only dispatch",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "SafetyAgent",
+      "measurable_criteria": "Clause-level quality requirement for fault tolerance",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SAF-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "EfficiencyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SAF-L2-001-06",
+      "name": "Safety Requirement 6",
+      "description": "The system shall ensure safety (risk mitigation): Special handling for block values that can be vectorized has been disabled in it was a no-op",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "SafetyAgent",
+      "measurable_criteria": "Clause-level quality requirement for risk mitigation",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SAF-L1-001",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "EfficiencyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SUS-L1-003",
+      "name": "Sustainability Goal",
+      "description": "Sustainability objective for elasticsearch_2026q1: Requirement 1 (Issue #142340: [DiskBBQ] Fix our silly imbalanced cluster issue)",
+      "gsn_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "GreenAgent",
+      "measurable_criteria": "Quality-attribute specific requirement analysis",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SUS-L2-003-01",
+      "name": "Sustainability Requirement 1",
+      "description": "The system shall ensure sustainability (energy footprint reduction): Requirement 1 (Issue #142340: [DiskBBQ] Fix our silly imbalanced cluster issue)",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "GreenAgent",
+      "measurable_criteria": "Clause-level quality requirement for energy footprint reduction",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SUS-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "TrustworthinessAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SUS-L2-003-02",
+      "name": "Sustainability Requirement 2",
+      "description": "The system shall ensure sustainability (resource lifecycle control): Cluster imbalance is a known issue and yeah, we are hitting it",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "GreenAgent",
+      "measurable_criteria": "Clause-level quality requirement for resource lifecycle control",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SUS-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "TrustworthinessAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SUS-L2-003-03",
+      "name": "Sustainability Requirement 3",
+      "description": "The system shall ensure sustainability (environmental impact awareness): I consistently see oversized clusters (multiples in size of our configured limit)",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "GreenAgent",
+      "measurable_criteria": "Clause-level quality requirement for environmental impact awareness",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SUS-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": "TrustworthinessAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SUS-L2-003-04",
+      "name": "Sustainability Requirement 4",
+      "description": "The system shall ensure sustainability (energy footprint reduction): This can lead to inconsistent search latency behavior for different queries (what if the query is nearer only tiny clusters or nearer only the huge ones",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "GreenAgent",
+      "measurable_criteria": "Clause-level quality requirement for energy footprint reduction",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SUS-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "TrustworthinessAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SUS-L2-003-05",
+      "name": "Sustainability Requirement 5",
+      "description": "The system shall ensure sustainability (resource lifecycle control): ) and can harm our logic for fetching postings lists",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "GreenAgent",
+      "measurable_criteria": "Clause-level quality requirement for resource lifecycle control",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SUS-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "standards/latest_2024.py",
+        "conflict_resolved_by": "TrustworthinessAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SUS-L2-003-06",
+      "name": "Sustainability Requirement 6",
+      "description": "The system shall ensure sustainability (environmental impact awareness): We should strive for cluster size consistency, even with SOAR overspilling",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "GreenAgent",
+      "measurable_criteria": "Clause-level quality requirement for environmental impact awareness",
+      "hierarchy_level": 2,
+      "parent_goal_id": "SUS-L1-003",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "TrustworthinessAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L1-004",
+      "name": "Trustworthiness Goal",
+      "description": "Trustworthiness objective for elasticsearch_2026q1: We should strive for cluster size consistency, even with SOAR overspilling",
+      "gsn_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Quality-attribute specific requirement analysis",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "No conflict with responsibility requirements; orthogonal to semantic correctness issues",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L2-004-01",
+      "name": "Trustworthiness Requirement 1",
+      "description": "The system shall ensure trustworthiness (security assurance): We should strive for cluster size consistency, even with SOAR overspilling",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Clause-level quality requirement for security assurance",
+      "hierarchy_level": 2,
+      "parent_goal_id": "TRU-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "ResponsibilityAgent - requires SLA definition",
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L2-004-02",
+      "name": "Trustworthiness Requirement 2",
+      "description": "The system shall ensure trustworthiness (auditability): Requirement 2 (Issue #140470: Query planner rewrite SUM(X+a) as SUM(X) + a*COUNT(X))",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Clause-level quality requirement for auditability",
+      "hierarchy_level": 2,
+      "parent_goal_id": "TRU-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "ResponsibilityAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L2-004-03",
+      "name": "Trustworthiness Requirement 3",
+      "description": "The system shall ensure trustworthiness (integrity guarantees): We should be able to optimize stats of the form SUM(X + a) where a is a constant to SUM(X) + aCOUNT(X)",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Clause-level quality requirement for integrity guarantees",
+      "hierarchy_level": 2,
+      "parent_goal_id": "TRU-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "ResponsibilityAgent - multivalued field semantics constraint",
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L2-004-04",
+      "name": "Trustworthiness Requirement 4",
+      "description": "The system shall ensure trustworthiness (security assurance): This should result in fewer addition operations, and reuse of SUM(X) if it is used elsewhere in the query",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Clause-level quality requirement for security assurance",
+      "hierarchy_level": 2,
+      "parent_goal_id": "TRU-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "ResponsibilityAgent - scope separation required",
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L2-004-05",
+      "name": "Trustworthiness Requirement 5",
+      "description": "The system shall ensure trustworthiness (auditability): There is a problem with doing this optimization due to multivaluedness",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Clause-level quality requirement for auditability",
+      "hierarchy_level": 2,
+      "parent_goal_id": "TRU-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "ResponsibilityAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L2-004-06",
+      "name": "Trustworthiness Requirement 6",
+      "description": "The system shall ensure trustworthiness (integrity guarantees): Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Clause-level quality requirement for integrity guarantees",
+      "hierarchy_level": 2,
+      "parent_goal_id": "TRU-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "ResponsibilityAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "EFF-L1-002",
+      "target_id": "EFF-L2-002-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "EFF-L1-002",
+      "target_id": "EFF-L2-002-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "EFF-L1-002",
+      "target_id": "EFF-L2-002-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "EFF-L1-002",
+      "target_id": "EFF-L2-002-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "EFF-L1-002",
+      "target_id": "EFF-L2-002-05",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "EFF-L1-002",
+      "target_id": "EFF-L2-002-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-007",
+      "source_id": "RES-L1-005",
+      "target_id": "RES-L2-005-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-008",
+      "source_id": "RES-L1-005",
+      "target_id": "RES-L2-005-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-009",
+      "source_id": "RES-L1-005",
+      "target_id": "RES-L2-005-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-010",
+      "source_id": "RES-L1-005",
+      "target_id": "RES-L2-005-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-011",
+      "source_id": "RES-L1-005",
+      "target_id": "RES-L2-005-05",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-012",
+      "source_id": "RES-L1-005",
+      "target_id": "RES-L2-005-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-013",
+      "source_id": "SAF-L1-001",
+      "target_id": "SAF-L2-001-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-014",
+      "source_id": "SAF-L1-001",
+      "target_id": "SAF-L2-001-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-015",
+      "source_id": "SAF-L1-001",
+      "target_id": "SAF-L2-001-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-016",
+      "source_id": "SAF-L1-001",
+      "target_id": "SAF-L2-001-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-017",
+      "source_id": "SAF-L1-001",
+      "target_id": "SAF-L2-001-05",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-018",
+      "source_id": "SAF-L1-001",
+      "target_id": "SAF-L2-001-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-019",
+      "source_id": "SUS-L1-003",
+      "target_id": "SUS-L2-003-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-020",
+      "source_id": "SUS-L1-003",
+      "target_id": "SUS-L2-003-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-021",
+      "source_id": "SUS-L1-003",
+      "target_id": "SUS-L2-003-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-022",
+      "source_id": "SUS-L1-003",
+      "target_id": "SUS-L2-003-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-023",
+      "source_id": "SUS-L1-003",
+      "target_id": "SUS-L2-003-05",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-024",
+      "source_id": "SUS-L1-003",
+      "target_id": "SUS-L2-003-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-025",
+      "source_id": "TRU-L1-004",
+      "target_id": "TRU-L2-004-01",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-026",
+      "source_id": "TRU-L1-004",
+      "target_id": "TRU-L2-004-02",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-027",
+      "source_id": "TRU-L1-004",
+      "target_id": "TRU-L2-004-03",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-028",
+      "source_id": "TRU-L1-004",
+      "target_id": "TRU-L2-004-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-029",
+      "source_id": "TRU-L1-004",
+      "target_id": "TRU-L2-004-05",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-030",
+      "source_id": "TRU-L1-004",
+      "target_id": "TRU-L2-004-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_quare-elasticsearch_2026q1-negotiation_integration_verification-s303",
+    "name": "OpenRE-Bench Integrated KAOS for elasticsearch_2026q1",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-09-30T00:52:50Z",
+    "requirement_source": "Requirement 1 (Issue #142340: [DiskBBQ] Fix our silly imbalanced cluster issue)\nDescription\n\nCluster imbalance is a known issue and yeah, we are hitting it. I consistently see oversized clusters (multiples in size of our configured limit). This can lead to inconsistent search latency behavior for different queries (what if the query is nearer only tiny clusters or nearer only the huge ones?) and can harm our logic for fetching postings lists.\n\nWe should strive for cluster size consistency, even with SOAR overspilling.\n\nRequirement 2 (Issue #140470: Query planner rewrite SUM(X+a) as SUM(X) + a*COUNT(X))\nWe should be able to optimize stats of the form SUM(X + a) where a is a constant to SUM(X) + aCOUNT(X). This should result in fewer addition operations, and reuse of SUM(X) if it is used elsewhere in the query. There is a problem with doing this optimization due to multivaluedness. Specifically, if a document has multiple values for X then X+a is null, and does not contribute to the result. For example if there are two documents one with X value 3 and one with values [5, 10], then the query STATS SUM(X), SUM(X + 4) evaluates to 18, 7 because both single and multi values are in the first sum, but only single values are in the ...\n\nRequirement 3 (Issue #144641: ES|QL: improve error message for unbounded sort before MV_EXPAND)\nSome queries with SORT + MV_EXPAND can result in an unbounded sort, that cannot be executed for now.\n\neg.\n\n \n\nCurrent error message is Unbounded SORT not supported yet [SORT something] please add a LIMIT, that is too generic to understand what the problem could be in the query. \nWe should make it more clear, explicitly mentioning the command (eg. MV_EXPAND) that caused the sort to remain unbounded, and suggest possible solutions.\n\nRequirement 4 (Issue #140103: [ES|QL] First/Last aliases and types)\nThis issue was created out of a small number of remaining work from that was deemed not necessary for a tech preview, essentially all the items from the \"_Things to circle back to after tech preview_\" section in the aforementioned ticket. 1. Vector-only dispatch. Special handling for block values that can be vectorized has been disabled in it was a no-op. At some point, we'd like to enable it back and actually have it implemented for performance reasons as the vector path won't have to check for nulls, or mult-ivalues. 2. Add support for date / data_nanos / float in the value parameter 3. Make aliases that default to @timestamp for the second parameter, and call them EARLIEST/LATEST. For example ...",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "negotiation_integration_verification"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "EFF-L1-002",
+        "name": "Efficiency Goal",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": null
+      },
+      {
+        "id": "RES-L1-005",
+        "name": "Responsibility Goal",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": null
+      },
+      {
+        "id": "SAF-L1-001",
+        "name": "Safety Goal",
+        "quality_attribute": "Safety",
+        "parent_goal_id": null
+      },
+      {
+        "id": "SUS-L1-003",
+        "name": "Sustainability Goal",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": null
+      },
+      {
+        "id": "TRU-L1-004",
+        "name": "Trustworthiness Goal",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "EFF-L2-002-01",
+        "name": "Efficiency Requirement 1",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "EFF-L2-002-02",
+        "name": "Efficiency Requirement 2",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "EFF-L2-002-03",
+        "name": "Efficiency Requirement 3",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "EFF-L2-002-04",
+        "name": "Efficiency Requirement 4",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "EFF-L2-002-05",
+        "name": "Efficiency Requirement 5",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "EFF-L2-002-06",
+        "name": "Efficiency Requirement 6",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "RES-L2-005-01",
+        "name": "Responsibility Requirement 1",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "RES-L1-005"
+      },
+      {
+        "id": "RES-L2-005-02",
+        "name": "Responsibility Requirement 2",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "RES-L1-005"
+      },
+      {
+        "id": "RES-L2-005-03",
+        "name": "Responsibility Requirement 3",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "RES-L1-005"
+      },
+      {
+        "id": "RES-L2-005-04",
+        "name": "Responsibility Requirement 4",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "RES-L1-005"
+      },
+      {
+        "id": "RES-L2-005-05",
+        "name": "Responsibility Requirement 5",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "RES-L1-005"
+      },
+      {
+        "id": "RES-L2-005-06",
+        "name": "Responsibility Requirement 6",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "RES-L1-005"
+      },
+      {
+        "id": "SAF-L2-001-01",
+        "name": "Safety Requirement 1",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "SAF-L1-001"
+      },
+      {
+        "id": "SAF-L2-001-02",
+        "name": "Safety Requirement 2",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "SAF-L1-001"
+      },
+      {
+        "id": "SAF-L2-001-03",
+        "name": "Safety Requirement 3",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "SAF-L1-001"
+      },
+      {
+        "id": "SAF-L2-001-04",
+        "name": "Safety Requirement 4",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "SAF-L1-001"
+      },
+      {
+        "id": "SAF-L2-001-05",
+        "name": "Safety Requirement 5",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "SAF-L1-001"
+      },
+      {
+        "id": "SAF-L2-001-06",
+        "name": "Safety Requirement 6",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "SAF-L1-001"
+      },
+      {
+        "id": "SUS-L2-003-01",
+        "name": "Sustainability Requirement 1",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "SUS-L1-003"
+      },
+      {
+        "id": "SUS-L2-003-02",
+        "name": "Sustainability Requirement 2",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "SUS-L1-003"
+      },
+      {
+        "id": "SUS-L2-003-03",
+        "name": "Sustainability Requirement 3",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "SUS-L1-003"
+      },
+      {
+        "id": "SUS-L2-003-04",
+        "name": "Sustainability Requirement 4",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "SUS-L1-003"
+      },
+      {
+        "id": "SUS-L2-003-05",
+        "name": "Sustainability Requirement 5",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "SUS-L1-003"
+      },
+      {
+        "id": "SUS-L2-003-06",
+        "name": "Sustainability Requirement 6",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "SUS-L1-003"
+      },
+      {
+        "id": "TRU-L2-004-01",
+        "name": "Trustworthiness Requirement 1",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "TRU-L1-004"
+      },
+      {
+        "id": "TRU-L2-004-02",
+        "name": "Trustworthiness Requirement 2",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "TRU-L1-004"
+      },
+      {
+        "id": "TRU-L2-004-03",
+        "name": "Trustworthiness Requirement 3",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "TRU-L1-004"
+      },
+      {
+        "id": "TRU-L2-004-04",
+        "name": "Trustworthiness Requirement 4",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "TRU-L1-004"
+      },
+      {
+        "id": "TRU-L2-004-05",
+        "name": "Trustworthiness Requirement 5",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "TRU-L1-004"
+      },
+      {
+        "id": "TRU-L2-004-06",
+        "name": "Trustworthiness Requirement 6",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "TRU-L1-004"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "EFF-L1-002": [
+        "EFF-L2-002-01",
+        "EFF-L2-002-02",
+        "EFF-L2-002-03",
+        "EFF-L2-002-04",
+        "EFF-L2-002-05",
+        "EFF-L2-002-06"
+      ],
+      "RES-L1-005": [
+        "RES-L2-005-01",
+        "RES-L2-005-02",
+        "RES-L2-005-03",
+        "RES-L2-005-04",
+        "RES-L2-005-05",
+        "RES-L2-005-06"
+      ],
+      "SAF-L1-001": [
+        "SAF-L2-001-01",
+        "SAF-L2-001-02",
+        "SAF-L2-001-03",
+        "SAF-L2-001-04",
+        "SAF-L2-001-05",
+        "SAF-L2-001-06"
+      ],
+      "SUS-L1-003": [
+        "SUS-L2-003-01",
+        "SUS-L2-003-02",
+        "SUS-L2-003-03",
+        "SUS-L2-003-04",
+        "SUS-L2-003-05",
+        "SUS-L2-003-06"
+      ],
+      "TRU-L1-004": [
+        "TRU-L2-004-01",
+        "TRU-L2-004-02",
+        "TRU-L2-004-03",
+        "TRU-L2-004-04",
+        "TRU-L2-004-05",
+        "TRU-L2-004-06"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_quare-elasticsearch_2026q1-negotiation_integration_verification-s303",
+  "created_timestamp": "2026-09-30T00:52:50Z",
+  "total_elements": 35,
+  "total_relations": 30
+}

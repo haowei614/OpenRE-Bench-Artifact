@@ -1,0 +1,987 @@
+{
+  "Stakeholders": [
+    {
+      "id": "STA-L1-001",
+      "name": "Stakeholders Goal",
+      "description": "Stakeholders objective for pandas_2023q3: As a data analyst, I want to extract sub-fields from a pandas Series with ArrowDtype(struct) so that I can access individual columns within structured data without converting to other formats.",
+      "element_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.107143,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.107143,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:9",
+          "document": "knowledge_guide.py",
+          "score": 0.107143,
+          "content": "1. [Enhance Agent Professionalism] - Safety agents can reference specific clauses from ISO 26262 - Efficiency agents can refer to industry performance benchmarks - Sustainability agents can use carbon footprint calculation methods"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-01",
+      "name": "Stakeholders Output 1",
+      "description": "The system shall As a data analyst, I want to extract sub-fields from a pandas Series with ArrowDtype(struct) so that I can access individual columns within structured data without converting to other formats.",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.107143,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.107143,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:9",
+          "document": "knowledge_guide.py",
+          "score": 0.107143,
+          "content": "1. [Enhance Agent Professionalism] - Safety agents can reference specific clauses from ISO 26262 - Efficiency agents can refer to industry performance benchmarks - Sustainability agents can use carbon footprint calculation methods"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-02",
+      "name": "Stakeholders Output 2",
+      "description": "The system shall As a pandas user, I want to use field(\"sub-column name\") syntax on ArrowDtype Series containing struct types so that I can retrieve nested fields with intuitive and consistent API.",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:19",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.1,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.1,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:12",
+          "document": "cases/real_world_studies.py",
+          "score": 0.1,
+          "content": "Actual Challenges and Solutions: - Challenge: Camera performance degraded 30% in rain Solution: Image enhancement algorithms + radar data fusion weight adjustment - Challenge: Misidentification in construction zones Solution: Added construction sign specialized training data -..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-03",
+      "name": "Stakeholders Output 3",
+      "description": "The system shall As a developer working with PyArrow data, I want to decompose struct columns (e.g., int_col, string_col) into separate Series so that I can perform operations on individual fields efficiently.",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.103448,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.103448,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "standards/latest_2024.py:13",
+          "document": "standards/latest_2024.py",
+          "score": 0.103448,
+          "content": "Chinese Algorithm Recommendation Management Provisions (2024 Revision): Algorithm Transparency Requirements: - Algorithm disclosure: Core algorithm logic public disclosure - User rights: Users can choose algorithm recommendation on/off - Data usage: Clear notification of perso..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-04",
+      "name": "Stakeholders Output 4",
+      "description": "The system shall As a data engineer, I want pandas to support struct field extraction natively so that I can work with complex nested data types without external dependencies or manual parsing.",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.111111,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.111111,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.074074,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Collector": [
+    {
+      "id": "COL-L1-002",
+      "name": "Collector Goal",
+      "description": "Collector objective for pandas_2023q3: The pandas library shall provide a field(\"sub-column name\") method on Series objects with ArrowDtype(struct) that returns a Series containing the extracted struct field values while maintaining the field's PyArrow type.",
+      "element_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:11",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.111111,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:11",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.111111,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.074074,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-01",
+      "name": "Collector Output 1",
+      "description": "The system shall The pandas library shall provide a field(\"sub-column name\") method on Series objects with ArrowDtype(struct) that returns a Series containing the extracted struct field values while maintaining the field's PyArrow type.",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:11",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.111111,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:11",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.111111,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.074074,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-02",
+      "name": "Collector Output 2",
+      "description": "The system shall The field extraction method shall support single-level field access only; nested struct access via dot notation (e.g., field(\"parent.child\")) is explicitly deferred to future enhancement.",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:13",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:13",
+          "document": "automotive_safety.py",
+          "score": 0.08,
+          "content": "L3 Level (Conditional Automation): - Safety requirements: System responsible within ODD + takeover request response time limits - System examples: Audi A8 Traffic Jam Pilot - KAOS goals: - \"ODD boundary detection accuracy > 99.9%\" - \"Takeover request to driver response < 10 se..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:15",
+          "document": "automotive_safety.py",
+          "score": 0.08,
+          "content": "L5 Level (Full Automation): - Safety requirements: System completely responsible for all scenarios - Current status: Theoretical stage, no commercial products - KAOS goal: \"All-scenario safety equivalent to professional drivers\" \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.08,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-03",
+      "name": "Collector Output 3",
+      "description": "The system shall When a requested field does not exist in the struct, the field extraction method shall raise a KeyError exception with a descriptive message that identifies the missing field name and lists all available fields in the...",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:11",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.178571,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:11",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.178571,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:14",
+          "document": "automotive_safety.py",
+          "score": 0.107143,
+          "content": "L4 Level (High Automation): - Safety requirements: Complete system responsibility within ODD + minimal risk state capability - System examples: Waymo, Cruise (defined areas) - KAOS goals: - \"All safety-critical functions with redundant design\" - \"Safe parking success rate when..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-04",
+      "name": "Collector Output 4",
+      "description": "The system shall The field extraction feature shall be compatible with all PyArrow struct configurations, including nullable fields, repeated fields, and mixed-type struct members, without limitation or special-case exclusions.",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:33",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.153846,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.153846,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "knowledge_guide.py:1",
+          "document": "knowledge_guide.py",
+          "score": 0.115385,
+          "content": "#!/usr/bin/env python3 \"\"\" Knowledge Base Content Management Guide Explains what types of content should be placed in the knowledge base and how to organize it \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Modeler": [
+    {
+      "id": "MOD-L1-003",
+      "name": "Modeler Goal",
+      "description": "Modeler objective for pandas_2023q3: Entity: Series",
+      "element_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-01",
+      "name": "Modeler Output 1",
+      "description": "The system shall Entity: Series",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-02",
+      "name": "Modeler Output 2",
+      "description": "The system shall Entity: ArrowDtype",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-03",
+      "name": "Modeler Output 3",
+      "description": "The system shall Entity: struct",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-04",
+      "name": "Modeler Output 4",
+      "description": "The system shall Entity: field extraction method",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Checker": [
+    {
+      "id": "CHE-L1-004",
+      "name": "Checker Goal",
+      "description": "Checker objective for pandas_2023q3: 1. SYNTAX VERIFICATION: Requirement 1 specifies field(\"sub-column name\") returns a Series with maintained PyArrow type. Verification expectation: Confirm field() is invoked as Series.field(\"name\") method syntax per SR...",
+      "element_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-01",
+      "name": "Checker Output 1",
+      "description": "The system shall 1. SYNTAX VERIFICATION: Requirement 1 specifies field(\"sub-column name\") returns a Series with maintained PyArrow type. Verification expectation: Confirm field() is invoked as Series.field(\"name\") method syntax per SR...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:17",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-02",
+      "name": "Checker Output 2",
+      "description": "The system shall 2. SINGLE-LEVEL SCOPE VERIFICATION: Requirement 2 explicitly defers nested struct access to future work. Verification expectation: Confirm implementation rejects or raises NotImplementedError for dot-notation queries...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:15",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:15",
+          "document": "automotive_safety.py",
+          "score": 0.12,
+          "content": "L5 Level (Full Automation): - Safety requirements: System completely responsible for all scenarios - Current status: Theoretical stage, no commercial products - KAOS goal: \"All-scenario safety equivalent to professional drivers\" \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.12,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:8",
+          "document": "automotive_safety.py",
+          "score": 0.12,
+          "content": "Specific KAOS Goal Mapping: High-level safety goal: \"Vehicle should avoid causing casualties\" └── ASIL D sub-goal: \"Braking system failure rate < 10^-8/hour\" └── Design requirement: \"Dual redundant braking circuits + fault detection < 100ms\" └── Implementation measures: \"Prima..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-03",
+      "name": "Checker Output 3",
+      "description": "The system shall 3. ERROR HANDLING VERIFICATION: Requirement 3 mandates KeyError for missing fields with descriptive message. Verification expectation: Confirm KeyError is raised (not ValueError, AttributeError, or silent return); val...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:11",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:11",
+          "document": "knowledge_guide.py",
+          "score": 0.166667,
+          "content": "3. [Ensure Compliance] - Automatically check for missing regulatory requirements - Remind about critical safety/privacy considerations - Ensure generated KAOS models comply with industry standards"
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.125,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.125,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-04",
+      "name": "Checker Output 4",
+      "description": "The system shall 4. CONFIGURATION COMPATIBILITY VERIFICATION: Requirement 4 claims support for all PyArrow struct configurations (nullable, repeated, mixed-type members). Verification expectation: Confirm test coverage includes nullab...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "domains/automotive_safety.py:4",
+      "source_document": "domains/automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "domains/automotive_safety.py:4",
+          "document": "domains/automotive_safety.py",
+          "score": 0.173913,
+          "content": "ASIL C: - Applicable systems: Lane keeping assist, collision warning - Failure rate requirement: <10^-7 failures/hour - Development process: V-model, semi-formal methods - Verification requirements: Structured test coverage - Documentation requirements: Safety analysis documen..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.130435,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "sample_knowledge.py:54",
+          "document": "sample_knowledge.py",
+          "score": 0.130435,
+          "content": "Verification Methods: - Formal verification - Test coverage - Peer review - User acceptance \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Documenter": [
+    {
+      "id": "DOC-L1-005",
+      "name": "Documenter Goal",
+      "description": "Documenter objective for pandas_2023q3: 1. Functional Overview – field() Method for ArrowDtype Struct Field Extraction: The pandas Series class shall expose a field(name: str) method that extracts a named sub-field from ArrowDtype(struct) columns and return...",
+      "element_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:3",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:3",
+          "document": "standards/latest_2024.py",
+          "score": 0.153846,
+          "content": "ISO 26262:2018 Amendment 1 (Released 2024): New Content: - Enhanced semiconductor guidelines (Part 11 extension) - Simplified software tool qualification process - Dedicated guidelines for motorcycle applications - Integrated cybersecurity and functional safety requirements"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.115385,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:21",
+          "document": "cases/real_world_studies.py",
+          "score": 0.115385,
+          "content": "Technical Debt and Continuous Improvement: - Map update frequency: Weekly high-precision map updates - Algorithm iteration cycle: Monthly deployment of new perception algorithms - Hardware maintenance: 40 hours maintenance time per vehicle per month - Data annotation: 1 millio..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-01",
+      "name": "Documenter Output 1",
+      "description": "The system shall 1. Functional Overview – field() Method for ArrowDtype Struct Field Extraction: The pandas Series class shall expose a field(name: str) method that extracts a named sub-field from ArrowDtype(struct) columns and return...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "standards/latest_2024.py:3",
+      "source_document": "standards/latest_2024.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "standards/latest_2024.py:3",
+          "document": "standards/latest_2024.py",
+          "score": 0.153846,
+          "content": "ISO 26262:2018 Amendment 1 (Released 2024): New Content: - Enhanced semiconductor guidelines (Part 11 extension) - Simplified software tool qualification process - Dedicated guidelines for motorcycle applications - Integrated cybersecurity and functional safety requirements"
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.115385,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:21",
+          "document": "cases/real_world_studies.py",
+          "score": 0.115385,
+          "content": "Technical Debt and Continuous Improvement: - Map update frequency: Weekly high-precision map updates - Algorithm iteration cycle: Monthly deployment of new perception algorithms - Hardware maintenance: 40 hours maintenance time per vehicle per month - Data annotation: 1 millio..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-02",
+      "name": "Documenter Output 2",
+      "description": "The system shall 2. Method Signature & Invocation: field(name: str) shall be invoked as Series.field(\"field_name\") accepting a single string argument denoting the struct field name; no chaining, nested access, or alternative syntaxes...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:33",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.107143,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.107143,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:24",
+          "document": "automotive_safety.py",
+          "score": 0.071429,
+          "content": "G2: External connection security ├── G2.1: Cellular network connection protection │ ├── G2.1.1: End-to-end encrypted communication │ ├── G2.1.2: Server identity verification │ └── G2.1.3: Malicious server detection ├── G2.2: WiFi connection security management │ ├── G2.2.1: Tr..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-03",
+      "name": "Documenter Output 3",
+      "description": "The system shall 3. Return Value & Type Preservation: The method shall return a pandas Series object with dtype set to the extracted field's PyArrow type (including nullable and repeated variants); scalar extraction and multi-field ac...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.103448,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.103448,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:20",
+          "document": "cases/real_world_studies.py",
+          "score": 0.103448,
+          "content": "3. Human-machine interaction and customer experience: - Passenger communication: In-vehicle screen displays route and decision reasoning - Remote assistance: Average 3% of trips require human guidance, response time <30 seconds - Emergency handling: Passengers can contact cust..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-04",
+      "name": "Documenter Output 4",
+      "description": "The system shall 4. Error Handling – Missing Fields: When a requested field name does not exist in the struct, field() shall raise KeyError with a message listing the missing field name and all available field names in the struct; beh...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:11",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.185185,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:11",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.185185,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:20",
+          "document": "cases/real_world_studies.py",
+          "score": 0.148148,
+          "content": "3. Human-machine interaction and customer experience: - Passenger communication: In-vehicle screen displays route and decision reasoning - Remote assistance: Average 3% of trips require human guidance, response time <30 seconds - Emergency handling: Passengers can contact cust..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ]
+}

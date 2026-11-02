@@ -1,0 +1,307 @@
+{
+  "gsn_elements": [
+    {
+      "id": "EFF-L1-002",
+      "name": "Negotiated Integrated Goal",
+      "description": "Efficiency objective for pandas_2023q3: Enable Series.to_parquet() with integrated optional metadata support to eliminate conversion overhead (target: <5% latency variance vs DataFrame equivalent) and improve serializ...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Quality-attribute specific requirement analysis",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "GreenAgent - integrated metadata lifecycle concern into efficiency goal",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "EFF-L2-002-06",
+      "name": "Efficiency Requirement 6",
+      "description": "The system shall ensure efficiency (resource utilization): - convert the series to a DataFrame to use the DF method",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EfficiencyAgent",
+      "measurable_criteria": "Clause-level quality requirement for resource utilization",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": "GreenAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "RES-L2-005-06",
+      "name": "Responsibility Requirement 6",
+      "description": "The system shall ensure responsibility (ethical compliance): I'd like to extract just the int_col field from this Series as another Series",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "ResponsibilityAgent",
+      "measurable_criteria": "Clause-level quality requirement for ethical compliance",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "SafetyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SAF-L2-001-06",
+      "name": "Safety Requirement 6",
+      "description": "The system shall ensure safety (risk mitigation): to_parquet() method only work for dataframe",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "SafetyAgent",
+      "measurable_criteria": "Clause-level quality requirement for risk mitigation",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "EfficiencyAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "SUS-L2-003-06",
+      "name": "Sustainability Requirement 6",
+      "description": "The system shall ensure sustainability (environmental impact awareness): Pandas allow one to store metadata in DataFrame",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "GreenAgent",
+      "measurable_criteria": "Clause-level quality requirement for environmental impact awareness",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": "TrustworthinessAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L2-004-06",
+      "name": "Trustworthiness Requirement 6",
+      "description": "The system shall ensure trustworthiness (integrity guarantees): Series with ArrowDtype(struct) must preserve field names, types, and nested structure integrity through parquet round-trip",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Clause-level quality requirement for integrity guarantees",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "ResponsibilityAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "TRU-L2-004-05",
+      "name": "Trustworthiness Requirement 5",
+      "description": "The system shall ensure trustworthiness (auditability): Struct-typed Series serialization must log type inference decisions and field mapping transformations",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "TrustworthinessAgent",
+      "measurable_criteria": "Clause-level quality requirement for auditability",
+      "hierarchy_level": 2,
+      "parent_goal_id": "EFF-L1-002",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": "ResponsibilityAgent",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "EFF-L1-002",
+      "target_id": "EFF-L2-002-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "EFF-L1-002",
+      "target_id": "RES-L2-005-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "EFF-L1-002",
+      "target_id": "SAF-L2-001-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "EFF-L1-002",
+      "target_id": "SUS-L2-003-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "EFF-L1-002",
+      "target_id": "TRU-L2-004-06",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "EFF-L1-002",
+      "target_id": "TRU-L2-004-05",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_quare-pandas_2023q3-multi_agent_with_negotiation-s303",
+    "name": "OpenRE-Bench Integrated KAOS for pandas_2023q3",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-10-30T06:44:33Z",
+    "requirement_source": "Requirement 1 (Issue #54638: ENH: allow writing series to parquet file)\nFeature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing functionality in pandas Problem Description Currently the .to_parquet() method only work for dataframe. It would be nicer if the method could work on Series to. Currently we either have to save the series to another format or involve a pd.DataFrame(Serie) which seems a bit clunky. Feature Description For a given pandas Serie, being able to write Serie.to_parquet() Alternative Solutions Currently the two alternatives are: - save to another format which is a bit convoluted as we now have to deal with multiple formats. - convert the series to a DataFrame to use the DF method. Additional Context _No ...\n\nRequirement 2 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame.attrs and load it back)\nFeature Type\n\n- [ ] Adding new functionality to pandas\n\n- [X] Changing existing functionality in pandas\n\n- [ ] Removing existing functionality in pandas\n\n Problem Description\n\nPandas allow one to store metadata in DataFrame.attrs. Similarly pyarrow allow one to store meta data via the metadata option in pa.schema.\nHowever, if one try to use DataFrame.to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back. The metadata has been lost.\n\n Feature Description\n\n \n\n Alternative Solutions\n\nN/A\n\n Additional Context\n\n_No response_\n\nRequirement 3 (Issue #54938: ENH: Series.struct accessor with Series.struct.field(\"sub-column name\") for ArrowDtype)\nFeature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing functionality in pandas Problem Description When I have a Series of type ArrowDtype(struct(...)), I'd like to be able to extract sub-fields from them. For example, I have a pandas Series with the ArrowDtype(pyarrow.struct([(\"int_col\", pyarrow.int64()), (\"string_col\", pyarrow.string())])). I'd like to extract just the int_col field from this Series as another Series. Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(...)). This struct accessor provides a field() method which returns a Series containing only the specified sub-field. Alternative Solutions I can currently do this via pyarrow.compute.struct_field on the underlying pyarrow array: Additional Context This issue is ...",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Integrated",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "multi_agent_with_negotiation"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "EFF-L1-002",
+        "name": "Negotiated Integrated Goal",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "EFF-L2-002-06",
+        "name": "Efficiency Requirement 6",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "RES-L2-005-06",
+        "name": "Responsibility Requirement 6",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "SAF-L2-001-06",
+        "name": "Safety Requirement 6",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "SUS-L2-003-06",
+        "name": "Sustainability Requirement 6",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "TRU-L2-004-06",
+        "name": "Trustworthiness Requirement 6",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "EFF-L1-002"
+      },
+      {
+        "id": "TRU-L2-004-05",
+        "name": "Trustworthiness Requirement 5",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "EFF-L1-002"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "EFF-L1-002": [
+        "EFF-L2-002-06",
+        "RES-L2-005-06",
+        "SAF-L2-001-06",
+        "SUS-L2-003-06",
+        "TRU-L2-004-06",
+        "TRU-L2-004-05"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_quare-pandas_2023q3-multi_agent_with_negotiation-s303",
+  "created_timestamp": "2026-10-30T06:44:33Z",
+  "total_elements": 7,
+  "total_relations": 6
+}

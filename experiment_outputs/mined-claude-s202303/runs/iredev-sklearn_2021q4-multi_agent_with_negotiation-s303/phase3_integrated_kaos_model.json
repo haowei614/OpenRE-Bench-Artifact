@@ -1,0 +1,307 @@
+{
+  "gsn_elements": [
+    {
+      "id": "ANA-L1-004",
+      "name": "Negotiated Integrated Goal",
+      "description": "Analyst objective for sklearn_2021q4: SYS-REQ-001 [MUST]: Abstract Base Class for Feature Selectors – The system shall provide an abstract base class (ABC) in sklearn.base module that enforces consistent fit(X, y, gro...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L2-002-04",
+      "name": "EndUser Output 4",
+      "description": "The system shall Expectation: fit() method must accept groups parameter to enable cross-validation strategies that respect data structure (e.g., temporal groups, patient cohorts) during feature importance evaluation.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L2-006-04",
+      "name": "Reviewer Output 4",
+      "description": "The system shall SRS-004 [CONSISTENCY VIOLATION]: Precedence logic states 'groups parameter takes precedence for defining fold structure; cv parameter determines number of splits' but SRS-002 lists 'cv=5' as default parameter. Conflic...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "knowledge_guide.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001-04",
+      "name": "Interviewer Output 4",
+      "description": "The system shall REQ-004 [SHOULD]: Multivariate and Sequential Selection Support – Abstract base class must accommodate both univariate (single-feature) and multivariate (subset-based) feature selection strategies alongside sequential...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "domains/automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L2-003-04",
+      "name": "Deployer Output 4",
+      "description": "The system shall INFRASTRUCTURE: Deploy ABC implementation within scikit-learn 1.x+ (Python 3.8+) runtime; integrate into sklearn.base module with zero breaking changes to existing selector classes; maintain backward compatibility thr... Negotiated trade-off accepted by Analyst.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "Analyst",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-04",
+      "name": "Archivist Output 4",
+      "description": "The system shall SRS-004 [MUST]: Groups Parameter Precedence Logic – When both groups and cv parameters are provided to SequentialFeatureSelector.fit(), groups parameter shall take precedence for defining fold structure; cv parameter... Negotiated trade-off accepted by Reviewer.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": "Reviewer",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L2-004-04",
+      "name": "Analyst Output 4",
+      "description": "The system shall SYS-REQ-004 [MUST]: Cross-Validation Fold Pre-computation – The system shall pre-compute cross-validation fold boundaries during fit() initialization (not lazily) to enable deterministic performance profiling and supp...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "ANA-L1-004",
+      "target_id": "END-L2-002-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "ANA-L1-004",
+      "target_id": "REV-L2-006-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "ANA-L1-004",
+      "target_id": "INT-L2-001-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "ANA-L1-004",
+      "target_id": "DEP-L2-003-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "ANA-L1-004",
+      "target_id": "ARC-L2-005-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "ANA-L1-004",
+      "target_id": "ANA-L2-004-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_iredev-sklearn_2021q4-multi_agent_with_negotiation-s303",
+    "name": "OpenRE-Bench Integrated KAOS for sklearn_2021q4",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-09-30T01:53:13Z",
+    "requirement_source": "Requirement 1 (Issue #21318: enhancement base class for sklearn models)\nDescribe the workflow you want to enable\n\nSklearn does not provide an abstract class for the fit method and transform method which is not friendly to code hints. In Python project, type hints is very important. This would be helpful for python type hints if sklearn had abstract classes with fit and transform methods\n\n===================================\ni hope a abstract class like this\n \n \n\n Describe your proposed solution\n\n \n\n Describe alternatives you've considered, if relevant\n\n_No response_\n\n Additional context\n\n_No response_\n\nRequirement 2 (Issue #21356: SequentialFeatureSelector.fit() groups parameter)\nDescribe the workflow you want to enable\n\nSequentialFeatureSelector allows specifying a cross-validation splitter via the cv parameter in the constructor, but does not allow the groups parameter in fit() so group-based cross-validation cannot be used.\n\n Describe your proposed solution\n\nAdd a groups parameter to SequentialFeatureSelector.fit() to allow groups to be passed into the cross-validation splitter:\n \n\nThis will need to be passed through to _get_best_new_feature() and then to cross_val_score().\n\n Describe alternatives you've considered, if relevant\n\n_No response_\n\n Additional context\n\n_No response_\n\nRequirement 3 (Issue #21521: Add option to choose OOB scorer in RandomForest)\nDescribe the workflow you want to enable Random forests provide for free an estimate of its out-of-sample performance using the concept of out-of-bag (OOB) predictions. In practice, it works well when 1. rows are independent 2. the number of trees is large (500+). If oob_score=True, currently the following scoring is applied to the OOB predictions: - RandomForestRegressor() always returns \"r2\", even if the trees are built to minimize Poisson deviance or mean absolute error. R-squared is mainly relevant for the MSE. What do you mean, @lorentzenchr ? - RandomForestClassifier() always returns accuracy, even if it does not enjoy many good properties. For instance, if my criterion is \"entropy\" and I am modelling a binary target, then the corresponding scoring function ...\n\nRequirement 4 (Issue #21639: Default Value for SimpleImputer with all missing values)\nDescribe the workflow you want to enable In the _Notes_ of the SimpleImputer, it says that: > Columns which only contained missing values at fit are discarded upon transform if strategy is not \"constant\". It'd be nice to be able to set this to a default value in transform instead of dropping those columns if there is no valid summary statistic in fit. I recognize that it may only be a couple of lines, but it seems useful to have the logic captured within the class instead of checking beforehand for all np.nans per column. Describe your proposed solution Near the lines We could add something like Describe alternatives you've considered, if relevant An alternative is to do this logic ...",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Integrated",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "multi_agent_with_negotiation"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "ANA-L1-004",
+        "name": "Negotiated Integrated Goal",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "END-L2-002-04",
+        "name": "EndUser Output 4",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "REV-L2-006-04",
+        "name": "Reviewer Output 4",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "INT-L2-001-04",
+        "name": "Interviewer Output 4",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "DEP-L2-003-04",
+        "name": "Deployer Output 4",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ARC-L2-005-04",
+        "name": "Archivist Output 4",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ANA-L2-004-04",
+        "name": "Analyst Output 4",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "ANA-L1-004"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "ANA-L1-004": [
+        "END-L2-002-04",
+        "REV-L2-006-04",
+        "INT-L2-001-04",
+        "DEP-L2-003-04",
+        "ARC-L2-005-04",
+        "ANA-L2-004-04"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_iredev-sklearn_2021q4-multi_agent_with_negotiation-s303",
+  "created_timestamp": "2026-09-30T01:53:13Z",
+  "total_elements": 7,
+  "total_relations": 6
+}

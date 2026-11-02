@@ -1,0 +1,307 @@
+{
+  "gsn_elements": [
+    {
+      "id": "ANA-L1-004",
+      "name": "Negotiated Integrated Goal",
+      "description": "Analyst objective for pandas_2023q3: SR-2023Q3-001 | FUNCTIONAL | Series.to_parquet() Method Implementation | The pandas Series class SHALL provide a to_parquet() method enabling direct Parquet file export without man...",
+      "gsn_type": "Goal",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst deliverables remain traceable in artifacts pool",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "properties": {
+        "original_kaos_type": "Goal",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "domains/automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "END-L2-002-04",
+      "name": "EndUser Output 4",
+      "description": "The system shall Usage Scenario: Machine learning pipelines that generate feature Series need direct Parquet export for integration with downstream processing tools (Spark, DuckDB) without DataFrame conversion overhead",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "EndUser",
+      "measurable_criteria": "EndUser action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "cases/real_world_studies.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "REV-L2-006-04",
+      "name": "Reviewer Output 4",
+      "description": "The system shall SRS-2023Q3-PANDAS-003 | CONSISTENCY CONFLICT | Parameter parity claim contradicts restriction. Section SR-2023Q3-002 asserts 'identical semantics to DataFrame.to_parquet()' while SR-2023Q3-003 restricts partition_cols...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Integrated",
+      "priority": 1,
+      "stakeholder": "Reviewer",
+      "measurable_criteria": "Reviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": null,
+        "validation_status": "candidate_resolution",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "INT-L2-001-04",
+      "name": "Interviewer Output 4",
+      "description": "The system shall IR-2023Q3-004: SHOULD - Performance parity validation | Implementation shall demonstrate equivalent performance characteristics to DataFrame.to_parquet() for large Series (multi-GB scale) | Priority: Medium | Rational...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Interviewer",
+      "measurable_criteria": "Interviewer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "DEP-L2-003-04",
+      "name": "Deployer Output 4",
+      "description": "The system shall INFRASTRUCTURE CONSTRAINT: PyArrow ≥10.0.0 mandatory hard dependency across all supported platforms (Linux, macOS, Windows); Series.to_parquet() shall fail gracefully with informative error if PyArrow unavailable or b...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Deployer",
+      "measurable_criteria": "Deployer action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ARC-L2-005-04",
+      "name": "Archivist Output 4",
+      "description": "The system shall SRS-2023Q3-PANDAS-004 | FUNCTIONAL REQUIREMENT | Parameter Restriction - partition_cols (SR-2023Q3-003) | Series.to_parquet() SHALL explicitly reject partition_cols parameter with informative error message: 'partition... Negotiated trade-off accepted by Reviewer.",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Archivist",
+      "measurable_criteria": "Archivist action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "sample_knowledge.py",
+        "conflict_resolved_by": "Reviewer",
+        "validation_status": "resolved",
+        "citation_required": true
+      }
+    },
+    {
+      "id": "ANA-L2-004-04",
+      "name": "Analyst Output 4",
+      "description": "The system shall SR-2023Q3-004 | FUNCTIONAL | Series Name to Column Name Mapping | Series.to_parquet() SHALL map Series.name attribute to Parquet column name. When Series.name is None, method SHALL use default column name 'series' wit...",
+      "gsn_type": "Strategy",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Analyst",
+      "measurable_criteria": "Analyst action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "ANA-L1-004",
+      "properties": {
+        "original_kaos_type": "Task",
+        "source": "openre_bench.phase1.rag",
+        "source_document": "automotive_safety.py",
+        "conflict_resolved_by": null,
+        "validation_status": "pending",
+        "citation_required": true
+      }
+    }
+  ],
+  "gsn_connections": [
+    {
+      "id": "REL-001",
+      "source_id": "ANA-L1-004",
+      "target_id": "END-L2-002-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-002",
+      "source_id": "ANA-L1-004",
+      "target_id": "REV-L2-006-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-003",
+      "source_id": "ANA-L1-004",
+      "target_id": "INT-L2-001-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-004",
+      "source_id": "ANA-L1-004",
+      "target_id": "DEP-L2-003-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-005",
+      "source_id": "ANA-L1-004",
+      "target_id": "ARC-L2-005-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    },
+    {
+      "id": "REL-006",
+      "source_id": "ANA-L1-004",
+      "target_id": "ANA-L2-004-04",
+      "connection_type": "SupportedBy",
+      "description": "Derived from parent-child refinement",
+      "strength": null,
+      "properties": {
+        "original_kaos_relation": "AND-refinement"
+      }
+    }
+  ],
+  "model_metadata": {
+    "model_id": "model_iredev-pandas_2023q3-multi_agent_with_negotiation-s101",
+    "name": "OpenRE-Bench Integrated KAOS for pandas_2023q3",
+    "description": "Deterministic protocol-aligned integrated GSN model.",
+    "created_timestamp": "2026-10-30T06:33:33Z",
+    "requirement_source": "Requirement 1 (Issue #54638: ENH: allow writing series to parquet file)\nFeature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing functionality in pandas Problem Description Currently the .to_parquet() method only work for dataframe. It would be nicer if the method could work on Series to. Currently we either have to save the series to another format or involve a pd.DataFrame(Serie) which seems a bit clunky. Feature Description For a given pandas Serie, being able to write Serie.to_parquet() Alternative Solutions Currently the two alternatives are: - save to another format which is a bit convoluted as we now have to deal with multiple formats. - convert the series to a DataFrame to use the DF method. Additional Context _No ...\n\nRequirement 2 (Issue #54321: ENH: Allow to_parquet to save the metadata from DataFrame.attrs and load it back)\nFeature Type\n\n- [ ] Adding new functionality to pandas\n\n- [X] Changing existing functionality in pandas\n\n- [ ] Removing existing functionality in pandas\n\n Problem Description\n\nPandas allow one to store metadata in DataFrame.attrs. Similarly pyarrow allow one to store meta data via the metadata option in pa.schema.\nHowever, if one try to use DataFrame.to_parquet to convert a pandas dataframe into a parquet file via pyarrow and then load it back. The metadata has been lost.\n\n Feature Description\n\n \n\n Alternative Solutions\n\nN/A\n\n Additional Context\n\n_No response_\n\nRequirement 3 (Issue #54938: ENH: Series.struct accessor with Series.struct.field(\"sub-column name\") for ArrowDtype)\nFeature Type - [X] Adding new functionality to pandas - [ ] Changing existing functionality in pandas - [ ] Removing existing functionality in pandas Problem Description When I have a Series of type ArrowDtype(struct(...)), I'd like to be able to extract sub-fields from them. For example, I have a pandas Series with the ArrowDtype(pyarrow.struct([(\"int_col\", pyarrow.int64()), (\"string_col\", pyarrow.string())])). I'd like to extract just the int_col field from this Series as another Series. Feature Description Add a struct accessor which is accessible from Series with ArrowDtype(struct(...)). This struct accessor provides a field() method which returns a Series containing only the specified sub-field. Alternative Solutions I can currently do this via pyarrow.compute.struct_field on the underlying pyarrow array: Additional Context This issue is ...",
+    "model_type": "GSN",
+    "quality_attributes": [
+      "Efficiency",
+      "Integrated",
+      "Responsibility",
+      "Safety",
+      "Sustainability",
+      "Trustworthiness"
+    ],
+    "hierarchy_levels": [
+      1,
+      2
+    ],
+    "setting": "multi_agent_with_negotiation"
+  },
+  "hierarchy_structure": {
+    "level_1": [
+      {
+        "id": "ANA-L1-004",
+        "name": "Negotiated Integrated Goal",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": null
+      }
+    ],
+    "level_2": [
+      {
+        "id": "END-L2-002-04",
+        "name": "EndUser Output 4",
+        "quality_attribute": "Efficiency",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "REV-L2-006-04",
+        "name": "Reviewer Output 4",
+        "quality_attribute": "Integrated",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "INT-L2-001-04",
+        "name": "Interviewer Output 4",
+        "quality_attribute": "Responsibility",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "DEP-L2-003-04",
+        "name": "Deployer Output 4",
+        "quality_attribute": "Safety",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ARC-L2-005-04",
+        "name": "Archivist Output 4",
+        "quality_attribute": "Sustainability",
+        "parent_goal_id": "ANA-L1-004"
+      },
+      {
+        "id": "ANA-L2-004-04",
+        "name": "Analyst Output 4",
+        "quality_attribute": "Trustworthiness",
+        "parent_goal_id": "ANA-L1-004"
+      }
+    ],
+    "level_3": [],
+    "parent_child_mappings": {
+      "ANA-L1-004": [
+        "END-L2-002-04",
+        "REV-L2-006-04",
+        "INT-L2-001-04",
+        "DEP-L2-003-04",
+        "ARC-L2-005-04",
+        "ANA-L2-004-04"
+      ]
+    }
+  },
+  "topology_status": {
+    "status": "Valid",
+    "is_valid": true,
+    "is_dag": true,
+    "orphan_count": 0,
+    "cycle_count": 0,
+    "invalid_leaf_count": 0,
+    "orphan_elements": [],
+    "cycles": [],
+    "invalid_leaves": []
+  },
+  "model_id": "model_iredev-pandas_2023q3-multi_agent_with_negotiation-s101",
+  "created_timestamp": "2026-10-30T06:33:33Z",
+  "total_elements": 7,
+  "total_relations": 6
+}

@@ -1,0 +1,118 @@
+# OpenRE-Bench Case Ingestion Configuration
+#
+# All thresholds, projects, and knobs for the mining pipeline live here.
+# Editing this file (not the code) is the intended way to change behaviour.
+#
+# The GitHub token is NEVER stored here. It is read from the environment
+# variable named by `github.token_env` (default: GITHUB_TOKEN), or from a
+# gitignored file `ingestion/.env.local` containing `GITHUB_TOKEN=...`.
+
+github:
+  api_base: "https://api.github.com"
+  token_env: "GITHUB_TOKEN"     # environment variable name to read the token from
+  rate_limit_delay: 0.8          # base seconds to sleep between requests
+  retry_limit: 4                 # max retries on transient errors / secondary limits
+  per_page: 100                  # issues per page (GitHub max)
+  max_issues_per_project: 600    # cap on issues pulled per project (pagination stop)
+  user_agent: "openre-bench-ingestion/0.1 (+https://github.com/haowei614/OpenRE-Bench-Artifact)"
+
+# Projects to mine. Verified against thresholds at fetch time.
+# owner/repo, a short slug used in case names, and the domain label.
+projects:
+  # NOTE: django/django was a candidate but is NOT minable: its GitHub issues
+  # are disabled (the project tracks issues on its own Trac instance), so the
+  # issue-search API returns zero. The fetch_projects verification step catches
+  # this automatically. Replaced with scikit-learn to keep 5 minable projects.
+  - repo: "scikit-learn/scikit-learn"
+    slug: "sklearn"
+    domain: "ML Library"
+    labels: ["New Feature", "Enhancement"]
+  - repo: "huggingface/transformers"
+    slug: "transformers"
+    domain: "ML / NLP"
+    labels: ["Feature request", "enhancement", "New model"]
+  - repo: "microsoft/vscode"
+    slug: "vscode"
+    domain: "Editor / DevTool"
+    labels: ["feature-request"]
+  - repo: "elastic/elasticsearch"
+    slug: "elasticsearch"
+    domain: "Database / Search"
+    labels: [">enhancement", "enhancement"]
+  - repo: "pandas-dev/pandas"
+    slug: "pandas"
+    domain: "Data Processing"
+    labels: ["Enhancement"]
+
+# Project-selection thresholds (verified live against the API before mining).
+project_selection:
+  min_stars: 5000
+  min_open_issues: 100
+  min_closed_issues: 500
+  languages: ["Python", "Java", "JavaScript", "TypeScript"]
+  require_active_days: 180       # must have a push within this many days
+
+# Issue-level filters. Applied in order; each stage logs how many it drops.
+issue_filtering:
+  # Global label allow-list (case-insensitive). Per-project `labels` above are
+  # used for the API query; this list is the union enforced during filtering.
+  labels:
+    - "enhancement"
+    - "feature request"
+    - "feature-request"      # microsoft/vscode convention
+    - "feature"
+    - "new feature"
+    - "proposal"
+    - "new model"
+    - ">enhancement"         # elastic/elasticsearch convention
+  prefer_closed: true            # closed issues are preferred (validated by maintainers)
+  min_reactions_if_open: 5       # open issues need this many +1/heart reactions
+  min_body_length: 200           # characters, after normalization
+  bug_exclusion_keywords:
+    - "bug"
+    - "crash"
+    - "traceback"
+    - "stack trace"
+    - "regression"
+    - "does not work"
+    - "not working"
+    - "broken"
+  # Requirement-signal keyword gate. Default OFF for v1.0: the filter audit found
+  # the gate had little discriminative power (high false-omission among drops) and
+  # it was removed from the release pipeline. Set true only for ablation/replay of
+  # the pre-audit funnel; the keyword list below is kept for that path.
+  requirement_signal: false
+  requirement_keywords:          # used only when requirement_signal: true
+    - "should"
+    - "must"
+    - "need"
+    - "require"
+    - "allow"
+    - "support"
+    - "enable"
+    - "would like"
+    - "propose"
+  max_discussion_comments: 40    # drop mega-threads (pure design debate) above this
+  deduplication_threshold: 0.80  # TF-IDF cosine similarity; drop near-duplicates
+
+# Aggregation: how filtered issues become one RE case per project.
+aggregation:
+  method: "time_window"          # time_window | topic_cluster | milestone
+  time_window: "quarter"         # calendar-quarter buckets (deterministic)
+  max_issues_per_case: 5
+  min_issues_per_case: 1
+  per_issue_word_cap: 120        # truncate each issue body to this many words
+  target_word_count_min: 50
+  target_word_count_max: 430      # body-word budget; headers add ~10-15 words/issue
+
+# Output locations (relative to repo root).
+output:
+  cases_dir: "data/case_studies"
+  metadata_file: "data/mined_cases_metadata.json"
+  stats_csv: "ingestion/stats/mining_statistics.csv"
+  stats_md: "ingestion/stats/mining_statistics.md"
+  case_name_template: "{slug}_{window}"   # e.g. django_2023q1
+
+# Reproducibility: every source of randomness uses this seed.
+reproducibility:
+  random_seed: 42

@@ -1,0 +1,987 @@
+{
+  "Stakeholders": [
+    {
+      "id": "STA-L1-001",
+      "name": "Stakeholders Goal",
+      "description": "Stakeholders objective for elasticsearch_2026q1: As an ES|QL user, I need clear error messages when SORT + MV_EXPAND creates unbounded operations, so I can understand what query adjustment is needed",
+      "element_type": "Goal",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:16",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:16",
+          "document": "knowledge_guide.py",
+          "score": 0.125,
+          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+        },
+        {
+          "chunk_id": "standards/latest_2024.py:13",
+          "document": "standards/latest_2024.py",
+          "score": 0.125,
+          "content": "Chinese Algorithm Recommendation Management Provisions (2024 Revision): Algorithm Transparency Requirements: - Algorithm disclosure: Core algorithm logic public disclosure - User rights: Users can choose algorithm recommendation on/off - Data usage: Clear notification of perso..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-01",
+      "name": "Stakeholders Output 1",
+      "description": "The system shall As an ES|QL user, I need clear error messages when SORT + MV_EXPAND creates unbounded operations, so I can understand what query adjustment is needed",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:16",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:16",
+          "document": "knowledge_guide.py",
+          "score": 0.125,
+          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+        },
+        {
+          "chunk_id": "standards/latest_2024.py:13",
+          "document": "standards/latest_2024.py",
+          "score": 0.125,
+          "content": "Chinese Algorithm Recommendation Management Provisions (2024 Revision): Algorithm Transparency Requirements: - Algorithm disclosure: Core algorithm logic public disclosure - User rights: Users can choose algorithm recommendation on/off - Data usage: Clear notification of perso..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-02",
+      "name": "Stakeholders Output 2",
+      "description": "The system shall As a data analyst, I need STATS aggregations to correctly handle multi-valued fields, so that SUM(X) includes all values while SUM(X+a) only processes single-valued documents",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:15",
+          "document": "automotive_safety.py",
+          "score": 0.076923,
+          "content": "L5 Level (Full Automation): - Safety requirements: System completely responsible for all scenarios - Current status: Theoretical stage, no commercial products - KAOS goal: \"All-scenario safety equivalent to professional drivers\" \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.076923,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-03",
+      "name": "Stakeholders Output 3",
+      "description": "The system shall As a query developer, I need the error message to explicitly mention which command (SORT, MV_EXPAND) causes the unbounded operation, so I can quickly fix my query",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:6",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.125,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "STA-L2-001-04",
+      "name": "Stakeholders Output 4",
+      "description": "The system shall As an ES|QL operator, I need consistent behavior for multi-valued field aggregations across different STATS functions, so results are predictable and documented",
+      "element_type": "Task",
+      "quality_attribute": "Responsibility",
+      "priority": 1,
+      "stakeholder": "Stakeholders",
+      "measurable_criteria": "Stakeholders action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "STA-L1-001",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:5",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:5",
+          "document": "knowledge_guide.py",
+          "score": 0.125,
+          "content": "3. [Negotiation and Conflict Resolution Patterns] ✅ Real quality attribute conflict cases ✅ Validated negotiation strategies ✅ Assessment methods for compromises and trade-offs ✅ Convergence patterns for multi-round negotiations"
+        },
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:22",
+          "document": "automotive_safety.py",
+          "score": 0.083333,
+          "content": "Cybersecurity Goal Hierarchy: High-level goal: \"Protect vehicle from cyber attacks\" ├── Confidentiality: Sensitive information not accessed by unauthorized parties ├── Integrity: Data and system functions not maliciously modified ├── Availability: Critical functions remain ava..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Collector": [
+    {
+      "id": "COL-L1-002",
+      "name": "Collector Goal",
+      "description": "Collector objective for elasticsearch_2026q1: REQ-ES-2026Q1-001: The system shall return NULL for SUM(X+a) when X contains multiple values, and shall exclude that document's contribution from the aggregation result, maintaining consistent NULL semantics across al...",
+      "element_type": "Goal",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:47",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:47",
+          "document": "cases/real_world_studies.py",
+          "score": 0.129032,
+          "content": "Compliance Costs and Investment: - Compliance team: 500+ full-time compliance staff - Technology investment: $500 million annually for risk control system maintenance - Regulatory fines: $250 million cumulative from 2020-2022 - KYC costs: Average $5 verification cost per new u..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.129032,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:11",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.129032,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-01",
+      "name": "Collector Output 1",
+      "description": "The system shall REQ-ES-2026Q1-001: The system shall return NULL for SUM(X+a) when X contains multiple values, and shall exclude that document's contribution from the aggregation result, maintaining consistent NULL semantics across al...",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:47",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:47",
+          "document": "cases/real_world_studies.py",
+          "score": 0.129032,
+          "content": "Compliance Costs and Investment: - Compliance team: 500+ full-time compliance staff - Technology investment: $500 million annually for risk control system maintenance - Regulatory fines: $250 million cumulative from 2020-2022 - KYC costs: Average $5 verification cost per new u..."
+        },
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.129032,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:11",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.129032,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-02",
+      "name": "Collector Output 2",
+      "description": "The system shall REQ-ES-2026Q1-002: The system shall detect unbounded SORT operations that occur before MV_EXPAND on any field and shall reject such queries with a measurable error condition.",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:33",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.185185,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:33",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.185185,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.148148,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-03",
+      "name": "Collector Output 3",
+      "description": "The system shall REQ-ES-2026Q1-003: The system shall generate an error message with format 'Unbounded SORT not supported with MV_EXPAND: cannot sort on [field] before expanding multi-valued field [mv_field]. Add LIMIT clause or reorde...",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:11",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:11",
+          "document": "sample_knowledge.py",
+          "score": 0.16129,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:11",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.16129,
+          "content": "Safety Goal Template: \"Under [operating conditions], when [failure event] occurs, the system shall [safety response], with probability not exceeding [ASIL requirement]\""
+        },
+        {
+          "chunk_id": "sample_knowledge.py:33",
+          "document": "sample_knowledge.py",
+          "score": 0.129032,
+          "content": "Error 1: Goals too abstract and unverifiable Error Example: \"System should be safe\" Correction Example: \"System shall stop within 2 seconds after detecting obstacles, with success rate >99.9%\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "COL-L2-002-04",
+      "name": "Collector Output 4",
+      "description": "The system shall REQ-ES-2026Q1-004: The system shall include in STATS aggregations all single-valued and multi-valued field instances in SUM(X), but shall include only single-valued instances in SUM(X+a), producing measurably distinct...",
+      "element_type": "Task",
+      "quality_attribute": "Efficiency",
+      "priority": 1,
+      "stakeholder": "Collector",
+      "measurable_criteria": "Collector action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "COL-L1-002",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "sample_knowledge.py:34",
+      "source_document": "sample_knowledge.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sample_knowledge.py:34",
+          "document": "sample_knowledge.py",
+          "score": 0.153846,
+          "content": "Error 2: Missing key stakeholders Error Example: Only considering users and system, ignoring regulatory authorities Correction Example: Include users, system, regulatory authorities, maintenance personnel, environment"
+        },
+        {
+          "chunk_id": "sample_knowledge_fixed.py:34",
+          "document": "sample_knowledge_fixed.py",
+          "score": 0.153846,
+          "content": "Error 2: Missing key stakeholders Error Example: Only considering users and system, ignoring regulatory authorities Correction Example: Include users, system, regulatory authorities, maintenance personnel, environment"
+        },
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.115385,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Modeler": [
+    {
+      "id": "MOD-L1-003",
+      "name": "Modeler Goal",
+      "description": "Modeler objective for elasticsearch_2026q1: Entity: STATS aggregation function",
+      "element_type": "Goal",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.25,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:18",
+          "document": "domains/automotive_safety.py",
+          "score": 0.25,
+          "content": "Risk Level 2 (Medium Risk): - Impact: Vehicle function impact - Assets: Engine control, transmission - Protection measures: Digital signatures + access control - Monitoring requirements: Periodic integrity checks ≤1s"
+        },
+        {
+          "chunk_id": "metrics/quantified_benchmarks.py:14",
+          "document": "metrics/quantified_benchmarks.py",
+          "score": 0.25,
+          "content": "Actual Deployment Statistics: - HTTPS adoption rate: 95%+ (global websites) - TLS 1.3 adoption rate: 60%+ (2024) - Multi-factor authentication: 78% of enterprises enabled (Microsoft 2024 stats) - Zero Trust architecture: 21% of enterprises fully deployed (Gartner 2024) \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-01",
+      "name": "Modeler Output 1",
+      "description": "The system shall Entity: STATS aggregation function",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.25,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:18",
+          "document": "domains/automotive_safety.py",
+          "score": 0.25,
+          "content": "Risk Level 2 (Medium Risk): - Impact: Vehicle function impact - Assets: Engine control, transmission - Protection measures: Digital signatures + access control - Monitoring requirements: Periodic integrity checks ≤1s"
+        },
+        {
+          "chunk_id": "metrics/quantified_benchmarks.py:14",
+          "document": "metrics/quantified_benchmarks.py",
+          "score": 0.25,
+          "content": "Actual Deployment Statistics: - HTTPS adoption rate: 95%+ (global websites) - TLS 1.3 adoption rate: 60%+ (2024) - Multi-factor authentication: 78% of enterprises enabled (Microsoft 2024 stats) - Zero Trust architecture: 21% of enterprises fully deployed (Gartner 2024) \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-02",
+      "name": "Modeler Output 2",
+      "description": "The system shall Entity: multi-valued field (X)",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.2,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:5",
+          "document": "knowledge_guide.py",
+          "score": 0.2,
+          "content": "3. [Negotiation and Conflict Resolution Patterns] ✅ Real quality attribute conflict cases ✅ Validated negotiation strategies ✅ Assessment methods for compromises and trade-offs ✅ Convergence patterns for multi-round negotiations"
+        },
+        {
+          "chunk_id": "metrics/quantified_benchmarks.py:14",
+          "document": "metrics/quantified_benchmarks.py",
+          "score": 0.2,
+          "content": "Actual Deployment Statistics: - HTTPS adoption rate: 95%+ (global websites) - TLS 1.3 adoption rate: 60%+ (2024) - Multi-factor authentication: 78% of enterprises enabled (Microsoft 2024 stats) - Zero Trust architecture: 21% of enterprises fully deployed (Gartner 2024) \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-03",
+      "name": "Modeler Output 3",
+      "description": "The system shall Entity: arithmetic expression (X+a)",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:25",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:25",
+          "document": "automotive_safety.py",
+          "score": 0.2,
+          "content": "Threat Assessment Levels: - High risk: Braking/steering systems under attack → ASIL D safety requirements - Medium risk: Infotainment system exploited as springboard → ASIL B requirements - Low risk: Non-critical function data leakage → ASIL A requirements \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:7",
+          "document": "automotive_safety.py",
+          "score": 0.2,
+          "content": "ASIL A: - Failure rate requirement: < 10^-6 /hour - Applicable systems: Entertainment system, air conditioning system - Development requirements: Structured development, basic testing"
+        },
+        {
+          "chunk_id": "domains/automotive_safety.py:6",
+          "document": "domains/automotive_safety.py",
+          "score": 0.2,
+          "content": "ASIL A (Most Lenient): - Applicable systems: Entertainment systems, comfort functions - Failure rate requirement: <10^-5 failures/hour - Development process: Standard software development practices"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "MOD-L2-003-04",
+      "name": "Modeler Output 4",
+      "description": "The system shall Entity: NULL value semantics",
+      "element_type": "Task",
+      "quality_attribute": "Trustworthiness",
+      "priority": 1,
+      "stakeholder": "Modeler",
+      "measurable_criteria": "Modeler action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "MOD-L1-003",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:1",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:1",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "\"\"\" Automotive Safety Domain Professional Knowledge Based on ISO 26262 Functional Safety Standards and Actual Engineering Experience \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:10",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L0 Level (No Automation): - Safety requirements: Traditional automotive safety standards - Driver responsibility: 100% driving tasks - System responsibility: Basic warnings and alerts"
+        },
+        {
+          "chunk_id": "automotive_safety.py:11",
+          "document": "automotive_safety.py",
+          "score": 0.0,
+          "content": "L1 Level (Driver Assistance): - Safety requirements: Driver can immediately take over when assistance functions fail - System examples: Adaptive Cruise Control (ACC) - KAOS goal: \"Alert driver within 2 seconds when system fails\" - Failure rate: < 10^-6 /hour (ASIL B)"
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Checker": [
+    {
+      "id": "CHE-L1-004",
+      "name": "Checker Goal",
+      "description": "Checker objective for elasticsearch_2026q1: 1. VERIFICATION OF REQ-ES-2026Q1-001 (Multi-Valued NULL Semantics): Confirmed that SUM(X+a) returns NULL when X is multi-valued and document is excluded from aggregation. Test case requirement: Execute STATS SUM(X+a)...",
+      "element_type": "Goal",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.172414,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.172414,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.137931,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-01",
+      "name": "Checker Output 1",
+      "description": "The system shall 1. VERIFICATION OF REQ-ES-2026Q1-001 (Multi-Valued NULL Semantics): Confirmed that SUM(X+a) returns NULL when X is multi-valued and document is excluded from aggregation. Test case requirement: Execute STATS SUM(X+a)...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.172414,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.172414,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.137931,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-02",
+      "name": "Checker Output 2",
+      "description": "The system shall 2. VERIFICATION OF REQ-ES-2026Q1-002 (Unbounded SORT Detection): Confirmed detection of SORT before MV_EXPAND creates unbounded operation. Test case requirement: Execute queries with SORT on any field followed by MV_E...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.148148,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.148148,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "automotive_safety.py:19",
+          "document": "automotive_safety.py",
+          "score": 0.111111,
+          "content": "Case 2: Tesla Model S Collision Accident (2016) Root cause: Sensor limitations + algorithm defects + user misuse Lessons learned: - Insufficient sensor fusion: Relying only on cameras failed to detect white trailer - Vague ODD definition: Did not clearly restrict to highway sc..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-03",
+      "name": "Checker Output 3",
+      "description": "The system shall 3. VERIFICATION OF REQ-ES-2026Q1-003 (Error Message Format): Confirmed error message format includes explicit command names and field placeholders. Test case requirement: Capture error output from unbounded SORT+MV_EX...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:11",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.185185,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "automotive_safety.py:23",
+          "document": "automotive_safety.py",
+          "score": 0.148148,
+          "content": "G1: Vehicle network communication security ├── G1.1: CAN bus message authentication │ ├── G1.1.1: Critical message digital signatures (braking, steering) │ ├── G1.1.2: Message freshness verification (timestamp + sequence number) │ └── G1.1.3: Abnormal message detection and iso..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:16",
+          "document": "knowledge_guide.py",
+          "score": 0.148148,
+          "content": "1. Retrieval Precision: Proportion of query-relevant results 2. Application Frequency: Number of times knowledge is referenced by agents 3. Negotiation Improvement: Quality improvement in conflict resolution after enabling RAG 4. Model Quality: Completeness and professionalism..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "CHE-L2-004-04",
+      "name": "Checker Output 4",
+      "description": "The system shall 4. VERIFICATION OF REQ-ES-2026Q1-004 (Aggregation Inclusion Rules): Confirmed SUM(X) includes all single and multi-valued instances while SUM(X+a) includes only single-valued. Test case requirement: Execute both aggre...",
+      "element_type": "Task",
+      "quality_attribute": "Safety",
+      "priority": 1,
+      "stakeholder": "Checker",
+      "measurable_criteria": "Checker action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "CHE-L1-004",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:11",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.137931,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "automotive_safety.py:17",
+          "document": "automotive_safety.py",
+          "score": 0.103448,
+          "content": "Case 1: Toyota Unintended Acceleration Incident (2009-2011) Root cause: Software defects + insufficient design redundancy Lessons learned: - KAOS modeling missing: Failed to consider abnormal interactions between accelerator pedal and software - Incomplete safety goals: \"Preve..."
+        },
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.103448,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "candidate_resolution",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ],
+  "Documenter": [
+    {
+      "id": "DOC-L1-005",
+      "name": "Documenter Goal",
+      "description": "Documenter objective for elasticsearch_2026q1: 1. Multi-Valued Field Aggregation Semantics – Define NULL propagation behavior for arithmetic expressions in STATS functions when operands contain multiple values; specify document exclusion scope (per-function vs. gl...",
+      "element_type": "Goal",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter deliverables remain traceable in shared workspace",
+      "hierarchy_level": 1,
+      "parent_goal_id": null,
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.103448,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:21",
+          "document": "cases/real_world_studies.py",
+          "score": 0.103448,
+          "content": "Technical Debt and Continuous Improvement: - Map update frequency: Weekly high-precision map updates - Algorithm iteration cycle: Monthly deployment of new perception algorithms - Hardware maintenance: 40 hours maintenance time per vehicle per month - Data annotation: 1 millio..."
+        },
+        {
+          "chunk_id": "metrics/quantified_benchmarks.py:14",
+          "document": "metrics/quantified_benchmarks.py",
+          "score": 0.103448,
+          "content": "Actual Deployment Statistics: - HTTPS adoption rate: 95%+ (global websites) - TLS 1.3 adoption rate: 60%+ (2024) - Multi-factor authentication: 78% of enterprises enabled (Microsoft 2024 stats) - Zero Trust architecture: 21% of enterprises fully deployed (Gartner 2024) \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-01",
+      "name": "Documenter Output 1",
+      "description": "The system shall 1. Multi-Valued Field Aggregation Semantics – Define NULL propagation behavior for arithmetic expressions in STATS functions when operands contain multiple values; specify document exclusion scope (per-function vs. gl...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 1",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.103448,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:21",
+          "document": "cases/real_world_studies.py",
+          "score": 0.103448,
+          "content": "Technical Debt and Continuous Improvement: - Map update frequency: Weekly high-precision map updates - Algorithm iteration cycle: Monthly deployment of new perception algorithms - Hardware maintenance: 40 hours maintenance time per vehicle per month - Data annotation: 1 millio..."
+        },
+        {
+          "chunk_id": "metrics/quantified_benchmarks.py:14",
+          "document": "metrics/quantified_benchmarks.py",
+          "score": 0.103448,
+          "content": "Actual Deployment Statistics: - HTTPS adoption rate: 95%+ (global websites) - TLS 1.3 adoption rate: 60%+ (2024) - Multi-factor authentication: 78% of enterprises enabled (Microsoft 2024 stats) - Zero Trust architecture: 21% of enterprises fully deployed (Gartner 2024) \"\"\""
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-02",
+      "name": "Documenter Output 2",
+      "description": "The system shall 2. Unbounded SORT Detection Criteria – Establish measurable conditions that distinguish unbounded SORT operations (SORT before MV_EXPAND on any field) from bounded sorts; define detection algorithm and verifiable test...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 2",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "automotive_safety.py:20",
+      "source_document": "automotive_safety.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "automotive_safety.py:20",
+          "document": "automotive_safety.py",
+          "score": 0.166667,
+          "content": "Corrected KAOS Goals: G1: Autonomous driving system safe operation ├── G1.1: Multi-sensor fusion detection │ ├── G1.1.1: Camera + radar + LiDAR redundancy │ ├── G1.1.2: Sensor failure detection <100ms │ └── G1.1.3: Severe weather degradation strategy ├── G1.2: ODD boundary man..."
+        },
+        {
+          "chunk_id": "cases/real_world_studies.py:11",
+          "document": "cases/real_world_studies.py",
+          "score": 0.166667,
+          "content": "Key Experience and Lessons: 1. Edge case handling: Invested 40% development time on 1% edge scenarios 2. Data collection strategy: \"Shadow mode\" collected millions of hours of real driving data 3. Progressive deployment: From simple highway scenarios to complex urban roads 4...."
+        },
+        {
+          "chunk_id": "automotive_safety.py:18",
+          "document": "automotive_safety.py",
+          "score": 0.125,
+          "content": "Corrected KAOS Goals: G1: Prevent vehicle unintended acceleration ├── G1.1: Throttle input validation and limitation │ ├── G1.1.1: Throttle signal reasonableness check (0-100% range) │ ├── G1.1.2: Throttle change rate limitation (<30%/second) │ └── G1.1.3: Throttle pedal posit..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-03",
+      "name": "Documenter Output 3",
+      "description": "The system shall 3. Error Message Format and Content – Specify exact error message structure with extraction logic for [field] and [mv_field] placeholders; define when to list one vs. multiple problematic commands (SORT, MV_EXPAND).",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 3",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "cases/real_world_studies.py:20",
+      "source_document": "cases/real_world_studies.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "cases/real_world_studies.py:20",
+          "document": "cases/real_world_studies.py",
+          "score": 0.148148,
+          "content": "3. Human-machine interaction and customer experience: - Passenger communication: In-vehicle screen displays route and decision reasoning - Remote assistance: Average 3% of trips require human guidance, response time <30 seconds - Emergency handling: Passengers can contact cust..."
+        },
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.148148,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "sample_knowledge.py:24",
+          "document": "sample_knowledge.py",
+          "score": 0.148148,
+          "content": "Pattern 3: Trustworthiness vs Efficiency Conflict Scenario: Decision explanation generation requires additional 50% computation time Resolution Strategies: - Asynchronous Explanation: Execute decision first, generate explanation later - Tiered Explanation: Brief explanation ge..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    },
+    {
+      "id": "DOC-L2-005-04",
+      "name": "Documenter Output 4",
+      "description": "The system shall 4. Arithmetic Operations Scope Clarification – Confirm that NULL-return rule for multi-valued operands applies uniformly to +, -, *, /, % in all STATS functions (SUM, AVG, MIN, MAX, COUNT); document any function-speci...",
+      "element_type": "Task",
+      "quality_attribute": "Sustainability",
+      "priority": 1,
+      "stakeholder": "Documenter",
+      "measurable_criteria": "Documenter action artifact 4",
+      "hierarchy_level": 2,
+      "parent_goal_id": "DOC-L1-005",
+      "source": "openre_bench.phase1.rag",
+      "source_chunk_id": "knowledge_guide.py:6",
+      "source_document": "knowledge_guide.py",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "knowledge_guide.py:6",
+          "document": "knowledge_guide.py",
+          "score": 0.133333,
+          "content": "4. [Error Patterns and Lessons Learned] ✅ Common KAOS modeling errors ✅ Typical pitfalls in requirement analysis ✅ Checklists for quality attribute omissions ✅ Methods to fix traceability gaps"
+        },
+        {
+          "chunk_id": "automotive_safety.py:15",
+          "document": "automotive_safety.py",
+          "score": 0.1,
+          "content": "L5 Level (Full Automation): - Safety requirements: System completely responsible for all scenarios - Current status: Theoretical stage, no commercial products - KAOS goal: \"All-scenario safety equivalent to professional drivers\" \"\"\""
+        },
+        {
+          "chunk_id": "automotive_safety.py:14",
+          "document": "automotive_safety.py",
+          "score": 0.066667,
+          "content": "L4 Level (High Automation): - Safety requirements: Complete system responsibility within ODD + minimal risk state capability - System examples: Waymo, Cruise (defined areas) - KAOS goals: - \"All safety-critical functions with redundant design\" - \"Safe parking success rate when..."
+        }
+      ],
+      "conflict_resolved_by": null,
+      "validation_status": "pending",
+      "validation_timestamp": null,
+      "citation_required": true
+    }
+  ]
+}

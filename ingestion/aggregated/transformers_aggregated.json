@@ -1,0 +1,49 @@
+{
+  "aggregation_method": "time_window",
+  "domain": "ML / NLP",
+  "fetched_at": "2026-09-29T04:10:02Z",
+  "repo": "huggingface/transformers",
+  "selected_count": 4,
+  "selected_issues": [
+    {
+      "body_for_case": "Feature request i believe labels in the training of causal LMs means the value to predict at time n, i.e., the next token. in other words, i'd assume, if labels is given, it should be already shifted by one in the data loader w.r.t. the input_ids. however, in LlamaForCausalLM.forward(), i found the labels are always shifted, silently. ... i found it quite unexpected hence calling it \"silently\". as this is for a causal LM, shouldn't it be not shifting the labels by default? in modeling GPT2, this is at least documented explicitly. in gemma2, it has the same behavior and no explicit mentioning in the docstring. i think at least we should force the docstring to mention this, if making ...",
+      "created_at": "2024-08-22T15:54:02Z",
+      "html_url": "https://github.com/huggingface/transformers/issues/32944",
+      "number": 32944,
+      "reactions": 10,
+      "state": "closed",
+      "title": "clarify the label shifting behavior of llama models when `labels` is given."
+    },
+    {
+      "body_for_case": "Feature request\n\nWith the recent publish of FlexAttention, think it makes senses to support it with sdpa path of Gemma2.\nLeaving it open to the community:\n\n- [ ] implement the path\n- [ ] make sure integration tests work \n- [ ] add some doc\n\nRelated to 32865",
+      "created_at": "2024-08-19T12:07:53Z",
+      "html_url": "https://github.com/huggingface/transformers/issues/32877",
+      "number": 32877,
+      "reactions": 6,
+      "state": "closed",
+      "title": "Add logit scaling sdpa using `FlexAttention` for Gemma2"
+    },
+    {
+      "body_for_case": "Feature request Unlock a new workflow for on-device use-cases via torch.export and ExecuTorch. So ideally the users can have an e2e experience by loading a pretrained transformer model from HuggingFace, export and lower it to ExecuTorch and get reasonable performance out-of-the-box. For example: 1. Load a model with StaticCache: 2. Then export the model with StaticCache. and then further lower the exported program to ExecuTorch with delegates for performance: With that you may get a model for on-device with reasonable performance to start with. From there and still within ExecuTorch stack, you can easily tailor the experience for your use-cases, of course, with better performance! Note that ExecuTorch supports delegatation to XNNPACK backend, Apple Core ML and MPS, Qualcomm QNN, ...",
+      "created_at": "2024-07-26T20:06:13Z",
+      "html_url": "https://github.com/huggingface/transformers/issues/32253",
+      "number": 32253,
+      "reactions": 5,
+      "state": "open",
+      "title": "Export to ExecuTorch"
+    },
+    {
+      "body_for_case": "Feature request\n\nAs numpy 2.0 comes out, it brings impressive speed up, please consider add numpy 2.0 support.\n\nBesides, numpy is so foundamental, I think all libs should force to align with it rather than force users with lower numpy version/\n\nCurrently support numpy 2.0 libs:\n\n- torch\n\nThoese don't:\n\n- tensorflow\n- transformers\n\nSo, please just ignore tensorflow, nowadays we don't use it any longer,\n\n Motivation\n\nAt least make us have an option.\n\n Your contribution\n\ndon't force to lower version, just keep up to date.",
+      "created_at": "2024-07-05T04:03:29Z",
+      "html_url": "https://github.com/huggingface/transformers/issues/31802",
+      "number": 31802,
+      "reactions": 3,
+      "state": "closed",
+      "title": "Please support numpy 2.0"
+    }
+  ],
+  "slug": "transformers",
+  "total_words": 377,
+  "window_issue_count": 70,
+  "window_label": "2024q3"
+}
