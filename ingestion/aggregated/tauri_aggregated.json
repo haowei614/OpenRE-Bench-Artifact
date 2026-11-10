@@ -1,0 +1,40 @@
+{
+  "aggregation_method": "time_window",
+  "domain": "Desktop App Framework",
+  "fetched_at": "2026-11-10T13:43:43Z",
+  "repo": "tauri-apps/tauri",
+  "selected_count": 3,
+  "selected_issues": [
+    {
+      "body_for_case": "Describe the problem Several platforms supported by Tauri - macOS, iOS, and Android, to name a few - have some kind of built-in push notifications system. For Apple systems, of course there is APNS, and for Android and Firebase-enabled apps, there is FCM. Tauri isn't yet able to support these APIs, as far as I can tell. On Apple platforms, the developer must register a method with the AppDelegate and call a method on NSApplication, which isn't easy to do from Rust. iOS uses a similar flow, but with UIApplication instead. Push Notifications are likely to be a common need for Tauri developers, especially on mobile platforms. Describe the solution you'd like I think Tauri should add calls to the ...",
+      "created_at": "2024-11-12T00:44:57Z",
+      "html_url": "https://github.com/tauri-apps/tauri/issues/11651",
+      "number": 11651,
+      "reactions": 76,
+      "state": "open",
+      "title": "[feat] Push Notifications"
+    },
+    {
+      "body_for_case": "Describe the problem On Windows, there isn't a way to inspect raw incoming wndproc messages. This is useful in a lot of advanced Win32 API use cases, and is necessary for e.g. the appbar APIs. An appbar is a special window that reserves a portion of the monitor screen space, like the native Windows taskbar. To be properly registered as an appbar, there are several window messages that need to be responded to in a certain way - example of appbar wndproc. This would also avoid the need for spawning supplementary message windows (e.g. for listening to window events, hardware/device events, etc.). Describe the solution you'd like Perhaps it'd be feasible to expose a new enum member RunEvent::WindowEvent::Raw(u32, usize, isize) ...",
+      "created_at": "2024-11-11T19:38:59Z",
+      "html_url": "https://github.com/tauri-apps/tauri/issues/11650",
+      "number": 11650,
+      "reactions": 14,
+      "state": "open",
+      "title": "[feat] Expose raw window procedure messages on Windows"
+    },
+    {
+      "body_for_case": "Describe the problem Myself, and especially contributors to a Tauri-based app, do not want/have the signing keys when testing. However, when the various environment variables are not set, the build just fails. There is no quick way to build a non-signed bundle of an app. Describe the solution you'd like Alternatives considered Currently, the workaround is to have something like a tauri.conf.dev.json file with values like: Then, use tauri build --config src-tauri/tauri.conf.dev.json. I just find it odd there is no flag in the cli to disable signing. Additional context It is helpful to go through the whole workflow of installing, manually opening, checking the closing and re-opening behaviour, checking uninstalling (if all expected files are removed). Also, with things like ...",
+      "created_at": "2024-11-08T17:44:12Z",
+      "html_url": "https://github.com/tauri-apps/tauri/issues/11626",
+      "number": 11626,
+      "reactions": 12,
+      "state": "closed",
+      "title": "[feat] build without signing cli flag"
+    }
+  ],
+  "slug": "tauri",
+  "total_words": 363,
+  "window_issue_count": 58,
+  "window_label": "2024q4"
+}

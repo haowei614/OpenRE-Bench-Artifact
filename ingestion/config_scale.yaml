@@ -1,0 +1,149 @@
+# OpenRE-Bench scale demonstration: same pipeline and filter settings as the
+# v1.0 config.yaml, applied to 16 additional projects. Outputs go to separate
+# locations so the frozen v1.0 suite and its audited pool are untouched. This
+# extension is NOT part of the filter audit.
+
+github:
+  api_base: "https://api.github.com"
+  token_env: "GITHUB_TOKEN"
+  rate_limit_delay: 0.8
+  retry_limit: 4
+  per_page: 100
+  max_issues_per_project: 600
+  user_agent: "openre-bench-ingestion/0.1 (+https://github.com/haowei614/OpenRE-Bench-Artifact)"
+
+projects:
+  - repo: "pytorch/pytorch"
+    slug: "pytorch"
+    domain: "Deep Learning"
+    labels: ["feature"]
+  - repo: "apache/airflow"
+    slug: "airflow"
+    domain: "Workflow Orchestration"
+    labels: ["kind:feature"]
+  - repo: "python-poetry/poetry"
+    slug: "poetry"
+    domain: "Packaging"
+    labels: ["kind/feature"]
+  - repo: "matplotlib/matplotlib"
+    slug: "matplotlib"
+    domain: "Visualization"
+    labels: ["New feature"]
+  - repo: "streamlit/streamlit"
+    slug: "streamlit"
+    domain: "Web App Framework"
+    labels: ["type:enhancement"]
+  - repo: "microsoft/TypeScript"
+    slug: "typescript"
+    domain: "Programming Language"
+    labels: ["Suggestion"]
+  - repo: "angular/angular"
+    slug: "angular"
+    domain: "Frontend Framework"
+    labels: ["feature"]
+  - repo: "grafana/grafana"
+    slug: "grafana"
+    domain: "Observability"
+    labels: ["type/feature-request"]
+  - repo: "react/react"
+    slug: "react"
+    domain: "UI Library"
+    labels: ["Type: Feature Request"]
+  - repo: "nodejs/node"
+    slug: "node"
+    domain: "JS Runtime"
+    labels: ["feature request"]
+  - repo: "spring-projects/spring-boot"
+    slug: "springboot"
+    domain: "Application Framework"
+    labels: ["type: enhancement"]
+  - repo: "keycloak/keycloak"
+    slug: "keycloak"
+    domain: "Identity / Security"
+    labels: ["kind/feature"]
+  - repo: "kubernetes/kubernetes"
+    slug: "kubernetes"
+    domain: "Container Orchestration"
+    labels: ["kind/feature"]
+  - repo: "hashicorp/terraform"
+    slug: "terraform"
+    domain: "Infrastructure as Code"
+    labels: ["enhancement"]
+  - repo: "rust-lang/rust"
+    slug: "rust"
+    domain: "Compiler"
+    labels: ["C-feature-request"]
+  - repo: "tauri-apps/tauri"
+    slug: "tauri"
+    domain: "Desktop App Framework"
+    labels: ["type: feature request"]
+
+project_selection:
+  min_stars: 5000
+  min_open_issues: 100
+  min_closed_issues: 500
+  languages: ["Python", "Java", "JavaScript", "TypeScript", "Go", "Rust"]
+  require_active_days: 180
+
+issue_filtering:
+  labels:
+    - "enhancement"
+    - "feature request"
+    - "feature-request"
+    - "feature"
+    - "new feature"
+    - "proposal"
+    - "new model"
+    - ">enhancement"
+    - "kind:feature"
+    - "kind/feature"
+    - "type:enhancement"
+    - "type: enhancement"
+    - "suggestion"
+    - "type/feature-request"
+    - "type: feature request"
+    - "c-feature-request"
+  prefer_closed: true
+  min_reactions_if_open: 5
+  min_body_length: 200
+  bug_exclusion_keywords:
+    - "bug"
+    - "crash"
+    - "traceback"
+    - "stack trace"
+    - "regression"
+    - "does not work"
+    - "not working"
+    - "broken"
+  requirement_signal: false
+  requirement_keywords:
+    - "should"
+    - "must"
+    - "need"
+    - "require"
+    - "allow"
+    - "support"
+    - "enable"
+    - "would like"
+    - "propose"
+  max_discussion_comments: 40
+  deduplication_threshold: 0.80
+
+aggregation:
+  method: "time_window"
+  time_window: "quarter"
+  max_issues_per_case: 5
+  min_issues_per_case: 1
+  per_issue_word_cap: 120
+  target_word_count_min: 50
+  target_word_count_max: 430
+
+output:
+  cases_dir: "data/case_studies_scale"
+  metadata_file: "data/mined_cases_metadata_scale.json"
+  stats_csv: "ingestion/stats/mining_statistics_scale.csv"
+  stats_md: "ingestion/stats/mining_statistics_scale.md"
+  case_name_template: "{slug}_{window}"
+
+reproducibility:
+  random_seed: 42
