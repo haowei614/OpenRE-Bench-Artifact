@@ -165,6 +165,24 @@ will not match the paper's hosted-model numbers.
 The pre-generated artifacts are paper evidence, not an alternative mechanism for
 generating new LLM outputs.
 
+## Scale Demonstration (16 further projects)
+
+The unchanged pipeline (same filter settings as v1.0, requirement-signal gate off)
+was run on 16 further projects, adding Go and Rust: 9,350 fetched issues, 4,600
+after filtering, and 16 schema-valid cases in 437 s end to end (bounded by GitHub
+API rate limits). This extension is **not** part of the audited v1.0 pool or the
+v1.0 case suite, and it is kept in separate files:
+
+- Config: [`ingestion/config_scale.yaml`](ingestion/config_scale.yaml)
+- Funnel statistics: [`ingestion/stats/mining_statistics_scale.md`](ingestion/stats/mining_statistics_scale.md)
+- Cases: [`data/case_studies_scale/`](data/case_studies_scale/) (metadata: `data/mined_cases_metadata_scale.json`)
+
+Replay offline from the committed snapshots (no token needed):
+
+```bash
+uv run python ingestion/run_all.py --config ingestion/config_scale.yaml --skip-fetch
+```
+
 ## Repository Map
 
 | Path | Purpose |
