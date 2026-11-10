@@ -26,11 +26,12 @@ cases**, a **filter audit**, and **reference runs on the mined cases**.
 | Git ref | Paper / use | Archival DOI |
 |---------|-------------|--------------|
 | tag `quare-2026` (= `v1.0.5-artifact`) | QUARE (IEEE RE 2026) artifact freeze | [10.5281/zenodo.20790776](https://doi.org/10.5281/zenodo.20790776) |
-| branch `msr2027` (this tip) | MSR extension: issue mining, filter audit, mined-case reference runs | *pending* — mint a new Zenodo DOI when this branch is released; do **not** reuse the QUARE DOI |
+| tag `msr2027-v1.0` | MSR extension: issue mining, filter audit, mined-case reference runs | [10.5281/zenodo.23875694](https://doi.org/10.5281/zenodo.23875694) |
+| tag `msr2027-v1.1` | MSR 2027 submission: v1.0 plus the 16-project scale demonstration | [10.5281/zenodo.24111289](https://doi.org/10.5281/zenodo.24111289) |
+| branch `msr2027` | Development tip of the MSR extension | — |
 
 The `quare-2026` tag is frozen and must remain untouched. Reviewers of the MSR
-extension should use branch `msr2027` (or a later MSR release tag) as the
-authoritative, fully accessible artifact until the new DOI is minted.
+submission should use tag `msr2027-v1.1`, which the paper cites.
 
 ## Quick Offline Reproduction (no API key, no cost)
 
