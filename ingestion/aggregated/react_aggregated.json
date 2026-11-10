@@ -1,0 +1,49 @@
+{
+  "aggregation_method": "time_window",
+  "domain": "UI Library",
+  "fetched_at": "2026-11-10T13:40:17Z",
+  "repo": "react/react",
+  "selected_count": 4,
+  "selected_issues": [
+    {
+      "body_for_case": "Note: This is my personal proposal. Please don’t announce it anywhere as “React dropping refs!” 😄 Higher order components solve many problems of mixins, however they come with their own problems. The most painful one in my experience is that they hide the ref of the wrapped component, so they can’t be treated as transparent wrappers. This is well described in 4213. As we prepare for de-emphasizing createClass and mixins I think it’s important that we treat higher order components as first class pattern in React, and provide full support for it without clashes with existing features. This means we need to fix refs to work well with higher order components. In the community, I see that people embrace stateless ...",
+      "created_at": "2016-06-06T16:34:24Z",
+      "html_url": "https://github.com/react/react/issues/6974",
+      "number": 6974,
+      "reactions": 20,
+      "state": "closed",
+      "title": "RFC: Make Refs Opt-in"
+    },
+    {
+      "body_for_case": "It would be great if it was possible to run some code after the component actually unmounted. This is useful where you consider the following:\n\n \n\nThe above will throw exception during Child componentWillUnmount since Parent gets unmounted first so Service is already destroyed.\n\nIf there existed componentDidUnmount the Service can be destroyed after the children are unmounted, i.e.",
+      "created_at": "2016-04-06T15:18:13Z",
+      "html_url": "https://github.com/react/react/issues/6424",
+      "number": 6424,
+      "reactions": 16,
+      "state": "closed",
+      "title": "componentDidUnmount functionality (in addition to componentWillUnmount)"
+    },
+    {
+      "body_for_case": "As per my chat here with @gaearon I'm filing an issue to discuss this further.\n\nI would like to avoid a specific element that I rendered on the server from beeing further updated by react once it reaches the client.\nOne specific use case is rendering ad server tags that are kind of a pain in the ars, using things like document.write, etc. I render them using dangerouslySetInnerHTML but sometimes when React is doing the reconciliation client side they get re-render so they stop executing. Now I managed to track down some of these cases by fixing render differences between server and client which would trigger DOM patching but it still seems to happen.\nAny advice?",
+      "created_at": "2016-04-26T17:00:11Z",
+      "html_url": "https://github.com/react/react/issues/6622",
+      "number": 6622,
+      "reactions": 6,
+      "state": "closed",
+      "title": "Have React ignore a specific DOM element"
+    },
+    {
+      "body_for_case": "As discussed in 6015, we plan to add a new build configuration that does _not_ have the __DEV__ overhead but that comes with the new ReactPerf enabled. This means that developer warnings, etc, will need to be gated by __DEV__, but the component tree (6549) and some other events (e.g. 6612) will need to be gated by __PROFILE__. I’m curious how this could be implemented. Right now our system is simple: Current System Variables - __DEV__ = (process.env.NODE_ENV !== 'production') Development Build (any NODE_ENV except 'production') - __DEV__ is true Production Build (NODE_ENV is 'production') - __DEV__ is false As you can see, if process.env.NODE_ENV is omitted, we assume __DEV__ mode. This is a sensible assumption, and not the one ...",
+      "created_at": "2016-04-27T02:17:42Z",
+      "html_url": "https://github.com/react/react/issues/6627",
+      "number": 6627,
+      "reactions": 6,
+      "state": "closed",
+      "title": "Introduce __PROFILE__ build"
+    }
+  ],
+  "slug": "react",
+  "total_words": 416,
+  "window_issue_count": 13,
+  "window_label": "2016q2"
+}

@@ -1,0 +1,49 @@
+{
+  "aggregation_method": "time_window",
+  "domain": "Container Orchestration",
+  "fetched_at": "2026-11-10T13:42:49Z",
+  "repo": "kubernetes/kubernetes",
+  "selected_count": 4,
+  "selected_issues": [
+    {
+      "body_for_case": "What would you like to be added? Add support to the spec.MaxUnavailable setting when set to 0 (zero) for PDBs used in combination with jobs. Context Currently, the documentation states that spec.MaxUnavailable should not be used for resources that do not support the scale subresource, and when deployed, the PDB shows this warning: > Warning CalculateExpectedPodCountFailed 75s controllermanager Failed to calculate the number of expected pods: jobs.batch does not implement the scale subresource However, by setting spec.MaxUnavailable=0 in the PDB and use it in combination with a selector label to point the PDB to the Scaled Jobs, our testing has confirmed that it effectively prevents disruptions of Keda Scaled Jobs during node upgrades. The reasoning is that when spec.MaxUnavailable is ...",
+      "created_at": "2025-01-14T20:44:37Z",
+      "html_url": "https://github.com/kubernetes/kubernetes/issues/129625",
+      "number": 129625,
+      "reactions": 16,
+      "state": "open",
+      "title": "Support spec.MaxUnavailable=0  to use PDB with Jobs and prevent disruptions during node upgrades"
+    },
+    {
+      "body_for_case": "What would you like to be added?\n\nAs part of KEP-2400, which is about swap enablement, a container's swap limit can be set.\n\nAs part of this KEP, swap limitation will be set to cgroup's memory.swap.max. Since the swap limitation is affected by the container's memory requests (see calculation info below), if the container's memory requests are being resized, the swap limitation needs to also be re-calculated, adapted and aligned accordingly.\n\nSwap limit calculation\nSee the LimitedSwap behavior swap limit calculation steps here: \n\nIt being handled in code by: \n\n Why is this needed?\n\nTo ensure the pod-resize feature is compatible & consistent with swap.",
+      "created_at": "2025-02-12T10:30:12Z",
+      "html_url": "https://github.com/kubernetes/kubernetes/issues/130111",
+      "number": 130111,
+      "reactions": 6,
+      "state": "open",
+      "title": "[KEP-1287] [InPlacePodVerticalScaling] Ensure swap limitations are handled as part of in-place pod resize"
+    },
+    {
+      "body_for_case": "What would you like to be added?\n\n- add more info when pod PreStop and PostStart Hook failed\n\n Why is this needed?\n\nWhen I use the postStart or preStop Hook, I find that the event does not have more errors, which makes troubleshooting relatively difficult. Of course, we can view the log in kubelet, but only sre has permission, and users may not have this permission. I hope to provide err information in the event.\n\n \n\n \n\nsome code:",
+      "created_at": "2025-02-26T05:43:29Z",
+      "html_url": "https://github.com/kubernetes/kubernetes/issues/130438",
+      "number": 130438,
+      "reactions": 4,
+      "state": "closed",
+      "title": "add more info when pod PreStop and PostStart Hook failed"
+    },
+    {
+      "body_for_case": "What would you like to be added:\nAdd argument --as-user-extra in kubectl auth.\n\nWhy is this needed:\nContext: \n\nCurrently, as-user-extra can only be set via kubeconfig, which cause inconvenience when trying to impersonate as other user for AAD-enabled Kubernetes.",
+      "created_at": "2025-02-21T02:09:14Z",
+      "html_url": "https://github.com/kubernetes/kubernetes/issues/130389",
+      "number": 130389,
+      "reactions": 3,
+      "state": "closed",
+      "title": "Support `--as-user-extra` for `kubectl auth`"
+    }
+  ],
+  "slug": "kubernetes",
+  "total_words": 341,
+  "window_issue_count": 75,
+  "window_label": "2025q1"
+}
